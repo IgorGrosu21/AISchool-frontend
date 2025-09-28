@@ -1,489 +1,486 @@
 {
   "auth": {
     "login": {
-      "label": "Войти в аккаунт",
-      "link": "Впервые тут? Зарегестрируйтесь!",
-      "submit": "Войти"
+      "label": "Login to your account",
+      "link": "First time here? Sign up!",
+      "submit": "Login"
     },
     "signup": {
-      "label": "Создать аккаунт",
-      "link": "Уже есть аккаунт? Войдите!",
-      "submit": "Зарегестрироваться"
+      "label": "Create an account",
+      "link": "Already have an account? Login!",
+      "submit": "Sign up"
     },
     "logout": {
-      "submit": "Выйти"
+      "submit": "Logout"
     },
     "verify": {
-      "submit": "Отправить"
+      "submit": "Send"
     },
     "errors": {
-      "email_already_exists": "Эл. почта уже занята",
-      "email_not_found": "Аккаунт не найден",
-      "password_too_small": "Мин. длина пароля: 8",
-      "password_only_numbers": "В пароле должна быть буква",
-      "password_only_letters": "В пароле должна быть цифра",
-      "password_incorect": "Неверный пароль"
+      "email_already_exists": "Email already exists",
+      "email_not_found": "Account not found",
+      "password_too_small": "Minimum password length: 8",
+      "password_only_numbers": "Password must contain a letter",
+      "password_only_letters": "Password must contain a number",
+      "password_incorect": "Incorrect password"
     },
     "user_type": {
-      "singular": "Тип пользователя",
-      "student": "Ученик",
-      "teacher": "Учитель",
-      "parent": "Родитель"
+      "singular": "User type",
+      "student": "Student",
+      "teacher": "Teacher",
+      "parent": "Parent"
     },
-    "email": "Эл. почта",
-    "password": "Пароль",
-    "country": "Страна",
-    "region": "Регион",
-    "city": "Город",
+    "email": "Email",
+    "password": "Password",
+    "country": "Country",
+    "region": "Region",
+    "city": "City",
     "city_picker": {
-      "label": "Город",
-      "not_selected": "Не выбран", 
-      "change": "Изменить",
-      "dialog_title": "Выберите город",
-      "save": "Сохранить",
-      "cancel": "Отмена"
+      "label": "City",
+      "not_selected": "Not selected", 
+      "change": "Change",
+      "dialog_title": "Select city",
+      "save": "Save",
+      "cancel": "Cancel"
     },
-    "name": "Имя",
-    "surname": "Фамилия",
-    "lang": "Язык",
-    "alternatives": "Другие способы входа"
+    "name": "Name",
+    "surname": "Surname",
+    "lang": "Language",
+    "alternatives": "Other login methods"
   },
   "components": {
     "edit": {
-      "200": "Данные успешно сохранены",
-      "403": "Недостаточно прав для внесения изменений",
-      "404": "Запрос не найден",
-      "500": "Произошла ошибка, попробуйте позже",
-      "edit": "Редактировать",
-      "return": "Вернуться",
-      "discard": "Сбросить",
-      "save": "Сохранить"
+      "200": "Data successfully saved",
+      "403": "Not enough rights to make changes",
+      "404": "Request not found",
+      "500": "An error occurred, please try again later",
+      "edit": "Edit",
+      "return": "Return",
+      "discard": "Discard",
+      "save": "Save"
     },
     "sidebar": {
       "unverified": {
-        "label": "Ваш аккаунт еще не активен, для верификации пожалуйста нажмите на кнопку ниже, чтобы проверить вашу почту",
-        "helper": "будет отправлено письмо с ссылкой, которая позволит закончить процесс создания аккаунта. После перехода по ссылке перезагрузите эту страницу"
+        "label": "Your account is not yet active, please click the button below to verify your email",
+        "helper": "an email with a link will be sent, which will allow you to complete the account creation process. After clicking the link, reload this page"
       },
-      "home": "Главная",
-      "profile": "Мой профиль",
-      "klass": "Мой класс",
-      "school": "Моя школа",
-      "manuals": "Учебники",
-      "tests": "Тесты",
-      "diary": "Дневник",
-      "journal": "Журнал",
-      "events": "Мероприятия",
-      "webinars": "Вебинары",
-      "olimpiads": "Олимпиады",
-      "universities": "Университеты",
-      "subscriptions": "Подписки"
+      "home": "Home",
+      "profile": "My profile",
+      "klass": "My class",
+      "school": "My school",
+      "manuals": "Manuals",
+      "tests": "Tests",
+      "diary": "Diary",
+      "journal": "Journal",
+      "events": "Events",
+      "webinars": "Webinars",
+      "olimpiads": "Olimpiads",
+      "universities": "Universities",
+      "subscriptions": "Subscriptions"
     },
     "ad": {
-      "title": "Доступно с подпиской AISchool+",
-      "promo": "Разблокируйте весь потенциал вместе с подпиской AISchool+ и увеличьте свою продуктивность в разы",
-      "info": "Подписку всегда можно отменить в вашем профиле",
-      "redirect": "Перейти к подпискам"
+      "title": "Available with AISchool+ subscription",
+      "promo": "Unlock the full potential together with the AISchool+ subscription and increase your productivity",
+      "info": "The subscription can always be cancelled in your profile",
+      "redirect": "Go to subscriptions"
     },
     "image_uploader": {
-      "delete": "Удалить",
-      "upload": "Загрузить",
-      "save": "Сохранить"
+      "delete": "Delete",
+      "upload": "Upload",
+      "save": "Save"
     },
     "pdf_viewer": {
-      "to_start": "В начало",
-      "prev": "Назад",
-      "next": "Вперед",
-      "to_end": "В конец"
+      "to_start": "To start",
+      "prev": "Back",
+      "next": "Forward",
+      "to_end": "To end"
     },
     "footer": {
-      "info": "Информация",
-      "about": "О нас",
-      "news": "Новости",
-      "privacy_policy": "Политика обработки данных",
-      "support": "Поддержка",
-      "user_agreement": "Пользовательское соглашение",
-      "help": "Помощь",
-      "contacts": "Контакты"
+      "info": "Information",
+      "about": "About",
+      "news": "News",
+      "privacy_policy": "Privacy policy",
+      "support": "Support",
+      "user_agreement": "User agreement",
+      "help": "Help",
+      "contacts": "Contacts"
     },
     "landing": {
       "hero": {
         "title": "AI School",
-        "desc": "Революционная платформа для современного образования с искусственным интеллектом",
+        "desc": "Revolutionary platform for modern education with artificial intelligence",
         "features": {
-          "1": "Искусственный интеллект",
-          "2": "Электронный журнал",
-          "3": "Задания по предметам"
+          "1": "Artificial intelligence",
+          "2": "Electronic journal",
+          "3": "Tasks by subjects"
         },
         "buttons": {
-          "1": "Начать обучение",
-          "2": "Войти в систему"
+          "1": "Start learning",
+          "2": "Login to the system"
         }
       },
       "pluses": {
-        "title": "Преимущества для {userType, select, student {учеников} teacher {учителей} parent {родителей} other {пользователей}}{paid, plural, =0 {} =1 { с подпиской} other {}}",
+        "title": "Advantages for {userType, select, student {students} teacher {teachers} parent {parents} other {users}}{paid, plural, =0 {} =1 { with a subscription} other {}}",
         "desc": {
-          "student_free": "Обучение еще никогда не было таким простым!",
-          "student_paid": "Используйте полную мощь платформы AISchool",
-          "teacher_free": "Упростите свою работу с помощью современных инструментов",
-          "teacher_paid": "Позвольте ИИ делать всю рутинную работу за вас",
-          "parent_free": "Оставайтесь в курсе успехов вашего ребенка"
+          "student_free": "Study has never been so easy!",
+          "student_paid": "Use the full power of the AISchool platform",
+          "teacher_free": "Simplify your work with modern tools",
+          "teacher_paid": "Let AI do all the routine work for you",
+          "parent_free": "Stay in the know about your child's progress"
         }
       },
       "cta": {
-        "title": "Готовы начать обучение будущего?",
-        "desc": "Присоединяйтесь к тысячам учеников и преподавателей, которые уже используют AI School для достижения лучших результатов",
+        "title": "Ready to start learning the future?",
+        "desc": "Join thousands of students and teachers who are already using AI School to achieve the best results",
         "features": {
-          "1": "Интерактивное обучение",
-          "2": "Мгновенные результаты",
-          "3": "Аналитика прогресса"
+          "1": "Interactive learning",
+          "2": "Instant results",
+          "3": "Progress analysis"
         },
         "buttons": {
-          "1": "Начать обучение",
-          "2": "Войти в систему"
+          "1": "Start learning",
+          "2": "Login to the system"
         }
       },
       "for": {
-        "student": "Для учеников",
-        "teacher": "Для учителей",
-        "parent": "Для родителей"
+        "student": "For students",
+        "teacher": "For teachers",
+        "parent": "For parents"
       }
     },
     "home": {
       "greetings": {
-        "title": "Добро пожаловать",
-        "desc": "Мы рады видеть вас на нашей платформе! Здесь будет ваш личный кабинет"
+        "title": "Welcome",
+        "desc": "We are glad to see you on our platform! Here will be your personal workspace"
       },
       "sections": {
         "student": {
           "1": {
-            "title": "Расписание на завтра"
+            "title": "Tomorrow timetable"
           },
           "2": {
-            "title": "Последние оценки"
+            "title": "Latest notes"
           },
           "3": {
-            "title": "Аналитика успеваемости"
+            "title": "Performance analysis"
           }
         },
         "teacher": {
           "1": {
-            "title": "Расписание на завтра"
+            "title": "Tomorrow timetable"
           },
           "2": {
-            "title": "Последние домашние задания"
+            "title": "Latest homework"
           },
           "3": {
-            "title": "Аналитика успеваемости"
+            "title": "Performance analysis"
           }
         },
         "parent": {
           "1": {
-            "title": "Последние оценки"
+            "title": "Tomorrow timetable"
           },
           "2": {
-            "title": "Последние домашние задания"
+            "title": "Latest notes"
           },
           "3": {
-            "title": "Аналитика успеваемости"
+            "title": "Performance analysis"
           }
         }
       },
-      "no_lessons_tomorrow": "На завтра нет уроков"
+      "no_lessons_tomorrow": "No lessons tomorrow"
     }
   },
   "schools": {
-    "singular": "Школа",
-    "plural": "Школы",
-    "pick_one": "Выберите школу",
-    "pick_many": "Выберите школы",
-    "list": "Список зарегестрированных школ",
-    "timetable": "Расписание уроков",
+    "singular": "School",
+    "plural": "Schools",
+    "pick_one": "Pick a school",
+    "pick_many": "Pick schools",
+    "list": "List of registered schools",
+    "timetable": "Timetable",
     "filters": {
       "langs": {
-        "title": "Языки"
+        "title": "Languages"
       },
       "types": {
-        "title": "Типы заведений",
-        "E": "Начальная школа",
-        "S": "Школа",
-        "G": "Гимназия",
-        "L": "Лицей",
-        "C": "Колледж"
+        "title": "Types of institutions",
+        "E": "Primary school",
+        "S": "School",
+        "G": "Gymnasium",
+        "L": "Lyceum",
+        "C": "College"
       },
       "profiles": {
-        "title": "Профили",
-        "GE": "Общий",
-        "AR": "Изобразительный",
-        "MU": "Музыкльный",
-        "CH": "Хореографический",
-        "TE": "Театральный",
-        "AL": "Альтернативный",
-        "SP": "Спортивный",
-        "HU": "Гуманитарный",
-        "RE": "Реальный",
-        "BI": "Двуязычный"
+        "title": "Profiles",
+        "GE": "General",
+        "AR": "Artistic",
+        "MU": "Music",
+        "CH": "Choreography",
+        "TE": "Theater",
+        "AL": "Alternative",
+        "SP": "Sports",
+        "HU": "Humanitarian",
+        "RE": "Real",
+        "BI": "Two-language"
       }
     },
     "details": {
-      "found": "Найдено школ:",
-      "edit": "Редактировать",
-      "name": "Название",
-      "desc": "Описание",
-      "lang": "Язык",
-      "contacts": "Контакты",
-      "phones": "Телефоны",
-      "phone": "Телефон #",
-      "emails": "Эл. почты",
-      "email": "Эл. почта #",
-      "address": "Адресс",
-      "website": "Сайт школы",
-      "work_hours": "Часы работы"
+      "found": "Found schools:",
+      "edit": "Edit",
+      "name": "Name",
+      "desc": "Description",
+      "lang": "Language",
+      "contacts": "Contacts",
+      "phones": "Phones",
+      "phone": "Phone #",
+      "emails": "Emails",
+      "email": "Email #",
+      "address": "Address",
+      "website": "School website",
+      "work_hours": "Work hours"
     }
   },
   "klasses": {
-    "singular": "Класс",
-    "plural": "Классы",
-    "list": "Список классов",
-    "school_list": "Список школ",
-    "teacher": "Классный руководитель",
+    "singular": "Class",
+    "plural": "Classes",
+    "list": "List of classes",
+    "school_list": "List of schools",
+    "teacher": "Class teacher",
     "profiles": {
-      "title": "Профиль",
-      "R": "Реальный",
-      "U": "Гуманитарный"
+      "title": "Profile",
+      "R": "Real",
+      "U": "Humanitarian"
     },
-    "networth": "Состояние",
-    "timetable": "Расписание",
-    "groups": "Группы",
-    "pick_grade": "Выберите ваш класс",
-    "pick_letter": "Выберите букву вашего класса"
+    "networth": "Networth",
+    "timetable": "Timetable",
+    "groups": "Groups",
+    "pick_grade": "Pick your class",
+    "pick_letter": "Pick your class letter"
   },
   "timetable": {
-    "singular": "Расписание уроков",
-    "no_timetable": "На этот день расписание не установлено",
-    "no_lesson": "Урок еще не создан. Ответсвенное лицо должно внести изменения в расписание уроков",
-    "no_specific_lesson": "Урок еще не создан. Учитель должен написать тему урока, добавить домашнее задание или поставить вам оценку",
-    "holiday": "Ура, каникулы!",
+    "singular": "Timetable",
+    "no_timetable": "Timetable is not set for this day",
+    "no_lesson": "Lesson is not created. The responsible person must make changes to the timetable",
+    "no_specific_lesson": "Lesson is not created. The teacher must write the topic of the lesson, add homework or put a grade for you",
+    "holiday": "Hurray, holidays!",
     "lesson_time": {
-      "singular": "Время проведения уроков",
-      "desc": "Укажите время начало и конца каждого урока",
-      "helper": "Если не хотите сохранять какой-то урок, просто не указывайте его время",
-      "duration": "Длительность урока",
-      "starting": "Начало",
-      "ending": "Конец"
+      "singular": "Lesson time",
+      "desc": "Specify the time of the start and end of each lesson",
+      "helper": "If you don't want to save a particular lesson, just don't specify the time",
+      "duration": "Lesson duration",
+      "starting": "Start",
+      "ending": "End"
     },
     "group": {
-      "singular": "Группа учеников",
-      "plural": "Группы учеников"
+      "singular": "Group of students",
+      "plural": "Groups of students"
     },
     "lessons": {
-      "singular": "Урок",
-      "plural": "Уроки",
-      "klass_not_exist": "Выбранного класса не существует",
-      "teacher": "Учитель",
-      "subject": "Предмет",
+      "singular": "Lesson",
+      "plural": "Lessons",
+      "klass_not_exist": "The selected class does not exist",
+      "teacher": "Teacher",
+      "subject": "Subject",
       "seasons": {
-        "autumn": "Осень",
-        "winter": "Зима",
-        "spring": "Весна"
+        "autumn": "Autumn",
+        "winter": "Winter",
+        "spring": "Spring"
       }
     },
     "subjects": {
-      "plural": "Предметы",
-      "desc": "Предметы, преподаваемые в школе",
-      "pick": "Выберите предметы которые преподаваемые в школе",
-      "helper": "Выберите предметы на языке преподавания; если дисциплины преподаются на двух языках — укажите обе"
+      "plural": "Subjects",
+      "desc": "Subjects taught in the school",
+      "pick": "Pick subjects that are taught in the school",
+      "helper": "Pick subjects on the language of teaching; if the subjects are taught in two languages, specify both"
     },
     "specific_lessons": {
-      "title": "Тема урока",
-      "desc": "Домашнее задание",
-      "teacher_comment": "Комментарий учителя",
-      "student_comment": "Комментарий ученика",
-      "homework": "Домашняя работа",
-      "last_modified": "Последнее изменение",
+      "title": "Lesson topic",
+      "desc": "Homework",
+      "teacher_comment": "Teacher's comment",
+      "student_comment": "Student's comment",
+      "homework": "Homework",
+      "last_modified": "Last modification",
       "links": {
-        "confirmation": "Вы уверены, что хотите удалить следующую ссылку?",
-        "singular": "Ссылка",
-        "plural": "Ссылки",
-        "edit": "Редактировать",
-        "discard": "Сбросить",
-        "close": "Закрыть",
-        "add": "Добавить",
-        "cancel": "Отмена",
-        "proceed": "Да, я уверен / уверена"
+        "confirmation": "Are you sure you want to delete the following link?",
+        "singular": "Link",
+        "plural": "Links",
+        "edit": "Edit",
+        "discard": "Reset",
+        "close": "Close",
+        "add": "Add",
+        "cancel": "Cancel",
+        "proceed": "Yes, I'm sure / I'm sure"
       },
       "files": {
-        "singular": "Файл",
-        "plural": "Файлы",
-        "no_image": "Выбранный файл не является фотографией, поэтому мы не можем показать его. Попробуйте скачать его и открыть на вашем компьютере"
+        "singular": "File",
+        "plural": "Files",
+        "no_image": "The selected file is not an image, so we cannot show it. Try downloading it and opening it on your computer"
       },
       "notes": {
-        "ma": "Уважительный пропуск",
-        "ua": "Неуважительный пропуск",
-        "da": "Пропуск по болезни",
-        "VG": "Очень хорошо",
-        "G": "Хорошо",
-        "S": "Удовлетворительно",
-        "N": "Неудовлетворительно",
-        "comment": "Комментарий",
-        "close": "Закрыть",
-        "open_lesson": "Открыть урок",
-        "discard": "Отменить",
-        "save": "Сохранить"
+        "ma": "Motivated absence",
+        "ua": "Unjustified absence",
+        "da": "Absence due to illness",
+        "VG": "Very good",
+        "G": "Good",
+        "S": "Satisfactory",
+        "N": "Unsatisfactory",
+        "comment": "Comment",
+        "close": "Close",
+        "open_lesson": "Open lesson",
+        "discard": "Cancel",
+        "save": "Save"
       }
     },
     "weekdays": {
-      "MO": "Понедельник",
-      "TU": "Вторник",
-      "WE": "Среда",
-      "TH": "Четверг",
-      "FR": "Пятница",
-      "SA": "Суббота"
+      "MO": "Monday",
+      "TU": "Tuesday",
+      "WE": "Wednesday",
+      "TH": "Thursday",
+      "FR": "Friday",
+      "SA": "Saturday"
     }
   },
   "subjects": {
-    "singular": "Предмет",
-    "plural": "Предметы",
-    "picked": "Выбранные предметы",
-    "list": "Список предметов"
+    "singular": "Subject",
+    "plural": "Subjects",
+    "picked": "Picked subjects",
+    "list": "List of subjects"
   },
   "manuals": {
-    "singular": "Учебник",
-    "plural": "Учебники",
-    "topics": "Темы",
-    "theories": "Теории",
-    "tasks": "Задания",
-    "prev_theory": "Предедущая теория",
-    "next_theory": "Следующая теория",
-    "prev_task": "Предедущее задание",
-    "next_task": "Следующее задание",
-    "complete": "Завершить"
+    "singular": "Manual",
+    "plural": "Manuals",
+    "topics": "Topics",
+    "tasks": "Tasks",
+    "prev_task": "Previous task",
+    "next_task": "Next task",
+    "complete": "Complete"
   },
   "subscriptions": {
-    "plural": "Подписки",
+    "plural": "Subscriptions",
     "plans": {
-      "title": "Подписка AISchool+",
-      "duration": "Длительность",
-      "price": "Стоимость",
-      "discount": "Экономия",
-      "benefit": "Выгода",
-      "monthly": "1 месяц",
-      "quarter": "1 четверть",
-      "semester": "1 семестр",
-      "yearly": "1 год",
-      "forever": "навсегда",
-      "submit": "Оформить",
+      "title": "AISchool+ subscription",
+      "duration": "Duration",
+      "price": "Price",
+      "discount": "Discount",
+      "benefit": "Benefit",
+      "monthly": "1 month",
+      "quarter": "1 quarter",
+      "semester": "1 semester",
+      "yearly": "1 year",
+      "forever": "forever",
+      "submit": "Submit",
       "user_type": {
-        "solo": "Одиночная",
-        "group": "Групповая"
+        "solo": "Solo",
+        "group": "Group"
       }
     },
     "free_pluses": {
-      "student": "Самый удобный электронный дневник;Онлайн домашние задания;Удобные учебники;Многочисленные мероприятия",
-      "teacher": "Самый удобный электронный журнал;Менеджемент и аналитика класса;Генерация уникальный тестов;Автоматическая проверка онлайн заданий",
-      "parent": "Мониторинг успеваемости ребенка;Связь с учителями;Аналитика прогресса обучения;Контроль посещаемости"
+      "student": "The most convenient electronic diary;Online homework;Convenient manuals;Numerous events",
+      "teacher": "The most convenient electronic journal;Class management and analytics;Generation of unique tests;Automatic checking of online tasks",
+      "parent": "Monitoring of student's progress;Contact with teachers;Progress analysis;Attendance control"
     },
     "pluses": {
-      "solo": "Доступ к предметам всех классов;Задания с искусственным интелектом;Вебинары со студентами;Олимпиады от AISchool;Отсутствие рекламы;Доступ к аудиозаданиям по языкам;Задания для подготовки к экзаменам;Задания гос. олимпиад прошлых лет;Доступ к внешкольным предметам;Помощь при поступлении в государственные вузы",
-      "group": "Набор оценок голосом;Скан журнала для переноса на онлайн платформу;Автоматический перенос оценок в онлайн журнал;Проверка работ с помощью ИИ;Генерация тестов с помощью ИИ;Генерация домашнего задания с помощью ИИ",
-      "about": "О Подписке",
-      "desc": "Мы предоставляем все нужные материалы для обучения абсолютно бесплатно, однако искусственный интелект (к сожалению) не бесплатный.\nДля того, чтобы мы могли поддерживать наши сервера мы вводим платную подписку.\nКроме внедрения ИИ, как ученики, так и учителя получат доступ к множеству удобных функций и дополнительных материалов, для помощи в обучении.\nПодписку классом может оформить классный руководитель в личном профиле. Для оформления подписки необходимо участие минимум 75% выбранного класса",
-      "advantages": "Преимущества AISchool+",
+      "solo": "Access to subjects of all classes;Tasks with artificial intelligence;Webinars with students;Olympiads from AISchool;No ads;Access to audio tasks by languages;Tasks for preparing for exams;Tasks from previous years' state olympiads;Access to extracurricular subjects;Help with entering state universities",
+      "group": "Voice scoring;Scan of the journal for transfer to the online platform;Automatic transfer of marks to the online journal;Checking tasks with AI;Generation of tests with AI;Generation of homework with AI",
+      "about": "About the subscription",
+      "desc": "We provide all the necessary materials for learning absolutely free, however, artificial intelligence (unfortunately) is not free.\nTo be able to support our servers, we introduce a paid subscription.\nIn addition to the implementation of AI, both students and teachers will have access to a large number of convenient functions and additional materials to help in learning.\nThe class subscription can be issued by the class teacher in the personal profile. To issue a subscription, a minimum of 75% of the selected class is required",
+      "advantages": "Advantages AISchool+",
       "group_details": {
-        "title": "Подписка классом",
-        "desc": "Подписка классом включает в себя все плюсы одиночной подписки, но также предоставляет полезные функции для учителей.\nФункционал будет доступен только для классов, которые оформили подписку",
-        "discount": "Стоимость групповой подписки ниже на 50%!",
-        "price": "Стоимость",
-        "view_price": "Перейти к стоимости"
+        "title": "Class subscription",
+        "desc": "The class subscription includes all the pluses of a solo subscription, but also provides useful functions for teachers.\nThe functionality will only be available for classes that have subscribed",
+        "discount": "The price of the group subscription is lower by 50%!",
+        "price": "Price",
+        "view_price": "Go to the price"
       }
     }
   },
   "profile": {
-    "title": "Профиль",
-    "students": "ученика",
-    "teachers": "учителя",
-    "parents": "родителя",
-    "is_verified": "Проверенный",
-    "name": "Ваше имя",
-    "surname": "Ваша фамилия",
-    "socials": "Соц. сети",
-    "pick_socials": "Добавьте свои соц. сети (Instagram, Facebook)",
-    "add": "Добавить"
+    "title": "Profile",
+    "students": "student",
+    "teachers": "teacher",
+    "parents": "parent",
+    "is_verified": "Verified",
+    "name": "Your name",
+    "surname": "Your surname",
+    "socials": "Social networks",
+    "pick_socials": "Add your social networks (Instagram, Facebook)",
+    "add": "Add"
   },
   "students": {
-    "singular": "Ученик",
-    "list": "Список учеников",
-    "balance": "Баланс",
-    "rank": "Место в топе",
-    "subscription": "Подписка",
-    "is_manager": "Заполняет дз"
+    "singular": "Student",
+    "list": "List of students",
+    "balance": "Balance",
+    "rank": "Rank",
+    "subscription": "Subscription",
+    "is_manager": "Is manager"
   },
   "teachers": {
-    "experience": "Стаж работы: {years, plural, one {# год} few {# года} many {# лет} other {# лет}}",
-    "edit_experience": "Укажите свой суммарный стаж работы"
+    "experience": "Work experience: {years, plural, one {# year} few {# years} many {# years} other {# years}}",
+    "edit_experience": "Specify your total work experience"
   },
   "positions": {
-    "singular": "Должность",
-    "staff": "Учителя",
-    "work_places": "Места работы",
-    "HM": "Директор",
-    "HT": "Завуч",
-    "T": "Учитель",
-    "ET": "Учитель младшего звена",
-    "is_manager": "Менеджер",
-    "delete": "Удалить",
-    "pick_subjects": "Выберите предметы которые вы преподаете",
-    "helper_subjects": "Выберите предметы на языке преподавания; если работаете на двух языках — укажите оба"
+    "singular": "Position",
+    "staff": "Teachers",
+    "work_places": "Work places",
+    "HM": "Director",
+    "HT": "Vice-rector",
+    "T": "Teacher",
+    "ET": "Teacher of lower grades",
+    "is_manager": "Manager",
+    "delete": "Delete",
+    "pick_subjects": "Pick subjects that you teach",
+    "helper_subjects": "Pick subjects on the language of teaching; if you work in two languages, specify both"
   },
   "diary": {
-    "singular": "Эл. Дневник",
-    "child": "Ребенок",
-    "pick_child": "Выберите ребенка",
-    "school": "Школа",
-    "pick_school": "Выберите школу",
-    "summertime": "Поздравляем с приходом лета, ждем вас в следующем году!"
+    "singular": "Electronic diary",
+    "child": "Child",
+    "pick_child": "Pick a child",
+    "school": "School",
+    "pick_school": "Pick a school",
+    "summertime": "Congratulations on the arrival of summer, we look forward to you next year!"
   },
   "journal": {
-    "singular": "Эл. Журнал",
-    "child": "Ребенок",
-    "pick_child": "Выберите ребенка",
-    "school": "Школа",
-    "pick_school": "Выберите школу",
-    "klass": "Класс",
-    "pick_klass": "Выберите класс",
-    "subject": "Предмет",
-    "pick_subject": "Выберите предмет",
+    "singular": "Electronic journal",
+    "child": "Child",
+    "pick_child": "Pick a child",
+    "school": "School",
+    "pick_school": "Pick a school",
+    "klass": "Class",
+    "pick_klass": "Pick a class",
+    "subject": "Subject",
+    "pick_subject": "Pick a subject",
     "periods": {
-      "frst": "I Семестр",
-      "scnd": "II Семестр",
-      "annual": "За год"
+      "frst": "I Semester",
+      "scnd": "II Semester",
+      "annual": "Year"
     },
-    "performance": "Успеваемость",
+    "performance": "Performance",
     "absences": {
-      "plural": "Пропуски",
-      "ma": "Уважительные пропуски",
-      "ua": "Неуважительные пропуски",
-      "da": "Пропуски по болезни"
+      "plural": "Absences",
+      "ma": "Motivated absences",
+      "ua": "Unjustified absences",
+      "da": "Absences due to illness"
     },
-    "extra_notes": "Десяток до следующего балла"
+    "extra_notes": "Ten points to the next grade"
   },
   "errors": {
     "401": {
-      "title": "Страница недоступна",
-      "desc": "Эта страница доступна только зарегестрированным пользователям. Войдите в аккаунт, чтобы получить доступ"
+      "title": "Page not available",
+      "desc": "This page is only available to registered users. Login to your account to get access"
     },
     "403": {
-      "title": "Страница недоступна",
-      "desc": "У вас недостаточно прав для доступа к этой странице. Возможно, ваш аккаунт не проверен"
+      "title": "Page not available",
+      "desc": "You do not have enough rights to access this page. Maybe your account is not verified"
     },
     "404": {
-      "title": "Страница не найдена",
-      "desc": "К сожалению, запрашиваемая страница не существует. Возможно, она была перемещена или удалена."
+      "title": "Page not found",
+      "desc": "Unfortunately, the requested page does not exist. Maybe it was moved or deleted."
     },
     "500": {
-      "title": "Страница не найдена",
-      "desc": "К сожалению, произошла ошибка. Попробуйте позже"
+      "title": "Page not found",
+      "desc": "Unfortunately, an error occurred. Please try again later"
     },
-    "home": "На главную",
-    "back": "Назад"
+    "home": "Home",
+    "back": "Back"
   }
 }

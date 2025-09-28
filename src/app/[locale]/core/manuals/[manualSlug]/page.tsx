@@ -22,7 +22,7 @@ export default async function Page({ params }: { params: Promise<{manualSlug: st
       complex
     >
       <Link style={{flex: 1, display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}} href={`/core/manuals/${manualSlug}/${module.slug}`}>
-        <Typography variant='h5'>{i + 1}. {module.name}</Typography>
+        <Typography variant='h5'>{i + 1}. {module.name} ({module.startPage}-{module.endPage})</Typography>
         <Balance balance={module.balance} showText={false} hideZeros />
       </Link>
     </ModuleList>)}

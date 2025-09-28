@@ -5,13 +5,15 @@ type WithSlug = {
   slug: string
 }
 
-export type ITheory = WithSlug
+type Paginated = WithSlug & {
+  startPage: number
+  endPage: number
+}
 
 export type ITask = WithSlug & {
   currency: keyof IBalance
   cost: number
 }
-
 
 export type IBalance = {
   [key: string]: number
@@ -21,7 +23,7 @@ export type IBalance = {
   diamonds: number
 }
 
-export type IModuleWithManual = WithSlug & {
+export type IModuleWithManual = Paginated &  {
   manual: IManual
 }
 
@@ -30,7 +32,7 @@ export type IModule = Omit<IModuleWithManual, 'manual'> & {
   balance: IBalance
 }
 
-export type ITopic = WithSlug & {
+export type ITopic = Paginated & {
   balance: IBalance
 }
 

@@ -1,489 +1,486 @@
 {
   "auth": {
     "login": {
-      "label": "Войти в аккаунт",
-      "link": "Впервые тут? Зарегестрируйтесь!",
-      "submit": "Войти"
+      "label": "Conectați-vă la contul dvs",
+      "link": "Prima dată aici? Înscrie-te!",
+      "submit": "Log in"
     },
     "signup": {
-      "label": "Создать аккаунт",
-      "link": "Уже есть аккаунт? Войдите!",
-      "submit": "Зарегестрироваться"
+      "label": "Creați un cont",
+      "link": "Ai deja un cont? Log in!",
+      "submit": "Înscrieți-vă"
     },
     "logout": {
-      "submit": "Выйти"
+      "submit": "Deconectare"
     },
     "verify": {
-      "submit": "Отправить"
+      "submit": "Trimite"
     },
     "errors": {
-      "email_already_exists": "Эл. почта уже занята",
-      "email_not_found": "Аккаунт не найден",
-      "password_too_small": "Мин. длина пароля: 8",
-      "password_only_numbers": "В пароле должна быть буква",
-      "password_only_letters": "В пароле должна быть цифра",
-      "password_incorect": "Неверный пароль"
+      "email_already_exists": "E-mailul există deja",
+      "email_not_found": "Cont nu a fost găsit",
+      "password_too_small": "Lungimea minimă a parolei: 8",
+      "password_only_numbers": "Parola trebuie să conțină o literă",
+      "password_only_letters": "Parola trebuie să conțină un număr",
+      "password_incorect": "Parolă incorectă"
     },
     "user_type": {
-      "singular": "Тип пользователя",
-      "student": "Ученик",
-      "teacher": "Учитель",
-      "parent": "Родитель"
+      "singular": "Tip utilizator",
+      "student": "Student",
+      "teacher": "Profesor",
+      "parent": "Părinte"
     },
-    "email": "Эл. почта",
-    "password": "Пароль",
-    "country": "Страна",
-    "region": "Регион",
-    "city": "Город",
+    "email": "E-mail",
+    "password": "Parolă",
+    "country": "Ţară",
+    "region": "Regiune",
+    "city": "Oraș",
     "city_picker": {
-      "label": "Город",
-      "not_selected": "Не выбран", 
-      "change": "Изменить",
-      "dialog_title": "Выберите город",
-      "save": "Сохранить",
-      "cancel": "Отмена"
+      "label": "Oraș",
+      "not_selected": "Nu este selectat",
+      "change": "Schimba",
+      "dialog_title": "Selectați orașul",
+      "save": "Salva",
+      "cancel": "Anula"
     },
-    "name": "Имя",
-    "surname": "Фамилия",
-    "lang": "Язык",
-    "alternatives": "Другие способы входа"
+    "name": "Nume",
+    "surname": "Prenume",
+    "lang": "Limbă",
+    "alternatives": "Alte metode de autentificare"
   },
   "components": {
     "edit": {
-      "200": "Данные успешно сохранены",
-      "403": "Недостаточно прав для внесения изменений",
-      "404": "Запрос не найден",
-      "500": "Произошла ошибка, попробуйте позже",
-      "edit": "Редактировать",
-      "return": "Вернуться",
-      "discard": "Сбросить",
-      "save": "Сохранить"
+      "200": "Datele salvate cu succes",
+      "403": "Nu sunt suficiente drepturi pentru a face schimbări",
+      "404": "Pagina nu a fost găsită",
+      "500": "A apărut o eroare, vă rugăm să încercați din nou mai târziu",
+      "edit": "Editează",
+      "return": "Reveni",
+      "discard": "Anulează",
+      "save": "Salva"
     },
     "sidebar": {
       "unverified": {
-        "label": "Ваш аккаунт еще не активен, для верификации пожалуйста нажмите на кнопку ниже, чтобы проверить вашу почту",
-        "helper": "будет отправлено письмо с ссылкой, которая позволит закончить процесс создания аккаунта. После перехода по ссылке перезагрузите эту страницу"
+        "label": "Contul dvs. nu este încă activ, vă rugăm să faceți clic pe butonul de mai jos pentru a vă verifica e-mailul",
+        "helper": "Va fi trimis un e-mail cu un link, care vă va permite să finalizați procesul de creare a contului. După ce faceți clic pe link, reîncărcați această pagină"
       },
-      "home": "Главная",
-      "profile": "Мой профиль",
-      "klass": "Мой класс",
-      "school": "Моя школа",
-      "manuals": "Учебники",
-      "tests": "Тесты",
-      "diary": "Дневник",
-      "journal": "Журнал",
-      "events": "Мероприятия",
-      "webinars": "Вебинары",
-      "olimpiads": "Олимпиады",
-      "universities": "Университеты",
-      "subscriptions": "Подписки"
+      "home": "Acasă",
+      "profile": "Profilul meu",
+      "klass": "Clasa mea",
+      "school": "Școala mea",
+      "manuals": "Manuale",
+      "tests": "Teste",
+      "diary": "Jurnal",
+      "journal": "Jurnal",
+      "events": "Evenimente",
+      "webinars": "Webinarii",
+      "olimpiads": "Olimpiade",
+      "universities": "Universități",
+      "subscriptions": "Abonamente"
     },
     "ad": {
-      "title": "Доступно с подпиской AISchool+",
-      "promo": "Разблокируйте весь потенциал вместе с подпиской AISchool+ и увеличьте свою продуктивность в разы",
-      "info": "Подписку всегда можно отменить в вашем профиле",
-      "redirect": "Перейти к подпискам"
+      "title": "Disponibil cu Aischool+ Abonament",
+      "promo": "Deblocați potențialul întreg împreună cu abonamentul AISchool+ și creșteți-vă productivitatea",
+      "info": "Abonamentul poate fi întotdeauna anulat în profilul dvs.",
+      "redirect": "Accesați abonamente"
     },
     "image_uploader": {
-      "delete": "Удалить",
-      "upload": "Загрузить",
-      "save": "Сохранить"
+      "delete": "Șterge",
+      "upload": "Încărcați",
+      "save": "Salva"
     },
     "pdf_viewer": {
-      "to_start": "В начало",
-      "prev": "Назад",
-      "next": "Вперед",
-      "to_end": "В конец"
+      "to_start": "La început",
+      "prev": "Înapoi",
+      "next": "Înainte",
+      "to_end": "La sfârșit"
     },
     "footer": {
-      "info": "Информация",
-      "about": "О нас",
-      "news": "Новости",
-      "privacy_policy": "Политика обработки данных",
-      "support": "Поддержка",
-      "user_agreement": "Пользовательское соглашение",
-      "help": "Помощь",
-      "contacts": "Контакты"
+      "info": "Informaţii",
+      "about": "Despre",
+      "news": "Noutăți",
+      "privacy_policy": "Politica de confidențialitate",
+      "support": "Sprijin",
+      "user_agreement": "Acord de utilizator",
+      "help": "Ajutor",
+      "contacts": "Contacte"
     },
     "landing": {
       "hero": {
         "title": "AI School",
-        "desc": "Революционная платформа для современного образования с искусственным интеллектом",
+        "desc": "Platforma revoluționară pentru educația modernă cu inteligență artificială",
         "features": {
-          "1": "Искусственный интеллект",
-          "2": "Электронный журнал",
-          "3": "Задания по предметам"
+          "1": "Inteligenţă artificială",
+          "2": "Jurnal electronic",
+          "3": "Sarcini de către subiecți"
         },
         "buttons": {
-          "1": "Начать обучение",
-          "2": "Войти в систему"
+          "1": "Începeți să învățați",
+          "2": "Conectați-vă la sistem"
         }
       },
       "pluses": {
-        "title": "Преимущества для {userType, select, student {учеников} teacher {учителей} parent {родителей} other {пользователей}}{paid, plural, =0 {} =1 { с подпиской} other {}}",
+        "title": "Avantaje pentru {usertype, select, student {elevuri} teacher {profesori} parent {părinți} other {utilizatori}} {paid, plural, = 0 {} = 1 {cu un abonament} other {}}",
         "desc": {
-          "student_free": "Обучение еще никогда не было таким простым!",
-          "student_paid": "Используйте полную мощь платформы AISchool",
-          "teacher_free": "Упростите свою работу с помощью современных инструментов",
-          "teacher_paid": "Позвольте ИИ делать всю рутинную работу за вас",
-          "parent_free": "Оставайтесь в курсе успехов вашего ребенка"
+          "student_free": "Studiul nu a fost niciodată atât de ușor!",
+          "student_paid": "Folosiți întreaga putere a platformei Aischool",
+          "teacher_free": "Simplificați-vă munca cu instrumente moderne",
+          "teacher_paid": "Lasă-l pe AI să facă toate lucrările de rutină pentru tine",
+          "parent_free": "Stai în cunoștință despre progresul copilului tău"
         }
       },
       "cta": {
-        "title": "Готовы начать обучение будущего?",
-        "desc": "Присоединяйтесь к тысячам учеников и преподавателей, которые уже используют AI School для достижения лучших результатов",
+        "title": "Sunteți gata să începeți să învățați viitorul?",
+        "desc": "Alăturați-vă mii de elevi și profesori care folosesc deja școala AI pentru a obține cele mai bune rezultate",
         "features": {
-          "1": "Интерактивное обучение",
-          "2": "Мгновенные результаты",
-          "3": "Аналитика прогресса"
+          "1": "Învățare interactivă",
+          "2": "Rezultate instantanee",
+          "3": "Analiza progresului"
         },
         "buttons": {
-          "1": "Начать обучение",
-          "2": "Войти в систему"
+          "1": "Începeți să învățați",
+          "2": "Conectați-vă la sistem"
         }
       },
       "for": {
-        "student": "Для учеников",
-        "teacher": "Для учителей",
-        "parent": "Для родителей"
+        "student": "Pentru studenți",
+        "teacher": "Pentru profesori",
+        "parent": "Pentru părinți"
       }
     },
     "home": {
       "greetings": {
-        "title": "Добро пожаловать",
-        "desc": "Мы рады видеть вас на нашей платформе! Здесь будет ваш личный кабинет"
+        "title": "Bun venit",
+        "desc": "Ne bucurăm să vă vedem pe platforma noastră!Aici va fi spațiul dvs. de lucru personal"
       },
       "sections": {
         "student": {
           "1": {
-            "title": "Последние оценки"
+            "title": "Mâine orar"
           },
           "2": {
-            "title": "Последние домашние задания"
+            "title": "Ultimele note"
           },
           "3": {
-            "title": "Аналитика успеваемости"
+            "title": "Analiza performanței"
           }
         },
         "teacher": {
           "1": {
-            "title": "Последние домашние задания"
+            "title": "Mâine orar"
           },
           "2": {
-            "title": "Расписание на завтра"
+            "title": "Ultimele teme"
           },
           "3": {
-            "title": "Аналитика успеваемости"
+            "title": "Analiza performanței"
           }
         },
         "parent": {
           "1": {
-            "title": "Последние оценки"
+            "title": "Mâine orar"
           },
           "2": {
-            "title": "Последние домашние задания"
+            "title": "Ultimele note"
           },
           "3": {
-            "title": "Аналитика успеваемости"
+            "title": "Analiza performanței"
           }
         }
       },
-      "no_lessons_tomorrow": "На завтра нет уроков"
+      "no_lessons_tomorrow": "Mâine fără lecții"
     }
   },
   "schools": {
-    "singular": "Школа",
-    "plural": "Школы",
-    "pick_one": "Выберите школу",
-    "pick_many": "Выберите школы",
-    "list": "Список зарегестрированных школ",
-    "timetable": "Расписание уроков",
+    "singular": "Şcoală",
+    "plural": "Școli",
+    "pick_one": "Alege o școală",
+    "pick_many": "Alegeți școli",
+    "list": "Lista școlilor înregistrate",
+    "timetable": "Orar",
     "filters": {
       "langs": {
-        "title": "Языки"
+        "title": "Limbi"
       },
       "types": {
-        "title": "Типы заведений",
-        "E": "Начальная школа",
-        "S": "Школа",
-        "G": "Гимназия",
-        "L": "Лицей",
-        "C": "Колледж"
+        "title": "Tipuri de instituții",
+        "E": "Școală primară",
+        "S": "Şcoală",
+        "G": "Gimnazial",
+        "L": "Liceu",
+        "C": "Colegiu"
       },
       "profiles": {
-        "title": "Профили",
-        "GE": "Общий",
-        "AR": "Изобразительный",
-        "MU": "Музыкльный",
-        "CH": "Хореографический",
-        "TE": "Театральный",
-        "AL": "Альтернативный",
-        "SP": "Спортивный",
-        "HU": "Гуманитарный",
-        "RE": "Реальный",
-        "BI": "Двуязычный"
+        "title": "Profiluri",
+        "GE": "General",
+        "AR": "Artistic",
+        "MU": "Muzică",
+        "CH": "Coregrafie",
+        "TE": "Teatru",
+        "AL": "Alternativă",
+        "SP": "Sport",
+        "HU": "Umanitar",
+        "RE": "Real",
+        "BI": "În două limbi"
       }
     },
     "details": {
-      "found": "Найдено школ:",
-      "edit": "Редактировать",
-      "name": "Название",
-      "desc": "Описание",
-      "lang": "Язык",
-      "contacts": "Контакты",
-      "phones": "Телефоны",
-      "phone": "Телефон #",
-      "emails": "Эл. почты",
-      "email": "Эл. почта #",
-      "address": "Адресс",
-      "website": "Сайт школы",
-      "work_hours": "Часы работы"
+      "found": "Găsite școli:",
+      "edit": "Edita",
+      "name": "Nume",
+      "desc": "Descriere",
+      "lang": "Limbă",
+      "contacts": "Contacte",
+      "phones": "Telefoane",
+      "phone": "Telefon #",
+      "emails": "E-mailuri",
+      "email": "E-mail #",
+      "address": "Adresa",
+      "website": "Site-ul școlii",
+      "work_hours": "Ore de lucru"
     }
   },
   "klasses": {
-    "singular": "Класс",
-    "plural": "Классы",
-    "list": "Список классов",
-    "school_list": "Список школ",
-    "teacher": "Классный руководитель",
+    "singular": "Clasă",
+    "plural": "Clase",
+    "list": "Lista claselor",
+    "school_list": "Lista școlilor",
+    "teacher": "Profesor de clasă",
     "profiles": {
-      "title": "Профиль",
-      "R": "Реальный",
-      "U": "Гуманитарный"
+      "title": "Profil",
+      "R": "Real",
+      "U": "Umanitar"
     },
-    "networth": "Состояние",
-    "timetable": "Расписание",
-    "groups": "Группы",
-    "pick_grade": "Выберите ваш класс",
-    "pick_letter": "Выберите букву вашего класса"
+    "networth": "Balanță",
+    "timetable": "Orar",
+    "groups": "Grupuri",
+    "pick_grade": "Alegeți-vă clasa",
+    "pick_letter": "Alegeți-vă litera de clasă"
   },
   "timetable": {
-    "singular": "Расписание уроков",
-    "no_timetable": "На этот день расписание не установлено",
-    "no_lesson": "Урок еще не создан. Ответсвенное лицо должно внести изменения в расписание уроков",
-    "no_specific_lesson": "Урок еще не создан. Учитель должен написать тему урока, добавить домашнее задание или поставить вам оценку",
-    "holiday": "Ура, каникулы!",
+    "singular": "Orar",
+    "no_timetable": "Orarul nu este stabilit pentru această zi",
+    "no_lesson": "Lecția nu este creată. Persoana responsabilă trebuie să facă modificări la orar",
+    "no_specific_lesson": "Lecția nu este creată. Profesorul trebuie să scrie subiectul lecției, să adauge teme sau să pună o notă pentru tine",
+    "holiday": "Sărbători!",
     "lesson_time": {
-      "singular": "Время проведения уроков",
-      "desc": "Укажите время начало и конца каждого урока",
-      "helper": "Если не хотите сохранять какой-то урок, просто не указывайте его время",
-      "duration": "Длительность урока",
-      "starting": "Начало",
-      "ending": "Конец"
+      "singular": "Timp de lecție",
+      "desc": "Specificați timpul începutului și al sfârșitului fiecărei lecții",
+      "helper": "Dacă nu doriți să salvați o anumită lecție, nu specificați timpul",
+      "duration": "Durata lecției",
+      "starting": "Început",
+      "ending": "Sfârşit"
     },
     "group": {
-      "singular": "Группа учеников",
-      "plural": "Группы учеников"
+      "singular": "Grup de studenți",
+      "plural": "Grupuri de studenți"
     },
     "lessons": {
-      "singular": "Урок",
-      "plural": "Уроки",
-      "klass_not_exist": "Выбранного класса не существует",
-      "teacher": "Учитель",
-      "subject": "Предмет",
+      "singular": "Lecţie",
+      "plural": "Lecții",
+      "klass_not_exist": "Clasa selectată nu există",
+      "teacher": "Profesor",
+      "subject": "Subiect",
       "seasons": {
-        "autumn": "Осень",
-        "winter": "Зима",
-        "spring": "Весна"
+        "autumn": "Toamnă",
+        "winter": "Iarnă",
+        "spring": "Primăvară"
       }
     },
     "subjects": {
-      "plural": "Предметы",
-      "desc": "Предметы, преподаваемые в школе",
-      "pick": "Выберите предметы которые преподаваемые в школе",
-      "helper": "Выберите предметы на языке преподавания; если дисциплины преподаются на двух языках — укажите обе"
+      "plural": "Subiecte",
+      "desc": "Subiecte predate în școală",
+      "pick": "Alegeți subiecte care sunt predate în școală",
+      "helper": "Alegeți subiecte pe limba predării; Dacă subiectele sunt predate în două limbi, specificați ambele"
     },
     "specific_lessons": {
-      "title": "Тема урока",
-      "desc": "Домашнее задание",
-      "teacher_comment": "Комментарий учителя",
-      "student_comment": "Комментарий ученика",
-      "homework": "Домашняя работа",
-      "last_modified": "Последнее изменение",
+      "title": "Subiectul lecției",
+      "desc": "Teme pentru acasă",
+      "teacher_comment": "Comentariul profesorului",
+      "student_comment": "Comentariul studentului",
+      "homework": "Teme pentru acasă",
+      "last_modified": "Ultima modificare",
       "links": {
-        "confirmation": "Вы уверены, что хотите удалить следующую ссылку?",
-        "singular": "Ссылка",
-        "plural": "Ссылки",
-        "edit": "Редактировать",
-        "discard": "Сбросить",
-        "close": "Закрыть",
-        "add": "Добавить",
-        "cancel": "Отмена",
-        "proceed": "Да, я уверен / уверена"
+        "confirmation": "Ești sigur că vrei să ștergeți următorul link?",
+        "singular": "Linkul",
+        "plural": "Linkuri",
+        "edit": "Edita",
+        "discard": "Resetează",
+        "close": "Închide",
+        "add": "Adăuga",
+        "cancel": "Anula",
+        "proceed": "Da, sunt sigur / sunt sigur"
       },
       "files": {
-        "singular": "Файл",
-        "plural": "Файлы",
-        "no_image": "Выбранный файл не является фотографией, поэтому мы не можем показать его. Попробуйте скачать его и открыть на вашем компьютере"
+        "singular": "Fișier",
+        "plural": "Fișiere",
+        "no_image": "Fișierul selectat nu este o imagine, deci nu o putem arăta.Încercați să îl descărcați și să îl deschideți pe computer"
       },
       "notes": {
-        "ma": "Уважительный пропуск",
-        "ua": "Неуважительный пропуск",
-        "da": "Пропуск по болезни",
-        "VG": "Очень хорошо",
-        "G": "Хорошо",
-        "S": "Удовлетворительно",
-        "N": "Неудовлетворительно",
-        "comment": "Комментарий",
-        "close": "Закрыть",
-        "open_lesson": "Открыть урок",
-        "discard": "Отменить",
-        "save": "Сохранить"
+        "ma": "Absență motivată",
+        "ua": "Absență nejustificată",
+        "da": "Absența din cauza bolii",
+        "VG": "Foarte bun",
+        "G": "Bun",
+        "S": "Satisfăcător",
+        "N": "Nesatisfăcător",
+        "comment": "Comentariu",
+        "close": "Închide",
+        "open_lesson": "Lecție deschisă",
+        "discard": "Anula",
+        "save": "Salva"
       }
     },
     "weekdays": {
-      "MO": "Понедельник",
-      "TU": "Вторник",
-      "WE": "Среда",
-      "TH": "Четверг",
-      "FR": "Пятница",
-      "SA": "Суббота"
+      "MO": "luni",
+      "TU": "marti",
+      "WE": "miercuri",
+      "TH": "joi",
+      "FR": "vineri",
+      "SA": "sâmbătă"
     }
   },
   "subjects": {
-    "singular": "Предмет",
-    "plural": "Предметы",
-    "picked": "Выбранные предметы",
-    "list": "Список предметов"
+    "singular": "Subiect",
+    "plural": "Subiecte",
+    "picked": "Subiecte alese",
+    "list": "Lista subiecților"
   },
   "manuals": {
-    "singular": "Учебник",
-    "plural": "Учебники",
-    "topics": "Темы",
-    "theories": "Теории",
-    "tasks": "Задания",
-    "prev_theory": "Предедущая теория",
-    "next_theory": "Следующая теория",
-    "prev_task": "Предедущее задание",
-    "next_task": "Следующее задание",
-    "complete": "Завершить"
+    "singular": "Manual",
+    "plural": "Manuale",
+    "topics": "Subiecte",
+    "tasks": "Sarcini",
+    "prev_task": "Sarcină anterioară",
+    "next_task": "Următoarea sarcină",
+    "complete": "Complet"
   },
   "subscriptions": {
-    "plural": "Подписки",
+    "plural": "Abonamente",
     "plans": {
-      "title": "Подписка AISchool+",
-      "duration": "Длительность",
-      "price": "Стоимость",
-      "discount": "Экономия",
-      "benefit": "Выгода",
-      "monthly": "1 месяц",
-      "quarter": "1 четверть",
-      "semester": "1 семестр",
-      "yearly": "1 год",
-      "forever": "навсегда",
-      "submit": "Оформить",
+      "title": "Aischool+ abonament",
+      "duration": "Durată",
+      "price": "Preţ",
+      "discount": "Reducere",
+      "benefit": "Beneficia",
+      "monthly": "1 lună",
+      "quarter": "1 sfert",
+      "semester": "1 semestru",
+      "yearly": "1 an",
+      "forever": "pentru totdeauna",
+      "submit": "Depune",
       "user_type": {
-        "solo": "Одиночная",
-        "group": "Групповая"
+        "solo": "Solo",
+        "group": "Grup"
       }
     },
     "free_pluses": {
-      "student": "Самый удобный электронный дневник;Онлайн домашние задания;Удобные учебники;Многочисленные мероприятия",
-      "teacher": "Самый удобный электронный журнал;Менеджемент и аналитика класса;Генерация уникальный тестов;Автоматическая проверка онлайн заданий",
-      "parent": "Мониторинг успеваемости ребенка;Связь с учителями;Аналитика прогресса обучения;Контроль посещаемости"
+      "student": "Cel mai convenabil jurnal electronic; teme online; manuale convenabile; numeroase evenimente",
+      "teacher": "Cel mai convenabil jurnal electronic; managementul clasei și analize; generarea de teste unice; verificarea automată a sarcinilor online",
+      "parent": "Monitorizarea progresului elevului; contactul cu profesorii; analiza progresului; controlul prezenței"
     },
     "pluses": {
-      "solo": "Доступ к предметам всех классов;Задания с искусственным интелектом;Вебинары со студентами;Олимпиады от AISchool;Отсутствие рекламы;Доступ к аудиозаданиям по языкам;Задания для подготовки к экзаменам;Задания гос. олимпиад прошлых лет;Доступ к внешкольным предметам;Помощь при поступлении в государственные вузы",
-      "group": "Набор оценок голосом;Скан журнала для переноса на онлайн платформу;Автоматический перенос оценок в онлайн журнал;Проверка работ с помощью ИИ;Генерация тестов с помощью ИИ;Генерация домашнего задания с помощью ИИ",
-      "about": "О Подписке",
-      "desc": "Мы предоставляем все нужные материалы для обучения абсолютно бесплатно, однако искусственный интелект (к сожалению) не бесплатный.\nДля того, чтобы мы могли поддерживать наши сервера мы вводим платную подписку.\nКроме внедрения ИИ, как ученики, так и учителя получат доступ к множеству удобных функций и дополнительных материалов, для помощи в обучении.\nПодписку классом может оформить классный руководитель в личном профиле. Для оформления подписки необходимо участие минимум 75% выбранного класса",
-      "advantages": "Преимущества AISchool+",
+      "solo": "Access to subjects of all classes;Tasks with artificial intelligence;Webinars with students;Olympiads from AISchool;No ads;Access to audio tasks by languages;Tasks for preparing for exams;Tasks from previous years' state olympiads;Access to extracurricular subjects;Help with entering state universities",
+      "group": "Scoring vocal; scanare a jurnalului pentru transfer pe platforma online; transfer automat de mărci în jurnalul online; verificarea sarcinilor cu AI; generarea de teste cu AI; generarea de teme cu AI",
+      "about": "Despre abonament",
+      "desc": "Oferim toate materialele necesare pentru învățarea absolut gratuită, cu toate acestea, inteligența artificială (din păcate) nu este gratuită.\nPentru a putea susține serverele noastre, introducem un abonament plătit.\nPe lângă implementarea AI, atât studenții, cât și profesorii vor avea acces la un număr mare de funcții convenabile și materiale suplimentare pentru a ajuta la învățare.\nAbonamentul clasei poate fi emis de profesorul de clasă în profilul personal.Pentru a emite un abonament, este necesar un minim de 75% din clasa selectată",
+      "advantages": "Avantaje AISchool+",
       "group_details": {
-        "title": "Подписка классом",
-        "desc": "Подписка классом включает в себя все плюсы одиночной подписки, но также предоставляет полезные функции для учителей.\nФункционал будет доступен только для классов, которые оформили подписку",
-        "discount": "Стоимость групповой подписки ниже на 50%!",
-        "price": "Стоимость",
-        "view_price": "Перейти к стоимости"
+        "title": "Abonament la clasă",
+        "desc": "Abonamentul clasei include toate plusurile unui abonament solo, dar oferă și funcții utile pentru profesori.\nFuncționalitatea va fi disponibilă numai pentru clasele care s-au abonat",
+        "discount": "Prețul abonamentului de grup este mai mic cu 50%!",
+        "price": "Preţ",
+        "view_price": "Merge la preț"
       }
     }
   },
   "profile": {
-    "title": "Профиль",
-    "students": "ученика",
-    "teachers": "учителя",
-    "parents": "родителя",
-    "is_verified": "Проверенный",
-    "name": "Ваше имя",
-    "surname": "Ваша фамилия",
-    "socials": "Соц. сети",
-    "pick_socials": "Добавьте свои соц. сети (Instagram, Facebook)",
-    "add": "Добавить"
+    "title": "Profil",
+    "students": "elev",
+    "teachers": "profesor",
+    "parents": "părinte",
+    "is_verified": "Verificat",
+    "name": "Numele dumneavoastră",
+    "surname": "Prenumele dumneavoastră",
+    "socials": "Rețele sociale",
+    "pick_socials": "Adăugați rețelele de socializare (Instagram, Facebook)",
+    "add": "Adăugați"
   },
   "students": {
-    "singular": "Ученик",
-    "list": "Список учеников",
-    "balance": "Баланс",
-    "rank": "Место в топе",
-    "subscription": "Подписка",
-    "is_manager": "Заполняет дз"
+    "singular": "Elev",
+    "list": "Lista elevilor",
+    "balance": "Balanță",
+    "rank": "Rank",
+    "subscription": "Abonament",
+    "is_manager": "Este manager"
   },
   "teachers": {
-    "experience": "Стаж работы: {years, plural, one {# год} few {# года} many {# лет} other {# лет}}",
-    "edit_experience": "Укажите свой суммарный стаж работы"
+    "experience": "Experiență de lucru: {years, plural, one {# an} few {# ani} many {# ani} other {# ani}}",
+    "edit_experience": "Specificați-vă experiența totală de muncă"
   },
   "positions": {
-    "singular": "Должность",
-    "staff": "Учителя",
-    "work_places": "Места работы",
-    "HM": "Директор",
-    "HT": "Завуч",
-    "T": "Учитель",
-    "ET": "Учитель младшего звена",
-    "is_manager": "Менеджер",
-    "delete": "Удалить",
-    "pick_subjects": "Выберите предметы которые вы преподаете",
-    "helper_subjects": "Выберите предметы на языке преподавания; если работаете на двух языках — укажите оба"
+    "singular": "Poziţie",
+    "staff": "Profesori",
+    "work_places": "Locuri de lucru",
+    "HM": "Director",
+    "HT": "Vice-rector",
+    "T": "Profesor",
+    "ET": "Profesor de clase inferioare",
+    "is_manager": "Manager",
+    "delete": "Șterge",
+    "pick_subjects": "Alegeți subiecte pe care le învățați",
+    "helper_subjects": "Alegeți subiecte pe limba predării;Dacă lucrați în două limbi, specificați ambele"
   },
   "diary": {
-    "singular": "Эл. Дневник",
-    "child": "Ребенок",
-    "pick_child": "Выберите ребенка",
-    "school": "Школа",
-    "pick_school": "Выберите школу",
-    "summertime": "Поздравляем с приходом лета, ждем вас в следующем году!"
+    "singular": "Jurnal electronic",
+    "child": "Copil",
+    "pick_child": "Alege un copil",
+    "school": "Şcoală",
+    "pick_school": "Alege o școală",
+    "summertime": "Felicitări pentru sosirea verii, vă așteptăm cu nerăbdare anul viitor!"
   },
   "journal": {
-    "singular": "Эл. Журнал",
-    "child": "Ребенок",
-    "pick_child": "Выберите ребенка",
-    "school": "Школа",
-    "pick_school": "Выберите школу",
-    "klass": "Класс",
-    "pick_klass": "Выберите класс",
-    "subject": "Предмет",
-    "pick_subject": "Выберите предмет",
+    "singular": "Jurnal electronic",
+    "child": "Copil",
+    "pick_child": "Alege un copil",
+    "school": "Şcoală",
+    "pick_school": "Alege o școală",
+    "klass": "Clasă",
+    "pick_klass": "Alege o clasă",
+    "subject": "Subiect",
+    "pick_subject": "Alege un subiect",
     "periods": {
-      "frst": "I Семестр",
-      "scnd": "II Семестр",
-      "annual": "За год"
+      "frst": "I semestru",
+      "scnd": "II semestrul",
+      "annual": "An"
     },
-    "performance": "Успеваемость",
+    "performance": "Performanţă",
     "absences": {
-      "plural": "Пропуски",
-      "ma": "Уважительные пропуски",
-      "ua": "Неуважительные пропуски",
-      "da": "Пропуски по болезни"
+      "plural": "Absențe",
+      "ma": "Absențe motivate",
+      "ua": "Absențe nejustificate",
+      "da": "Absențe din cauza bolii"
     },
-    "extra_notes": "Десяток до следующего балла"
+    "extra_notes": "Zece puncte până la clasa următoare"
   },
   "errors": {
     "401": {
-      "title": "Страница недоступна",
-      "desc": "Эта страница доступна только зарегестрированным пользователям. Войдите в аккаунт, чтобы получить доступ"
+      "title": "Pagina nu este disponibilă",
+      "desc": "Această pagină este disponibilă numai pentru utilizatorii înregistrați.Conectați-vă la contul dvs. pentru a obține acces"
     },
     "403": {
-      "title": "Страница недоступна",
-      "desc": "У вас недостаточно прав для доступа к этой странице. Возможно, ваш аккаунт не проверен"
+      "title": "Pagina nu este disponibilă",
+      "desc": "Nu aveți suficiente drepturi pentru a accesa această pagină.Poate că contul dvs. nu este verificat"
     },
     "404": {
-      "title": "Страница не найдена",
-      "desc": "К сожалению, запрашиваемая страница не существует. Возможно, она была перемещена или удалена."
+      "title": "Pagina nu a fost găsită",
+      "desc": "Din păcate, pagina solicitată nu există.Poate că a fost mutat sau șters."
     },
     "500": {
-      "title": "Страница не найдена",
-      "desc": "К сожалению, произошла ошибка. Попробуйте позже"
+      "title": "Pagina nu a fost găsită",
+      "desc": "Din păcate, a apărut o eroare.Vă rugăm să încercați din nou mai târziu"
     },
-    "home": "На главную",
-    "back": "Назад"
+    "home": "Acasă",
+    "back": "Înapoi"
   }
 }

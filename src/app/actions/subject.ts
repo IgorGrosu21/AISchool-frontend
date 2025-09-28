@@ -3,9 +3,9 @@
 import { errorHandler, sendTask } from "@/requests"
 import { IDetailedTopic, ITask } from "@/interfaces"
 
-export async function completeTask(topic: IDetailedTopic, theory: ITask) {
-  if (!topic.completedTasks.includes(theory.slug)) {
-    const res = await sendTask(topic, theory)
+export async function completeTask(topic: IDetailedTopic, task: ITask) {
+  if (!topic.completedTasks.includes(task.slug)) {
+    const res = await sendTask(topic, task)
     if (res) {
       const [dataRaw, status] = res
       const data = await errorHandler(dataRaw, status)

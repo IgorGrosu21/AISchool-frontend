@@ -6,7 +6,7 @@ export { Greetings, Sections } from "./home";
 export { Title } from "./editable";
 export { KlassesButton, KlassesRange, KlassLink, PickKlass } from "./klasses";
 export { Welcome, Pluses } from "./landing";
-export { TheoryButtons, Balance, Currency, ModuleHeader, ModuleList } from "./manuals";
+export { Balance, Currency, ModuleHeader, ModuleList } from "./manuals";
 export { Note, StudentNoteList, TeacherNoteList, NotePicker } from "./notes";
 export { SchoolPositions, SchoolPositionsEditor, TeacherPositions, TeacherPositionsEditor } from "./positions";
 export { ProfileContainer, Profile, SmallProfile, UserVerifier } from "./profile";

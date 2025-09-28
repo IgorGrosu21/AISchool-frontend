@@ -16,13 +16,7 @@ export default async function Page({ params }: { params: Promise<{manualSlug: st
       {label: `${manual.subject.verboseName} ${manual.grade}`, href: manualSlug},
       {label: detailedModule.name, href: moduleSlug}
     ]} last={topic.name}>
-    <ModuleHeader title={topic.name} progress={topic.progress} balance={topic.balance} />
-    <ModuleList
-      list={topic.theories}
-      baseLink={`${manualSlug}/${moduleSlug}/${topicSlug}/theories`}
-    >
-      {t('theories')}
-    </ModuleList>
+    <ModuleHeader title={`${topic.name} (${topic.startPage}-${topic.endPage})`} progress={topic.progress} balance={topic.balance} />
     <ModuleList
       list={topic.tasks}
       baseLink={`${manualSlug}/${moduleSlug}/${topicSlug}/tasks`}

@@ -15,7 +15,7 @@ type ModuleListProps<T> = {
   children: string
 })
 
-export async function ModuleList<T extends { slug: string, name: string}>({list, baseLink, renderCost, complex, children}: ModuleListProps<T>) {
+export async function ModuleList<T extends { slug: string, name: string, startPage?: number, endPage?: number}>({list, baseLink, renderCost, complex, children}: ModuleListProps<T>) {
   return <Stack>
     <Stack direction='row' sx={{
       p: 2,
@@ -43,7 +43,7 @@ export async function ModuleList<T extends { slug: string, name: string}>({list,
             color: 'primary.contrastText',
           }
         }}>
-          <Typography variant='h6'>{j + 1}. {item.name}</Typography>
+          <Typography variant='h6'>{j + 1}. {item.name} ({item.startPage}-{item.endPage})</Typography>
           {renderCost && renderCost(item)}
         </Stack>
       </Link>

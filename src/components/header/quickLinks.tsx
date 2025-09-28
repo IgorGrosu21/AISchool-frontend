@@ -39,7 +39,7 @@ export function QuickLinks({ userRoutes }: QuickLinksProps) {
     >
       <Typography variant='h6'>{tLanding(`for.${type}`)}</Typography>
     </Button>) : links.map((link, i) => <Link key={i} href={`/core/${link.link}`}>
-      <Button sx={{gap: 1}}>
+      <Button sx={{gap: 1}} suppressHydrationWarning>
         {<link.Icon color='primary' sx={{display: {xs: 'none', xl: 'block'}}} />}
         <Typography variant='h6'>{link.label}</Typography>
       </Button>
