@@ -122,13 +122,24 @@
       "contacts": "Contacte"
     },
     "landing": {
-      "hero": {
-        "title": "AI School",
-        "desc": "Platforma revoluționară pentru educația modernă cu inteligență artificială",
-        "features": {
-          "1": "Inteligenţă artificială",
-          "2": "Jurnal electronic",
-          "3": "Sarcini de către subiecți"
+      "welcome": {
+        "hero": {
+          "title": "AI School",
+          "desc": "Platforma revoluționară pentru educația modernă cu inteligență artificială",
+          "features": {
+            "1": "Inteligenţă artificială",
+            "2": "Jurnal electronic",
+            "3": "Sarcini de către subiecți"
+          }
+        },
+        "cta": {
+          "title": "Sunteți gata să începeți să învățați viitorul?",
+          "desc": "Alăturați-vă mii de elevi și profesori care folosesc deja școala AI pentru a obține cele mai bune rezultate",
+          "features": {
+            "1": "Învățare interactivă",
+            "2": "Rezultate instantanee",
+            "3": "Analiza progresului"
+          }
         },
         "buttons": {
           "1": "Începeți să învățați",
@@ -143,19 +154,6 @@
           "teacher_free": "Simplificați-vă munca cu instrumente moderne",
           "teacher_paid": "Lasă-l pe AI să facă toate lucrările de rutină pentru tine",
           "parent_free": "Stai în cunoștință despre progresul copilului tău"
-        }
-      },
-      "cta": {
-        "title": "Sunteți gata să începeți să învățați viitorul?",
-        "desc": "Alăturați-vă mii de elevi și profesori care folosesc deja școala AI pentru a obține cele mai bune rezultate",
-        "features": {
-          "1": "Învățare interactivă",
-          "2": "Rezultate instantanee",
-          "3": "Analiza progresului"
-        },
-        "buttons": {
-          "1": "Începeți să învățați",
-          "2": "Conectați-vă la sistem"
         }
       },
       "for": {
