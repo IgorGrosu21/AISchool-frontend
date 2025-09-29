@@ -10,12 +10,12 @@ export function usePluses(userType: 'student' | 'teacher' | 'parent', paid: bool
     let pluses: string = ''
     let indexes: number[] = [0, 1, 2, 3]
     if (userType === 'student') {
-      pluses = paid ? t('pluses.solo') : t('free_pluses.student')
+      pluses = paid ? t('pluses.solo.list') : t('free_pluses.student')
       if (paid) {
         indexes = [0, 1, 6, 9]
       }
     } else if (userType === 'teacher') {
-      pluses = paid ? t('pluses.group') : t('free_pluses.teacher')
+      pluses = paid ? t('pluses.group.list') : t('free_pluses.teacher')
       if (paid) {
         indexes = [1, 3, 4, 5]
       }
