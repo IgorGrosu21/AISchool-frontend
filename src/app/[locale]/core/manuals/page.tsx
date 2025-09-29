@@ -27,7 +27,7 @@ export default async function Page() {
         <Typography variant='h5' sx={{textAlign: 'center', color: 'primary.contrastText'}}>{grouped[0].grade} {tKlasses('singular')}</Typography>
       </Stack>}
       {grouped.map((group, i) => <Stack key={i} gap={4}>
-        <Grid2 container spacing={4} columns={{xs: 2, md: 5}}>
+        <Grid2 container spacing={4} columns={{xs: 1, md: 5}}>
           {grouped.length > 1 && <Grid2 size={1}>
             <Stack sx={{height: '100%', alignItems: 'center', justifyContent: 'center'}}>
               <Stack sx={{bgcolor: 'primary.main', borderRadius: '50%', width: {xs: 123, md: 164}, aspectRatio: 1, justifyContent: 'center'}}>

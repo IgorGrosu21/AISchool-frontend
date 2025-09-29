@@ -12,10 +12,9 @@ export {
   SchoolWithTimetableEditorContext, useSchoolWithTimetableEditorContext,
   EditorProvider
 } from "./editor";
-export { useJournalContext, JournalProvider } from "./journal";
+export { type Group, useJournalContext, JournalProvider } from "./journal";
 export {
   useAttachedFilesContext,
   useAttachedLinksContext,
   AttachedItemsProvider
 } from "./specificLesson";
-export { useSubscriptionsContext, SubscriptionsProvider } from "./subscriptions";

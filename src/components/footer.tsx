@@ -65,12 +65,12 @@ export async function Footer() {
         {t('contacts')}
       </Typography>
       <Stack gap={1}>
-        <Link href='tel:+37360578524' target='_blank'>
+        <Link href='tel:+37360578524'>
           <Typography color='textSecondary' sx={{textAlign: {xs: 'center', md: 'start'}}}>
             +373 60 578 524
           </Typography>
         </Link>
-        <Link href='mailto:aischool.md@gmail.com' target='_blank'>
+        <Link href='mailto:aischool.md@gmail.com'>
           <Typography color='textSecondary' sx={{textAlign: {xs: 'center', md: 'start'}}}>
             aischool.md@gmail.com
           </Typography>

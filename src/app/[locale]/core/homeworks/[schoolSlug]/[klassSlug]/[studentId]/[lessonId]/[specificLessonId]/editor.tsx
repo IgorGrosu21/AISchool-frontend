@@ -27,7 +27,7 @@ export function Editor({date}: ContainerProps) {
     <SpecificLessonHeader specificLesson={specificLesson} date={date} editable={homework.student.isManager}>
       <Grid2 container spacing={2} columns={{xs: 1, md: 2}}>
         <Grid2 size={1}>
-          <Panel gap={2}>
+          <Panel gap={2} sx={{height: '100%'}}>
             <Typography variant='h5'>{t('title')}</Typography>
             <Typography variant='h6'>{specificLesson.title}</Typography>
           </Panel>
@@ -36,7 +36,7 @@ export function Editor({date}: ContainerProps) {
           <AttachedLinks links={specificLesson.links} />
         </Grid2>
         <Grid2 size={1}>
-          <Panel gap={2}>
+          <Panel gap={2} sx={{height: '100%'}}>
             <Typography variant='h5'>{t('desc')}</Typography>
             <Typography variant='h6'>{specificLesson.desc}</Typography>
           </Panel>
@@ -48,7 +48,7 @@ export function Editor({date}: ContainerProps) {
     </SpecificLessonHeader>
     <AttachedItemsProvider value={{ setInstance: setHomework }}>
       <Stack gap={4}>
-        <Panel>
+        <Panel direction='row' gap={{xs: 2, md: 4}} sx={{alignItems: 'center'}}>
           {lesson.teacher && <SmallProfile user={lesson.teacher.user} disableLink extraSmall />}
           <Box sx={{flex: 1}} />
           <Note value={note?.value} big />
@@ -64,7 +64,7 @@ export function Editor({date}: ContainerProps) {
             <AttachedLinksEditor links={homework?.links} />
           </Grid2>
           <Grid2 size={1}>
-            <Panel sx={{justifyContent: 'center'}}>
+            <Panel gap={2} sx={{height: '100%'}}>
               <Typography variant='h5'>{t('teacher_comment')}:</Typography>
               <Typography variant='h6'>{note?.comment}</Typography>
             </Panel>

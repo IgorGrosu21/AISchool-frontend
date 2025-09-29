@@ -1,13 +1,13 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Card as MuiCard, CardContent as MuiCardContent } from '@mui/material'
+import { Card as MuiCard, CardContent as MuiCardContent, CardProps as MuiCardProps } from '@mui/material'
 
-interface CardProps extends React.PropsWithChildren {
+interface CardProps extends MuiCardProps {
   index: number
 }
 
-export function Card({index, children}: CardProps) {
+export function Card({index, children, ...props}: CardProps) {
   return <motion.div
     style={{height: '100%'}}
     initial={{ opacity: 0, y: 50 }}
@@ -30,6 +30,7 @@ export function Card({index, children}: CardProps) {
           boxShadow: '0 16px 48px rgba(0,0,0,0.15)',
         }
       }}
+      {...props}
     >
       <MuiCardContent sx={{ height: '100%', p: 4 }}>
         {children}

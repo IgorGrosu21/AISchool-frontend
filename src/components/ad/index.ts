@@ -1,0 +1,1 @@
+export { AdWrapper as Ad } from './wrapper';

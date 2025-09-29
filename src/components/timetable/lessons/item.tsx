@@ -18,12 +18,12 @@ export function Lesson({lessonTime, lesson, children, showSubject = true, disabl
       <Typography variant='h6'>{lessonTime.order + 1}.</Typography>
       <Stack gap={2} sx={{flex: 1}}>
         {showSubject && <Stack direction='row' sx={{justifyContent: 'space-between', alignItems: 'center'}}>
-          {disableLink ? <Typography variant='h6' color='primary'>
+          {disableLink ? <Typography variant='h6' color='primary' sx={{textAlign: 'left', flex: 1}}>
             {lesson?.subject.verboseName}
           </Typography> : <Link href={`/core/manuals/${lesson?.manualSlug}`}>
-            <Typography variant='h6' color='primary'>{lesson?.subject.verboseName}</Typography>
+            <Typography variant='h6' color='primary' sx={{textAlign: 'left', flex: 1}}>{lesson?.subject.verboseName}</Typography>
           </Link>}
-          <Typography>{lessonTime.starting} - {lessonTime.ending}</Typography>
+          <Typography sx={{flex: 1, textAlign: 'right'}}>{lessonTime.starting} - {lessonTime.ending}</Typography>
         </Stack>}
         {children}
       </Stack>

@@ -44,6 +44,7 @@ export function LanguagePicker() {
         py: 1,
       }}
       aria-label="language picker"
+      suppressHydrationWarning
     >
       <Typography sx={{display: {xs: 'none', lg: 'block'}}}>{currentLanguage?.name}</Typography>
       <Typography sx={{display: {xs: 'block', lg: 'none'}}}>{currentLanguage?.code}</Typography>

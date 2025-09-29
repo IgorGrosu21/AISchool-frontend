@@ -36,6 +36,7 @@ export function QuickLinks({ userRoutes }: QuickLinksProps) {
     {isLanding ? ['student', 'teacher', 'parent'].map(type => <Button
       key={type}
       onClick={() => scrollToSection(`${type}_pluses`)}
+      suppressHydrationWarning
     >
       <Typography variant='h6'>{tLanding(`for.${type}`)}</Typography>
     </Button>) : links.map((link, i) => <Link key={i} href={`/core/${link.link}`}>

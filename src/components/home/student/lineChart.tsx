@@ -30,7 +30,7 @@ export function LineChart({data}: LineChartProps) {
   const progressData = useNoteProgress(data)
   
   return <Line options={{responsive: true}} data={{
-    labels: progressData.map((point) => point.date),
+    labels: progressData.map((point) => point.date.slice(5)),
     datasets: [
       {
         data: progressData.map((point) => point.value),

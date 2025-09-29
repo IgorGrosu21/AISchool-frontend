@@ -8,6 +8,7 @@ import { NotesContainer } from "../container";
 import { useJournalContext } from "@/providers";
 import { useStudentNotes } from "@/hooks"
 import { Panel } from "@/ui";
+import { Note } from "../item";
 
 interface StudentNoteListProps {
   subjects: ISubjectName[]
@@ -28,7 +29,7 @@ export function StudentNoteList({subjects}: StudentNoteListProps) {
           <Grid2 size={{xs: 12, md: 10}}>
             <Stack direction='row' gap={2} sx={{height: '100%', alignItems: 'center', flexWrap: 'wrap'}}>
               {group.notes.map((note, i) => <Link key={i} href={getHref(note)}>
-                <Typography variant='h6'>{note.value}</Typography>
+                <Note value={note.value} styled={false} />
               </Link>)}
             </Stack>
           </Grid2>

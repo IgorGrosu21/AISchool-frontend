@@ -16,7 +16,7 @@ export function AttachedLinks({links}: AttachedLinksProps) {
     <Typography variant='h5'>{t('links.plural')}:</Typography>
     {links && <Stack>
       {links.split('|').map((link, i) => <Stack key={i} direction='row' gap={4} sx={{alignItems: 'center'}}>
-        <Link href={link} style={{flex: 1}}>
+        <Link href={link} style={{flex: 1}} target='_blank'>
           <Typography color='primary' variant='h6' sx={{wordBreak: 'break-word'}}>{link}</Typography>
         </Link>
       </Stack>)}

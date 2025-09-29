@@ -64,7 +64,7 @@ export async function NavigationContainer({segments, last, children}: Navigation
         </Typography>}
       </Breadcrumbs>
     </Panel>
-    <Stack gap={{ xs: 4, md: 8 }} sx={{height: '100%', width: '100%', minHeight: '90vh'}}>
+    <Stack gap={{ xs: 4, md: 8 }} sx={{height: '100%', width: '100%', minHeight: '70vh'}}>
       {children}
     </Stack>
   </Stack>

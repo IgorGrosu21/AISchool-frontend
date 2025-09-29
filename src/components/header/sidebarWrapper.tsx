@@ -3,8 +3,8 @@
 import { getTranslations } from "next-intl/server";
 import {
   HomeOutlined, AccountCircleOutlined, Group, School, 
-  AutoStoriesOutlined, /*QuizOutlined,*/ ClassOutlined, AutoStories,
-  //VideocamOutlined, EmojiEvents, SchoolOutlined,SellOutlined,
+  AutoStoriesOutlined, QuizOutlined, ClassOutlined, AutoStories,
+  VideocamOutlined, EmojiEvents, SchoolOutlined,SellOutlined,
 } from "@mui/icons-material"
 import { SideBar } from "./sidebar";
 import { IUserRoutes } from "@/interfaces";
@@ -18,16 +18,14 @@ export async function SideBarWrapper({ userRoutes }: { userRoutes: IUserRoutes }
     ],
     [
       {path: 'manuals', icon: <AutoStoriesOutlined color='secondary' />},
-      //{path: 'tests', icon: <QuizOutlined color='secondary' />},
+      {path: 'tests', icon: <QuizOutlined color='secondary' />},
     ],
-    /*
     [
       {path: 'webinars', icon: <VideocamOutlined color='tertiary' />},
       {path: 'olimpiads', icon: <EmojiEvents color='tertiary' />},
       {path: 'universities', icon: <SchoolOutlined color='tertiary' />},
       {path: 'subscriptions', icon: <SellOutlined color='tertiary' />},
     ],
-    */
   ]
 
   if (userRoutes.profileLink) {

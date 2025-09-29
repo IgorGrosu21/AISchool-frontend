@@ -21,7 +21,7 @@ export async function Socials({user}: SocialsProps) {
 
   return <Stack direction='row' gap={2}>
     <Typography variant='h6'>{t('socials')}:</Typography>
-    <Stack direction='row' gap={2}>
+    <Stack direction='row' gap={2} sx={{alignItems: 'center'}}>
       {socials.map((s, i) => s ? <Link key={i} target='_blank' href={s.link}>
         <Stack direction='row' gap={1} sx={{alignItems: 'center'}}>
         {
@@ -29,12 +29,12 @@ export async function Socials({user}: SocialsProps) {
         ?
         <>
           <Facebook color='primary' />
-          <Typography variant="h6">Facebook</Typography>
+          <Typography variant="h6" sx={{display: {xs: 'none', md: 'inline'}}}>Facebook</Typography>
         </>
         :
         <>
           <Instagram color='primary' />
-          <Typography variant="h6">Instagram</Typography>
+          <Typography variant="h6" sx={{display: {xs: 'none', md: 'inline'}}}>Instagram</Typography>
         </>
         }
         </Stack>

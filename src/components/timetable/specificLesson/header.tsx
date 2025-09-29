@@ -23,9 +23,9 @@ export function SpecificLessonHeader({specificLesson, date, editable = false, ch
     <Panel direction='row' sx={{justifyContent: 'space-between', alignItems: 'center'}}>
       <Link href={`/core/diary/${klass.school.slug}/${klass.slug}/calendar/${specificLesson.date}`}>
         <Typography variant='h5' color='primary'>{lesson.subject.verboseName}</Typography>
-        <Typography color='textDisabled' variant='h6' sx={{textAlign: 'end'}}>{date}, {lesson.lessonTime.starting}</Typography>
+        <Typography color='textDisabled' variant='h6' sx={{textAlign: {xs: 'start', md: 'end'}}}>{date}, {lesson.lessonTime.starting}</Typography>
       </Link>
-      <Stack direction='row' gap={2} sx={{justifyContent: 'flex-end', alignItems: 'flex-end'}}>
+      <Stack direction='row' gap={2} sx={{justifyContent: 'flex-end', alignItems: 'center', flexWrap: 'wrap'}}>
         <KlassLink baseHref={`/core/schools/${klass.school.slug}/klasses`} klass={klass} />
         <Image
           src={lesson.subject.image}

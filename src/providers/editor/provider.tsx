@@ -62,7 +62,7 @@ export function EditorProvider<T extends ICanEdit>({children, value: {Context, i
   return <Context.Provider value={{instance, setInstance}}>
     {returnLabel !== '' && <Title label={returnLabel} link={returnLink} type='back' />}
     {children}
-    <Panel direction='row' sx={{justifyContent: 'space-between'}}>
+    <Panel direction='row' sx={{flexGrow: 0, justifyContent: 'space-between'}}>
       <Link href={returnLink}>
         <Button variant='outlined'>{t('return')}</Button>
       </Link>

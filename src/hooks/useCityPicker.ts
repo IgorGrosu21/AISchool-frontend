@@ -34,7 +34,7 @@ export function useCityPicker() {
         case 404:
           router.push('/not-found')
           return
-        default:
+        case 500:
           router.push('/error')
           return
       }
@@ -54,7 +54,7 @@ export function useCityPicker() {
           case 404:
             router.push('/not-found')
             return
-          default:
+          case 500:
             router.push('/error')
             return
         }
@@ -75,7 +75,7 @@ export function useCityPicker() {
           case 404:
             router.push('/not-found')
             return
-          default:
+          case 500:
             router.push('/error')
             return
         }
@@ -99,7 +99,7 @@ export function useCityPicker() {
           case 404:
             router.push('/not-found')
             return
-          default:
+          case 500:
             router.push('/error')
             return
         }
@@ -125,7 +125,7 @@ export function useCityPicker() {
           case 404:
             router.push('/not-found')
             return
-          default:
+          case 500:
             router.push('/error')
             return
         }

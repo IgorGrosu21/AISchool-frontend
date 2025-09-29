@@ -6,6 +6,7 @@ import { INoteName } from "@/interfaces"
 import { useNotePicker } from "@/hooks"
 import { Note } from "./item"
 import { Panel } from "@/ui"
+import { abscences, notes, descriptors } from "./utils"
 
 interface NotePickerProps<T> {
   notesOpened: boolean
@@ -15,10 +16,6 @@ interface NotePickerProps<T> {
   hasNotes?: boolean
   link?: string
 }
-
-const abscences = ['ma', 'ua', 'da']
-const notes = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
-const descriptors = ['VG', 'G', 'S', 'N']
 
 type Note = Omit<INoteName, 'specificLesson' | 'student'>
 

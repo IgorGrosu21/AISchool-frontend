@@ -27,7 +27,7 @@ export function Sections({personHome}: SectionsProps) {
             {t('no_lessons_tomorrow')}
           </Typography>),
           <LatestNotes key='latestNotes' latestNotes={personHome.latestNotes} />,
-          <StudentAnalytics key='analytics' id={personHome.id} analytics={personHome.analytics} />,
+          <StudentAnalytics key='analytics' analytics={personHome.analytics} />,
         ]
       case 'teacher':
         return [
@@ -39,7 +39,7 @@ export function Sections({personHome}: SectionsProps) {
             {t('no_lessons_tomorrow')}
           </Typography>),
           <LatestHomeworks key='latestHomeworks' latestHomeworks={personHome.latestHomeworks} />,
-          <TeacherAnalytics key='analytics' id={personHome.id} analytics={personHome.analytics} />,
+          <TeacherAnalytics key='analytics' analytics={personHome.analytics} />,
         ]
       case 'parent':
         return []

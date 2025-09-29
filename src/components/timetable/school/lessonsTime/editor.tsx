@@ -16,7 +16,7 @@ export function LessonTimeEditor({school, setTimetable}: LessonTimeEditorProps) 
   const { duration, setDuration, updateTime } = useLessonTimeEditor(school, setTimetable)
 
   return <Stack gap={8}>
-    <Stack gap={2} direction='row' sx={{justifyContent: 'space-between', alignItems: 'center'}}>
+    <Stack gap={2} direction={{xs: 'column', md: 'row'}} sx={{justifyContent: 'space-between', alignItems: 'center'}}>
       <Stack>
         <Typography variant='h5'>{t('lesson_time.desc')}</Typography>
         <Typography>({t('lesson_time.helper')})</Typography>

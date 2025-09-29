@@ -27,7 +27,7 @@ export function Editor({date}: ContainerProps) {
       <SpecificLessonHeader specificLesson={specificLesson} date={date}>
         <Grid2 container spacing={2} columns={{xs: 1, md: 2}}>
           <Grid2 size={1}>
-            <Panel gap={2}>
+            <Panel gap={2} sx={{height: '100%'}}>
               <Typography variant='h5'>{t('title')}</Typography>
               <TextField value={specificLesson.title} onChange={e => setSpecificLesson(l => ({...l, title: e.target.value}))} />
             </Panel>
@@ -36,7 +36,7 @@ export function Editor({date}: ContainerProps) {
             <AttachedLinksEditor links={specificLesson.links} small={false} />
           </Grid2>
           <Grid2 size={1}>
-            <Panel gap={2}>
+            <Panel gap={2} sx={{height: '100%'}}>
               <Typography variant='h5'>{t('desc')}</Typography>
               <TextField multiline maxRows={10} value={specificLesson.desc} onChange={e => setSpecificLesson(l => ({...l, desc: e.target.value}))} />
             </Panel>
@@ -47,12 +47,19 @@ export function Editor({date}: ContainerProps) {
         </Grid2>
       </SpecificLessonHeader>
     </AttachedItemsProvider>
-    {!specificLesson.isStudent && <Stack gap={4} ref={studentsPickerRef}>
-      <Panel direction='row' gap={4} sx={{flexGrow: 0, justifyContent: 'space-between', alignItems: 'center', position: 'relative'}}>
-        <StudentsPicker anchorEl={studentsPickerRef.current} students={students} activeStudent={activeStudent} setActiveStudent={setActiveStudent} />
-        <Box sx={{flex: 1}} />
-        <Note value={activeNote?.value} onClick={() => openNotes(true)} big />
-      </Panel>
+    {!specificLesson.isStudent && <Stack gap={4}>
+      <Box ref={studentsPickerRef}>
+        <Panel direction='row' gap={{xs: 2, md: 4}} sx={{alignItems: 'center'}}>
+          <StudentsPicker
+            anchorEl={studentsPickerRef.current}
+            students={students}
+            activeStudent={activeStudent}
+            setActiveStudent={setActiveStudent}
+          />
+          <Box sx={{flex: 1, display: {xs: 'none', md: 'block'}}} />
+          <Note value={activeNote?.value} onClick={() => openNotes(true)} big />
+        </Panel>
+      </Box>
       <Grid2 container spacing={2} columns={{xs: 1, md: 2}}>
         <Grid2 size={1}>
           <Panel gap={2} sx={{height: '100%'}}>

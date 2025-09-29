@@ -1,0 +1,146 @@
+'use client'
+
+import { Button, Stack, Typography, Box, Fade, Grow, useTheme, alpha } from "@mui/material";
+import { Link } from '@/i18n';
+import { useTranslations } from "next-intl";
+import { useState, useEffect } from "react";
+import { Star, Diamond, RocketLaunch } from '@mui/icons-material';
+
+export function AnimatedAdContent() {
+  const t = useTranslations('components.ad');
+  const theme = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  return <Stack sx={{
+    justifyContent: 'center',
+    alignItems: 'center',
+    background: `linear-gradient(135deg, ${alpha(theme.palette.primary.main, 0.05)} 0%, ${alpha(theme.palette.secondary.main, 0.05)} 100%)`,
+    position: 'relative',
+    padding: 4,
+    '&::before': {
+      content: '""',
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      background: `
+        radial-gradient(circle at 20% 80%, ${alpha(theme.palette.primary.main, 0.1)} 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, ${alpha(theme.palette.secondary.main, 0.1)} 0%, transparent 50%)
+      `,
+    }
+  }}>
+    <Stack gap={4} sx={{alignItems: 'center', textAlign: 'center', width: '100%'}}>
+      <Fade in={mounted} timeout={800}>
+        <Typography variant='h1' sx={{
+          fontWeight: 'bold',
+          color: 'primary.main',
+          fontSize: { xs: '3rem', sm: '4rem', md: '5rem' },
+          background: `linear-gradient(45deg, ${theme.palette.primary.main}, ${theme.palette.secondary.main})`,
+          backgroundClip: 'text',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          lineHeight: 1.1,
+        }}>
+          {t('title')}
+        </Typography>
+      </Fade>
+      <Fade in={mounted} timeout={1200}>
+        <Stack direction="row" gap={2} sx={{alignItems: 'center'}}>
+          <Diamond sx={{ 
+            color: 'primary.main',             
+            fontSize: { xs: '2rem', sm: '2.5rem' },
+            animation: 'bounce 2s infinite',
+            '@keyframes bounce': {
+              '0%, 20%, 50%, 80%, 100%': { transform: 'translateY(0)' },
+              '40%': { transform: 'translateY(-10px)' },
+              '60%': { transform: 'translateY(-5px)' },
+            }
+          }} />
+          <Typography variant='h4' color='text.primary' sx={{fontWeight: 500, fontSize: { xs: '1.5rem', sm: '2rem' }}}>
+            {t('promo')}
+          </Typography>
+        </Stack>
+      </Fade>
+      <Fade in={mounted} timeout={1600}>
+        <Typography variant='h6' color='text.secondary' sx={{fontSize: { xs: '1rem', sm: '1.2rem' }, fontWeight: 400}}>
+          {t('info')}
+        </Typography>
+      </Fade>
+      <Fade in={mounted} timeout={2000}>
+        <Stack direction={{ xs: 'column', sm: 'row' }} gap={2} sx={{ mt: 2 }}>
+          <Box sx={{
+            flex: 1,
+            p: 3,
+            borderRadius: 3,
+            backgroundColor: alpha(theme.palette.primary.main, 0.1),
+            border: `1px solid ${alpha(theme.palette.primary.main, 0.2)}`,
+            minWidth: '200px',
+            transition: 'all 0.3s ease',
+            '&:hover': {
+              transform: 'translateY(-2px)',
+              boxShadow: 2,
+            }
+          }}>
+            <Star color='primary' sx={{ fontSize: '2rem', mb: 1 }} />
+            <Typography variant="h6" color="primary" sx={{ fontWeight: 600, mb: 1 }}>
+              {t('premium_access')}
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              {t('premium_access_desc')}
+            </Typography>
+          </Box>
+          <Box sx={{
+            flex: 1,
+            p: 3,
+            borderRadius: 3,
+            backgroundColor: alpha(theme.palette.secondary.main, 0.1),
+            border: `1px solid ${alpha(theme.palette.secondary.main, 0.2)}`,
+            minWidth: '200px',
+            transition: 'all 0.3s ease',
+            '&:hover': {
+              transform: 'translateY(-2px)',
+              boxShadow: 2,
+            }
+          }}>
+            <RocketLaunch color='secondary' sx={{ fontSize: '2rem', mb: 1 }} />
+            <Typography variant="h6" color="secondary" sx={{ fontWeight: 600, mb: 1 }}>
+              {t('enhanced_experience')}
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              {t('enhanced_experience_desc')}
+            </Typography>
+          </Box>
+        </Stack>
+      </Fade>
+      <Grow in={mounted} timeout={2400}>
+        <Link href="/core/subscriptions">
+          <Button
+            variant="contained"
+            size="large"
+            color="primary"
+            sx={{
+              fontSize: '1.2rem',
+              padding: '16px 40px',
+              borderRadius: 3,
+              textTransform: 'none',
+              fontWeight: 600,
+              transition: 'all 0.3s ease',
+              boxShadow: 3,
+              '&:hover': {
+                transform: 'translateY(-2px)',
+                boxShadow: 6,
+              },
+            }}
+          >
+            {t('redirect')}
+          </Button>
+        </Link>
+      </Grow>
+    </Stack>
+  </Stack>
+}

@@ -13,7 +13,7 @@ export function NightNodeToggler() {
     setMode(theme.palette.mode === 'dark' ? 'light' : 'dark');
   }, [theme.palette.mode, setMode])
 
-  return <IconButton onClick={toggleMode} color='primary'>
+  return <IconButton onClick={toggleMode} color='primary' suppressHydrationWarning>
     <DarkModeOutlined sx={{display: theme.palette.mode === 'dark' ? 'block' : 'none'}} />
     <LightModeOutlined sx={{display: theme.palette.mode === 'light' ? 'block' : 'none'}} />
   </IconButton>

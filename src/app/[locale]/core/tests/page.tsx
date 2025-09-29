@@ -1,9 +1,7 @@
-import { Ad, ComingSoon, NavigationContainer } from "@/components";
+import { ComingSoon, NavigationContainer } from "@/components";
 
 export default async function Page() {
   return <NavigationContainer segments={[]} last=''>
-    <Ad>
-      <ComingSoon />
-    </Ad>
+    <ComingSoon />
   </NavigationContainer>
 }

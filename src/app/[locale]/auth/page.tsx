@@ -57,7 +57,7 @@ export default function Page() {
       <Divider />
       <Stack gap={2}>
         <AuthButton type={type} variant='h6' />
-        <Button sx={{borderRadius: 90, p: 1, bgcolor: 'transparent', color: '#000'}} variant='contained'>
+        <Button sx={{borderRadius: 90, p: 1, bgcolor: 'transparent', color: 'text.primary'}} variant='contained'>
           <Typography>{t('alternatives')}</Typography>
         </Button>
       </Stack>

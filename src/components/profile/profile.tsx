@@ -30,8 +30,8 @@ export async function Profile({user, headerChildren, children}: ProfileProps) {
           border: 1,
           borderColor: 'primary.main',
           borderRadius: '50%',
-          width: { xs: 150, md: 200 },
-          height: { xs: 150, md: 200 },
+          width: 200,
+          height: 200,
           justifyContent: 'center',
           alignItems: 'center',
           alignSelf: 'center'
@@ -57,7 +57,7 @@ export async function Profile({user, headerChildren, children}: ProfileProps) {
         </Typography>
         <Stack direction='row' gap={1} sx={{
           alignItems: 'center',
-          justifyContent: { xs: 'center', md: 'flex-start' }
+          justifyContent: 'flex-start'
         }}>
           <Image 
             loading='lazy' 

@@ -1,7 +1,7 @@
 'use client'
 
 import { Stack, Grid2, Typography } from "@mui/material"
-import { Group } from "@/providers/journal/context"
+import { type Group } from "@/providers"
 import { useTranslations } from "next-intl"
 import { Panel } from "@/ui"
 

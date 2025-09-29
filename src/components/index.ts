@@ -1,3 +1,4 @@
+export { Ad } from "./ad";
 export { AttachedFiles, AttachedFilesEditor, AttachedLinks, AttachedLinksEditor } from "./attached";
 export { Calendar } from "./calendar";
 export { ErrorPage } from "./errors";
@@ -26,9 +27,10 @@ export {
   Lesson,
   SpecificLessonHeader, SpecificLessons
 } from "./timetable";
+export { SubscriptionHero, SubscriptionPlans, SubscriptionPluses, SubscriptionDescription } from "./subscriptions";
 
-export { Ad } from "./ad";
 export { AuthButton } from "./authButton";
+export { ComingSoon } from "./commingSoon";
 export { Footer } from "./footer";
 export { ImageUploader } from "./imageUploader";
 export { Loader } from "./loader";

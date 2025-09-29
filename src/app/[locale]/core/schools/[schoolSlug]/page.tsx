@@ -27,7 +27,7 @@ export default async function Page({ params }: { params: Promise<{schoolSlug: st
       priority
     />
     <Panel>
-      <Typography variant='h5' sx={{textAlign: 'center'}}>
+      <Typography variant='h6' sx={{textAlign: 'center'}}>
         {school.desc}
       </Typography>
     </Panel>
@@ -39,6 +39,6 @@ export default async function Page({ params }: { params: Promise<{schoolSlug: st
       <TimetableButton schoolSlug={schoolSlug} />
     </Stack>
     <SchoolPositions school={school} />
-    <Photos school={school} />
+    {school.files.length > 1 && <Photos school={school} />}
   </NavigationContainer>
 }

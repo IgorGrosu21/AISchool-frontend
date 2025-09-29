@@ -82,7 +82,23 @@
       "title": "Available with AISchool+ subscription",
       "promo": "Unlock the full potential together with the AISchool+ subscription and increase your productivity",
       "info": "The subscription can always be cancelled in your profile",
-      "redirect": "Go to subscriptions"
+      "redirect": "Go to subscriptions",
+      "premium_feature": "Premium Feature",
+      "premium_access": "Premium Access",
+      "premium_access_desc": "Unlock all features with AISchool+ subscription",
+      "enhanced_experience": "Enhanced Experience",
+      "enhanced_experience_desc": "Boost your productivity with advanced tools"
+    },
+    "coming_soon": {
+      "title": "Coming Soon",
+      "subtitle": "Something amazing is brewing",
+      "description": "We're working hard to bring you an incredible experience. Stay tuned for updates!",
+      "back_home": "Back to Home",
+      "under_development": "Under Development",
+      "stay_updated": "Stay Updated",
+      "stay_updated_desc": "We'll notify you when this feature is ready",
+      "exciting_features": "Exciting Features",
+      "exciting_features_desc": "Something amazing is being built for you"
     },
     "image_uploader": {
       "delete": "Delete",
@@ -106,13 +122,24 @@
       "contacts": "Contacts"
     },
     "landing": {
-      "hero": {
-        "title": "AI School",
-        "desc": "Revolutionary platform for modern education with artificial intelligence",
-        "features": {
-          "1": "Artificial intelligence",
-          "2": "Electronic journal",
-          "3": "Tasks by subjects"
+      "welcome": {
+        "hero": {
+          "title": "AI School",
+          "desc": "Revolutionary platform for modern education with artificial intelligence",
+          "features": {
+            "1": "Artificial intelligence",
+            "2": "Electronic journal",
+            "3": "Tasks by subjects"
+          }
+        },
+        "cta": {
+          "title": "Ready to start learning the future?",
+          "desc": "Join thousands of students and teachers who are already using AI School to achieve the best results",
+          "features": {
+            "1": "Interactive learning",
+            "2": "Instant results",
+            "3": "Progress analysis"
+          }
         },
         "buttons": {
           "1": "Start learning",
@@ -127,19 +154,6 @@
           "teacher_free": "Simplify your work with modern tools",
           "teacher_paid": "Let AI do all the routine work for you",
           "parent_free": "Stay in the know about your child's progress"
-        }
-      },
-      "cta": {
-        "title": "Ready to start learning the future?",
-        "desc": "Join thousands of students and teachers who are already using AI School to achieve the best results",
-        "features": {
-          "1": "Interactive learning",
-          "2": "Instant results",
-          "3": "Progress analysis"
-        },
-        "buttons": {
-          "1": "Start learning",
-          "2": "Login to the system"
         }
       },
       "for": {
@@ -317,9 +331,20 @@
         "no_image": "The selected file is not an image, so we cannot show it. Try downloading it and opening it on your computer"
       },
       "notes": {
+        "short_absences": {
+          "ma": "ma",
+          "ua": "ua",
+          "da": "da"
+        },
         "ma": "Motivated absence",
         "ua": "Unjustified absence",
         "da": "Absence due to illness",
+        "short_descriptors": {
+          "VG": "VG",
+          "G": "G",
+          "S": "S",
+          "N": "N"
+        },
         "VG": "Very good",
         "G": "Good",
         "S": "Satisfactory",
@@ -356,41 +381,52 @@
     "complete": "Complete"
   },
   "subscriptions": {
-    "plural": "Subscriptions",
-    "plans": {
+    "hero": {
       "title": "AISchool+ subscription",
-      "duration": "Duration",
-      "price": "Price",
-      "discount": "Discount",
-      "benefit": "Benefit",
-      "monthly": "1 month",
-      "quarter": "1 quarter",
-      "semester": "1 semester",
-      "yearly": "1 year",
-      "forever": "forever",
-      "submit": "Submit",
-      "user_type": {
-        "solo": "Solo",
-        "group": "Group"
+      "desc": "Unlock the full potential of AI-powered education",
+      "features": {
+        "1": "Boost you productivity",
+        "2": "Increase your learning efficiency",
+        "3": "Use AI at maximum"
       }
     },
     "free_pluses": {
-      "student": "The most convenient electronic diary;Online homework;Convenient manuals;Numerous events",
-      "teacher": "The most convenient electronic journal;Class management and analytics;Generation of unique tests;Automatic checking of online tasks",
-      "parent": "Monitoring of student's progress;Contact with teachers;Progress analysis;Attendance control"
+      "student": "The most convenient electronic diary;Online homework;Convenient textbooks;Numerous activities",
+      "teacher": "The most convenient electronic journal;Class management and analytics;Unique test generation;Automatic online assignment checking",
+      "parent": "Monitoring your child's academic performance;Communication with teachers;Learning progress analytics;Attendance monitoring"
     },
     "pluses": {
-      "solo": "Access to subjects of all classes;Tasks with artificial intelligence;Webinars with students;Olympiads from AISchool;No ads;Access to audio tasks by languages;Tasks for preparing for exams;Tasks from previous years' state olympiads;Access to extracurricular subjects;Help with entering state universities",
-      "group": "Voice scoring;Scan of the journal for transfer to the online platform;Automatic transfer of marks to the online journal;Checking tasks with AI;Generation of tests with AI;Generation of homework with AI",
-      "about": "About the subscription",
-      "desc": "We provide all the necessary materials for learning absolutely free, however, artificial intelligence (unfortunately) is not free.\nTo be able to support our servers, we introduce a paid subscription.\nIn addition to the implementation of AI, both students and teachers will have access to a large number of convenient functions and additional materials to help in learning.\nThe class subscription can be issued by the class teacher in the personal profile. To issue a subscription, a minimum of 75% of the selected class is required",
-      "advantages": "Advantages AISchool+",
-      "group_details": {
+      "title": "Advantages AISchool+",
+      "desc": "Discover all the powerful features that come with AISchool+ subscription",
+      "solo": {
+        "title": "Advantages for students",
+        "desc": "Advanced artificial intelligence to enhance your educational experience",
+        "list": "Access to subjects of all classes;Tasks with artificial intelligence;Webinars with students;Olympiads from AISchool;No ads;Access to audio tasks by languages;Tasks for preparing for exams;Tasks from previous years' state olympiads;Access to extracurricular subjects;Help with entering state universities"
+      },
+      "group": {
+        "title": "Class subscription advantages",
+        "desc": "Special tools for teachers and class management",
+        "list": "Voice scoring;Scan of the journal for transfer to the online platform;Automatic transfer of marks to the online journal;Checking tasks with AI;Generation of tests with AI;Generation of homework with AI"
+        }
+      },
+    "plans": {
+      "title": "Subscription plans",
+      "desc": "All group plans come with a 50% discount!",
+      "monthly": "1 month",
+      "quarter": "3 months",
+      "yearly": "1 year",
+      "forever": "forever"
+    },
+    "description": {
+      "title": "About the subscription",
+      "about": {
+        "title": "Importance of the subscription",
+        "desc": "We provide all the necessary learning materials absolutely free, but artificial intelligence (AI) is (unfortunately) not free. To support our servers, we are introducing a paid subscription. In addition to the AI ​​implementation, both students and teachers will have access to a variety of convenient features and additional materials to support their learning. A class subscription can be created by the homeroom teacher in their personal profile. Subscriptions require at least 75% participation in the selected class."
+      },
+      "group": {
         "title": "Class subscription",
-        "desc": "The class subscription includes all the pluses of a solo subscription, but also provides useful functions for teachers.\nThe functionality will only be available for classes that have subscribed",
-        "discount": "The price of the group subscription is lower by 50%!",
-        "price": "Price",
-        "view_price": "Go to the price"
+        "desc": "A class subscription includes all the benefits of a single subscription, but also provides helpful features for teachers. This functionality will only be available to classes that subscribe.",
+        "discount": "The price of the group subscription is lower by 50%!"
       }
     }
   },

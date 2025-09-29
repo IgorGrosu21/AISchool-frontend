@@ -57,7 +57,7 @@ export function SideBar({ user, routes }: SideBarProps) {
         minWidth: {xs: '100vw', md: '25vw', lg: '17.5vw'},
         maxWidth: {xs: '100vw', md: '33vw', lg: '20vw'},
         width: {xs: '100vw', md: 'auto'},
-        bgcolor: 'background.default',
+        bgcolor: 'background.paper',
         transition: '0.5s'
       }}>
         <Stack direction='row' sx={{p: 2, justifyContent: 'center', bgcolor: 'primary.dark', position: 'relative'}}>
@@ -71,18 +71,21 @@ export function SideBar({ user, routes }: SideBarProps) {
               transform: 'translateY(-50%)',
               color: 'primary.contrastText'
             }}
+            suppressHydrationWarning
           >
             <Close />
           </IconButton>
-          <ThemeImage
-            srcDark='/images/logo-transparent-dark.png'
-            srcLight='/images/logo-transparent-light.png'
-            alt='logo'
-            width={100}
-            height={94}
-          />
+          <Link href='/'>
+            <ThemeImage
+              srcDark='/images/logo-transparent-dark.png'
+              srcLight='/images/logo-transparent-light.png'
+              alt='logo'
+              width={100}
+              height={94}
+            />
+          </Link>
         </Stack>
-        <Stack sx={{height: '100%', width: '100%', justifyContent: 'center'}}>
+        <Stack gap={2} sx={{height: '100%', width: '100%', justifyContent: 'center'}}>
           <Stack gap={2} direction='row' sx={{p: 2, bgcolor: 'primary.main', alignItems: 'center'}}>
             <Link href={user.profileLink ?? '/core'} style={{display: 'flex', alignItems: 'center', pointerEvents: user.profileLink ? 'unset' : 'none'}}>
               <ThemeImage
@@ -99,7 +102,7 @@ export function SideBar({ user, routes }: SideBarProps) {
               <Typography variant='h6' color='primary.contrastText'>{user.surname}</Typography>
             </Stack>
           </Stack>
-          {user.isAccountVerified ? <Stack gap={2} sx={{p: 4}}>
+          {user.isAccountVerified ? <Stack gap={2} sx={{px: 4}}>
             {routes.map((group, i) => <Stack key={i}>
               {group.map((route, j) => (
                 <Link key={j} href={'/core/' + route.path}>
@@ -121,7 +124,7 @@ export function SideBar({ user, routes }: SideBarProps) {
             <Typography sx={{textAlign: 'center', textWrap: 'wrap', whiteSpace: 'pre-wrap'}}>({t('unverified.helper')})</Typography>
             <AuthButton type='verify' variant='h6' />
           </Stack>}
-          <Stack component='form' action={logoutThis} sx={{p: 4, flex: 1, justifyContent: 'flex-end'}}>
+          <Stack component='form' action={logoutThis} sx={{px: 4, pb: 4, flex: 1, justifyContent: 'flex-end'}}>
             <AuthButton type='logout' variant='h6' />
           </Stack>
         </Stack>

@@ -70,8 +70,8 @@
       "school": "Școala mea",
       "manuals": "Manuale",
       "tests": "Teste",
-      "diary": "Jurnal",
-      "journal": "Jurnal",
+      "diary": "Agendă",
+      "journal": "Registru",
       "events": "Evenimente",
       "webinars": "Webinarii",
       "olimpiads": "Olimpiade",
@@ -82,7 +82,23 @@
       "title": "Disponibil cu Aischool+ Abonament",
       "promo": "Deblocați potențialul întreg împreună cu abonamentul AISchool+ și creșteți-vă productivitatea",
       "info": "Abonamentul poate fi întotdeauna anulat în profilul dvs.",
-      "redirect": "Accesați abonamente"
+      "redirect": "Accesați abonamente",
+      "premium_feature": "Funcționalitate Premium",
+      "premium_access": "Acces Premium",
+      "premium_access_desc": "Deblocați toate funcționalitățile cu abonamentul AISchool+",
+      "enhanced_experience": "Experiență Îmbunătățită",
+      "enhanced_experience_desc": "Creșteți-vă productivitatea cu instrumente avansate"
+    },
+    "coming_soon": {
+      "title": "În Curând",
+      "subtitle": "Ceva uimitor se pregătește",
+      "description": "Lucrăm din greu pentru a vă aduce o experiență incredibilă. Rămâneți la curent cu actualizările!",
+      "back_home": "Înapoi la Acasă",
+      "under_development": "În Dezvoltare",
+      "stay_updated": "Rămâneți la Curent",
+      "stay_updated_desc": "Vă vom anunța când această funcționalitate este gata",
+      "exciting_features": "Funcționalități Uimitoare",
+      "exciting_features_desc": "Ceva uimitor se construiește pentru dumneavoastră"
     },
     "image_uploader": {
       "delete": "Șterge",
@@ -317,11 +333,22 @@
         "no_image": "Fișierul selectat nu este o imagine, deci nu o putem arăta.Încercați să îl descărcați și să îl deschideți pe computer"
       },
       "notes": {
+        "short_absences": {
+          "ma": "am",
+          "ua": "an",
+          "da": "ab"
+        },
         "ma": "Absență motivată",
         "ua": "Absență nejustificată",
         "da": "Absența din cauza bolii",
-        "VG": "Foarte bun",
-        "G": "Bun",
+        "short_descriptors": {
+          "VG": "FB",
+          "G": "B",
+          "S": "S",
+          "N": "N"
+        },
+        "VG": "Foarte bine",
+        "G": "Bine",
         "S": "Satisfăcător",
         "N": "Nesatisfăcător",
         "comment": "Comentariu",
@@ -356,41 +383,52 @@
     "complete": "Complet"
   },
   "subscriptions": {
-    "plural": "Abonamente",
-    "plans": {
-      "title": "Aischool+ abonament",
-      "duration": "Durată",
-      "price": "Preţ",
-      "discount": "Reducere",
-      "benefit": "Beneficia",
-      "monthly": "1 lună",
-      "quarter": "1 sfert",
-      "semester": "1 semestru",
-      "yearly": "1 an",
-      "forever": "pentru totdeauna",
-      "submit": "Depune",
-      "user_type": {
-        "solo": "Solo",
-        "group": "Grup"
+    "hero": {
+      "title": "AISchool+ abonament",
+      "desc": "Deblocați potențialul complet al educației bazate pe AI",
+      "features": {
+        "1": "Îmbunătățește productivitatea",
+        "2": "Crește eficiența învățării",
+        "3": "Folosește AI la maximum"
       }
     },
     "free_pluses": {
-      "student": "Cel mai convenabil jurnal electronic; teme online; manuale convenabile; numeroase evenimente",
-      "teacher": "Cel mai convenabil jurnal electronic; managementul clasei și analize; generarea de teste unice; verificarea automată a sarcinilor online",
-      "parent": "Monitorizarea progresului elevului; contactul cu profesorii; analiza progresului; controlul prezenței"
+      "student": "Cel mai convenabil jurnal electronic;Teme online;Manuale convenabile;Numeroase activități",
+      "teacher": "Cel mai convenabil jurnal electronic;Gestionarea și analiza cursurilor;Generarea unică de teste;Verificarea automată a temelor online",
+      "parent": "Monitorizarea performanței academice a copilului dumneavoastră;Comunicarea cu profesorii;Analiza progresului învățării;Monitorizarea prezenței"
     },
     "pluses": {
-      "solo": "Access to subjects of all classes;Tasks with artificial intelligence;Webinars with students;Olympiads from AISchool;No ads;Access to audio tasks by languages;Tasks for preparing for exams;Tasks from previous years' state olympiads;Access to extracurricular subjects;Help with entering state universities",
-      "group": "Scoring vocal; scanare a jurnalului pentru transfer pe platforma online; transfer automat de mărci în jurnalul online; verificarea sarcinilor cu AI; generarea de teste cu AI; generarea de teme cu AI",
-      "about": "Despre abonament",
-      "desc": "Oferim toate materialele necesare pentru învățarea absolut gratuită, cu toate acestea, inteligența artificială (din păcate) nu este gratuită.\nPentru a putea susține serverele noastre, introducem un abonament plătit.\nPe lângă implementarea AI, atât studenții, cât și profesorii vor avea acces la un număr mare de funcții convenabile și materiale suplimentare pentru a ajuta la învățare.\nAbonamentul clasei poate fi emis de profesorul de clasă în profilul personal.Pentru a emite un abonament, este necesar un minim de 75% din clasa selectată",
-      "advantages": "Avantaje AISchool+",
-      "group_details": {
+      "title": "Avantaje AISchool+",
+      "desc": "Descoperă toate funcțiile puternice care vin cu abonamentul AISchool+",
+      "solo": {
+        "title": "Avantaje pentru elevi",
+        "desc": "Inteligență artificială avansată pentru a îmbunătăți experiența educațională",
+        "list": "Acces la subiecte de toate clasele;sarcini cu inteligență artificială;Webinari cu studenți;Olimpiade de la AISchool;fără reclame;Acces la sarcini audio prin limbi;sarcini pentru pregătirea pentru examene;sarcini de la olimpiadele statului din anii trecuți;acces la subiecte extracurriculare;ajutor cu intrarea în universități statale"
+      },
+      "group": {
+        "title": "Avantaje de abonament de clasă",
+        "desc": "Instrumente speciale pentru profesori și managementul claselor",
+        "list": "Scoring vocal;scanare a jurnalului pentru transfer pe platforma online;transfer automat de mărci în jurnalul online;verificarea sarcinilor cu AI;generarea de teste cu AI;generarea de teme cu AI"
+      }
+    },
+    "plans": {
+      "title": "Planuri de abonament",
+      "desc": "Toate planurile de grup vin cu o reducere de 50%!",
+      "monthly": "1 lună",
+      "quarter": "3 luni",
+      "yearly": "1 an",
+      "forever": "pentru totdeauna"
+    },
+    "description": {
+      "title": "Despre abonament",
+      "about": {
+        "title": "Importanța abonamentului",
+        "desc": "Oferim toate materialele didactice necesare absolut gratuit, dar inteligența artificială (IA) nu este (din păcate) gratuită. Pentru a oferi suport serverelor noastre, introducem un abonament cu plată. Pe lângă implementarea inteligenței artificiale, atât elevii, cât și profesorii vor avea acces la o varietate de funcții convenabile și materiale suplimentare pentru a-și sprijini învățarea. Un abonament la curs poate fi creat de către profesorul titular în profilul său personal. Abonamentele necesită o participare de cel puțin 75% la cursul selectat."
+      },
+      "group": {
         "title": "Abonament la clasă",
-        "desc": "Abonamentul clasei include toate plusurile unui abonament solo, dar oferă și funcții utile pentru profesori.\nFuncționalitatea va fi disponibilă numai pentru clasele care s-au abonat",
-        "discount": "Prețul abonamentului de grup este mai mic cu 50%!",
-        "price": "Preţ",
-        "view_price": "Merge la preț"
+        "desc": "Un abonament la o clasă include toate beneficiile unui singur abonament, dar oferă și funcții utile pentru profesori. Această funcționalitate va fi disponibilă numai pentru clasele care se abonează.",
+        "discount": "Prețul abonamentului de grup este mai mic cu 50%!"
       }
     }
   },
@@ -429,10 +467,10 @@
     "is_manager": "Manager",
     "delete": "Șterge",
     "pick_subjects": "Alegeți subiecte pe care le învățați",
-    "helper_subjects": "Alegeți subiecte pe limba predării;Dacă lucrați în două limbi, specificați ambele"
+    "helper_subjects": "Alegeți subiecte pe limba predării; Dacă lucrați în două limbi, specificați ambele"
   },
   "diary": {
-    "singular": "Jurnal electronic",
+    "singular": "Agendă electronică",
     "child": "Copil",
     "pick_child": "Alege un copil",
     "school": "Şcoală",
@@ -440,7 +478,7 @@
     "summertime": "Felicitări pentru sosirea verii, vă așteptăm cu nerăbdare anul viitor!"
   },
   "journal": {
-    "singular": "Jurnal electronic",
+    "singular": "Registru electronic",
     "child": "Copil",
     "pick_child": "Alege un copil",
     "school": "Şcoală",

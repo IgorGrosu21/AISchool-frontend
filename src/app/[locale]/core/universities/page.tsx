@@ -1,10 +1,9 @@
-import { Ad, NavigationContainer } from "@/components";
-import { Stack } from "@mui/material";
+import { Ad, ComingSoon, NavigationContainer } from "@/components";
 
 export default async function Page() {
   return <NavigationContainer segments={[]} last=''>
     <Ad>
-      <Stack></Stack>
+      <ComingSoon />
     </Ad>
   </NavigationContainer>
 }
