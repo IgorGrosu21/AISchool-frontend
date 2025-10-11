@@ -2,9 +2,9 @@
 
 import { ReactNode } from "react";
 import { cookies } from "next/headers";
-import { AnimatedAdContent } from "./content";
+import { Content } from "./content";
 
-export async function AdWrapper({children}: {children: ReactNode | ReactNode[]}) {
+export async function Ad({children}: {children: ReactNode | ReactNode[]}) {
   const cookieStore = await cookies()
   const hasSubcription = cookieStore.get('subscription')?.value
 
@@ -12,5 +12,5 @@ export async function AdWrapper({children}: {children: ReactNode | ReactNode[]})
     return children
   }
 
-  return <AnimatedAdContent />
+  return <Content translations="ad" />
 }

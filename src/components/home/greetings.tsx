@@ -37,7 +37,7 @@ export function Greetings({profileType, user}: GreetingsProps) {
     <StatsPanelsContainer>
       {sections.map((feature, index) => <StatsPanel
         key={index}
-        onClick={() => scrollToSection(index)}
+        onClick={() => scrollToSection(index + 1)}
         sx={{cursor: 'pointer'}}
         text={t(`sections.${profileType}.${index + 1}.title`)}
         Icon={feature.icon}

@@ -1,7 +1,7 @@
 import { Stack } from "@mui/material";
 import { redirect } from "next/navigation"
-import Image from "next/image";
 import { isLoggedIn } from "@/app/actions/token";
+import { ThemeImage } from "@/components/themeImage";
 
 export default async function AuthLayout({ children }: { children: React.ReactNode }) {
   const loggedIn = await isLoggedIn()
@@ -20,12 +20,12 @@ export default async function AuthLayout({ children }: { children: React.ReactNo
       justifyContent: 'center'
     }}
   >
-    <Image 
-      src='/images/logo-blue.png' 
+    <ThemeImage
+      srcDark='/images/logo-blue-dark.png'
+      srcLight='/images/logo-blue-light.png'
       width={100} 
       height={94} 
-      alt='light-logo' 
-      priority 
+      alt='logo' 
       style={{ 
         marginBottom: '1rem',
         maxWidth: '100%',

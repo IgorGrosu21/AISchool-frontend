@@ -1,9 +1,8 @@
 'use client'
 
 import { IKlassNameWithGroups } from "@/interfaces"
-import { Box, Divider, Stack } from "@mui/material"
+import { Box, Divider, Stack, Typography } from "@mui/material"
 import { useMemo } from "react"
-import Typography from '@mui/material/Typography';
 import { Link } from '@/i18n';
 import { GroupsContainer } from "./container";
 

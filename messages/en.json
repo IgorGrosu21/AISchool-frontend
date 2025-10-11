@@ -80,25 +80,31 @@
     },
     "ad": {
       "title": "Available with AISchool+ subscription",
-      "promo": "Unlock the full potential together with the AISchool+ subscription and increase your productivity",
-      "info": "The subscription can always be cancelled in your profile",
-      "redirect": "Go to subscriptions",
-      "premium_feature": "Premium Feature",
-      "premium_access": "Premium Access",
-      "premium_access_desc": "Unlock all features with AISchool+ subscription",
-      "enhanced_experience": "Enhanced Experience",
-      "enhanced_experience_desc": "Boost your productivity with advanced tools"
+      "subtitle": "Unlock the full potential together with the AISchool+ subscription and increase your productivity",
+      "info": {
+        "title": "The subscription can always be cancelled in your profile",
+        "features": {
+          "1": "Premium Access",
+          "1_desc": "Unlock all features with AISchool+ subscription",
+          "2": "Enhanced Experience",
+          "2_desc": "Boost your productivity with advanced tools"
+        }
+      },
+      "redirect": "Go to subscriptions"
     },
     "coming_soon": {
       "title": "Coming Soon",
       "subtitle": "Something amazing is brewing",
-      "description": "We're working hard to bring you an incredible experience. Stay tuned for updates!",
-      "back_home": "Back to Home",
-      "under_development": "Under Development",
-      "stay_updated": "Stay Updated",
-      "stay_updated_desc": "We'll notify you when this feature is ready",
-      "exciting_features": "Exciting Features",
-      "exciting_features_desc": "Something amazing is being built for you"
+      "info": {
+        "title": "We're working hard to bring you an incredible experience. Stay tuned for updates!",
+        "features": {
+          "1": "Stay Updated",
+          "1_desc": "We'll notify you when this feature is ready",
+          "2": "Exciting Features",
+          "2_desc": "Something amazing is being built for you"
+        }
+      },
+      "redirect": "Back to Home"
     },
     "image_uploader": {
       "delete": "Delete",
@@ -127,18 +133,36 @@
           "title": "AI School",
           "desc": "Revolutionary platform for modern education with artificial intelligence",
           "features": {
-            "1": "Artificial intelligence",
-            "2": "Electronic journal",
-            "3": "Tasks by subjects"
+            "1": {
+              "title": "Artificial intelligence",
+              "desc": "Our project's crown jewel is the country's first integration of artificial intelligence into education – create tests, check assignments, and create unique tasks using AI. The 21st century is here, time to harness the full power of technology!"
+            },
+            "2": {
+              "title": "Electronic journal",
+              "desc": "An electronic journal simplifies routine tasks, such as calculating grade point averages, counting absences, and analyzing academic performance. The electronic journal is available in three convenient formats: yearly, monthly, and weekly, allowing you to quickly find the lesson you need."
+            },
+            "3": {
+              "title": "Tasks by subjects",
+              "desc": "Online assignments based on state textbooks have been developed for each subject. Each student receives unique assignments, and the number of attempts is unlimited. Teachers can use these assignments to create tests and homework assignments, and can also directly transfer grades to the online gradebook with the click of a button."
+            }
           }
         },
         "cta": {
           "title": "Ready to start learning the future?",
           "desc": "Join thousands of students and teachers who are already using AI School to achieve the best results",
           "features": {
-            "1": "Interactive learning",
-            "2": "Instant results",
-            "3": "Progress analysis"
+            "1": {
+              "title": "Interactive learning",
+              "desc": "Monotonous notebook entries filled with dozens of pages of difficult-to-digest information are a thing of the past. Practice, practice, and more practice are what children need in the 21st century. Tens of thousands of unique assignments will help students master the material, reinforce it, and improve their academic performance, while teachers can create unique assignments and tests that can be easily graded by artificial intelligence."
+            },
+            "2": {
+              "title": "Instant results",
+              "desc": "Online learning allows students to instantly see their results, eliminating the need to wait days or even weeks to learn their grades. Teachers, in turn, can finally delegate some of their grading work to artificial intelligence, saving time for other important tasks. Furthermore, manually transferring grades from notebooks and test sheets to the electronic gradebook is no longer necessary—it's all done with the click of a button."
+            },
+            "3": {
+              "title": "Progress analysis",
+              "desc": "Data analytics is the foundation of progress in the 21st century. With our platform, students can see their progress in their average grades in each subject, and teachers can see how they compare across classes. Learn your strengths and weaknesses to improve your academic performance."
+            }
           }
         },
         "buttons": {

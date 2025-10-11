@@ -1,6 +1,6 @@
 'use client'
 
-import { Typography, Stack, Box, Grid2, useTheme, alpha } from "@mui/material";
+import { Typography, Stack, Box, Grid2, alpha } from "@mui/material";
 import { useTranslations } from "next-intl";
 import { Info, Group, CheckCircle } from '@mui/icons-material';
 import { Section, SectionHeader, Card } from "@/ui";
@@ -8,7 +8,6 @@ import { motion } from "framer-motion";
 
 export function SubscriptionDescription() {
   const t = useTranslations('subscriptions.description');
-  const theme = useTheme();
 
   const descriptionCards = [
     {
@@ -34,7 +33,7 @@ export function SubscriptionDescription() {
           <Card index={index}>
             <Stack gap={4} sx={{ height: '100%', p: 2 }}>
               <motion.div whileHover={{ scale: 1.1, rotate: 5 }} transition={{ type: "spring", stiffness: 300 }}>
-                <Box sx={{
+                <Box sx={theme => ({
                   width: 80,
                   height: 80,
                   borderRadius: '50%',
@@ -45,16 +44,16 @@ export function SubscriptionDescription() {
                   mx: 'auto',
                   mb: 3,
                   boxShadow: `0 8px 32px ${alpha(theme.palette[card.color].main, 0.25)}`
-                }}>
+                })}>
                   <card.icon sx={{ fontSize: 48, color: 'background.default' }} />
                 </Box>
               </motion.div>
               <Stack gap={4} sx={{ textAlign: 'center', flex: 1 }}>
-                <Typography variant="h4" color={card.color} sx={{ 
+                <Typography variant="h4" color={card.color} sx={theme => ({ 
                   fontWeight: 700,
                   fontSize: { xs: '1.5rem', md: '1.75rem' },
                   textShadow: `0 2px 4px ${alpha(theme.palette[card.color].main, 0.2)}`
-                }}>
+                })}>
                   {card.title}
                 </Typography>
                 <Typography variant="h6" color="text.primary" sx={{ 
@@ -71,13 +70,13 @@ export function SubscriptionDescription() {
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.3, duration: 0.5 }}
                 >
-                  <Box sx={{
+                  <Box sx={theme => ({
                     p: 3,
                     borderRadius: 2,
                     backgroundColor: alpha(theme.palette.secondary.main, 0.1),
                     border: `1px solid ${alpha(theme.palette.secondary.main, 0.2)}`,
                     mt: 'auto'
-                  }}>
+                  })}>
                     <Stack direction="row" alignItems="center" gap={2} sx={{ justifyContent: 'center' }}>
                       <CheckCircle color="secondary" sx={{ fontSize: '1.5rem' }} />
                       <Typography 

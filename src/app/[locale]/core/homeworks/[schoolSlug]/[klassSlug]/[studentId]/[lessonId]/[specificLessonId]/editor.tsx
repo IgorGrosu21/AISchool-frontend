@@ -49,7 +49,7 @@ export function Editor({date}: ContainerProps) {
     <AttachedItemsProvider value={{ setInstance: setHomework }}>
       <Stack gap={4}>
         <Panel direction='row' gap={{xs: 2, md: 4}} sx={{alignItems: 'center'}}>
-          {lesson.teacher && <SmallProfile user={lesson.teacher.user} disableLink extraSmall />}
+          <SmallProfile user={lesson.teacher?.user} disableLink extraSmall />
           <Box sx={{flex: 1}} />
           <Note value={note?.value} big />
         </Panel>

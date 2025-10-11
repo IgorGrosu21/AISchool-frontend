@@ -1,6 +1,6 @@
 'use client'
 
-import { Typography, Stack, Box, Grid2, useTheme, alpha } from "@mui/material";
+import { Typography, Stack, Box, Grid2, alpha } from "@mui/material";
 import { useTranslations } from "next-intl";
 import { 
   AutoAwesome, 
@@ -11,7 +11,6 @@ import { motion } from "framer-motion";
 
 export function SubscriptionPluses() {
   const t = useTranslations('subscriptions.pluses');
-  const theme = useTheme();
 
   const soloFeatures = t('solo.list').split(';');
   const groupFeatures = t('group.list').split(';');
@@ -41,7 +40,7 @@ export function SubscriptionPluses() {
           <Card index={index}>
             <Stack gap={4} sx={{ height: '100%', p: 2 }}>
               <motion.div whileHover={{ scale: 1.1, rotate: 5 }} transition={{ type: "spring", stiffness: 300 }}>
-                <Box sx={{
+                <Box sx={theme => ({
                   width: 80,
                   height: 80,
                   borderRadius: '50%',
@@ -52,16 +51,16 @@ export function SubscriptionPluses() {
                   mx: 'auto',
                   mb: 3,
                   boxShadow: `0 8px 32px ${alpha(theme.palette[card.color].main, 0.25)}`
-                }}>
+                })}>
                   <card.icon sx={{ fontSize: 48, color: 'background.default' }} />
                 </Box>
               </motion.div>
               <Stack gap={4} sx={{ textAlign: 'center', flex: 1 }}>
-                <Typography variant="h4" color={card.color} sx={{ 
+                <Typography variant="h4" color={card.color} sx={theme => ({ 
                   fontWeight: 700,
                   fontSize: { xs: '1.5rem', md: '1.75rem' },
                   textShadow: `0 2px 4px ${alpha(theme.palette[card.color].main, 0.2)}`
-                }}>
+                })}>
                   {card.title}
                 </Typography>
                 <Typography variant="h6" color="text.primary" sx={{ 
@@ -80,14 +79,14 @@ export function SubscriptionPluses() {
                     transition={{ delay: i * 0.1, duration: 0.5 }}
                   >
                     <Stack direction="row" alignItems="center" gap={2}>
-                      <Box sx={{
+                      <Box sx={theme => ({
                         width: 8,
                         height: 8,
                         borderRadius: '50%',
                         backgroundColor: `${card.color}.main`,
                         flexShrink: 0,
                         boxShadow: `0 2px 8px ${alpha(theme.palette[card.color].main, 0.3)}`,
-                      }}/>
+                      })}/>
                       <Typography variant="body1" color="text.primary" sx={{ 
                         fontWeight: 500,
                         fontSize: '1rem',

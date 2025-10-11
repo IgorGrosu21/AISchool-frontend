@@ -19,7 +19,7 @@ export function Month({month}: MonthProps) {
     layoutId={`month-${month}`}
     transition={{ layout: { type: 'spring', stiffness: 120, damping: 18 } }}
     style={{
-      width: isActive ? '100%' : '100%',
+      width: '100%',
       margin: isActive ? '0 auto' : undefined,
       zIndex: isActive ? 10 : 1
     }}

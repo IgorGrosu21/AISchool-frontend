@@ -32,33 +32,31 @@ export type IPersonHome = {
   profileType: 'teacher'
 } | IParentHome & {
   profileType: 'parent'
-} | {
-  profileType: 'staff'
 })
 
-type IStudentHome = {
+type IAnalytics<T> = Array<{
+  subjectName: ISubjectName
+  points: Array<T>
+}>
+
+type IDefaultHome<T> = {
   tomorrowTimetable: Array<Omit<ILessonTime, 'lessons'> & {lesson?: ILessonName, specificLesson?: ISpecificLessonName}>
-  latestNotes: INote[]
-  analytics: Array<{
-    subject: ISubjectName
-    points: Array<{
-      date: string
-      value: string
-    }>
+  latestData: T[]
+}
+
+type IStudentHome = IDefaultHome<INote> & {
+  analytics: IAnalytics<{
+    date: string
+    value: string
   }>
 }
 
-type ITeacherHome = {
-  tomorrowTimetable: Array<Omit<ILessonTime, 'lessons'> & {lesson?: ILessonName, specificLesson?: ISpecificLessonName}>
-  latestHomeworks: IDetailedHomework[]
+type ITeacherHome = IDefaultHome<IDetailedHomework> & {
   analytics: Array<{
     school: ISchoolName
-    subjects: Array<{
-      subjectName: ISubjectName
-      klasses: Array<{
-        slug: string
-        values: string[]
-      }>
+    subjects: IAnalytics<{
+      slug: string
+      values: string[]
     }>
   }>
 }

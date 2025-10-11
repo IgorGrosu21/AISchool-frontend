@@ -1,12 +1,12 @@
 'use client'
 
-import { School, TrendingUp, People, ArrowForward } from '@mui/icons-material'
+import { School, TrendingUp, SmartToy, LaptopChromebook, AutoAwesome, BarChart } from '@mui/icons-material'
 import { Section, StatsPanel, StatsPanelsContainer, SectionHeader, AnimationGroup1, AnimationGroup4 } from '@/ui'
 import { LandingButtons } from './buttons'
 import { useTranslations } from 'next-intl'
 
-const heroFeatures = [School, TrendingUp, People].map(Icon => ({ icon: Icon }))
-const ctaFeatures = [School, TrendingUp, ArrowForward].map(Icon => ({ icon: Icon }))
+const heroFeatures = [SmartToy, LaptopChromebook, School].map(Icon => ({ icon: Icon }))
+const ctaFeatures = [AutoAwesome, TrendingUp, BarChart].map(Icon => ({ icon: Icon }))
 
 export function Welcome({type}: {type: 'hero' | 'cta'}) {
   const t = useTranslations(`components.landing.welcome`);
@@ -24,7 +24,8 @@ export function Welcome({type}: {type: 'hero' | 'cta'}) {
     <StatsPanelsContainer>
       {(type === 'hero' ? heroFeatures : ctaFeatures).map((feature, index) => <StatsPanel
         key={index}
-        text={t(`${type}.features.${index + 1}`)}
+        text={t(`${type}.features.${index + 1}.title`)}
+        desc={t(`${type}.features.${index + 1}.desc`)}
         Icon={feature.icon}
       />)}
     </StatsPanelsContainer>

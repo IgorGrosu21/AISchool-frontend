@@ -1,4 +1,3 @@
-export { Ad } from "./ad";
 export { AttachedFiles, AttachedFilesEditor, AttachedLinks, AttachedLinksEditor } from "./attached";
 export { Calendar } from "./calendar";
 export { ErrorPage } from "./errors";
@@ -11,6 +10,7 @@ export { Balance, Currency, ModuleHeader, ModuleList } from "./manuals";
 export { Note, StudentNoteList, TeacherNoteList, NotePicker } from "./notes";
 export { SchoolPositions, SchoolPositionsEditor, TeacherPositions, TeacherPositionsEditor } from "./positions";
 export { ProfileContainer, Profile, SmallProfile, UserVerifier } from "./profile";
+export { Ad, ComingSoon } from "./restricted";
 export {
   Contacts, ContactsEditor,
   Photos, PhotosEditor,
@@ -24,13 +24,11 @@ export {
   TimetableButton,
   KlassGroups, KlassGroupsEditor, KlassLessons, KlassLessonsEditor,
   TimetableStepper, TimetableStepperEditor,
-  Lesson,
-  SpecificLessonHeader, SpecificLessons
+  SpecificLessonHeader, SpecificLesson, SpecificLessons
 } from "./timetable";
 export { SubscriptionHero, SubscriptionPlans, SubscriptionPluses, SubscriptionDescription } from "./subscriptions";
 
 export { AuthButton } from "./authButton";
-export { ComingSoon } from "./commingSoon";
 export { Footer } from "./footer";
 export { ImageUploader } from "./imageUploader";
 export { Loader } from "./loader";

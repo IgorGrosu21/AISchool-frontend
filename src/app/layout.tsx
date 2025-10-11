@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Roboto } from 'next/font/google';
 import InitColorSchemeScript from '@mui/material/InitColorSchemeScript';
-import "./globals.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import { ThemeProvider, CssBaseline } from "@mui/material";
+import "./globals.css";
 import theme from "../theme";
 
 const roboto = Roboto({

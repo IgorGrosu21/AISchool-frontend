@@ -1,20 +1,20 @@
 'use client'
 
 import { DarkModeOutlined, LightModeOutlined } from "@mui/icons-material"
-import { IconButton } from "@mui/material"
-import { useColorScheme, useTheme } from "@mui/material/styles";
+import { IconButton, useColorScheme } from "@mui/material"
+import { useIsDark } from "@/hooks"
 import { useCallback } from "react";
 
 export function NightNodeToggler() {
   const { setMode } = useColorScheme();
-  const theme = useTheme()
+  const isDark = useIsDark()
 
   const toggleMode = useCallback(() => {
-    setMode(theme.palette.mode === 'dark' ? 'light' : 'dark');
-  }, [theme.palette.mode, setMode])
+    setMode(isDark ? 'light' : 'dark');
+  }, [isDark, setMode])
 
   return <IconButton onClick={toggleMode} color='primary' suppressHydrationWarning>
-    <DarkModeOutlined sx={{display: theme.palette.mode === 'dark' ? 'block' : 'none'}} />
-    <LightModeOutlined sx={{display: theme.palette.mode === 'light' ? 'block' : 'none'}} />
+    <DarkModeOutlined sx={{display: isDark ? 'block' : 'none'}} />
+    <LightModeOutlined sx={{display: isDark ? 'none' : 'block'}} />
   </IconButton>
 }

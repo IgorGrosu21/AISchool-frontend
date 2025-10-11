@@ -1,21 +1,18 @@
 'use client'
 
-import { Button, Stack, Typography, Box, Fade, Grow, useTheme, alpha } from "@mui/material";
+import { Button, Stack, Typography, Box, Fade, alpha } from '@mui/material';
 import { Link } from '@/i18n';
-import { useTranslations } from "next-intl";
-import { useState, useEffect } from "react";
-import { Star, Diamond, RocketLaunch } from '@mui/icons-material';
+import { useTranslations } from 'next-intl';
+import { useIsMounted } from '@/hooks';
+import { Star, RocketLaunch, Schedule } from '@mui/icons-material';
+import { useMemo } from 'react';
 
-export function AnimatedAdContent() {
-  const t = useTranslations('components.ad');
-  const theme = useTheme();
-  const [mounted, setMounted] = useState(false);
+export function Content({translations}: {translations: string}) {
+  const t = useTranslations(`components.${translations}`);
+  const FeatureIcon = useMemo(() => translations === 'ad' ? Star : Schedule, [translations]);
+  const isMounted = useIsMounted();
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  return <Stack sx={{
+  return <Stack sx={theme => ({
     justifyContent: 'center',
     alignItems: 'center',
     background: `linear-gradient(135deg, ${alpha(theme.palette.primary.main, 0.05)} 0%, ${alpha(theme.palette.secondary.main, 0.05)} 100%)`,
@@ -33,10 +30,10 @@ export function AnimatedAdContent() {
         radial-gradient(circle at 80% 20%, ${alpha(theme.palette.secondary.main, 0.1)} 0%, transparent 50%)
       `,
     }
-  }}>
+  })}>
     <Stack gap={4} sx={{alignItems: 'center', textAlign: 'center', width: '100%'}}>
-      <Fade in={mounted} timeout={800}>
-        <Typography variant='h1' sx={{
+      <Fade in={isMounted} timeout={800}>
+        <Typography variant='h1' sx={theme => ({
           fontWeight: 'bold',
           color: 'primary.main',
           fontSize: { xs: '3rem', sm: '4rem', md: '5rem' },
@@ -45,35 +42,23 @@ export function AnimatedAdContent() {
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
           lineHeight: 1.1,
-        }}>
+        })}>
           {t('title')}
         </Typography>
       </Fade>
-      <Fade in={mounted} timeout={1200}>
-        <Stack direction="row" gap={2} sx={{alignItems: 'center'}}>
-          <Diamond sx={{ 
-            color: 'primary.main',             
-            fontSize: { xs: '2rem', sm: '2.5rem' },
-            animation: 'bounce 2s infinite',
-            '@keyframes bounce': {
-              '0%, 20%, 50%, 80%, 100%': { transform: 'translateY(0)' },
-              '40%': { transform: 'translateY(-10px)' },
-              '60%': { transform: 'translateY(-5px)' },
-            }
-          }} />
-          <Typography variant='h4' color='text.primary' sx={{fontWeight: 500, fontSize: { xs: '1.5rem', sm: '2rem' }}}>
-            {t('promo')}
-          </Typography>
-        </Stack>
-      </Fade>
-      <Fade in={mounted} timeout={1600}>
-        <Typography variant='h6' color='text.secondary' sx={{fontSize: { xs: '1rem', sm: '1.2rem' }, fontWeight: 400}}>
-          {t('info')}
+      <Fade in={isMounted} timeout={1200}>
+        <Typography variant='h4' color='text.primary' sx={{fontWeight: 500, fontSize: { xs: '1.5rem', sm: '2rem' }, maxWidth: 'md'}}>
+          {t('subtitle')}
         </Typography>
       </Fade>
-      <Fade in={mounted} timeout={2000}>
+      <Fade in={isMounted} timeout={1600}>
+        <Typography variant='h6' color='text.secondary' sx={{fontSize: { xs: '1rem', sm: '1.2rem' }, fontWeight: 400}}>
+          {t('info.title')}
+        </Typography>
+      </Fade>
+      <Fade in={isMounted} timeout={2000}>
         <Stack direction={{ xs: 'column', sm: 'row' }} gap={2} sx={{ mt: 2 }}>
-          <Box sx={{
+          <Box sx={theme => ({
             flex: 1,
             p: 3,
             borderRadius: 3,
@@ -85,16 +70,16 @@ export function AnimatedAdContent() {
               transform: 'translateY(-2px)',
               boxShadow: 2,
             }
-          }}>
-            <Star color='primary' sx={{ fontSize: '2rem', mb: 1 }} />
-            <Typography variant="h6" color="primary" sx={{ fontWeight: 600, mb: 1 }}>
-              {t('premium_access')}
+          })}>
+            <FeatureIcon color='primary' sx={{ fontSize: '2rem', mb: 1 }} />
+            <Typography variant='h6' color='primary' sx={{ fontWeight: 600, mb: 1 }}>
+              {t('info.features.1')}
             </Typography>
-            <Typography variant="body2" color="text.secondary">
-              {t('premium_access_desc')}
+            <Typography variant='body2' color='text.secondary'>
+              {t('info.features.1_desc')}
             </Typography>
           </Box>
-          <Box sx={{
+          <Box sx={theme => ({
             flex: 1,
             p: 3,
             borderRadius: 3,
@@ -106,23 +91,23 @@ export function AnimatedAdContent() {
               transform: 'translateY(-2px)',
               boxShadow: 2,
             }
-          }}>
+          })}>
             <RocketLaunch color='secondary' sx={{ fontSize: '2rem', mb: 1 }} />
-            <Typography variant="h6" color="secondary" sx={{ fontWeight: 600, mb: 1 }}>
-              {t('enhanced_experience')}
+            <Typography variant='h6' color='secondary' sx={{ fontWeight: 600, mb: 1 }}>
+              {t('info.features.2')}
             </Typography>
-            <Typography variant="body2" color="text.secondary">
-              {t('enhanced_experience_desc')}
+            <Typography variant='body2' color='text.secondary'>
+              {t('info.features.2_desc')}
             </Typography>
           </Box>
         </Stack>
       </Fade>
-      <Grow in={mounted} timeout={2400}>
-        <Link href="/core/subscriptions">
+      <Fade in={isMounted} timeout={2400}>
+        <Link href={`/core${translations === 'ad' ? '/subscriptions' : ''}`}>
           <Button
-            variant="contained"
-            size="large"
-            color="primary"
+            variant='contained'
+            size='large'
+            color='primary'
             sx={{
               fontSize: '1.2rem',
               padding: '16px 40px',
@@ -140,7 +125,7 @@ export function AnimatedAdContent() {
             {t('redirect')}
           </Button>
         </Link>
-      </Grow>
+      </Fade>
     </Stack>
   </Stack>
 }

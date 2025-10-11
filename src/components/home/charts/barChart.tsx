@@ -22,12 +22,12 @@ ChartJS.register(
 );
 
 interface BarChartProps {
-  data: (IPersonHome & { profileType: 'teacher' })['analytics'][number]['subjects'][number]['klasses']
+  data: (IPersonHome & { profileType: 'teacher' })['analytics'][number]['subjects'][number]['points']
 }
 
 export function BarChart({data}: BarChartProps) {
-  const theme = useTheme()
   const progressData = useKlassesPerformance(data)
+  const theme = useTheme()
   
   return <Bar options={{responsive: true}} data={{
     labels: progressData.map((klass) => klass.slug),

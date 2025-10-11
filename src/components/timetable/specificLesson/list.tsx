@@ -7,11 +7,10 @@ import { useTranslations } from "next-intl";
 import { Link } from '@/i18n';
 import { useRouter } from "@/i18n";
 import { format } from "date-fns";
-import { Note } from "../../notes/item";
 import { useDiaryContext } from "@/providers";
 import { TimetableContainer } from "../container";
-import { Lesson } from "../lessons";
 import { useHolidayChecker } from "@/hooks";
+import { SpecificLesson } from "./item";
 
 interface SpecificLessonsProps {
   specificLessons: ISpecificLessonName[]
@@ -55,24 +54,14 @@ export function SpecificLessons({specificLessons, dates}: SpecificLessonsProps) 
       const lesson = lessons.find(l => l.lessonTime === lessonTime.id)
       const specificLesson = lesson ? specificLessons.find(sl => sl.lesson === lesson.id) : undefined
 
-      return <Lesson
+      return <SpecificLesson
         key={lessonTime.order}
         lessonTime={lessonTime}
         lesson={lesson}
+        specificLesson={specificLesson}
+        accountType={accountType}
         onClick={() => pickSpecificLesson(lesson, specificLesson, dates[groupIndex])}
-      >
-        <Stack direction='row' gap={2}>
-          <Stack gap={1} sx={{flex: 1}}>
-            {accountType == 'student' ? <Typography color='secondary'>
-              {lesson?.teacher?.user.surname ?? ''} {lesson?.teacher?.user.name ?? ''}
-            </Typography> : <Typography color='secondary'>
-              {lesson?.klassSlug}
-            </Typography>}
-            {specificLesson && <Typography>{specificLesson?.title}</Typography>}
-          </Stack>
-          {specificLesson?.note && <Note value={specificLesson.note} big />}
-        </Stack>
-      </Lesson>
+      />
     }} emptyGroupNode={<Link
       href={`/core/schools/${schoolSlug}/timetable`}
       style={{pointerEvents: accountType === 'teacher' ? 'unset' : 'none'}}

@@ -37,7 +37,12 @@ export function SideBar({ user, routes }: SideBarProps) {
   }, [pathname])
 
   return <>
-    <IconButton onClick={toggleDrawer} size="large" sx={{bgcolor: 'primary.main', color: 'primary.contrastText'}}>
+    <IconButton
+      onClick={toggleDrawer}
+      size="large"
+      sx={{bgcolor: 'primary.main', color: 'primary.contrastText'}}
+      suppressHydrationWarning
+    >
       <Menu />
     </IconButton>
     <Drawer

@@ -80,25 +80,31 @@
     },
     "ad": {
       "title": "Disponibil cu Aischool+ Abonament",
-      "promo": "Deblocați potențialul întreg împreună cu abonamentul AISchool+ și creșteți-vă productivitatea",
-      "info": "Abonamentul poate fi întotdeauna anulat în profilul dvs.",
-      "redirect": "Accesați abonamente",
-      "premium_feature": "Funcționalitate Premium",
-      "premium_access": "Acces Premium",
-      "premium_access_desc": "Deblocați toate funcționalitățile cu abonamentul AISchool+",
-      "enhanced_experience": "Experiență Îmbunătățită",
-      "enhanced_experience_desc": "Creșteți-vă productivitatea cu instrumente avansate"
+      "subtitle": "Deblocați potențialul întreg împreună cu abonamentul AISchool+ și creșteți-vă productivitatea",
+      "info": {
+        "title": "Abonamentul poate fi întotdeauna anulat în profilul dvs.",
+        "features": {
+          "1": "Acces Premium",
+          "1_desc": "Deblocați toate funcționalitățile cu abonamentul AISchool+",
+          "2": "Experiență Îmbunătățită",
+          "2_desc": "Creșteți-vă productivitatea cu instrumente avansate"
+        }
+      },
+      "redirect": "Accesați abonamente"
     },
     "coming_soon": {
       "title": "În Curând",
       "subtitle": "Ceva uimitor se pregătește",
-      "description": "Lucrăm din greu pentru a vă aduce o experiență incredibilă. Rămâneți la curent cu actualizările!",
-      "back_home": "Înapoi la Acasă",
-      "under_development": "În Dezvoltare",
-      "stay_updated": "Rămâneți la Curent",
-      "stay_updated_desc": "Vă vom anunța când această funcționalitate este gata",
-      "exciting_features": "Funcționalități Uimitoare",
-      "exciting_features_desc": "Ceva uimitor se construiește pentru dumneavoastră"
+      "info": {
+        "title": "Lucrăm din greu pentru a vă aduce o experiență incredibilă. Rămâneți la curent cu actualizările!",
+        "features": {
+          "1": "Rămâneți la Curent",
+          "1_desc": "Vă vom anunța când această funcționalitate este gata",
+          "2": "Funcționalități Uimitoare",
+          "2_desc": "Ceva uimitor se construiește pentru dumneavoastră"
+        }
+      },
+      "redirect": "Înapoi la Acasă"
     },
     "image_uploader": {
       "delete": "Șterge",
@@ -127,18 +133,36 @@
           "title": "AI School",
           "desc": "Platforma revoluționară pentru educația modernă cu inteligență artificială",
           "features": {
-            "1": "Inteligenţă artificială",
-            "2": "Jurnal electronic",
-            "3": "Sarcini de către subiecți"
+            "1": {
+              "title": "Inteligenţă artificială",
+              "desc": "Bijuteria coroanei proiectului nostru este prima integrare a inteligenței artificiale în educație din țară – creați teste, verificați teme și creați sarcini unice folosind IA. Secolul XXI a sosit, este timpul să valorificăm întreaga putere a tehnologiei!"
+            },
+            "2": {
+              "title": "Jurnal electronic",
+              "desc": "Un jurnal electronic simplifică sarcinile de rutină, cum ar fi calcularea mediilor generale, numărarea absențelor și analizarea performanței academice. Jurnalul electronic este disponibil în trei formate convenabile: anual, lunar și săptămânal, permițându-vă să găsiți rapid lecția de care aveți nevoie."
+            },
+            "3": {
+              "title": "Sarcini de către subiecți",
+              "desc": "Pentru fiecare materie au fost elaborate teme online bazate pe manualele de stat. Fiecare elev primește teme unice, iar numărul de încercări este nelimitat. Profesorii pot folosi aceste teme pentru a crea teste și teme pentru acasă și pot, de asemenea, transfera direct notele în carnetul de note online cu un simplu clic."
+            }
           }
         },
         "cta": {
           "title": "Sunteți gata să începeți să învățați viitorul?",
           "desc": "Alăturați-vă mii de elevi și profesori care folosesc deja școala AI pentru a obține cele mai bune rezultate",
           "features": {
-            "1": "Învățare interactivă",
-            "2": "Rezultate instantanee",
-            "3": "Analiza progresului"
+            "1": {
+              "title": "Învățare interactivă",
+              "desc": "Însemnările monotone din caiete, pline de zeci de pagini de informații greu de digerat, sunt de domeniul trecutului. Copiii au nevoie de practică, practică și iar practică în secolul XXI. Zeci de mii de teme unice îi vor ajuta pe elevi să stăpânească materia, să o consolideze și să își îmbunătățească performanța academică, în timp ce profesorii pot crea teme și teste unice care pot fi ușor notate de inteligența artificială."
+            },
+            "2": {
+              "title": "Rezultate instantanee",
+              "desc": "Învățarea online le permite elevilor să își vadă instantaneu rezultatele, eliminând necesitatea de a aștepta zile sau chiar săptămâni pentru a afla notele. Profesorii, la rândul lor, pot delega în sfârșit o parte din munca lor de notare inteligenței artificiale, economisind timp pentru alte sarcini importante. În plus, transferul manual al notelor din caiete și foi de testare în carnetul de note electronic nu mai este necesar - totul se face cu un singur clic."
+            },
+            "3": {
+              "title": "Analiza progresului",
+              "desc": "Analiza datelor este fundamentul progresului în secolul XXI. Cu ajutorul platformei noastre, elevii își pot vedea progresul în ceea ce privește notele medii la fiecare materie, iar profesorii pot vedea cum se compară acestea între clase. Învață-ți punctele forte și punctele slabe pentru a-ți îmbunătăți performanța academică."
+            }
           }
         },
         "buttons": {

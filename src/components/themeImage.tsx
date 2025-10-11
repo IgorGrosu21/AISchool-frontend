@@ -1,6 +1,7 @@
 'use client'
 
-import { Box, useTheme } from '@mui/material'
+import { Box } from '@mui/material'
+import { useIsDark } from '@/hooks'
 import Image, { ImageProps } from 'next/image'
  
 type Props = Omit<ImageProps, 'src' | 'priority' | 'loading'> & {
@@ -9,7 +10,7 @@ type Props = Omit<ImageProps, 'src' | 'priority' | 'loading'> & {
 }
  
 export function ThemeImage(props: Props) {
-  const theme = useTheme()
+  const isDark = useIsDark()
   const { srcLight, srcDark, alt, ...rest } = props
  
   return <Box sx={{
@@ -21,13 +22,13 @@ export function ThemeImage(props: Props) {
       {...rest}
       src={srcLight}
       alt={alt + ' light'}
-      style={{display: theme.palette.mode === 'light' ? 'block' : 'none'}}
+      style={{display: isDark ? 'none' : 'block'}}
     />
     <Image
       {...rest}
       src={srcDark}
       alt={alt + ' dark'}
-      style={{display: theme.palette.mode === 'dark' ? 'block' : 'none'}}
+      style={{display: isDark ? 'block' : 'none'}}
     />
   </Box>
 }

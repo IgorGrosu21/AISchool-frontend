@@ -7,6 +7,7 @@ import { useEffect, useRef } from "react"
 import { useJournalContext, type Group } from "@/providers";
 import { Note } from "../../item";
 import { DateButton } from "./dateButton";
+import { useIsDark } from "@/hooks";
 
 type ILessonWithDate = {
   lesson: Omit<ILessonName, 'lessonTime'> & {lessonTime?: ILessonTimeName}
@@ -22,6 +23,7 @@ interface TeacherNoteListDesktopProps {
 export function TeacherNoteListDesktop({lessons, pickNote, getNoteInfo}: TeacherNoteListDesktopProps) {
   const { groups } = useJournalContext()
   const tableContainerRef = useRef<HTMLDivElement>(null)
+  const isDark = useIsDark()
 
   useEffect(() => {
     if (lessons.length > 0 && tableContainerRef.current) {
@@ -57,12 +59,12 @@ export function TeacherNoteListDesktop({lessons, pickNote, getNoteInfo}: Teacher
       </TableHead>
       <TableBody>
         {groups.map((group, i) => <TableRow key={i} hover>
-        <TableCell sx={theme => ({
+          <TableCell sx={{
             position: 'sticky',
             left: 0,
             zIndex: 2,
-            bgcolor: theme.palette.mode == 'light' ? 'rgba(233, 242, 247, 0.5)' : 'rgba(8, 8, 22, 0.5)'
-          })}>
+            bgcolor: isDark ? 'rgba(8, 8, 22, 0.5)' : 'rgba(233, 242, 247, 0.5)'
+          }}>
             <Typography variant='h6' color='primary'>{group.name}</Typography>
           </TableCell>
           {lessons.map((lessonWithDate, j) => {
@@ -76,12 +78,12 @@ export function TeacherNoteListDesktop({lessons, pickNote, getNoteInfo}: Teacher
               />
             </TableCell>
           })}
-          <TableCell sx={theme => ({
+          <TableCell sx={{
             position: 'sticky',
             right: 0,
             zIndex: 2,
-            bgcolor: theme.palette.mode == 'light' ? 'rgba(233, 242, 247, 0.5)' : 'rgba(8, 8, 22, 0.5)'
-          })}>
+            bgcolor: isDark ? 'rgba(8, 8, 22, 0.5)' : 'rgba(233, 242, 247, 0.5)'
+          }}>
             <Typography variant='h6' color='primary'>
               {group.performance}
             </Typography>
