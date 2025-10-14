@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 
 //mui components
 import Box from "@mui/material/Box"
@@ -19,7 +19,7 @@ export function AnimationGroup2() {
         zIndex: 1,
       }}
     >
-      <motion.div
+      <m.div
         animate={{
           rotate: 360,
           scale: [1, 1.2, 1],
@@ -49,7 +49,7 @@ export function AnimationGroup2() {
         zIndex: 1,
       }}
     >
-      <motion.div
+      <m.div
         animate={{
           rotate: -360,
           scale: [1, 0.8, 1],

@@ -1,3 +1,5 @@
+'use server'
+
 import { redirect } from "next/navigation"
 import { isLoggedIn } from "@/app/actions/token";
 import { ThemeImage } from "@/components/themeImage";

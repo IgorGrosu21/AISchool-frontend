@@ -47,7 +47,6 @@ export function SideBar({ user, routes }: SideBarProps) {
       onClick={toggleDrawer}
       size="large"
       sx={{bgcolor: 'primary.main', color: 'primary.contrastText'}}
-      suppressHydrationWarning
     >
       <MenuIcon />
     </IconButton>
@@ -82,7 +81,6 @@ export function SideBar({ user, routes }: SideBarProps) {
               transform: 'translateY(-50%)',
               color: 'primary.contrastText'
             }}
-            suppressHydrationWarning
           >
             <CloseIcon />
           </IconButton>

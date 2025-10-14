@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { Section, SectionHeader, Card } from "@/ui";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 //mui components
 import Box from "@mui/material/Box"
@@ -41,7 +41,7 @@ export function SubscriptionDescription() {
         {descriptionCards.map((card, index) => <Grid2 size={{ xs: 12, md: 6 }} key={index}>
           <Card index={index}>
             <Stack gap={4} sx={{ height: '100%', p: 2 }}>
-              <motion.div whileHover={{ scale: 1.1, rotate: 5 }} transition={{ type: "spring", stiffness: 300 }}>
+              <m.div whileHover={{ scale: 1.1, rotate: 5 }} transition={{ type: "spring", stiffness: 300 }}>
                 <Box sx={theme => ({
                   width: 80,
                   height: 80,
@@ -56,7 +56,7 @@ export function SubscriptionDescription() {
                 })}>
                   <card.icon sx={{ fontSize: 48, color: 'background.default' }} />
                 </Box>
-              </motion.div>
+              </m.div>
               <Stack gap={4} sx={{ textAlign: 'center', flex: 1 }}>
                 <Typography variant="h4" color={card.color} sx={theme => ({ 
                   fontWeight: 700,
@@ -74,7 +74,7 @@ export function SubscriptionDescription() {
                   {card.description}
                 </Typography>
                 <Box sx={{flex: 1}} />
-                {card.highlight && <motion.div
+                {card.highlight && <m.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.3, duration: 0.5 }}
@@ -100,7 +100,7 @@ export function SubscriptionDescription() {
                       </Typography>
                     </Stack>
                   </Box>
-                </motion.div>}
+                </m.div>}
               </Stack>
             </Stack>
           </Card>

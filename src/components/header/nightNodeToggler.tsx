@@ -16,16 +16,16 @@ export function NightNodeToggler() {
     setMode(mode);
   }, [setMode])
 
-  return <IconButton color='primary' suppressHydrationWarning>
+  return <IconButton color='primary'>
     <DarkModeOutlinedIcon
-      onClick={() => toggleMode('dark')}
+      onClick={() => toggleMode('light')}
       sx={[
         {display: 'none'},
         theme => theme.applyStyles('dark', { display: 'block' })
       ]}
     />
     <LightModeOutlinedIcon
-      onClick={() => toggleMode('light')}
+      onClick={() => toggleMode('dark')}
       sx={[
         {display: 'block'},
         theme => theme.applyStyles('dark', { display: 'none' })

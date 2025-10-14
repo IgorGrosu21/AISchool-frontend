@@ -3,7 +3,6 @@
 import { useTranslations } from "next-intl";
 import { Link } from '@/i18n';
 import { useRouter } from "@/i18n";
-import { motion } from "framer-motion";
 
 //mui components
 import Button from "@mui/material/Button"
@@ -18,12 +17,13 @@ export function ErrorButtons() {
   const router = useRouter();
   
   return <Stack direction={{ xs: 'column', sm: 'row' }} gap={3}>
-    <motion.div
-      whileHover={{ scale: 1.05, y: -2 }}
-      whileTap={{ scale: 0.95 }}
-      transition={{ type: "spring", stiffness: 300, damping: 20 }}
-    >
-      <Button variant="contained" size="large" startIcon={<HomeIcon />} component={Link} href="/core" sx={theme => ({
+    <Button 
+      variant="contained" 
+      size="large" 
+      startIcon={<HomeIcon />} 
+      component={Link} 
+      href="/core" 
+      sx={theme => ({
         px: 4,
         py: 1.5,
         fontSize: '1.1rem',
@@ -31,21 +31,25 @@ export function ErrorButtons() {
         borderRadius: 3,
         textTransform: 'none',
         boxShadow: `0 4px 20px ${alpha(theme.palette.primary.main, 0.3)}`,
-        transition: 'all 0.3s ease',
+        transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)',
         '&:hover': {
           boxShadow: `0 8px 30px ${alpha(theme.palette.primary.main, 0.4)}`,
-          transform: 'translateY(-2px)',
+          transform: 'translateY(-2px) scale(1.05)',
+        },
+        '&:active': {
+          transform: 'scale(0.95)',
+          transition: 'all 0.1s cubic-bezier(0.4, 0, 0.2, 1)',
         }
-      })} suppressHydrationWarning>
-        {t('home')}
-      </Button>
-    </motion.div>
-    <motion.div
-      whileHover={{ scale: 1.05, y: -2 }}
-      whileTap={{ scale: 0.95 }}
-      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+      })}
     >
-      <Button variant="outlined" size="large" startIcon={<ArrowBackIcon />} onClick={() => router.back()} sx={theme => ({
+      {t('home')}
+    </Button>
+    <Button 
+      variant="outlined" 
+      size="large" 
+      startIcon={<ArrowBackIcon />} 
+      onClick={() => router.back()} 
+      sx={theme => ({
         px: 4,
         py: 1.5,
         fontSize: '1.1rem',
@@ -53,15 +57,19 @@ export function ErrorButtons() {
         borderRadius: 3,
         textTransform: 'none',
         borderWidth: 2,
-        transition: 'all 0.3s ease',
+        transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)',
         '&:hover': {
           borderWidth: 2,
-          transform: 'translateY(-2px)',
+          transform: 'translateY(-2px) scale(1.05)',
           boxShadow: `0 4px 20px ${alpha(theme.palette.primary.main, 0.2)}`,
+        },
+        '&:active': {
+          transform: 'scale(0.95)',
+          transition: 'all 0.1s cubic-bezier(0.4, 0, 0.2, 1)',
         }
-      })}>
-        {t('back')}
-      </Button>
-    </motion.div>
+      })}
+    >
+      {t('back')}
+    </Button>
   </Stack>
 }

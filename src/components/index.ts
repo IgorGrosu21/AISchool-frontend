@@ -2,10 +2,10 @@ export { AttachedFiles, AttachedFilesEditor, AttachedLinks, AttachedLinksEditor 
 export { Calendar } from "./calendar";
 export { ErrorPage } from "./errors";
 export { Header } from "./header";
-export { Greetings, Sections } from "./home";
+export { HomeWrapper } from "./home";
 export { Title } from "./editable";
 export { KlassesButton, KlassesRange, KlassLink, PickKlass } from "./klasses";
-export { Welcome, Pluses } from "./landing";
+export { LandingWrapper } from "./landing";
 export { Balance, Currency, ModuleHeader, ModuleList } from "./manuals";
 export { Note, StudentNoteList, TeacherNoteList, NotePicker } from "./notes";
 export { SchoolPositions, SchoolPositionsEditor, TeacherPositions, TeacherPositionsEditor } from "./positions";
@@ -26,7 +26,7 @@ export {
   TimetableStepper, TimetableStepperEditor,
   SpecificLessonHeader, SpecificLesson, SpecificLessons
 } from "./timetable";
-export { SubscriptionHero, SubscriptionPlans, SubscriptionPluses, SubscriptionDescription } from "./subscriptions";
+export { SubscriptionWrapper } from "./subscriptions";
 
 export { AuthButton } from "./authButton";
 export { Footer } from "./footer";

@@ -1,2 +1,1 @@
-export { Welcome } from './welcome'
-export { Pluses } from './pluses'
+export { LandingWrapper } from './wrapper'

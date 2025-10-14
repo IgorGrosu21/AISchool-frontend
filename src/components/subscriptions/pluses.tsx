@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { Section, SectionHeader, Card } from "@/ui";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 //mui components
 import Box from "@mui/material/Box"
@@ -44,7 +44,7 @@ export function SubscriptionPluses() {
         {featureCards.map((card, index) => <Grid2 size={{ xs: 12, md: 6 }} key={index}>
           <Card index={index}>
             <Stack gap={4} sx={{ height: '100%', p: 2 }}>
-              <motion.div whileHover={{ scale: 1.1, rotate: 5 }} transition={{ type: "spring", stiffness: 300 }}>
+              <m.div whileHover={{ scale: 1.1, rotate: 5 }} transition={{ type: "spring", stiffness: 300 }}>
                 <Box sx={theme => ({
                   width: 80,
                   height: 80,
@@ -59,7 +59,7 @@ export function SubscriptionPluses() {
                 })}>
                   <card.icon sx={{ fontSize: 48, color: 'background.default' }} />
                 </Box>
-              </motion.div>
+              </m.div>
               <Stack gap={4} sx={{ textAlign: 'center', flex: 1 }}>
                 <Typography variant="h4" color={card.color} sx={theme => ({ 
                   fontWeight: 700,
@@ -77,7 +77,7 @@ export function SubscriptionPluses() {
                   {card.description}
                 </Typography>
                 <Stack gap={2}>
-                  {card.features.map((feature, i) => <motion.div
+                  {card.features.map((feature, i) => <m.div
                     key={i}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -100,7 +100,7 @@ export function SubscriptionPluses() {
                         {feature}
                       </Typography>
                     </Stack>
-                  </motion.div>)}
+                  </m.div>)}
                 </Stack>
               </Stack>
             </Stack>

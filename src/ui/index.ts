@@ -4,5 +4,4 @@ export { Card } from "./card";
 export { Panel } from "./panel";
 export { SectionHeader } from "./header";
 export { Section } from "./section";
-export { StatsPanel } from "./statsPanel";
-export { StatsPanelsContainer } from "./statsPanelsContainer";
+export { StatsPanels } from "./statsPanels";

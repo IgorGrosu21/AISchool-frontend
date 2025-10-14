@@ -1,7 +1,7 @@
 'use client'
 
 import { Month } from './month'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, m } from 'framer-motion'
 import { MonthButton } from './monthButton'
 import { useCalendarContext } from '@/providers'
 
@@ -13,7 +13,7 @@ export function Calendar() {
   const { monthGroups, activeMonth, setActiveMonth, setActiveDay } = useCalendarContext()
 
   return <AnimatePresence mode='wait'>
-    {activeMonth !== undefined ? <motion.div
+    {activeMonth !== undefined ? <m.div
       layout
       layoutRoot
       key='zoomed-month'
@@ -38,12 +38,12 @@ export function Calendar() {
           />
         </Grid2>))}
       </Grid2>
-    </motion.div> : <motion.div layout key='year-view'>
+    </m.div> : <m.div layout key='year-view'>
       <Grid2 container columns={{xs: 1, md: 3}} spacing={{xs: 2, md: 8}}>
         {monthGroups.map(group => group.map(month => <Grid2 key={month.getMonth()} size={1}>
           <Month month={month} />
         </Grid2>))}
       </Grid2>
-    </motion.div>}
+    </m.div>}
   </AnimatePresence>
 }

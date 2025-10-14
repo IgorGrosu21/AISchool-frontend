@@ -1,6 +1,6 @@
 'use client'
 
-import { Section, SectionHeader, StatsPanelsContainer, StatsPanel, AnimationGroup1 } from "@/ui"
+import { Section, SectionHeader, StatsPanels, AnimationGroup1 } from "@/ui"
 import { useTranslations } from "next-intl"
 import { IPersonHome } from "@/interfaces"
 import { useCallback } from "react"
@@ -38,14 +38,10 @@ export function Greetings({profileType, user}: GreetingsProps) {
       text1={`${t(`greetings.title`)}, ${user.name} ${user.surname}`}
       text2={t('greetings.desc')}
     />
-    <StatsPanelsContainer>
-      {sections.map((feature, index) => <StatsPanel
-        key={index}
-        onClick={() => scrollToSection(index + 1)}
-        sx={{cursor: 'pointer'}}
-        text={t(`sections.${profileType}.${index + 1}.title`)}
-        Icon={feature.icon}
-      />)}
-    </StatsPanelsContainer>
+    <StatsPanels panels={sections.map((feature, index) => ({
+      text: t(`sections.${profileType}.${index + 1}.title`),
+      Icon: feature.icon,
+      onClick: () => scrollToSection(index + 1),
+    }))} />
   </Section>
 }

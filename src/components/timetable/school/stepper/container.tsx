@@ -2,11 +2,12 @@
 
 import { useMemo, useState } from 'react'
 import { useTranslations } from 'next-intl'
-import { motion, AnimatePresence } from 'framer-motion'
 
 //mui components
 import Button from "@mui/material/Button"
 import Stack from "@mui/material/Stack"
+import Fade from "@mui/material/Fade"
+import Box from '@mui/material/Box'
 
 interface TimetableStepperContainerProps {
   subjectsComponent: React.ReactNode
@@ -35,19 +36,17 @@ export function TimetableStepperContainer({subjectsComponent, lessonTimeComponen
         {step.label}
       </Button>)}
     </Stack>
-    <AnimatePresence mode="wait">
-      <motion.div
-        key={activeStep}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -20 }}
-        transition={{
-          duration: 0.3,
-          ease: "easeInOut"
-        }}
-      >
+    <Fade 
+      in={true} 
+      key={activeStep}
+      timeout={300}
+      style={{
+        transitionDelay: '50ms',
+      }}
+    >
+      <Box>
         {steps[activeStep].component}
-      </motion.div>
-    </AnimatePresence>
+      </Box>
+    </Fade>
   </Stack>
 }

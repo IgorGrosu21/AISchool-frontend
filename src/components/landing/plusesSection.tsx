@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import { usePluses } from '@/hooks'
 import { Section, SectionHeader, Card } from '@/ui'
@@ -73,7 +73,7 @@ export function PlusesSection({ userType, animationGroup }: PlusesSectionProps) 
         const { icon: Icon, color } = getIconAndColor(index)
         return <Grid2 size={{ xs: 12, sm: 6 }} key={index}>
           <Card index={index}>
-            <motion.div whileHover={{ scale: 1.1, rotate: 5 }} transition={{ type: "spring", stiffness: 300 }}>
+            <m.div whileHover={{ scale: 1.1, rotate: 5 }} transition={{ type: "spring", stiffness: 300 }}>
               <Box sx={{
                 width: 80,
                 height: 80,
@@ -88,7 +88,7 @@ export function PlusesSection({ userType, animationGroup }: PlusesSectionProps) 
               }}>
                 <Icon sx={{ fontSize: 40, color: 'background.default' }} />
               </Box>
-            </motion.div>
+            </m.div>
             <Typography variant="h6" sx={{ 
               fontWeight: 600, 
               mb: 2, 

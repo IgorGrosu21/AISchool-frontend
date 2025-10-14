@@ -1,7 +1,7 @@
 'use client'
 
 import { useTranslations } from "next-intl";
-import { AnimationGroup2, Section, SectionHeader, StatsPanel, StatsPanelsContainer } from "@/ui";
+import { AnimationGroup2, Section, SectionHeader, StatsPanels } from "@/ui";
 
 //icons
 import RocketLaunchIcon from "@mui/icons-material/RocketLaunch"
@@ -19,12 +19,9 @@ export function SubscriptionHero() {
     animationGroup={<AnimationGroup2 />}
   >
     <SectionHeader isTitle onGradient text1={t(`title`)} text2={t(`desc`)} />
-    <StatsPanelsContainer>
-      {features.map((feature, index) => <StatsPanel
-        key={index}
-        text={t(`features.${index + 1}`)}
-        Icon={feature.icon}
-      />)}
-    </StatsPanelsContainer>
+    <StatsPanels panels={features.map((feature, index) => ({
+      text: t(`features.${index + 1}`),
+      Icon: feature.icon,
+    }))} />
   </Section>
 }

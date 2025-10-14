@@ -6,6 +6,7 @@ import { CalendarContext } from "./context";
 import { TypePicker } from "./typePicker";
 import { isSameMonth, setDate } from "date-fns";
 import { useTranslations } from "next-intl";
+import { domAnimation, LazyMotion } from "framer-motion";
 
 //mui components
 import Stack from "@mui/material/Stack"
@@ -62,7 +63,9 @@ export function CalendarProvider({children, value: {currentDay}}: ProviderProps<
         currentDay={currentDay}
         setActiveDay={setActiveDay}
       />
-      {children}
+      <LazyMotion features={domAnimation} strict>
+        {children}
+      </LazyMotion>
     </Stack> : <Stack sx={{flex: 1, justifyContent: 'center'}}>
       <Typography variant='h4' color='primary' sx={{textAlign: 'center'}}>{t('summertime')}</Typography>
     </Stack>}

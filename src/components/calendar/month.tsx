@@ -1,6 +1,6 @@
 'use client'
 
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, m } from 'framer-motion'
 import { MonthButton } from './monthButton';
 import { useMonthView } from '@/hooks';
 import { Days } from './days';
@@ -18,7 +18,7 @@ interface MonthProps {
 export function Month({month}: MonthProps) {
   const { isActive, weeks, activeWeek, setActiveMonth, setActiveDay, currentMonth } = useMonthView(month)
 
-  return <motion.div
+  return <m.div
     layout
     layoutId={`month-${month}`}
     transition={{ layout: { type: 'spring', stiffness: 120, damping: 18 } }}
@@ -38,7 +38,7 @@ export function Month({month}: MonthProps) {
       <MonthButton month={month} activeMonth={currentMonth} onClick={() => setActiveDay(undefined)} />
       <Divider />
       <AnimatePresence mode='wait'>
-        {activeWeek ? <motion.div
+        {activeWeek ? <m.div
           layout
           layoutRoot
           key='zoomed-week'
@@ -49,12 +49,12 @@ export function Month({month}: MonthProps) {
         >
           {/*as mentioned, unactive weeks have klass as undefined*/}
           <Week dates={activeWeek} />
-        </motion.div> : <motion.div layout key='month-view'>
+        </m.div> : <m.div layout key='month-view'>
           <Grid2 container spacing={2} columns={7}>
             {weeks.map((week, i) => <Days key={i} week={week} />)}
           </Grid2>
-        </motion.div>}
+        </m.div>}
       </AnimatePresence>
     </Stack>
-  </motion.div>
+  </m.div>
 }

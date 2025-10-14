@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 
 //mui components
 import MuiCard, { type CardProps as MuiCardProps } from "@mui/material/Card"
@@ -11,7 +11,7 @@ interface CardProps extends MuiCardProps {
 }
 
 export function Card({index, children, ...props}: CardProps) {
-  return <motion.div
+  return <m.div
     style={{height: '100%'}}
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -39,5 +39,5 @@ export function Card({index, children, ...props}: CardProps) {
         {children}
       </MuiCardContent>
     </MuiCard>
-  </motion.div>
+  </m.div>
 }

@@ -1,10 +1,10 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 
 export function AnimationGroup1() {
   return <>
-    <motion.div
+    <m.div
       animate={{
         rotate: 360,
         scale: [1, 1.1, 1],
@@ -25,7 +25,7 @@ export function AnimationGroup1() {
         backdropFilter: 'blur(10px)',
       }}
     />
-    <motion.div
+    <m.div
       animate={{
         y: [0, -20, 0],
         rotate: [0, 5, 0],

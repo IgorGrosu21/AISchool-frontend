@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { Link } from '@/i18n'
 
 //mui components
@@ -17,7 +17,7 @@ interface LandingButtonsProps {
 }
 
 export function LandingButtons({buttons}: LandingButtonsProps) {
-  return <motion.div
+  return <m.div
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.8, delay: 0.3 }}
@@ -59,5 +59,5 @@ export function LandingButtons({buttons}: LandingButtonsProps) {
         {button.text}
       </Button>)}
     </Stack>
-  </motion.div>
+  </m.div>
 }

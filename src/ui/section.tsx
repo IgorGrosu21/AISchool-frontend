@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from "framer-motion"
+import { m } from "framer-motion"
 
 //mui components
 import { useTheme } from "@mui/material/styles"
@@ -24,7 +24,7 @@ export function Section({children, animationGroup, color, ...props}: SectionProp
   }}>
     {animationGroup}
     <Box sx={{width: '100%', maxWidth: 'lg', mx: 'auto', px: 4, zIndex: 2}}>
-      <motion.div
+      <m.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -33,7 +33,7 @@ export function Section({children, animationGroup, color, ...props}: SectionProp
         <Stack gap={6} sx={{alignItems: 'center', textAlign: 'center'}}>
           {children}
         </Stack>
-      </motion.div>
+      </m.div>
     </Box>
   </Box>
 }

@@ -1,7 +1,7 @@
 'use client'
 
 import dynamic from 'next/dynamic'
-import { Section, StatsPanel, StatsPanelsContainer, SectionHeader } from '@/ui'
+import { Section, StatsPanels, SectionHeader } from '@/ui'
 import { LandingButtons } from './buttons'
 import { useTranslations } from 'next-intl'
 
@@ -33,13 +33,10 @@ export function Welcome({type}: {type: 'hero' | 'cta'}) {
       {variant: 'contained', text: t('buttons.1')},
       {variant: 'outlined', text: t('buttons.2')}
     ]} />
-    <StatsPanelsContainer>
-      {(type === 'hero' ? heroFeatures : ctaFeatures).map((feature, index) => <StatsPanel
-        key={index}
-        text={t(`${type}.features.${index + 1}.title`)}
-        desc={t(`${type}.features.${index + 1}.desc`)}
-        Icon={feature.icon}
-      />)}
-    </StatsPanelsContainer>
+    <StatsPanels panels={(type === 'hero' ? heroFeatures : ctaFeatures).map((feature, index) => ({
+      text: t(`${type}.features.${index + 1}.title`),
+      desc: t(`${type}.features.${index + 1}.desc`),
+      Icon: feature.icon,
+    }))} />
   </Section>
 }

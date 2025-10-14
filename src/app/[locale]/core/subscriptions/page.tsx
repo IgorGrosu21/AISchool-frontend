@@ -1,13 +1,7 @@
-import { SubscriptionHero, SubscriptionPlans, SubscriptionPluses, SubscriptionDescription } from '@/components'
+'use server'
 
-//mui components
-import Stack from "@mui/material/Stack"
+import { SubscriptionWrapper } from '@/components'
 
 export default async function Page() {
-  return <Stack>
-    <SubscriptionHero />
-    <SubscriptionPluses />
-    <SubscriptionPlans />
-    <SubscriptionDescription />
-  </Stack>
+  return <SubscriptionWrapper />
 }

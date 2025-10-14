@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from "framer-motion"
+import { m } from "framer-motion"
 
 //mui components
 import Stack from "@mui/material/Stack"
@@ -14,7 +14,7 @@ interface SectionHeaderProps {
 }
 
 export function SectionHeader({isTitle = false, onGradient = false, text1, text2}: SectionHeaderProps) {
-  return <motion.div
+  return <m.div
     initial={{ opacity: 0, y: 50 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.8, delay: 0.2 }}
@@ -40,5 +40,5 @@ export function SectionHeader({isTitle = false, onGradient = false, text1, text2
         {text2}
       </Typography>}
     </Stack>
-  </motion.div>
+  </m.div>
 }
