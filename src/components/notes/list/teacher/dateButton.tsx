@@ -1,6 +1,10 @@
-import { Button, Stack, Typography } from "@mui/material";
 import { ru } from "date-fns/locale";
 import { format } from 'date-fns';
+
+//mui components
+import Button from "@mui/material/Button"
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 
 interface DateButtonProps {
   date: string

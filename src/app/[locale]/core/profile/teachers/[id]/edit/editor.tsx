@@ -1,11 +1,14 @@
 'use client'
 
 import { IDetailedTeacher, ISchoolName, ISubjectName } from "@/interfaces";
-import { Stack, Typography } from "@mui/material";
 import { ProfileContainer as TeacherContainer, SubjectsEditor, TeacherPositionsEditor, ExperienceEditor } from "@/components";
 import { Panel } from "@/ui";
 import { useTeacherEditorContext } from "@/providers";
 import { useTranslations } from "next-intl";
+
+//mui components
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 
 interface ContainerProps {
   schoolNames: ISchoolName[]

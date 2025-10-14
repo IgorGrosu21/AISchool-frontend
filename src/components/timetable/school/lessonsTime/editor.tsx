@@ -1,10 +1,14 @@
 'use client'
 
 import { ILessonTime, ISchoolWithTimetable } from "@/interfaces";
-import { Stack, Typography, TextField } from "@mui/material";
 import { useTranslations } from "next-intl";
 import { TimetableContainer } from "../../container";
 import { useLessonTimeEditor } from "@/hooks";
+
+//mui components
+import Stack from "@mui/material/Stack"
+import TextField from "@mui/material/TextField"
+import Typography from "@mui/material/Typography"
 
 interface LessonTimeEditorProps {
   school: ISchoolWithTimetable

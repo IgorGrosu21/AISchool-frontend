@@ -1,7 +1,9 @@
 'use client'
 
-import { Box } from '@mui/material'
 import Image, { ImageProps } from 'next/image'
+
+//mui components
+import Box from "@mui/material/Box"
  
 type Props = Omit<ImageProps, 'src' | 'priority' | 'loading'> & {
   srcLight: ImageProps['src']

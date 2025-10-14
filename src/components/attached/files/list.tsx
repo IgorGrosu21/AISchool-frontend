@@ -1,11 +1,14 @@
 'use client'
 
-import { Button, Stack, Typography } from "@mui/material";
 import { useTranslations } from "next-intl";
 import { IDetailedMedia } from "@/interfaces";
 import { Link } from '@/i18n';
 import { Panel } from "@/ui";
 
+//mui components
+import Button from "@mui/material/Button"
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 //icons
 import DownloadIcon from "@mui/icons-material/Download";
 

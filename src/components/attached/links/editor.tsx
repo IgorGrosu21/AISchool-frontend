@@ -1,10 +1,13 @@
 'use client'
 
-import { Stack, TextField, Typography } from "@mui/material";
 import { useTranslations } from "next-intl";
 import { useAttachedLinksContext } from "@/providers";
 import { Panel } from "@/ui";
 
+//mui components
+import Stack from "@mui/material/Stack"
+import TextField from "@mui/material/TextField"
+import Typography from "@mui/material/Typography"
 //icons
 import AddIcon from "@mui/icons-material/Add"
 import CloseIcon from "@mui/icons-material/Close"

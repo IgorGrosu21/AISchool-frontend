@@ -1,8 +1,10 @@
 'use client'
 
-import { IconButton, useColorScheme } from "@mui/material"
 import { useCallback } from "react";
 
+//mui components
+import IconButton from "@mui/material/IconButton"
+import { useColorScheme } from "@mui/material/styles"
 //icons
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined"
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined"

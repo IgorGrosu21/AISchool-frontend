@@ -1,12 +1,19 @@
 'use client'
 
-import { Backdrop, Stack, Button, TextField, Link, Box } from "@mui/material"
 import { useTranslations } from "next-intl"
 import { INoteName } from "@/interfaces"
 import { useNotePicker } from "@/hooks"
 import { Note } from "./item"
 import { Panel } from "@/ui"
 import { abscences, notes, descriptors } from "./utils"
+
+//mui components
+import Backdrop from "@mui/material/Backdrop"
+import Box from "@mui/material/Box"
+import Button from "@mui/material/Button"
+import Link from "@mui/material/Link"
+import Stack from "@mui/material/Stack"
+import TextField from "@mui/material/TextField"
 
 interface NotePickerProps<T> {
   notesOpened: boolean

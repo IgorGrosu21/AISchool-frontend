@@ -4,8 +4,10 @@ import { FormState } from '@/app/actions/auth';
 import { Input } from './input';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
-import { IconButton, InputAdornment } from '@mui/material';
 
+//mui components
+import IconButton from "@mui/material/IconButton"
+import InputAdornment from "@mui/material/InputAdornment"
 //icons
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff"
 import VisibilityIcon from "@mui/icons-material/Visibility"

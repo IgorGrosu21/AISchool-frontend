@@ -2,11 +2,14 @@
 
 import { ProviderProps, useCallback, useMemo, useState } from "react"
 
-import { Stack, Typography } from "@mui/material";
 import { CalendarContext } from "./context";
 import { TypePicker } from "./typePicker";
 import { isSameMonth, setDate } from "date-fns";
 import { useTranslations } from "next-intl";
+
+//mui components
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 
 export function CalendarProvider({children, value: {currentDay}}: ProviderProps<{currentDay: Date}>) {
   const [type, setType] = useState<'year' | 'month' | 'week'>('week')

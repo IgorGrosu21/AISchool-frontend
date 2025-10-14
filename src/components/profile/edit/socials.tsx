@@ -1,11 +1,15 @@
 'use client'
 
 import { ISocial } from "@/interfaces"
-import { Button, Stack, TextField, Typography } from "@mui/material"
 import { useCallback } from "react"
 import { useTranslations } from "next-intl"
 import { useSocialsEditor } from "@/hooks"
 
+//mui components
+import Button from "@mui/material/Button"
+import Stack from "@mui/material/Stack"
+import TextField from "@mui/material/TextField"
+import Typography from "@mui/material/Typography"
 //icons
 import InstagramIcon from "@mui/icons-material/Instagram"
 import FacebookIcon from "@mui/icons-material/Facebook"

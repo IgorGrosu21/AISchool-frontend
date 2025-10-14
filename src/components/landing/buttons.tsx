@@ -1,9 +1,11 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Stack, Button } from '@mui/material'
 import { Link } from '@/i18n'
 
+//mui components
+import Button from "@mui/material/Button"
+import Stack from "@mui/material/Stack"
 //icons
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward"
 

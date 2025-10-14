@@ -1,8 +1,10 @@
 'use client'
 
-import { Stack, type StackOwnProps } from "@mui/material"
 import { motion } from "framer-motion"
 import { useMemo } from "react"
+
+//mui components
+import Stack, { type StackOwnProps } from "@mui/material/Stack"
 
 export function Panel({children, sx, ...props}: StackOwnProps) {
 

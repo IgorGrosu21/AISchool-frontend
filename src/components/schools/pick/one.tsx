@@ -1,8 +1,13 @@
 'use client'
 
 import { ISchoolName } from "@/interfaces"
-import { Stack, Typography, Autocomplete, TextField } from "@mui/material"
 import { useTranslations } from "next-intl"
+
+//mui components
+import Autocomplete from "@mui/material/Autocomplete"
+import Stack from "@mui/material/Stack"
+import TextField from "@mui/material/TextField"
+import Typography from "@mui/material/Typography"
 
 interface PickSchoolProps {
   value: ISchoolName | null

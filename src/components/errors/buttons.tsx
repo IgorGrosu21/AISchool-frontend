@@ -1,11 +1,14 @@
 'use client'
 
-import { Stack, Button, alpha } from "@mui/material";
 import { useTranslations } from "next-intl";
 import { Link } from '@/i18n';
 import { useRouter } from "@/i18n";
 import { motion } from "framer-motion";
 
+//mui components
+import Button from "@mui/material/Button"
+import Stack from "@mui/material/Stack"
+import { alpha } from "@mui/material/styles"
 //icons
 import HomeIcon from "@mui/icons-material/Home"
 import ArrowBackIcon from "@mui/icons-material/ArrowBack"

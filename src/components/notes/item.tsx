@@ -1,9 +1,13 @@
 'use client'
 
-import { Stack, Button, Typography, type ButtonProps, type TypographyProps } from "@mui/material";
 import { useTranslations } from "next-intl";
 import { useMemo } from "react";
 import { abscences, descriptors } from "./utils"
+
+//mui components
+import Stack from "@mui/material/Stack"
+import Button, { type ButtonProps } from "@mui/material/Button"
+import Typography, { type TypographyProps } from "@mui/material/Typography"
 
 interface NoteProps extends ButtonProps {
   value?: string

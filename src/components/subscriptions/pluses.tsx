@@ -1,10 +1,15 @@
 'use client'
 
-import { Typography, Stack, Box, Grid2, alpha } from "@mui/material";
 import { useTranslations } from "next-intl";
 import { Section, SectionHeader, Card } from "@/ui";
 import { motion } from "framer-motion";
 
+//mui components
+import Box from "@mui/material/Box"
+import Grid2 from "@mui/material/Grid2"
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
+import { alpha } from "@mui/material/styles"
 //icons
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome"
 import GroupIcon from "@mui/icons-material/Group"

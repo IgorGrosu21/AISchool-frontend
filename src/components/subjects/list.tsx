@@ -1,12 +1,15 @@
 'use client'
 
 import { ISubjectName } from '@/interfaces';
-import { Stack, type StackProps, Typography } from '@mui/material';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { Link } from '@/i18n';
 import { useIsMobile } from '@/hooks';
 import { Panel } from '@/ui';
+
+//mui components
+import Stack, { type StackProps } from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 
 interface SubjectsProps extends StackProps {
   subjects: ISubjectName[],

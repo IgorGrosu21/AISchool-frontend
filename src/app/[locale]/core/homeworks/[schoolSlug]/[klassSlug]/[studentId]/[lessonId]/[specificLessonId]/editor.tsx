@@ -1,11 +1,17 @@
 'use client'
 
 import { AttachedItemsProvider, useHomeworkEditorContext } from '@/providers'
-import { Box, Grid2, Stack, TextField, Typography } from '@mui/material'
 import { useCallback, useMemo } from 'react'
 import { useTranslations } from 'next-intl'
 import { SmallProfile, Note, AttachedLinksEditor, AttachedFilesEditor, AttachedLinks, AttachedFiles, SpecificLessonHeader } from '@/components'
 import { Panel } from '@/ui'
+
+//mui components
+import Box from "@mui/material/Box"
+import Grid2 from "@mui/material/Grid2"
+import Stack from "@mui/material/Stack"
+import TextField from "@mui/material/TextField"
+import Typography from "@mui/material/Typography"
 
 interface ContainerProps {
   date: string

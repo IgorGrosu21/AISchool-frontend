@@ -1,10 +1,13 @@
 'use client'
 
-import { Divider, Grid2 } from '@mui/material'
 import { Month } from './month'
 import { AnimatePresence, motion } from 'framer-motion'
 import { MonthButton } from './monthButton'
 import { useCalendarContext } from '@/providers'
+
+//mui components
+import Divider from "@mui/material/Divider"
+import Grid2 from "@mui/material/Grid2"
 
 export function Calendar() {
   const { monthGroups, activeMonth, setActiveMonth, setActiveDay } = useCalendarContext()

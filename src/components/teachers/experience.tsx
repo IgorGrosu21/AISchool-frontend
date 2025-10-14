@@ -1,7 +1,9 @@
 'use server'
 
-import { Typography } from "@mui/material"
 import { getTranslations } from "next-intl/server"
+
+//mui components
+import Typography from "@mui/material/Typography"
 
 interface ExperienceProps {
   experience: number

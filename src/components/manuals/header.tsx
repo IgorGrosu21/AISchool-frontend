@@ -1,9 +1,13 @@
 'use server'
 
 import { IBalance } from '@/interfaces';
-import { LinearProgress, Stack, Typography } from '@mui/material';
 import { Currency } from './currency';
 import { Balance } from './balance';
+
+//mui components
+import LinearProgress from "@mui/material/LinearProgress"
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 
 interface ModuleHeaderProps {
   title: string

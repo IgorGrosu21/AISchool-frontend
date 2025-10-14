@@ -1,9 +1,12 @@
 import { Contacts, Photos, KlassesButton, NavigationContainer, SchoolPositions, TimetableButton, Title } from '@/components';
 import { errorHandler, fetchSchool } from '@/requests';
 import { Panel } from '@/ui';
-import { Stack, Typography } from '@mui/material';
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
+
+//mui components
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 
 export default async function Page({ params }: { params: Promise<{schoolSlug: string}> }) {
   const { schoolSlug } = await params;

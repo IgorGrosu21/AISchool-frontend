@@ -1,8 +1,10 @@
 'use client'
 
-import { Autocomplete } from "@mui/material";
 import { useState } from "react";
 import { Input } from "./input";
+
+//mui components
+import Autocomplete from "@mui/material/Autocomplete"
 
 interface SelectProps<T> {
   disabled?: boolean

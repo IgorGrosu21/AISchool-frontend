@@ -3,10 +3,14 @@
 import { PickSchools, SchoolLink, SubjectsEditor } from "@/components"
 import { Panel } from "@/ui"
 import { IDetailedTeacher, IPosition, ISchoolName } from "@/interfaces"
-import { Button, Stack, Typography } from "@mui/material"
 import { useTranslations } from "next-intl"
 import { Dispatch, SetStateAction, useCallback, useEffect, useMemo, useState } from "react"
 import { TypePicker } from "../typePicker"
+
+//mui components
+import Button from "@mui/material/Button"
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 
 interface TeacherPositionsEditorProps {
   teacher: IDetailedTeacher

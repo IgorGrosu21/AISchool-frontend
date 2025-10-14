@@ -1,8 +1,15 @@
 'use client'
 
 import { IKlassName } from "@/interfaces";
-import { Stack, Typography, Divider, RadioGroup, FormControlLabel, Radio } from "@mui/material";
 import { useTranslations } from "next-intl";
+
+//mui components
+import Divider from "@mui/material/Divider"
+import FormControlLabel from "@mui/material/FormControlLabel"
+import Radio from "@mui/material/Radio"
+import RadioGroup from "@mui/material/RadioGroup"
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 
 interface PickKlassProps<T> {
   klass: T

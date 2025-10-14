@@ -1,7 +1,10 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Card as MuiCard, CardContent as MuiCardContent, CardProps as MuiCardProps } from '@mui/material'
+
+//mui components
+import MuiCard, { type CardProps as MuiCardProps } from "@mui/material/Card"
+import MuiCardContent from "@mui/material/CardContent"
 
 interface CardProps extends MuiCardProps {
   index: number

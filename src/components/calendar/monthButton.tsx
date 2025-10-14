@@ -1,9 +1,12 @@
 'use client'
 
-import { Button, Typography } from '@mui/material';
 import { format, isSameMonth } from 'date-fns';
 import { useMemo } from 'react';
 import { ru } from 'date-fns/locale/ru';
+
+//mui components
+import Button from "@mui/material/Button"
+import Typography from "@mui/material/Typography"
 
 interface MonthButtonProps {
   month: Date

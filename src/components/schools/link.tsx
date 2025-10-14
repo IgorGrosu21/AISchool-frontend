@@ -1,9 +1,12 @@
 'use client'
 
 import { ISchoolName } from "@/interfaces";
-import { Stack, Typography } from "@mui/material";
 import { useTranslations } from "next-intl";
 import { Link } from '@/i18n';
+
+//mui components
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 
 interface SchoolLinkProps {
   school: ISchoolName

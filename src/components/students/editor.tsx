@@ -1,9 +1,14 @@
 'use client'
 
 import { IStudent } from '@/interfaces';
-import { Stack, Typography, Checkbox, Grid2 } from '@mui/material';
 import { useTranslations } from 'next-intl';
 import { UserVerifier } from '../profile';
+
+//mui components
+import Checkbox from "@mui/material/Checkbox"
+import Grid2 from "@mui/material/Grid2"
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 
 interface StudentsEditorProps {
   students: IStudent[]

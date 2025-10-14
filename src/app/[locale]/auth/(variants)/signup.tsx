@@ -1,11 +1,18 @@
 'use client'
 
-import { Typography, Stack, Divider, FormControlLabel, Radio, RadioGroup } from "@mui/material";
 import { AuthFields, CityPicker, Credentials } from "../(util)";
 import { useTranslations } from "next-intl";
 import { FormState } from "@/app/actions/auth";
 import { useMemo } from "react";
 import { useIsMobile } from "@/hooks";
+
+//mui components
+import Divider from "@mui/material/Divider"
+import FormControlLabel from "@mui/material/FormControlLabel"
+import Radio from "@mui/material/Radio"
+import RadioGroup from "@mui/material/RadioGroup"
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 
 export function Signup({state}: {state: FormState}) {
   const t = useTranslations('auth');

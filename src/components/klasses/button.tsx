@@ -1,7 +1,11 @@
 'use client'
 
-import { Button, Link, Typography } from "@mui/material"
 import { useTranslations } from "next-intl"
+
+//mui components
+import Button from "@mui/material/Button"
+import Link from "@mui/material/Link"
+import Typography from "@mui/material/Typography"
 
 interface KlassesButtonProps {
   schoolSlug: string

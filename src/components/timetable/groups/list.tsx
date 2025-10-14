@@ -1,10 +1,15 @@
 'use client'
 
 import { IKlassNameWithGroups } from "@/interfaces"
-import { Box, Divider, Stack, Typography } from "@mui/material"
 import { useMemo } from "react"
 import { Link } from '@/i18n';
 import { GroupsContainer } from "./container";
+
+//mui components
+import Box from "@mui/material/Box"
+import Divider from "@mui/material/Divider"
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 
 interface GroupsProps {
   klass: IKlassNameWithGroups

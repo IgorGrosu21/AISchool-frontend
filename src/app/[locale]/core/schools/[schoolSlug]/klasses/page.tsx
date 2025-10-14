@@ -1,8 +1,11 @@
 import { KlassLink, NavigationContainer, Title } from "@/components"
 import { errorHandler, fetchSchoolWithKlasses } from "@/requests"
 import { IKlassName } from "@/interfaces"
-import { Divider, Stack } from "@mui/material"
 import { getTranslations } from "next-intl/server"
+
+//mui components
+import Divider from "@mui/material/Divider"
+import Stack from "@mui/material/Stack"
 
 const grades = Array.from({length: 12}, (_, i) => i + 1)
 

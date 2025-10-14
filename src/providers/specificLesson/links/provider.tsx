@@ -2,8 +2,14 @@
 
 import { Dispatch, ProviderProps, SetStateAction, useCallback, useState } from "react";
 import { LinksContext } from "./context";
-import { Backdrop, Stack, TextField, Button, Box } from "@mui/material";
 import { useTranslations } from "next-intl";
+
+//mui components
+import Backdrop from "@mui/material/Backdrop"
+import Box from "@mui/material/Box"
+import Button from "@mui/material/Button"
+import Stack from "@mui/material/Stack"
+import TextField from "@mui/material/TextField"
 
 interface ValueType<T> {
   setInstance: Dispatch<SetStateAction<T>>

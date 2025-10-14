@@ -2,7 +2,9 @@
 
 import { Greetings, Sections } from '@/components'
 import { errorHandler, fetchPersonHome } from '@/requests'
-import { Stack } from '@mui/material'
+
+//mui components
+import Stack from "@mui/material/Stack"
 
 export default async function Page() {
 

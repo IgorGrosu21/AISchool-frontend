@@ -2,9 +2,12 @@
 
 import { Panel } from "@/ui";
 import { IDetailedSchool } from "@/interfaces";
-import { Stack, Typography } from "@mui/material";
 import { getTranslations } from "next-intl/server";
 import { Link } from '@/i18n';
+
+//mui components
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 
 interface ContactsProps {
   school: IDetailedSchool

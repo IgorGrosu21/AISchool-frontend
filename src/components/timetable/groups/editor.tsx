@@ -3,11 +3,16 @@
 import { IGroupName, IPositionName, ISubjectName, ITeacherName, IKlassNameWithGroups } from "@/interfaces"
 import { useEffect, useMemo, useState } from "react";
 import { SubjectsEditor } from "@/components";
-import { Stack, Typography, Autocomplete, TextField, Button } from "@mui/material";
 import { useTranslations } from "next-intl";
 import { GroupsContainer } from "./container";
 import { useGroupsEditor } from "@/hooks";
 
+//mui components
+import Autocomplete from "@mui/material/Autocomplete"
+import Button from "@mui/material/Button"
+import Stack from "@mui/material/Stack"
+import TextField from "@mui/material/TextField"
+import Typography from "@mui/material/Typography"
 //icons
 import ArrowBackIcon from "@mui/icons-material/ArrowBack"
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward"

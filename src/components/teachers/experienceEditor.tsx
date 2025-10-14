@@ -1,9 +1,13 @@
 'use client'
 
 import { IDetailedTeacher } from "@/interfaces";
-import { Stack, Typography, TextField } from "@mui/material";
 import { useTranslations } from "next-intl";
 import { Dispatch, SetStateAction } from "react";
+
+//mui components
+import Stack from "@mui/material/Stack"
+import TextField from "@mui/material/TextField"
+import Typography from "@mui/material/Typography"
 
 interface ExperienceEditorProps {
   teacher: IDetailedTeacher,

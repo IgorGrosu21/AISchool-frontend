@@ -1,9 +1,14 @@
 'use client'
 
 import { ILessonTimeName } from "@/interfaces"
-import { Grid2, Stack, Typography, Divider } from "@mui/material"
 import { useTranslations } from "next-intl"
 import React, { useMemo } from "react"
+
+//mui components
+import Divider from "@mui/material/Divider"
+import Grid2 from "@mui/material/Grid2"
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 
 export const weekdays: ILessonTimeName['weekday'][] = ['MO', 'TU', 'WE', 'TH', 'FR', 'SA']
 

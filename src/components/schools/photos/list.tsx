@@ -1,8 +1,12 @@
 'use server'
 
 import { IDetailedSchool } from "@/interfaces";
-import { Stack, ImageList, ImageListItem } from "@mui/material";
 import Image from 'next/image';
+
+//mui components
+import ImageList from "@mui/material/ImageList"
+import ImageListItem from "@mui/material/ImageListItem"
+import Stack from "@mui/material/Stack"
 
 interface PhotosProps {
   school: IDetailedSchool

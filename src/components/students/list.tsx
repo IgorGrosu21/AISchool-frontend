@@ -2,8 +2,13 @@
 
 import { Balance, SmallProfile } from "@/components";
 import { IStudent } from "@/interfaces";
-import { Stack, Typography, Checkbox, Grid2 } from "@mui/material";
 import { getTranslations } from "next-intl/server";
+
+//mui components
+import Checkbox from "@mui/material/Checkbox"
+import Grid2 from "@mui/material/Grid2"
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 
 interface StudentsProps {
   students: IStudent[]

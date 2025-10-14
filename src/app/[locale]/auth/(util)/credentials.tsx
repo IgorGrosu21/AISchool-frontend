@@ -2,9 +2,15 @@
 
 import { Input } from './input';
 import { useMemo } from 'react';
-import { FormControlLabel, Radio, RadioGroup, Stack, Typography } from '@mui/material';
 import { useTranslations } from 'next-intl';
 import { useIsMobile } from '@/hooks';
+
+//mui components
+import FormControlLabel from "@mui/material/FormControlLabel"
+import Radio from "@mui/material/Radio"
+import RadioGroup from "@mui/material/RadioGroup"
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 
 export function Credentials() {
   const t = useTranslations('auth')

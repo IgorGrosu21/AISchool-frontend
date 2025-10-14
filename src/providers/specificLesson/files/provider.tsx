@@ -2,11 +2,15 @@
 
 import { Dispatch, ProviderProps, SetStateAction, useCallback, useEffect, useRef, useState } from "react";
 import { FilesContext } from "./context";
-import { Backdrop, Stack, Typography } from "@mui/material";
 import { useTranslations } from "next-intl";
 import { IDetailedMedia } from "@/interfaces";
 import Image from "next/image";
 import { Link } from '@/i18n';
+
+//mui components
+import Backdrop from "@mui/material/Backdrop"
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 
 type WithFiles = {
   files: IDetailedMedia[]

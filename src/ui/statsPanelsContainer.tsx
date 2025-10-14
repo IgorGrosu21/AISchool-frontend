@@ -1,7 +1,9 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Stack } from '@mui/material'
+
+//mui components
+import Stack from "@mui/material/Stack"
 
 export function StatsPanelsContainer({children}: React.PropsWithChildren) {
   return <motion.div

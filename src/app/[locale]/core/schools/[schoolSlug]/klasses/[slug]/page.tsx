@@ -1,7 +1,9 @@
 import { errorHandler, fetchKlass } from "@/requests"
-import { Typography } from "@mui/material"
 import { getTranslations } from "next-intl/server"
 import { NavigationContainer, Students, KlassLessons, KlassGroups, Title } from "@/components"
+
+//mui components
+import Typography from "@mui/material/Typography"
 
 export default async function Page({ params }: { params: Promise<{schoolSlug: string, slug: string}> }) {
   const { schoolSlug, slug } = await params

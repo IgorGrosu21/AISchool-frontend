@@ -1,9 +1,12 @@
 'use client'
 
-import { Typography, Slider } from "@mui/material";
 import { Panel } from "@/ui";
 import { useTranslations } from "next-intl";
 import { useCallback } from "react";
+
+//mui components
+import Slider from "@mui/material/Slider"
+import Typography from "@mui/material/Typography"
 
 interface KlassesRangeProps {
   startGrade: number,

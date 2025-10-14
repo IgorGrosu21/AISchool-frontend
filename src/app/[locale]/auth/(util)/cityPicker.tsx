@@ -1,12 +1,21 @@
 'use client'
 
 import { ICityName, ICountryName, IRegionName } from '@/interfaces'
-import { Stack, Box, Button, Dialog, DialogTitle, DialogContent, DialogActions, Typography } from '@mui/material'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import { Input } from './input'
 import { Select } from './select'
 import { useCityPicker, useIsMobile } from '@/hooks'
+
+//mui components
+import Box from "@mui/material/Box"
+import Button from "@mui/material/Button"
+import Dialog from "@mui/material/Dialog"
+import DialogActions from "@mui/material/DialogActions"
+import DialogContent from "@mui/material/DialogContent"
+import DialogTitle from "@mui/material/DialogTitle"
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 
 export function CityPicker() {
   const t = useTranslations('auth.city_picker')

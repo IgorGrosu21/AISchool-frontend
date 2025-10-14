@@ -1,10 +1,16 @@
 'use client';
 
 import { useState } from 'react';
-import { Button, Menu, MenuItem, ListItemText, Box, Typography } from '@mui/material';
 import { useRouter, usePathname } from '@/i18n';
 import { useLocale } from 'next-intl';
 
+//mui components
+import Box from "@mui/material/Box"
+import Button from "@mui/material/Button"
+import ListItemText from "@mui/material/ListItemText"
+import Menu from "@mui/material/Menu"
+import MenuItem from "@mui/material/MenuItem"
+import Typography from "@mui/material/Typography"
 //icons
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown"
 import CheckIcon from "@mui/icons-material/Check"

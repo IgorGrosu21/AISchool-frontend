@@ -1,11 +1,14 @@
 'use client'
 
 import { IGroupName, ILessonName, ILessonTimeName, IPositionName, ISubjectName, ITeacherName } from "@/interfaces";
-import { Autocomplete, TextField } from "@mui/material";
 import { useCallback } from "react";
 import { useTranslations } from "next-intl";
 import { TimetableContainer } from "../container";
 import { Lesson } from "./item";
+
+//mui components
+import Autocomplete from "@mui/material/Autocomplete"
+import TextField from "@mui/material/TextField"
 
 interface LessonsEditorProps<T, R> {
   subjects: ISubjectName[]

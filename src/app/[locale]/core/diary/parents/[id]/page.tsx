@@ -1,8 +1,11 @@
 import { NavigationContainer, SmallProfile } from "@/components"
 import { errorHandler, fetchParent } from "@/requests"
-import { Grid2, Typography } from "@mui/material"
 import { getTranslations } from "next-intl/server"
 import { Link } from '@/i18n'
+
+//mui components
+import Grid2 from "@mui/material/Grid2"
+import Typography from "@mui/material/Typography"
 
 export default async function Page({ params }: { params: Promise<{id: string}> }) {
   const { id } = await params

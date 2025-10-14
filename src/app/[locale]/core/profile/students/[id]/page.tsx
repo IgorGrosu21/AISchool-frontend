@@ -1,8 +1,11 @@
-import { Stack, Typography } from "@mui/material"
 import { Link } from '@/i18n'
 import Image from 'next/image';
 import { errorHandler, fetchStudent } from "@/requests";
 import { Balance, KlassLink, Profile } from "@/components";
+
+//mui components
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 
 export default async function Page({ params }: { params: Promise<{id: string}> }) {
   const { id } = await params;

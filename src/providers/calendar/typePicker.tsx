@@ -1,9 +1,12 @@
 'use client'
 
-import { Stack, ToggleButtonGroup, ToggleButton } from "@mui/material"
 import { setDate } from "date-fns"
 import { Dispatch, SetStateAction, useCallback } from "react"
 
+//mui components
+import Stack from "@mui/material/Stack"
+import ToggleButton from "@mui/material/ToggleButton"
+import ToggleButtonGroup from "@mui/material/ToggleButtonGroup"
 //icons
 import ViewCompactIcon from "@mui/icons-material/ViewCompact"
 import AppsIcon from "@mui/icons-material/Apps"

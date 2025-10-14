@@ -1,6 +1,8 @@
 'use client'
 
-import { Box, keyframes } from '@mui/material'
+//mui components
+import { keyframes } from "@mui/material/styles"
+import Box from "@mui/material/Box"
 
 const float = keyframes`
   0%, 100% {

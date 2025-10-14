@@ -1,9 +1,13 @@
 'use client'
 
-import { Stack, Grid2, Typography } from "@mui/material"
 import { type Group } from "@/providers"
 import { useTranslations } from "next-intl"
 import { Panel } from "@/ui"
+
+//mui components
+import Grid2 from "@mui/material/Grid2"
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 
 interface AnnualNoteListProps {
   groups: Array<Omit<Group, 'notes' | 'extraNotes'> & {notes: string[]}>

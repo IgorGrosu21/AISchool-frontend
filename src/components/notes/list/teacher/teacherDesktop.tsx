@@ -1,12 +1,20 @@
 'use client'
 
 import { ILessonName, ILessonTimeName, INote } from "@/interfaces"
-import { Typography, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material"
 import { format } from 'date-fns';
 import { useEffect, useRef } from "react"
 import { useJournalContext, type Group } from "@/providers";
 import { Note } from "../../item";
 import { DateButton } from "./dateButton";
+
+//mui components
+import Table from "@mui/material/Table"
+import TableBody from "@mui/material/TableBody"
+import TableCell from "@mui/material/TableCell"
+import TableContainer from "@mui/material/TableContainer"
+import TableHead from "@mui/material/TableHead"
+import TableRow from "@mui/material/TableRow"
+import Typography from "@mui/material/Typography"
 
 type ILessonWithDate = {
   lesson: Omit<ILessonName, 'lessonTime'> & {lessonTime?: ILessonTimeName}

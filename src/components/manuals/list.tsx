@@ -1,7 +1,11 @@
 'use server'
 
-import { Stack, Typography, Divider } from "@mui/material";
 import { Link } from '@/i18n';
+
+//mui components
+import Divider from "@mui/material/Divider"
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 
 type ModuleListProps<T> = {
   list: T[]

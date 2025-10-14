@@ -1,11 +1,14 @@
 'use client'
 
-import { Button, Link, Typography } from "@mui/material"
 import { usePathname } from "@/i18n"
 import { useCallback, useMemo } from "react"
 import { useTranslations } from "next-intl"
 import { IUserRoutes } from "@/interfaces"
 
+//mui components
+import Button from "@mui/material/Button"
+import Link from "@mui/material/Link"
+import Typography from "@mui/material/Typography"
 //icons
 import AutoStoriesIcon from "@mui/icons-material/AutoStories" 
 import AutoStoriesOutlinedIcon from "@mui/icons-material/AutoStoriesOutlined"

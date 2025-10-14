@@ -1,6 +1,5 @@
 'use server'
 
-import { Stack, Typography } from '@mui/material'
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { Socials } from './socials';
@@ -9,6 +8,10 @@ import { NavigationContainer } from '../navigationContainer';
 import { Panel } from '@/ui';
 import { Title } from '../editable';
 import { ThemeImage } from '../themeImage';
+
+//mui components
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 
 interface ProfileProps extends React.PropsWithChildren {
   user: IDetailedUser

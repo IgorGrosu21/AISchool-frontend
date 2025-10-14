@@ -1,12 +1,15 @@
 'use client'
 
-import { Stack, Typography } from "@mui/material"
 import { Section, SectionHeader } from "@/ui"
 import { IPersonHome } from "@/interfaces"
 import { useTranslations } from "next-intl"
 import { TomorrowTimetable } from "./tomorrowTimetable"
 import { LatestData } from "./latestData"
 import { Analytics } from "./analytics"
+
+//mui components
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 
 interface SectionsProps {
   personHome: IPersonHome

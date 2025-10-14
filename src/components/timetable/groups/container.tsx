@@ -1,9 +1,14 @@
 'use client'
 
-import { Accordion, AccordionDetails, AccordionSummary, Stack, Typography } from "@mui/material"
 import { useState } from "react";
 import { IGroupName, IKlassNameWithGroups, ISubjectName } from "@/interfaces";
 
+//mui components
+import Accordion from "@mui/material/Accordion"
+import AccordionDetails from "@mui/material/AccordionDetails"
+import AccordionSummary from "@mui/material/AccordionSummary"
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 //icons
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp"
 

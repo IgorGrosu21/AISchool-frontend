@@ -1,10 +1,13 @@
 'use client'
 
-import { Stack, Button, Box } from '@mui/material';
 import { useCallback, useEffect, useRef, useState, useTransition } from 'react';
 import { useTranslations } from 'next-intl';
 import { Loader } from './loader';
 
+//mui components
+import Box from "@mui/material/Box"
+import Button from "@mui/material/Button"
+import Stack from "@mui/material/Stack"
 //icons
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline"
 import FileUploadIcon from "@mui/icons-material/FileUpload"

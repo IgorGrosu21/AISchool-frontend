@@ -2,9 +2,14 @@
 
 import { SpecificLessons } from '@/components';
 import { useWeekView } from '@/hooks';
-import { Box, Button, CircularProgress, Stack, Typography } from '@mui/material';
 import { format } from 'date-fns';
 
+//mui components
+import Box from "@mui/material/Box"
+import Button from "@mui/material/Button"
+import CircularProgress from "@mui/material/CircularProgress"
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 //icons
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft"
 import ChevronRightIcon from "@mui/icons-material/ChevronRight"

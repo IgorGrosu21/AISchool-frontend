@@ -1,11 +1,14 @@
 'use client'
 
 import { IGroupName, ILessonName, ILessonTimeName, ISubjectName } from "@/interfaces";
-import { Typography, Breadcrumbs } from "@mui/material";
 import { useCallback } from "react";
 import { TimetableContainer } from "../container";
 import { Link } from '@/i18n';
 import { Lesson } from "./item";
+
+//mui components
+import Breadcrumbs from "@mui/material/Breadcrumbs"
+import Typography from "@mui/material/Typography"
 
 interface LessonsProps<T> {
   groups: IGroupName[]

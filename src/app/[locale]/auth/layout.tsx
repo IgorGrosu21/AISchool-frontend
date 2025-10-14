@@ -1,7 +1,9 @@
-import { Stack } from "@mui/material";
 import { redirect } from "next/navigation"
 import { isLoggedIn } from "@/app/actions/token";
 import { ThemeImage } from "@/components/themeImage";
+
+//mui components
+import Stack from "@mui/material/Stack"
 
 export default async function AuthLayout({ children }: { children: React.ReactNode }) {
   const loggedIn = await isLoggedIn()

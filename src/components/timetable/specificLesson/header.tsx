@@ -1,6 +1,5 @@
 'use client'
 
-import { Fab, Stack, Typography } from '@mui/material'
 import Image from 'next/image';
 import { Link } from '@/i18n'
 import { ISpecificLesson } from '@/interfaces';
@@ -8,6 +7,10 @@ import { useMemo } from 'react';
 import { KlassLink } from '@/components';
 import { Panel } from '@/ui';
 
+//mui components
+import Fab from "@mui/material/Fab"
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 //icons
 import EditIcon from "@mui/icons-material/Edit"
 

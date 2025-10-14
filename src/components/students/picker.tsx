@@ -3,8 +3,13 @@
 import { useCallback, useState } from "react";
 import { SmallProfile } from "../profile";
 import { IStudent } from "@/interfaces";
-import { Box, Button, Menu, MenuItem, Typography } from "@mui/material";
 
+//mui components
+import Box from "@mui/material/Box"
+import Button from "@mui/material/Button"
+import Menu from "@mui/material/Menu"
+import MenuItem from "@mui/material/MenuItem"
+import Typography from "@mui/material/Typography"
 //icons
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 

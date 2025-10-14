@@ -1,11 +1,16 @@
 'use client'
 
 import { ISubjectName } from "@/interfaces";
-import { Stack, Autocomplete, TextField, Checkbox, Box, type StackProps } from "@mui/material";
 import { useMemo } from "react";
 import { useTranslations } from "next-intl";
 import { Subjects } from "@/components";
 
+//mui components
+import Autocomplete from "@mui/material/Autocomplete"
+import Box from "@mui/material/Box"
+import Checkbox from "@mui/material/Checkbox"
+import Stack, { type StackProps } from "@mui/material/Stack"
+import TextField from "@mui/material/TextField"
 //icons
 import CheckBoxIcon from "@mui/icons-material/CheckBox"
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank"

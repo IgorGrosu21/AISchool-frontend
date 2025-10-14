@@ -3,9 +3,14 @@
 import { Note, SmallProfile } from "@/components"
 import { Card } from "@/ui"
 import { INote, IDetailedHomework } from "@/interfaces"
-import { Box, Grid2, Stack, Typography } from "@mui/material"
 import { Link } from "@/i18n"
 import { useCallback } from "react"
+
+//mui components
+import Box from "@mui/material/Box"
+import Grid2 from "@mui/material/Grid2"
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 
 type LatestDataProps = {
   accountType: 'student' | 'teacher'

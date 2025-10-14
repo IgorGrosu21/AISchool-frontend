@@ -1,11 +1,17 @@
 'use client'
 
-import { Button, Stack, Typography, Box, Fade, alpha } from '@mui/material';
 import { Link } from '@/i18n';
 import { useTranslations } from 'next-intl';
 import { useIsMounted } from '@/hooks';
 import { useMemo } from 'react';
 
+//mui components
+import Box from "@mui/material/Box"
+import Button from "@mui/material/Button"
+import Fade from "@mui/material/Fade"
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
+import { alpha } from "@mui/material/styles"
 //icons
 import StarIcon from "@mui/icons-material/Star"
 import RocketLaunchIcon from "@mui/icons-material/RocketLaunch"

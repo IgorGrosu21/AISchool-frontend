@@ -1,8 +1,12 @@
 import { NavigationContainer, Subjects } from "@/components";
 import { errorHandler, fetchManuals } from "@/requests";
 import { IManual } from "@/interfaces";
-import { Grid2, Stack, Typography } from "@mui/material";
 import { getTranslations } from "next-intl/server";
+
+//mui components
+import Grid2 from "@mui/material/Grid2"
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 
 export default async function Page() {
   const [manualsRaw, status] = await fetchManuals()

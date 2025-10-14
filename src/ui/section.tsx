@@ -1,7 +1,11 @@
 'use client'
 
-import { Box, BoxProps, Stack, useTheme } from "@mui/material"
 import { motion } from "framer-motion"
+
+//mui components
+import { useTheme } from "@mui/material/styles"
+import Box, { type BoxProps } from "@mui/material/Box"
+import Stack from "@mui/material/Stack"
 
 interface SectionProps extends BoxProps {
   animationGroup?: React.ReactNode,

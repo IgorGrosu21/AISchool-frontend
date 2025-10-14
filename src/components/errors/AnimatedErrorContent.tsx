@@ -1,10 +1,18 @@
 'use client'
 
-import {  Stack, Typography, Box, alpha, Fade, Slide, Grow } from "@mui/material";
 import { ErrorButtons } from "./buttons";
 import { useTranslations } from "next-intl";
 import { useIsMounted } from "@/hooks";
 import { useMemo } from "react";
+
+//mui components
+import Box from "@mui/material/Box"
+import Fade from "@mui/material/Fade"
+import Grow from "@mui/material/Grow"
+import Slide from "@mui/material/Slide"
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
+import { alpha } from "@mui/material/styles"
 
 interface AnimatedErrorContentProps {
   code: number;

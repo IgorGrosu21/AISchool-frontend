@@ -1,10 +1,13 @@
 'use server'
 
 import { IDetailedUser, ISocial } from "@/interfaces";
-import { Stack, Typography, Divider } from "@mui/material";
 import { getTranslations } from "next-intl/server";
 import { Link } from '@/i18n';
 
+//mui components
+import Divider from "@mui/material/Divider"
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 //icons
 import FacebookIcon from "@mui/icons-material/Facebook"
 import InstagramIcon from "@mui/icons-material/Instagram"

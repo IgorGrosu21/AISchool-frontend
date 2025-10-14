@@ -2,11 +2,20 @@
 
 import { useMemo } from 'react'
 import { IDetailedKlass } from '@/interfaces'
-import { Autocomplete, FormControl, FormControlLabel, Radio, RadioGroup, Stack, TextField, Typography } from '@mui/material'
 import { KlassGroupsEditor, KlassLessonsEditor, StudentsEditor } from '@/components'
 import { Panel } from '@/ui'
 import { useTranslations } from 'next-intl'
 import { useKlassEditorContext } from '@/providers'
+
+//mui components
+import Autocomplete from "@mui/material/Autocomplete"
+import FormControl from "@mui/material/FormControl"
+import FormControlLabel from "@mui/material/FormControlLabel"
+import Radio from "@mui/material/Radio"
+import RadioGroup from "@mui/material/RadioGroup"
+import Stack from "@mui/material/Stack"
+import TextField from "@mui/material/TextField"
+import Typography from "@mui/material/Typography"
 
 export function Editor() {
   const { instance: klass, setInstance: setKlass } = useKlassEditorContext()

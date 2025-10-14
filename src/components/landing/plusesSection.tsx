@@ -1,12 +1,15 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Box, Grid2, Typography } from '@mui/material'
 import { useTranslations } from 'next-intl'
 import { usePluses } from '@/hooks'
 import { Section, SectionHeader, Card } from '@/ui'
 import { useMemo } from 'react'
 
+//mui components
+import Box from "@mui/material/Box"
+import Grid2 from "@mui/material/Grid2"
+import Typography from "@mui/material/Typography"
 //icons
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome"
 import SchoolIcon from "@mui/icons-material/School"

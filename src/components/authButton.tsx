@@ -1,7 +1,10 @@
 'use client'
 
-import { Button, Typography, TypographyProps } from "@mui/material"
 import { useTranslations } from "next-intl";
+
+//mui components
+import Button from "@mui/material/Button"
+import Typography, { type TypographyProps } from "@mui/material/Typography"
 
 interface AuthButtonProps {
   type: string

@@ -1,10 +1,13 @@
 'use server'
 
-import { Breadcrumbs, Stack, Typography } from "@mui/material"
 import { getTranslations } from "next-intl/server"
 import { Link } from '@/i18n'
 import { Panel } from "@/ui"
 
+//mui components
+import Breadcrumbs from "@mui/material/Breadcrumbs"
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 //icons
 import HomeIcon from "@mui/icons-material/Home"
 

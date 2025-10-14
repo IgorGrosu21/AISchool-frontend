@@ -1,6 +1,5 @@
 'use client'
 
-import { Checkbox, Grid2, Stack, Table, TableBody, TableCell, TableHead, TableRow, Typography } from "@mui/material"
 import { Link } from '@/i18n';
 import Image from "next/image";
 import { ISchool, IDetailedCountry } from "@/interfaces";
@@ -9,6 +8,16 @@ import { useIsMobile, useSchoolFilters } from "@/hooks";
 import { KlassesRange } from "@/components";
 import { Panel } from "@/ui";
 
+//mui components
+import Checkbox from "@mui/material/Checkbox"
+import Grid2 from "@mui/material/Grid2"
+import Stack from "@mui/material/Stack"
+import Table from "@mui/material/Table"
+import TableBody from "@mui/material/TableBody"
+import TableCell from "@mui/material/TableCell"
+import TableHead from "@mui/material/TableHead"
+import TableRow from "@mui/material/TableRow"
+import Typography from "@mui/material/Typography"
 //icons
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft"
 import ChevronRightIcon from "@mui/icons-material/ChevronRight"

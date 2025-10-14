@@ -1,7 +1,6 @@
 'use client'
 
 import { ILessonName, ILessonTimeName, INote } from "@/interfaces"
-import { Stack, Box, Grid2 } from "@mui/material"
 import { type Group, useJournalContext } from "@/providers";
 import { Note } from "../../item";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
@@ -9,6 +8,11 @@ import { Panel } from "@/ui";
 import { StudentsPicker } from "@/components";
 import { format } from 'date-fns';
 import { DateButton } from "./dateButton";
+
+//mui components
+import Box from "@mui/material/Box"
+import Grid2 from "@mui/material/Grid2"
+import Stack from "@mui/material/Stack"
 
 type ILessonWithDate = {
   lesson: Omit<ILessonName, 'lessonTime'> & {lessonTime?: ILessonTimeName}

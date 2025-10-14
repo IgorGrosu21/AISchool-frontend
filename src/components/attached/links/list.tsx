@@ -1,9 +1,12 @@
 'use client'
 
 import { Panel } from "@/ui";
-import { Stack, Typography } from "@mui/material";
 import { useTranslations } from "next-intl";
 import { Link } from '@/i18n';
+
+//mui components
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 
 interface AttachedLinksProps {
   links?: string

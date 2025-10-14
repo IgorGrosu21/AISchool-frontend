@@ -1,10 +1,14 @@
 'use client'
 
-import { Button, CircularProgress, Stack } from '@mui/material';
 import { useTranslations } from 'next-intl';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
 import { useIsMobile } from '@/hooks';
+
+//mui components
+import Button from "@mui/material/Button"
+import CircularProgress from "@mui/material/CircularProgress"
+import Stack from "@mui/material/Stack"
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   'pdfjs-dist/build/pdf.worker.min.mjs',

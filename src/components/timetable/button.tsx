@@ -1,7 +1,11 @@
 'use server'
 
-import { Button, Link, Typography } from "@mui/material"
 import { getTranslations } from "next-intl/server"
+
+//mui components
+import Button from "@mui/material/Button"
+import Link from "@mui/material/Link"
+import Typography from "@mui/material/Typography"
 
 interface TimetableButtonProps {
   schoolSlug: string

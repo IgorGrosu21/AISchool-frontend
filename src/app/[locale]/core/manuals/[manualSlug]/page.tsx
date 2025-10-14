@@ -1,8 +1,10 @@
 import { Balance, ModuleHeader, ModuleList, NavigationContainer } from "@/components";
 import { errorHandler, fetchManual } from "@/requests";
-import { Typography } from "@mui/material";
 import { getTranslations } from "next-intl/server";
 import { Link } from '@/i18n';
+
+//mui components
+import Typography from "@mui/material/Typography"
 
 export default async function Page({ params }: { params: Promise<{manualSlug: string}> }) {
   const { manualSlug } = await params;

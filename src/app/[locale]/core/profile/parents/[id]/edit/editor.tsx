@@ -2,7 +2,9 @@
 
 import { ProfileContainer as ParentContainer } from "@/components";
 import { useParentEditorContext } from "@/providers";
-import { Typography } from "@mui/material";
+
+//mui components
+import Typography from "@mui/material/Typography"
 
 export function Editor() {
   const { instance: parent, setInstance: setParent } = useParentEditorContext()

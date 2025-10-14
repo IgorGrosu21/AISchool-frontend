@@ -1,8 +1,10 @@
 import { NavigationContainer, TeacherPositions } from "@/components"
 import { Panel } from "@/ui"
 import { errorHandler, fetchTeacher } from "@/requests"
-import { Typography } from "@mui/material"
 import { getTranslations } from "next-intl/server"
+
+//mui components
+import Typography from "@mui/material/Typography"
 
 export default async function Page({ params }: { params: Promise<{id: string}> }) {
   const { id } = await params

@@ -1,7 +1,9 @@
 'use client'
 
-import { Box } from '@mui/material'
 import { motion } from 'framer-motion'
+
+//mui components
+import Box from "@mui/material/Box"
 
 export function AnimationGroup2() {
   return <>

@@ -1,10 +1,12 @@
 'use server'
 
-import { Stack, Typography } from "@mui/material"
 import { ThemeImage } from "./themeImage"
 import { Link } from '@/i18n'
 import { getTranslations } from "next-intl/server";
 
+//mui components
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 //icons
 import FacebookIcon from '@mui/icons-material/Facebook'
 import InstagramIcon from '@mui/icons-material/Instagram'

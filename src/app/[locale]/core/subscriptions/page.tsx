@@ -1,5 +1,7 @@
 import { SubscriptionHero, SubscriptionPlans, SubscriptionPluses, SubscriptionDescription } from '@/components'
-import { Stack } from '@mui/material'
+
+//mui components
+import Stack from "@mui/material/Stack"
 
 export default async function Page() {
   return <Stack>

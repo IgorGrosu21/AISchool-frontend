@@ -2,11 +2,14 @@
 
 import { ImageUploader } from "@/components";
 import { IDetailedMedia, IDetailedSchool } from "@/interfaces";
-import { Stack, ImageList, ImageListItem } from "@mui/material";
 import { Dispatch, SetStateAction, useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import { editSchoolPhoto, removeSchoolPhoto } from "@/app/actions";
 
+//mui components
+import ImageList from "@mui/material/ImageList"
+import ImageListItem from "@mui/material/ImageListItem"
+import Stack from "@mui/material/Stack"
 //icons
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 

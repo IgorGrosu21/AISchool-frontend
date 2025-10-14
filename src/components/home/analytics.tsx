@@ -2,8 +2,10 @@
 
 import { IPersonHome } from "@/interfaces"
 import { Card } from "@/ui"
-import { Typography } from "@mui/material"
 import { LineChart, BarChart } from "./charts"
+
+//mui components
+import Typography from "@mui/material/Typography"
 
 type StudentWithPoints = (IPersonHome & { profileType: 'student' })['analytics'][number]
 type TeacherWithPoints = (IPersonHome & { profileType: 'teacher' })['analytics'][number]['subjects'][number]

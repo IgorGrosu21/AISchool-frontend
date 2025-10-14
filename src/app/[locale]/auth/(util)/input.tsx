@@ -1,7 +1,10 @@
 'use client'
 
-import { AutocompleteRenderInputParams, TextField, TextFieldProps } from "@mui/material";
 import { useTranslations } from "next-intl";
+
+//mui components
+import { type AutocompleteRenderInputParams } from "@mui/material/Autocomplete"
+import TextField, { type TextFieldProps } from "@mui/material/TextField"
 
 export function Input({hidden = false, ...props}: (TextFieldProps | AutocompleteRenderInputParams) & { name?: string, hidden?: boolean }) {
   const t = useTranslations('auth');

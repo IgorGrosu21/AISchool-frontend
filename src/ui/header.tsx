@@ -1,7 +1,10 @@
 'use client'
 
 import { motion } from "framer-motion"
-import { Stack, Typography } from "@mui/material"
+
+//mui components
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 
 interface SectionHeaderProps {
   isTitle?: boolean

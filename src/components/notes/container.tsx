@@ -1,11 +1,17 @@
 'use client'
 
-import { Stack, Typography, Box, Button, CircularProgress } from "@mui/material"
 import { useTranslations } from "next-intl"
 import { useJournalContext } from "@/providers"
 import { AnnualNoteList } from "./list"
 import { useGroupedNotes } from "@/hooks"
 import { Panel } from "@/ui"
+
+//mui components
+import Box from "@mui/material/Box"
+import Button from "@mui/material/Button"
+import CircularProgress from "@mui/material/CircularProgress"
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 
 interface NotesContainerProps extends React.PropsWithChildren {
   loading: boolean

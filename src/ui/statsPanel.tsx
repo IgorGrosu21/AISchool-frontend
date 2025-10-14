@@ -1,10 +1,14 @@
 'use client'
 
 import { motion, AnimatePresence } from "framer-motion"
-import { Stack, Typography, type StackProps, SvgIcon, IconButton } from "@mui/material"
 import { useState } from "react"
 import { Panel } from "./panel"
 
+//mui components
+import IconButton from "@mui/material/IconButton"
+import Stack, { type StackProps } from "@mui/material/Stack"
+import SvgIcon from "@mui/material/SvgIcon"
+import Typography from "@mui/material/Typography"
 //icons
 import CloseIcon from "@mui/icons-material/Close"
 

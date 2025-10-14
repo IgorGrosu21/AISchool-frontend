@@ -1,9 +1,12 @@
 'use client'
 
-import { Typography, Stack } from "@mui/material"
 import { EditButton } from "./editButton"
 import { ReturnButton } from "./returnButton"
 import { ICanEdit } from "@/interfaces"
+
+//mui components
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 
 interface TitleProps {
   label: string

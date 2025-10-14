@@ -1,9 +1,17 @@
 'use client'
 
-import { Typography, Stack, Radio, Rating, Chip, Grid2, Box } from "@mui/material";
 import { useTranslations } from "next-intl";
 import { useState, useMemo } from "react";
 import { Section, SectionHeader, Card } from "@/ui";
+
+//mui components
+import Box from "@mui/material/Box"
+import Chip from "@mui/material/Chip"
+import Grid2 from "@mui/material/Grid2"
+import Radio from "@mui/material/Radio"
+import Rating from "@mui/material/Rating"
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 
 export function SubscriptionPlans() {
   const [selectedPlan, setSelectedPlan] = useState(1);

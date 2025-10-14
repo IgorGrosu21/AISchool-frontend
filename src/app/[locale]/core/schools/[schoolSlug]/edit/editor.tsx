@@ -1,7 +1,6 @@
 'use client'
 
 import { IMedia } from '@/interfaces'
-import { Stack, TextField } from '@mui/material'
 import { useTranslations } from 'next-intl'
 import { ImageUploader, SchoolPositionsEditor, PhotosEditor, ContactsEditor } from '@/components'
 import { Panel } from '@/ui'
@@ -9,6 +8,10 @@ import Image from 'next/image'
 import { editSchoolPreview, removeSchoolPreview } from '@/app/actions'
 import { useSchoolEditorContext } from '@/providers'
 import { useCallback } from 'react'
+
+//mui components
+import Stack from "@mui/material/Stack"
+import TextField from "@mui/material/TextField"
 
 export function Editor() {
   const { instance: school, setInstance: setSchool } = useSchoolEditorContext()

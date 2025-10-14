@@ -5,11 +5,16 @@ import { Context, ProviderProps, useCallback, useMemo, useState, useTransition }
 import { useTranslations } from "next-intl";
 import { Loader, Title } from "@/components";
 import { Panel } from "@/ui";
-import { Stack, Button, Alert, Snackbar, SnackbarCloseReason } from "@mui/material";
 import { Link } from '@/i18n';
 import { EditorContextType } from "./contexts";
 import { ICanEdit } from "@/interfaces";
 import { useRouter } from "@/i18n";
+
+//mui components
+import Alert from "@mui/material/Alert"
+import Button from "@mui/material/Button"
+import Snackbar, { type SnackbarCloseReason } from "@mui/material/Snackbar"
+import Stack from "@mui/material/Stack"
 
 interface EditorProviderValue<T> {
   Context: Context<EditorContextType<T> | null>

@@ -1,7 +1,6 @@
 'use client'
 
 import { ILessonName, ISpecificLessonName } from "@/interfaces";
-import { Stack, Typography, Snackbar, Slide, SlideProps, Alert } from "@mui/material";
 import { useCallback, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from '@/i18n';
@@ -11,6 +10,13 @@ import { useDiaryContext } from "@/providers";
 import { TimetableContainer } from "../container";
 import { useHolidayChecker } from "@/hooks";
 import { SpecificLesson } from "./item";
+
+//mui components
+import Alert from "@mui/material/Alert"
+import Slide, { type SlideProps } from "@mui/material/Slide"
+import Snackbar from "@mui/material/Snackbar"
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 
 interface SpecificLessonsProps {
   specificLessons: ISpecificLessonName[]

@@ -1,7 +1,6 @@
 'use client'
 
 import { IDetailedKlass, INote } from "@/interfaces"
-import { Box } from "@mui/material"
 import { NotesContainer } from "../../container";
 import { NotePicker } from "../../picker";
 import { useTeacherNotes } from "@/hooks";
@@ -10,6 +9,9 @@ import { TeacherNoteListMobile } from "./teacherMobile";
 import { useCallback } from "react";
 import { format, isAfter } from "date-fns";
 import { type Group } from "@/providers";
+
+//mui components
+import Box from "@mui/material/Box"
 
 interface TeacherNoteListProps {
   klass: IDetailedKlass

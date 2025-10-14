@@ -1,8 +1,9 @@
 'use client'
 
-import { Fab } from "@mui/material";
 import { Link } from '@/i18n';
 
+//mui components
+import Fab from "@mui/material/Fab"
 //icons
 import ArrowBackIcon from "@mui/icons-material/ArrowBack"
 

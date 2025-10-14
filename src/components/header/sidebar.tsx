@@ -3,13 +3,17 @@
 import { Link } from '@/i18n'
 import { useState, useEffect, useCallback } from "react"
 import { usePathname } from "@/i18n"
-import { Stack, Typography, IconButton, Drawer } from "@mui/material"
 import { useTranslations } from "next-intl"
 import { AuthButton, ThemeImage } from "@/components"
 import { logoutThis, verify } from "@/app/actions"
 import { RouteController } from "./routeController"
 import { IUserRoutes } from "@/interfaces"
 
+//mui components
+import Drawer from "@mui/material/Drawer"
+import IconButton from "@mui/material/IconButton"
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 //icons
 import MenuIcon from "@mui/icons-material/Menu"
 import CloseIcon from "@mui/icons-material/Close"

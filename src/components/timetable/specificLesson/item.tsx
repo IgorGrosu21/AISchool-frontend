@@ -1,9 +1,12 @@
 'use client'
 
-import { Stack, type StackProps, Typography } from "@mui/material"
 import { Lesson } from "../lessons"
 import { ILessonTimeName, ILessonName, ISpecificLessonName } from "@/interfaces"
 import { Note } from "@/components"
+
+//mui components
+import Stack, { type StackProps } from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 
 interface SpecificLessonsProps extends StackProps {
   lessonTime: ILessonTimeName

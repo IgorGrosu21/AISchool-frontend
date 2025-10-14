@@ -1,7 +1,8 @@
 'use client'
 
-import { Fab } from "@mui/material";
 
+//mui components
+import Fab from "@mui/material/Fab"
 //icons
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp"
 

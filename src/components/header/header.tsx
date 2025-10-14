@@ -1,6 +1,5 @@
 'use server'
 
-import { IconButton, Stack, Typography } from "@mui/material";
 import { isLoggedIn } from "@/app/actions";
 import { Link } from '@/i18n';
 import { SideBarWrapper } from "./sidebarWrapper";
@@ -12,6 +11,10 @@ import { QuickLinks } from "./quickLinks";
 import { errorHandler, fetchUserRoutes } from "@/requests";
 import { IUserRoutes } from "@/interfaces";
 
+//mui components
+import IconButton from "@mui/material/IconButton"
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 //icons
 import LoginIcon from "@mui/icons-material/Login"
 

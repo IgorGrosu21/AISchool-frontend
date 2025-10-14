@@ -1,9 +1,12 @@
 'use client'
 
-import { Button, Stack } from '@mui/material'
 import { useMemo, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { motion, AnimatePresence } from 'framer-motion'
+
+//mui components
+import Button from "@mui/material/Button"
+import Stack from "@mui/material/Stack"
 
 interface TimetableStepperContainerProps {
   subjectsComponent: React.ReactNode

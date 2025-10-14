@@ -1,13 +1,15 @@
 'use client'
 
 import { IDetailedUser } from "@/interfaces";
-import { Stack } from "@mui/material";
 import { Fields } from "./fields";
 import { Socials } from "./socials";
 import { ImageUploader } from "../../imageUploader";
 import { removeAvatar, editAvatar } from "@/app/actions";
 import { Panel } from "@/ui";
 import { ThemeImage } from "../../themeImage";
+
+//mui components
+import Stack from "@mui/material/Stack"
 
 interface ContainerProps extends React.PropsWithChildren {
   user: IDetailedUser

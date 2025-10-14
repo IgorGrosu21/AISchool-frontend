@@ -1,9 +1,13 @@
 'use client'
 
 import { IUser } from "@/interfaces"
-import { Stack, Typography, Checkbox } from "@mui/material"
 import { useTranslations } from "next-intl"
 import { SmallProfile } from "./smallProfile"
+
+//mui components
+import Checkbox from "@mui/material/Checkbox"
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 
 interface UserVerifierProps {
   user: IUser,

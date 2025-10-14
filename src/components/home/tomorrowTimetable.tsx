@@ -4,8 +4,10 @@ import { SpecificLesson } from "@/components"
 import { Card } from "@/ui"
 import { IPersonHome } from "@/interfaces"
 import { Link } from "@/i18n"
-import { Stack } from "@mui/material"
 import { useMemo } from "react"
+
+//mui components
+import Stack from "@mui/material/Stack"
 
 interface TomorrowTimetableProps {
   id: string

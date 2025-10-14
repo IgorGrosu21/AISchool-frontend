@@ -3,8 +3,12 @@
 import { Subjects, SmallProfile } from "@/components";
 import { Panel } from "@/ui";
 import { IDetailedSchool } from "@/interfaces";
-import { Grid2, Stack, Typography } from "@mui/material";
 import { getTranslations } from "next-intl/server";
+
+//mui components
+import Grid2 from "@mui/material/Grid2"
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 
 interface SchoolPositionsProps {
   school: IDetailedSchool

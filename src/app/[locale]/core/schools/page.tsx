@@ -1,7 +1,9 @@
-import { Typography } from "@mui/material"
 import { errorHandler, fetchCity, fetchSchools } from "@/requests";
 import { getTranslations } from "next-intl/server";
 import { NavigationContainer, SchoolTable } from "@/components";
+
+//mui components
+import Typography from "@mui/material/Typography"
 
 export default async function Page() {
   const [[schoolsRaw, schoolsStatus], [cityRaw, cityStatus]] = await Promise.all([fetchSchools(), fetchCity()])

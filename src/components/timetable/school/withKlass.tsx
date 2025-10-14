@@ -2,9 +2,12 @@
 
 import { PickKlass, KlassesButton } from "@/components"
 import { IKlassName, IKlassNameWithGroups, ISchoolWithTimetable } from "@/interfaces"
-import { Stack, Typography } from "@mui/material"
 import { useTranslations } from "next-intl"
 import { useMemo, useState } from "react"
+
+//mui components
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 
 interface WithKlassProps {
   school: ISchoolWithTimetable

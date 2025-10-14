@@ -1,9 +1,11 @@
-import { Typography } from '@mui/material'
 import { NavigationContainer, Subjects } from '@/components'
 import { Panel } from '@/ui'
 import { getTranslations } from 'next-intl/server'
 import { errorHandler, fetchKlass, fetchTeachedSubjects } from '@/requests'
 import { redirect } from '@/i18n'
+
+//mui components
+import Typography from "@mui/material/Typography"
 
 export default async function TeacherJournalPage({ params }: { params: Promise<{id: string, schoolSlug: string, klassSlug: string}> }) {
   const { id, schoolSlug, klassSlug } = await params

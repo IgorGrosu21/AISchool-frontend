@@ -1,9 +1,10 @@
 'use client'
 
 import { ICanEdit } from "@/interfaces";
-import { Fab } from "@mui/material";
 import { Link } from '@/i18n';
 
+//mui components
+import Fab from "@mui/material/Fab"
 //icons
 import EditIcon from "@mui/icons-material/Edit"
 

@@ -1,9 +1,13 @@
 'use client'
 
 import { useCalendarContext } from '@/providers';
-import { Typography, Grid2, Button } from '@mui/material';
 import { isSameWeek } from 'date-fns';
 import { useMemo } from 'react';
+
+//mui components
+import Button from "@mui/material/Button"
+import Grid2 from "@mui/material/Grid2"
+import Typography from "@mui/material/Typography"
 
 interface DaysProps {
   week: Array<Date | null>

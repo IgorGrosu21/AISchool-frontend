@@ -1,7 +1,6 @@
 'use client'
 
 import { ISubjectName } from "@/interfaces"
-import { Grid2, Stack, Typography } from "@mui/material"
 import { useTranslations } from "next-intl"
 import { Link } from '@/i18n';
 import { NotesContainer } from "../container";
@@ -9,6 +8,11 @@ import { useJournalContext } from "@/providers";
 import { useStudentNotes } from "@/hooks"
 import { Panel } from "@/ui";
 import { Note } from "../item";
+
+//mui components
+import Grid2 from "@mui/material/Grid2"
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 
 interface StudentNoteListProps {
   subjects: ISubjectName[]

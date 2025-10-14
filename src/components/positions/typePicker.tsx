@@ -1,9 +1,14 @@
 'use client'
 
 import { IPosition } from "@/interfaces";
-import { FormControl, RadioGroup, FormControlLabel, Radio } from "@mui/material";
 import { useTranslations } from "next-intl";
 import { useMemo } from "react";
+
+//mui components
+import FormControl from "@mui/material/FormControl"
+import FormControlLabel from "@mui/material/FormControlLabel"
+import Radio from "@mui/material/Radio"
+import RadioGroup from "@mui/material/RadioGroup"
 
 interface TypePickerProps {
   type: IPosition['type'],

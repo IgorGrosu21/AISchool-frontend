@@ -1,9 +1,13 @@
 'use server'
 
 import { IBalance } from "@/interfaces"
-import { Box, Stack, StackProps, Typography } from "@mui/material"
 import { getTranslations } from "next-intl/server";
 import { Currency } from "./currency";
+
+//mui components
+import Box from "@mui/material/Box"
+import Stack, { type StackProps } from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 
 interface BalanceProps extends StackProps {
   balance: IBalance,

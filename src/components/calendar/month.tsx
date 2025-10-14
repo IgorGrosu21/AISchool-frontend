@@ -1,11 +1,15 @@
 'use client'
 
-import { Divider, Grid2, Stack } from '@mui/material';
 import { AnimatePresence, motion } from 'framer-motion'
 import { MonthButton } from './monthButton';
 import { useMonthView } from '@/hooks';
 import { Days } from './days';
 import { Week } from './week';
+
+//mui components
+import Divider from "@mui/material/Divider"
+import Grid2 from "@mui/material/Grid2"
+import Stack from "@mui/material/Stack"
 
 interface MonthProps {
   month: Date

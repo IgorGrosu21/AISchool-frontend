@@ -2,9 +2,13 @@
 
 import { Panel } from '@/ui';
 import { IDetailedSchool } from '@/interfaces';
-import { Grid2, TextField, Typography } from '@mui/material'
 import { useTranslations } from 'next-intl'
 import { Dispatch, SetStateAction, useCallback, useMemo } from 'react';
+
+//mui components
+import Grid2 from "@mui/material/Grid2"
+import TextField from "@mui/material/TextField"
+import Typography from "@mui/material/Typography"
 
 interface ContactsEditorProps {
   school: IDetailedSchool,

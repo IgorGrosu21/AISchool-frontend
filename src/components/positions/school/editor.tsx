@@ -2,12 +2,17 @@
 
 import { IDetailedSchool } from "@/interfaces"
 import { Dispatch, SetStateAction } from "react"
-import { Box, Checkbox, Grid2, Stack, Typography } from "@mui/material";
 import { useTranslations } from "next-intl";
 import { UserVerifier } from "@/components";
 import { Panel } from "@/ui";
 import { TypePicker } from "../typePicker";
 
+//mui components
+import Box from "@mui/material/Box"
+import Checkbox from "@mui/material/Checkbox"
+import Grid2 from "@mui/material/Grid2"
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 //icons
 import CloseIcon from "@mui/icons-material/Close"
 

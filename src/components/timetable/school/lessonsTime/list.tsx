@@ -1,8 +1,10 @@
 'use client'
 
 import { ILessonTime } from "@/interfaces"
-import { Typography } from "@mui/material"
 import { TimetableContainer } from "../../container"
+
+//mui components
+import Typography from "@mui/material/Typography"
 
 interface LessonTimeProps {
   timetable: ILessonTime[]

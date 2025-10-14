@@ -1,8 +1,12 @@
 'use client'
 
-import { Button, Grid2, Stack, Typography } from '@mui/material'
 import { useKlassListEditor } from '@/hooks'
 
+//mui components
+import Button from "@mui/material/Button"
+import Grid2 from "@mui/material/Grid2"
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
 //icons
 import AddCircleIcon from "@mui/icons-material/AddCircle"
 import RemoveCircleIcon from "@mui/icons-material/RemoveCircle"
