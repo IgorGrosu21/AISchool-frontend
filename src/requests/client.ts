@@ -3,6 +3,7 @@ import axios, { AxiosError } from 'axios';
 import { setupCache } from 'axios-cache-interceptor'
 import type { CacheRequestConfig, CacheUpdater, CachedResponse } from 'axios-cache-interceptor'
 import { IMedia } from '../interfaces';
+import { cache } from 'react';
 
 type updateCacheBehavior = 'replace' | 'ignore'
 
@@ -11,10 +12,18 @@ const api = setupCache(axios.create({
   withCredentials: true,
   headers: {
     'Content-Type': 'application/json'
-  }
-}));
+  },
+  timeout: 10000, // 10 second timeout
+}), {
+  ttl: 1000 * 60 * 5, // 5 minutes default cache
+  interpretHeader: false,
+  methods: ['get'],
+  cachePredicate: {
+    statusCheck: (status) => status >= 200 && status < 300,
+  },
+});
 
-export async function request<T>(config: CacheRequestConfig, updateCacheType?: updateCacheBehavior, access?: string): Promise<[T | undefined, number]> {
+export const request = cache(async <T>(config: CacheRequestConfig, updateCacheType?: updateCacheBehavior, access?: string): Promise<[T | undefined, number]> => {
   access = access ?? await getToken()
   config.method = config.method ?? 'GET'
   if (updateCacheType) {
@@ -41,7 +50,11 @@ export async function request<T>(config: CacheRequestConfig, updateCacheType?: u
         ...config.headers,
         Authorization: `Bearer ${access}`,
         'Content-Type': config.data instanceof FormData ? 'multipart/form-data' : 'application/json',
-      }
+      },
+      cache: {
+        ...config.cache,
+        ttl: 1000 * 60 * 5, // 5 minutes default cache
+      },
     })
     return [response.data, response.status];
   } catch (error: unknown) {
@@ -50,8 +63,7 @@ export async function request<T>(config: CacheRequestConfig, updateCacheType?: u
     }
     return [undefined, 500]
   }
-  
-}
+})
 
 async function refreshToken() {
   try {

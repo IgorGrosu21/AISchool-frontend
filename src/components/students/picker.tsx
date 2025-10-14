@@ -3,8 +3,10 @@
 import { useCallback, useState } from "react";
 import { SmallProfile } from "../profile";
 import { IStudent } from "@/interfaces";
-import { KeyboardArrowDown } from "@mui/icons-material";
 import { Box, Button, Menu, MenuItem, Typography } from "@mui/material";
+
+//icons
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 interface StudentsPickerProps<T> {
   anchorEl: HTMLDivElement | null
@@ -28,7 +30,7 @@ export function StudentsPicker<T extends IStudent | string>({anchorEl, students,
   return <Box>
     <Button variant='text' onClick={() => open(true)} sx={{px: {xs: 0, md: 2}, py: {xs: 0, md: 1}, gap: {xs: 1, md: 2, lg: 4}}}>
       {typeof activeStudent === 'string' ? activeStudent : <SmallProfile user={activeStudent.user} disableLink extraSmall />}
-      <KeyboardArrowDown sx={{transform: `rotate(${opened ? 180 : 0}deg)`, transition: '0.5s', fontSize: '2rem'}} />
+      <KeyboardArrowDownIcon sx={{transform: `rotate(${opened ? 180 : 0}deg)`, transition: '0.5s', fontSize: '2rem'}} />
     </Button>
     <Menu
       anchorEl={anchorEl}

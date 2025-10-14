@@ -2,10 +2,15 @@
 
 import { Button, Stack, Typography } from "@mui/material";
 import { useTranslations } from "next-intl";
-import { Close, Restore, Upload, Visibility } from "@mui/icons-material";
 import { useAttachedFilesContext } from "@/providers";
 import { IDetailedMedia } from "@/interfaces";
 import { Panel } from "@/ui";
+
+//icons
+import CloseIcon from "@mui/icons-material/Close"
+import RestoreIcon from "@mui/icons-material/Restore"
+import UploadIcon from "@mui/icons-material/Upload"
+import VisibilityIcon from "@mui/icons-material/Visibility"
 
 interface AttachedFilesEditorProps {
   files: IDetailedMedia[]
@@ -20,18 +25,18 @@ export function AttachedFilesEditor({files, filesData, small = true}: AttachedFi
   return <Panel gap={2} sx={{height: '100%'}}>
     <Stack direction='row' sx={{justifyContent: 'space-between', alignItems: 'center'}}>
       <Typography variant={small ? 'h6' : 'h5'}>{t('files.plural')}:</Typography>
-      <Upload onClick={openFilePicker} color='primary' />
+      <UploadIcon onClick={openFilePicker} color='primary' />
     </Stack>
     <Stack direction='row' gap={2}>
       {files.map((file, i) => <Button key={i} variant='outlined' color={file.delete ? 'secondary' : 'primary'} sx={{gap: 2, p: 2}}>
         <Typography>{file.file.split('/').at(-1)}</Typography>
-        <Visibility onClick={() => setActiveFile(file)} />
-        {file.delete ? <Restore onClick={() => restoreFile(i)} /> : <Close onClick={() => deleteFile(i, 'file')} />}
+        <VisibilityIcon onClick={() => setActiveFile(file)} />
+        {file.delete ? <RestoreIcon onClick={() => restoreFile(i)} /> : <CloseIcon onClick={() => deleteFile(i, 'file')} />}
       </Button>)}
       {filesData && filesData.map((file, i) => <Button key={i} variant='outlined' sx={{gap: 2, p: 2}}>
         <Typography>{file.name}</Typography>
-        <Visibility onClick={() => setActiveFileData(file)} />
-        <Close onClick={() => deleteFile(i, 'fileData')} />
+        <VisibilityIcon onClick={() => setActiveFileData(file)} />
+        <CloseIcon onClick={() => deleteFile(i, 'fileData')} />
       </Button>)}
     </Stack>
   </Panel>

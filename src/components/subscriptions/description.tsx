@@ -2,22 +2,26 @@
 
 import { Typography, Stack, Box, Grid2, alpha } from "@mui/material";
 import { useTranslations } from "next-intl";
-import { Info, Group, CheckCircle } from '@mui/icons-material';
 import { Section, SectionHeader, Card } from "@/ui";
 import { motion } from "framer-motion";
+
+//icons
+import InfoIcon from "@mui/icons-material/Info"
+import GroupIcon from "@mui/icons-material/Group"
+import CheckCircleIcon from "@mui/icons-material/CheckCircle"
 
 export function SubscriptionDescription() {
   const t = useTranslations('subscriptions.description');
 
   const descriptionCards = [
     {
-      icon: Info,
+      icon: InfoIcon,
       title: t('about.title'),
       description: t('about.desc'),
       color: 'primary' as const,
     },
     {
-      icon: Group,
+      icon: GroupIcon,
       title: t('group.title'),
       description: t('group.desc'),
       color: 'secondary' as const,
@@ -78,7 +82,7 @@ export function SubscriptionDescription() {
                     mt: 'auto'
                   })}>
                     <Stack direction="row" alignItems="center" gap={2} sx={{ justifyContent: 'center' }}>
-                      <CheckCircle color="secondary" sx={{ fontSize: '1.5rem' }} />
+                      <CheckCircleIcon color="secondary" sx={{ fontSize: '1.5rem' }} />
                       <Typography 
                         variant="h6" 
                         color="secondary" 

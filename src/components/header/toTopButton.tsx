@@ -1,7 +1,9 @@
 'use client'
 
-import { KeyboardArrowUp } from "@mui/icons-material";
 import { Fab } from "@mui/material";
+
+//icons
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp"
 
 export function ToTopButton() {
   return <Fab
@@ -18,6 +20,6 @@ export function ToTopButton() {
       height: { xs: 48, md: 56 },
     }}
   >
-    <KeyboardArrowUp fontSize='large' />
+    <KeyboardArrowUpIcon fontSize='large' />
   </Fab>
 }

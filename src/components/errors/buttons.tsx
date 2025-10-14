@@ -1,11 +1,14 @@
 'use client'
 
-import { Home, ArrowBack } from "@mui/icons-material";
 import { Stack, Button, alpha } from "@mui/material";
 import { useTranslations } from "next-intl";
 import { Link } from '@/i18n';
 import { useRouter } from "@/i18n";
 import { motion } from "framer-motion";
+
+//icons
+import HomeIcon from "@mui/icons-material/Home"
+import ArrowBackIcon from "@mui/icons-material/ArrowBack"
 
 export function ErrorButtons() {
   const t = useTranslations('errors');
@@ -17,7 +20,7 @@ export function ErrorButtons() {
       whileTap={{ scale: 0.95 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
     >
-      <Button variant="contained" size="large" startIcon={<Home />} component={Link} href="/core" sx={theme => ({
+      <Button variant="contained" size="large" startIcon={<HomeIcon />} component={Link} href="/core" sx={theme => ({
         px: 4,
         py: 1.5,
         fontSize: '1.1rem',
@@ -39,7 +42,7 @@ export function ErrorButtons() {
       whileTap={{ scale: 0.95 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
     >
-      <Button variant="outlined" size="large" startIcon={<ArrowBack />} onClick={() => router.back()} sx={theme => ({
+      <Button variant="outlined" size="large" startIcon={<ArrowBackIcon />} onClick={() => router.back()} sx={theme => ({
         px: 4,
         py: 1.5,
         fontSize: '1.1rem',

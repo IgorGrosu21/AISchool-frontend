@@ -1,20 +1,32 @@
 'use client'
 
-import { DarkModeOutlined, LightModeOutlined } from "@mui/icons-material"
 import { IconButton, useColorScheme } from "@mui/material"
-import { useIsDark } from "@/hooks"
 import { useCallback } from "react";
+
+//icons
+import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined"
+import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined"
 
 export function NightNodeToggler() {
   const { setMode } = useColorScheme();
-  const isDark = useIsDark()
 
-  const toggleMode = useCallback(() => {
-    setMode(isDark ? 'light' : 'dark');
-  }, [isDark, setMode])
+  const toggleMode = useCallback((mode: 'light' | 'dark') => {
+    setMode(mode);
+  }, [setMode])
 
-  return <IconButton onClick={toggleMode} color='primary' suppressHydrationWarning>
-    <DarkModeOutlined sx={{display: isDark ? 'block' : 'none'}} />
-    <LightModeOutlined sx={{display: isDark ? 'none' : 'block'}} />
+  return <IconButton color='primary' suppressHydrationWarning>
+    <DarkModeOutlinedIcon
+      onClick={() => toggleMode('dark')}
+      sx={[
+        {display: 'none'},
+        theme => theme.applyStyles('dark', { display: 'block' })
+      ]}
+    />
+    <LightModeOutlinedIcon
+      onClick={() => toggleMode('light')}
+      sx={[
+        {display: 'block'},
+        theme => theme.applyStyles('dark', { display: 'none' })
+      ]} />
   </IconButton>
 }

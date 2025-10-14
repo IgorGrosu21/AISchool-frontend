@@ -1,10 +1,14 @@
 'use client'
 
 import { useTranslations } from "next-intl";
-import { RocketLaunch, TrendingUp, SmartToy } from '@mui/icons-material';
 import { AnimationGroup2, Section, SectionHeader, StatsPanel, StatsPanelsContainer } from "@/ui";
 
-const features = [RocketLaunch, TrendingUp, SmartToy].map(Icon => ({ icon: Icon }))
+//icons
+import RocketLaunchIcon from "@mui/icons-material/RocketLaunch"
+import TrendingUpIcon from "@mui/icons-material/TrendingUp"
+import SmartToyIcon from "@mui/icons-material/SmartToy"
+
+const features = [RocketLaunchIcon, TrendingUpIcon, SmartToyIcon].map(Icon => ({ icon: Icon }))
 
 export function SubscriptionHero() {
   const t = useTranslations('subscriptions.hero');

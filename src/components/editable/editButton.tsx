@@ -2,8 +2,10 @@
 
 import { ICanEdit } from "@/interfaces";
 import { Fab } from "@mui/material";
-import { Edit } from "@mui/icons-material";
 import { Link } from '@/i18n';
+
+//icons
+import EditIcon from "@mui/icons-material/Edit"
 
 interface EditButtonProps<T> {
   link: string
@@ -23,7 +25,7 @@ export function EditButton<T extends ICanEdit>({link, editable}: EditButtonProps
         }
       }}
     >
-      <Edit />
+      <EditIcon />
     </Fab>
   </Link> : <></>
 }

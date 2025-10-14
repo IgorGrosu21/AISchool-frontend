@@ -27,7 +27,7 @@ declare module '@mui/material/SvgIcon' {
 
 const theme = createTheme({
   cssVariables: {
-    colorSchemeSelector: 'data',
+    colorSchemeSelector: '[data-theme=\'%s\']',
   },
   colorSchemes: {
     dark: {

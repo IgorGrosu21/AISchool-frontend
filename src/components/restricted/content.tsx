@@ -4,12 +4,16 @@ import { Button, Stack, Typography, Box, Fade, alpha } from '@mui/material';
 import { Link } from '@/i18n';
 import { useTranslations } from 'next-intl';
 import { useIsMounted } from '@/hooks';
-import { Star, RocketLaunch, Schedule } from '@mui/icons-material';
 import { useMemo } from 'react';
+
+//icons
+import StarIcon from "@mui/icons-material/Star"
+import RocketLaunchIcon from "@mui/icons-material/RocketLaunch"
+import ScheduleIcon from "@mui/icons-material/Schedule"
 
 export function Content({translations}: {translations: string}) {
   const t = useTranslations(`components.${translations}`);
-  const FeatureIcon = useMemo(() => translations === 'ad' ? Star : Schedule, [translations]);
+  const FeatureIcon = useMemo(() => translations === 'ad' ? StarIcon : ScheduleIcon, [translations]);
   const isMounted = useIsMounted();
 
   return <Stack sx={theme => ({
@@ -92,7 +96,7 @@ export function Content({translations}: {translations: string}) {
               boxShadow: 2,
             }
           })}>
-            <RocketLaunch color='secondary' sx={{ fontSize: '2rem', mb: 1 }} />
+            <RocketLaunchIcon color='secondary' sx={{ fontSize: '2rem', mb: 1 }} />
             <Typography variant='h6' color='secondary' sx={{ fontWeight: 600, mb: 1 }}>
               {t('info.features.2')}
             </Typography>

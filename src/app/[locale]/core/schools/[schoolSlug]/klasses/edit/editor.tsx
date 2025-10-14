@@ -1,8 +1,11 @@
 'use client'
 
 import { Button, Grid2, Stack, Typography } from '@mui/material'
-import { AddCircle, RemoveCircle } from '@mui/icons-material'
 import { useKlassListEditor } from '@/hooks'
+
+//icons
+import AddCircleIcon from "@mui/icons-material/AddCircle"
+import RemoveCircleIcon from "@mui/icons-material/RemoveCircle"
 
 export function Editor() {
   const { grouped, removeKlass, addKlass } = useKlassListEditor()
@@ -24,7 +27,7 @@ export function Editor() {
           }
         }} onClick={() => removeKlass(i, klass)}>
           <Typography variant='h6' sx={{color: 'primary.contrastText', textAlign: 'center'}}>{klass.grade}{klass.letter}</Typography>
-          <RemoveCircle fontSize='large' sx={{
+          <RemoveCircleIcon fontSize='large' sx={{
             position: 'absolute',
             top: '50%',
             left: '50%',
@@ -41,7 +44,7 @@ export function Editor() {
           justifyContent: 'center',
           alignItems: 'center'
         }} onClick={() => addKlass(i)}>
-          <AddCircle fontSize='large' sx={{color: 'primary.contrastText'}} />
+          <AddCircleIcon fontSize='large' sx={{color: 'primary.contrastText'}} />
         </Button>
       </Stack>
     </Grid2>)}

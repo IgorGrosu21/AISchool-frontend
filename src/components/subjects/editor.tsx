@@ -2,10 +2,13 @@
 
 import { ISubjectName } from "@/interfaces";
 import { Stack, Autocomplete, TextField, Checkbox, Box, type StackProps } from "@mui/material";
-import { CheckBox, CheckBoxOutlineBlank } from "@mui/icons-material";
 import { useMemo } from "react";
 import { useTranslations } from "next-intl";
 import { Subjects } from "@/components";
+
+//icons
+import CheckBoxIcon from "@mui/icons-material/CheckBox"
+import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank"
 
 interface SubjectsEditorProps<T> extends StackProps {
   instance: T,
@@ -30,8 +33,8 @@ export function SubjectsEditor<T extends {subjects: ISubjectName[]}>({instance, 
       renderOption={({key, ...props}, option, { selected }) => {
         return <Box component='li' key={key} {...props}>
           <Checkbox
-            icon={<CheckBoxOutlineBlank fontSize='small' />}
-            checkedIcon={<CheckBox fontSize='small' />}
+            icon={<CheckBoxOutlineBlankIcon fontSize='small' />}
+            checkedIcon={<CheckBoxIcon fontSize='small' />}
             style={{ marginRight: 8 }}
             checked={selected}
           />

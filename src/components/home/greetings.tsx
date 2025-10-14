@@ -3,15 +3,19 @@
 import { Section, SectionHeader, StatsPanelsContainer, StatsPanel, AnimationGroup1 } from "@/ui"
 import { useTranslations } from "next-intl"
 import { IPersonHome } from "@/interfaces"
-import { Assignment, Home, TrendingUp } from "@mui/icons-material"
 import { useCallback } from "react"
+
+//icons
+import AssignmentIcon from "@mui/icons-material/Assignment"
+import HomeIcon from "@mui/icons-material/Home"
+import TrendingUpIcon from "@mui/icons-material/TrendingUp"
 
 interface GreetingsProps {
   profileType: IPersonHome['profileType']
   user: IPersonHome['user']
 }
 
-const sections = [Assignment, Home, TrendingUp].map(Icon => ({ icon: Icon }))
+const sections = [AssignmentIcon, HomeIcon, TrendingUpIcon].map(Icon => ({ icon: Icon }))
 
 export function Greetings({profileType, user}: GreetingsProps) {
   const t = useTranslations('components.home')

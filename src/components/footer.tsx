@@ -1,10 +1,13 @@
 'use server'
 
-import { Facebook, Instagram } from "@mui/icons-material"
 import { Stack, Typography } from "@mui/material"
 import { ThemeImage } from "./themeImage"
 import { Link } from '@/i18n'
 import { getTranslations } from "next-intl/server";
+
+//icons
+import FacebookIcon from '@mui/icons-material/Facebook'
+import InstagramIcon from '@mui/icons-material/Instagram'
 
 export async function Footer() {
   const t = await getTranslations('components.footer');
@@ -77,8 +80,8 @@ export async function Footer() {
             </Typography>
           </Link>
           <Stack direction='row' gap={1} sx={{justifyContent: {xs: 'center', md: 'flex-start'}}}>
-            <Facebook color='primary' fontSize='large' />
-            <Instagram color='primary' fontSize='large' />
+            <FacebookIcon color='primary' fontSize='large' />
+            <InstagramIcon color='primary' fontSize='large' />
           </Stack>
         </Stack>
       </Stack>

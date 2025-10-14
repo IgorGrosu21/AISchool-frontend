@@ -1,9 +1,13 @@
 'use client'
 
-import { ViewCompact, Apps, ViewWeek } from "@mui/icons-material"
 import { Stack, ToggleButtonGroup, ToggleButton } from "@mui/material"
 import { setDate } from "date-fns"
 import { Dispatch, SetStateAction, useCallback } from "react"
+
+//icons
+import ViewCompactIcon from "@mui/icons-material/ViewCompact"
+import AppsIcon from "@mui/icons-material/Apps"
+import ViewWeekIcon from "@mui/icons-material/ViewWeek"
 
 interface TypePickerProps {
   type: 'year' | 'month' | 'week'
@@ -50,13 +54,13 @@ export function TypePicker({type, setType, currentMonth, setActiveMonth, current
       onChange={(_, v) => updateType(v)}
     >
       <ToggleButton value='year'>
-        <ViewCompact />
+        <ViewCompactIcon />
       </ToggleButton>
       <ToggleButton value='month'>
-        <Apps />
+        <AppsIcon />
       </ToggleButton>
       <ToggleButton value='week'>
-        <ViewWeek />
+        <ViewWeekIcon />
       </ToggleButton>
     </ToggleButtonGroup>
   </Stack>

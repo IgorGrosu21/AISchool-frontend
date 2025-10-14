@@ -1,13 +1,22 @@
 'use server'
 
 import { getTranslations } from "next-intl/server";
-import {
-  HomeOutlined, AccountCircleOutlined, Group, School, 
-  AutoStoriesOutlined, QuizOutlined, ClassOutlined, AutoStories,
-  VideocamOutlined, EmojiEvents, SchoolOutlined,SellOutlined,
-} from "@mui/icons-material"
 import { SideBar } from "./sidebar";
 import { IUserRoutes } from "@/interfaces";
+
+//icons
+import HomeOutlined from "@mui/icons-material/HomeOutlined"
+import AccountCircleOutlined from "@mui/icons-material/AccountCircleOutlined"
+import Group from "@mui/icons-material/Group"
+import School from "@mui/icons-material/School"
+import AutoStoriesOutlined from "@mui/icons-material/AutoStoriesOutlined"
+import QuizOutlined from "@mui/icons-material/QuizOutlined"
+import ClassOutlined from "@mui/icons-material/ClassOutlined"
+import AutoStories from "@mui/icons-material/AutoStories"
+import VideocamOutlined from "@mui/icons-material/VideocamOutlined"
+import EmojiEvents from "@mui/icons-material/EmojiEvents"
+import SchoolOutlined from "@mui/icons-material/SchoolOutlined"
+import SellOutlined from "@mui/icons-material/SellOutlined"
 
 export async function SideBarWrapper({ userRoutes }: { userRoutes: IUserRoutes }) {
   const t = await getTranslations('components.sidebar')

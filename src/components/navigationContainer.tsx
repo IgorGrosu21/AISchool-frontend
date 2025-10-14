@@ -1,10 +1,12 @@
 'use server'
 
-import { Home } from "@mui/icons-material"
 import { Breadcrumbs, Stack, Typography } from "@mui/material"
 import { getTranslations } from "next-intl/server"
 import { Link } from '@/i18n'
 import { Panel } from "@/ui"
+
+//icons
+import HomeIcon from "@mui/icons-material/Home"
 
 interface NavigationContainerProps extends React.PropsWithChildren {
   segments: Array<{
@@ -48,7 +50,7 @@ export async function NavigationContainer({segments, last, children}: Navigation
         }
       }}>
         <Link href='/core'>
-          <Home sx={{
+          <HomeIcon sx={{
             color: last === '' ? 'primary.main' : 'inherit',
             fontSize: { xs: '1.25rem', md: 'inherit' }
           }} />

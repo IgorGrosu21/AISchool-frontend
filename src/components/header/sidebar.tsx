@@ -3,14 +3,16 @@
 import { Link } from '@/i18n'
 import { useState, useEffect, useCallback } from "react"
 import { usePathname } from "@/i18n"
-
-import { Menu, Close} from "@mui/icons-material"
 import { Stack, Typography, IconButton, Drawer } from "@mui/material"
 import { useTranslations } from "next-intl"
 import { AuthButton, ThemeImage } from "@/components"
 import { logoutThis, verify } from "@/app/actions"
 import { RouteController } from "./routeController"
 import { IUserRoutes } from "@/interfaces"
+
+//icons
+import MenuIcon from "@mui/icons-material/Menu"
+import CloseIcon from "@mui/icons-material/Close"
 
 type Routes = Array<Array<{
   path: string,
@@ -43,7 +45,7 @@ export function SideBar({ user, routes }: SideBarProps) {
       sx={{bgcolor: 'primary.main', color: 'primary.contrastText'}}
       suppressHydrationWarning
     >
-      <Menu />
+      <MenuIcon />
     </IconButton>
     <Drawer
       variant="temporary"
@@ -78,7 +80,7 @@ export function SideBar({ user, routes }: SideBarProps) {
             }}
             suppressHydrationWarning
           >
-            <Close />
+            <CloseIcon />
           </IconButton>
           <Link href='/'>
             <ThemeImage

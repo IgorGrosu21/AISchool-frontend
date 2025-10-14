@@ -6,7 +6,9 @@ import { Stack, ImageList, ImageListItem } from "@mui/material";
 import { Dispatch, SetStateAction, useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import { editSchoolPhoto, removeSchoolPhoto } from "@/app/actions";
-import { AddCircleOutline } from "@mui/icons-material";
+
+//icons
+import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 
 interface PhotosEditorProps {
   school: IDetailedSchool,
@@ -65,7 +67,7 @@ export function PhotosEditor({school, setSchool}: PhotosEditorProps) {
         />
       </ImageListItem>)}
       <ImageListItem sx={{alignItems: 'center', justifyContent: 'center'}}>
-        <AddCircleOutline color='primary' sx={{fontSize: '3rem'}} onClick={addPhoto} />
+        <AddCircleOutlineIcon color='primary' sx={{fontSize: '3rem'}} onClick={addPhoto} />
       </ImageListItem>
     </ImageList>
   </Stack>

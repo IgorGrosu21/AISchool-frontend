@@ -2,9 +2,12 @@
 
 import { useState } from 'react';
 import { Button, Menu, MenuItem, ListItemText, Box, Typography } from '@mui/material';
-import { KeyboardArrowDown, Check } from '@mui/icons-material';
 import { useRouter, usePathname } from '@/i18n';
 import { useLocale } from 'next-intl';
+
+//icons
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown"
+import CheckIcon from "@mui/icons-material/Check"
 
 const languages = [
   { code: 'en', name: 'English' },
@@ -38,7 +41,7 @@ export function LanguagePicker() {
     <Button
       variant='outlined'
       onClick={handleClick}
-      endIcon={<KeyboardArrowDown sx={{transform: `rotate(${open ? 180 : 0}deg)`, transition: '0.5s'}} />}
+      endIcon={<KeyboardArrowDownIcon sx={{transform: `rotate(${open ? 180 : 0}deg)`, transition: '0.5s'}} />}
       sx={{ 
         px: 2,
         py: 1,
@@ -77,7 +80,7 @@ export function LanguagePicker() {
           <ListItemText primary={language.name} sx={{display: {xs: 'none', lg: 'block'}}} />
           <ListItemText primary={language.code} sx={{display: {xs: 'block', lg: 'none'}}} />
           {language.code === locale && (
-            <Check sx={{ ml: 2, color: 'primary.main' }} />
+            <CheckIcon sx={{ ml: 2, color: 'primary.main' }} />
           )}
         </MenuItem>
       ))}

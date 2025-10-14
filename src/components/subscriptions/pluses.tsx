@@ -2,12 +2,12 @@
 
 import { Typography, Stack, Box, Grid2, alpha } from "@mui/material";
 import { useTranslations } from "next-intl";
-import { 
-  AutoAwesome, 
-  Group,
-} from '@mui/icons-material';
 import { Section, SectionHeader, Card } from "@/ui";
 import { motion } from "framer-motion";
+
+//icons
+import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome"
+import GroupIcon from "@mui/icons-material/Group"
 
 export function SubscriptionPluses() {
   const t = useTranslations('subscriptions.pluses');
@@ -17,14 +17,14 @@ export function SubscriptionPluses() {
 
   const featureCards = [
     {
-      icon: AutoAwesome,
+      icon: AutoAwesomeIcon,
       title: t('solo.title'),
       description: t('solo.desc'),
       color: 'primary' as const,
       features: soloFeatures
     },
     {
-      icon: Group,
+      icon: GroupIcon,
       title: t('group.title'),
       description: t('group.desc'),
       color: 'secondary' as const,

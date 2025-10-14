@@ -1,9 +1,11 @@
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n';
-import { Stack } from "@mui/material";
 import { Header, Footer } from "@/components";
 import { AnimatedBackground } from "@/ui";
+
+//mui components
+import Stack from '@mui/material/Stack';
  
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({locale}));

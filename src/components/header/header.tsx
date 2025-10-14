@@ -3,7 +3,6 @@
 import { IconButton, Stack, Typography } from "@mui/material";
 import { isLoggedIn } from "@/app/actions";
 import { Link } from '@/i18n';
-import { Login } from "@mui/icons-material"
 import { SideBarWrapper } from "./sidebarWrapper";
 import { LanguagePicker } from "./languagePicker";
 import { ToTopButton } from "./toTopButton";
@@ -12,6 +11,9 @@ import { ThemeImage } from "../themeImage";
 import { QuickLinks } from "./quickLinks";
 import { errorHandler, fetchUserRoutes } from "@/requests";
 import { IUserRoutes } from "@/interfaces";
+
+//icons
+import LoginIcon from "@mui/icons-material/Login"
 
 export async function Header() {
   const loggedIn = await isLoggedIn()
@@ -54,7 +56,7 @@ export async function Header() {
       <LanguagePicker />
       {loggedIn ? <SideBarWrapper userRoutes={userRoutes!} /> : <Link href='/auth'>
         <IconButton size="large" sx={{bgcolor: 'primary.main', color: 'primary.contrastText'}}>
-          <Login />
+          <LoginIcon />
         </IconButton>
       </Link>}
     </Stack>

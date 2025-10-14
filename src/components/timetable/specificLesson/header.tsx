@@ -7,7 +7,9 @@ import { ISpecificLesson } from '@/interfaces';
 import { useMemo } from 'react';
 import { KlassLink } from '@/components';
 import { Panel } from '@/ui';
-import { Edit } from '@mui/icons-material';
+
+//icons
+import EditIcon from "@mui/icons-material/Edit"
 
 interface SpecificLessonHeaderProps extends React.PropsWithChildren {
   specificLesson: ISpecificLesson
@@ -46,7 +48,7 @@ export function SpecificLessonHeader({specificLesson, date, editable = false, ch
               }
             }}
           >
-            <Edit />
+            <EditIcon />
           </Fab>
         </Link>}
       </Stack>

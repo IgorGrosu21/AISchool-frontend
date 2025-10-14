@@ -4,10 +4,12 @@ import { IDetailedSchool } from "@/interfaces"
 import { Dispatch, SetStateAction } from "react"
 import { Box, Checkbox, Grid2, Stack, Typography } from "@mui/material";
 import { useTranslations } from "next-intl";
-import { Close } from "@mui/icons-material";
 import { UserVerifier } from "@/components";
 import { Panel } from "@/ui";
 import { TypePicker } from "../typePicker";
+
+//icons
+import CloseIcon from "@mui/icons-material/Close"
 
 interface SchoolPositionsEditorProps {
   school: IDetailedSchool
@@ -43,7 +45,7 @@ export function SchoolPositionsEditor({school, setSchool}: SchoolPositionsEditor
             <Checkbox checked={position.isManager} onChange={() => setSchool(
               s => ({...s, staff: s.staff.map((p, j) => i === j ? {...p, isManager: !p.isManager} : p)})
             )} />
-            <Close color='primary' onClick={() => setSchool(s => ({...s, staff: s.staff.filter(p => p.id !== position.id)}))} />
+            <CloseIcon color='primary' onClick={() => setSchool(s => ({...s, staff: s.staff.filter(p => p.id !== position.id)}))} />
           </Panel>
         </Grid2>
       </Grid2>)}

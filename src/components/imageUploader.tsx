@@ -1,10 +1,13 @@
 'use client'
 
-import { DeleteOutline, FileUpload } from '@mui/icons-material';
 import { Stack, Button, Box } from '@mui/material';
 import { useCallback, useEffect, useRef, useState, useTransition } from 'react';
 import { useTranslations } from 'next-intl';
 import { Loader } from './loader';
+
+//icons
+import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline"
+import FileUploadIcon from "@mui/icons-material/FileUpload"
 
 interface ImageUploaderProps<T> {
   renderImage: (src?: string) => React.ReactNode,
@@ -87,10 +90,10 @@ export function ImageUploader<T>({renderImage, existing, setExisting, sendFile, 
         transition: '0.5s'
       }}>
         <Button onClick={onDelete}>
-          {t('delete')} <DeleteOutline />
+          {t('delete')} <DeleteOutlineIcon />
         </Button>
         <Button onClick={openFilePicker}>
-          {t('upload')} <FileUpload />
+          {t('upload')} <FileUploadIcon />
         </Button>
         <Button variant='contained' onClick={upload} disabled={file === undefined}>
           {t('save')}

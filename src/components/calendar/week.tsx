@@ -2,9 +2,12 @@
 
 import { SpecificLessons } from '@/components';
 import { useWeekView } from '@/hooks';
-import { ChevronLeft, ChevronRight } from '@mui/icons-material';
 import { Box, Button, CircularProgress, Stack, Typography } from '@mui/material';
 import { format } from 'date-fns';
+
+//icons
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft"
+import ChevronRightIcon from "@mui/icons-material/ChevronRight"
 
 interface WeekProps {
   dates: Date[]
@@ -16,7 +19,7 @@ export function Week({dates}: WeekProps) {
   return <Stack gap={2} sx={{alignItems: 'center'}}>
     <Stack direction='row' sx={{alignItems: 'center'}}>
       <Button color='primary' onClick={goToPrevWeek} disabled={!canSubDays}>
-        <ChevronLeft />
+        <ChevronLeftIcon />
       </Button>
       <Stack direction='row' gap={2} sx={{
         color: isCurrent ? 'secondary.main' : 'primary.main',
@@ -28,7 +31,7 @@ export function Week({dates}: WeekProps) {
         <Typography variant='h6'>{format(dates[dates.length - 1], 'd.M')}</Typography>
       </Stack>
       <Button color='primary' onClick={goToNextWeek} disabled={!canAddDays}>
-        <ChevronRight />
+        <ChevronRightIcon />
       </Button>
     </Stack>
     <Box sx={{position: 'relative'}}>

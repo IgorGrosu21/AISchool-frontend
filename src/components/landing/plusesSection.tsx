@@ -2,15 +2,24 @@
 
 import { motion } from 'framer-motion'
 import { Box, Grid2, Typography } from '@mui/material'
-import { 
-  AutoAwesome, School, Assignment, Group,
-  AutoStories, TrendingUp, Speed, Psychology,
-  People, Schedule, Analytics, CheckCircle
-} from '@mui/icons-material'
 import { useTranslations } from 'next-intl'
 import { usePluses } from '@/hooks'
 import { Section, SectionHeader, Card } from '@/ui'
 import { useMemo } from 'react'
+
+//icons
+import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome"
+import SchoolIcon from "@mui/icons-material/School"
+import AssignmentIcon from "@mui/icons-material/Assignment"
+import GroupIcon from "@mui/icons-material/Group"
+import AutoStoriesIcon from "@mui/icons-material/AutoStories"
+import TrendingUpIcon from "@mui/icons-material/TrendingUp"
+import SpeedIcon from "@mui/icons-material/Speed"
+import PsychologyIcon from "@mui/icons-material/Psychology"
+import PeopleIcon from "@mui/icons-material/People"
+import ScheduleIcon from "@mui/icons-material/Schedule"
+import AnalyticsIcon from "@mui/icons-material/Analytics"
+import CheckCircleIcon from "@mui/icons-material/CheckCircle"
 
 interface PlusesSectionProps {
   userType: 'student' | 'teacher' | 'parent'
@@ -25,22 +34,22 @@ export function PlusesSection({ userType, animationGroup }: PlusesSectionProps) 
   const getIconAndColor = (index: number) => {
     const iconSets = {
       student: [
-        { icon: AutoAwesome, color: '#FF6B6B' },
-        { icon: School, color: '#4ECDC4' },
-        { icon: Assignment, color: '#45B7D1' },
-        { icon: Group, color: '#96CEB4' }
+        { icon: AutoAwesomeIcon, color: '#FF6B6B' },
+        { icon: SchoolIcon, color: '#4ECDC4' },
+        { icon: AssignmentIcon, color: '#45B7D1' },
+        { icon: GroupIcon, color: '#96CEB4' }
       ],
       teacher: [
-        { icon: AutoStories, color: '#FFEAA7' },
-        { icon: TrendingUp, color: '#DDA0DD' },
-        { icon: Speed, color: '#98D8C8' },
-        { icon: Psychology, color: '#F7DC6F' }
+        { icon: AutoStoriesIcon, color: '#FFEAA7' },
+        { icon: TrendingUpIcon, color: '#DDA0DD' },
+        { icon: SpeedIcon, color: '#98D8C8' },
+        { icon: PsychologyIcon, color: '#F7DC6F' }
       ],
       parent: [
-        { icon: People, color: '#FF6B6B' },
-        { icon: Schedule, color: '#4ECDC4' },
-        { icon: Analytics, color: '#45B7D1' },
-        { icon: CheckCircle, color: '#96CEB4' }
+        { icon: PeopleIcon, color: '#FF6B6B' },
+        { icon: ScheduleIcon, color: '#4ECDC4' },
+        { icon: AnalyticsIcon, color: '#45B7D1' },
+        { icon: CheckCircleIcon, color: '#96CEB4' }
       ]
     }
     return iconSets[userType][index]

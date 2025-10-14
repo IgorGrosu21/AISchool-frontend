@@ -5,7 +5,10 @@ import { Input } from './input';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 import { IconButton, InputAdornment } from '@mui/material';
-import { VisibilityOff, Visibility } from '@mui/icons-material';
+
+//icons
+import VisibilityOffIcon from "@mui/icons-material/VisibilityOff"
+import VisibilityIcon from "@mui/icons-material/Visibility"
 
 export function AuthFields({state}: {state: FormState}) {
   const [masked, setMasked] = useState(true)
@@ -52,7 +55,7 @@ export function AuthFields({state}: {state: FormState}) {
                 }
               }}
             >
-              {masked ? <VisibilityOff /> : <Visibility />}
+              {masked ? <VisibilityOffIcon /> : <VisibilityIcon />}
             </IconButton>
           </InputAdornment>
         }

@@ -8,7 +8,10 @@ import { useTranslations } from "next-intl";
 import { useIsMobile, useSchoolFilters } from "@/hooks";
 import { KlassesRange } from "@/components";
 import { Panel } from "@/ui";
-import { ChevronLeft, ChevronRight } from "@mui/icons-material";
+
+//icons
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft"
+import ChevronRightIcon from "@mui/icons-material/ChevronRight"
 
 interface SchoolTableProps {
   schools: ISchool[],
@@ -98,11 +101,11 @@ export function SchoolTable({schools, country}: SchoolTableProps) {
               <TableCell></TableCell>
               <TableCell colSpan={2} align="right">
                 <Stack direction='row' gap={2} sx={{alignItems: 'center', justifyContent: 'flex-end', flexWrap: 'nowrap'}}>
-                  <ChevronLeft onClick={prevPage} />
+                  <ChevronLeftIcon onClick={prevPage} />
                   <Typography variant='h6' sx={{textWrap: 'nowrap'}}>
                     {currentRows}
                   </Typography>
-                  <ChevronRight onClick={nextPage} />
+                  <ChevronRightIcon onClick={nextPage} />
                   <Typography variant='h6'>/</Typography>
                   <Typography variant='h6'>{filteredSchools.length}</Typography>
                 </Stack>

@@ -3,8 +3,10 @@
 import { motion, AnimatePresence } from "framer-motion"
 import { Stack, Typography, type StackProps, SvgIcon, IconButton } from "@mui/material"
 import { useState } from "react"
-import { Close } from "@mui/icons-material"
 import { Panel } from "./panel"
+
+//icons
+import CloseIcon from "@mui/icons-material/Close"
 
 interface StatsPanelProps extends StackProps {
   text: string
@@ -94,7 +96,7 @@ export function StatsPanel({text, desc, Icon, ...props}: StatsPanelProps) {
                   background: 'rgba(255, 255, 255, 0.1)',
                 }
               }}>
-                <Close />
+                <CloseIcon />
               </IconButton>
               <Icon sx={{ fontSize: 60 }} />
               <Typography variant="h4" sx={{ fontWeight: 700, textAlign: 'center' }}>

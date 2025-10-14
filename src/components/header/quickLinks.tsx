@@ -5,7 +5,11 @@ import { usePathname } from "@/i18n"
 import { useCallback, useMemo } from "react"
 import { useTranslations } from "next-intl"
 import { IUserRoutes } from "@/interfaces"
-import { AutoStories, AutoStoriesOutlined, ClassOutlined } from "@mui/icons-material"
+
+//icons
+import AutoStoriesIcon from "@mui/icons-material/AutoStories" 
+import AutoStoriesOutlinedIcon from "@mui/icons-material/AutoStoriesOutlined"
+import ClassOutlinedIcon from "@mui/icons-material/ClassOutlined"
 
 interface QuickLinksProps {
   userRoutes?: IUserRoutes
@@ -26,9 +30,9 @@ export function QuickLinks({ userRoutes }: QuickLinksProps) {
 
   const links = useMemo(() => {
     return userRoutes ? [
-      {link: 'manuals', Icon: AutoStoriesOutlined, label: tLinks('manuals')},
-      {link: userRoutes?.diaryLink, Icon: ClassOutlined, label: tLinks('diary')},
-      {link: userRoutes?.journalLink, Icon: AutoStories, label: tLinks('journal')},
+      {link: 'manuals', Icon: AutoStoriesOutlinedIcon, label: tLinks('manuals')},
+      {link: userRoutes?.diaryLink, Icon: ClassOutlinedIcon, label: tLinks('diary')},
+      {link: userRoutes?.journalLink, Icon: AutoStoriesIcon, label: tLinks('journal')},
     ] : []
   }, [userRoutes, tLinks])
 

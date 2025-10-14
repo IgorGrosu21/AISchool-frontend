@@ -1,10 +1,13 @@
 'use server'
 
 import { IDetailedUser, ISocial } from "@/interfaces";
-import { Facebook, Instagram } from "@mui/icons-material";
 import { Stack, Typography, Divider } from "@mui/material";
 import { getTranslations } from "next-intl/server";
 import { Link } from '@/i18n';
+
+//icons
+import FacebookIcon from "@mui/icons-material/Facebook"
+import InstagramIcon from "@mui/icons-material/Instagram"
 
 interface SocialsProps {
   user: IDetailedUser
@@ -28,12 +31,12 @@ export async function Socials({user}: SocialsProps) {
         s.type === 'fb'
         ?
         <>
-          <Facebook color='primary' />
+          <FacebookIcon color='primary' />
           <Typography variant="h6" sx={{display: {xs: 'none', md: 'inline'}}}>Facebook</Typography>
         </>
         :
         <>
-          <Instagram color='primary' />
+          <InstagramIcon color='primary' />
           <Typography variant="h6" sx={{display: {xs: 'none', md: 'inline'}}}>Instagram</Typography>
         </>
         }

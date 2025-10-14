@@ -1,9 +1,21 @@
 'use client'
 
-import { School, TrendingUp, SmartToy, LaptopChromebook, AutoAwesome, BarChart } from '@mui/icons-material'
-import { Section, StatsPanel, StatsPanelsContainer, SectionHeader, AnimationGroup1, AnimationGroup4 } from '@/ui'
+import dynamic from 'next/dynamic'
+import { Section, StatsPanel, StatsPanelsContainer, SectionHeader } from '@/ui'
 import { LandingButtons } from './buttons'
 import { useTranslations } from 'next-intl'
+
+//icons
+import SmartToy from '@mui/icons-material/SmartToy'
+import LaptopChromebook from '@mui/icons-material/LaptopChromebook'
+import School from '@mui/icons-material/School'
+import AutoAwesome from '@mui/icons-material/AutoAwesome'
+import TrendingUp from '@mui/icons-material/TrendingUp'
+import BarChart from '@mui/icons-material/BarChart'
+
+// Lazy load animation groups
+const AnimationGroup1 = dynamic(() => import('@/ui/animationsGroups/group1').then(mod => ({ default: mod.AnimationGroup1 })), { ssr: false })
+const AnimationGroup4 = dynamic(() => import('@/ui/animationsGroups/group4').then(mod => ({ default: mod.AnimationGroup4 })), { ssr: false })
 
 const heroFeatures = [SmartToy, LaptopChromebook, School].map(Icon => ({ icon: Icon }))
 const ctaFeatures = [AutoAwesome, TrendingUp, BarChart].map(Icon => ({ icon: Icon }))

@@ -2,8 +2,10 @@
 
 import { motion } from 'framer-motion'
 import { Stack, Button } from '@mui/material'
-import { ArrowForward } from '@mui/icons-material'
 import { Link } from '@/i18n'
+
+//icons
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward"
 
 interface LandingButtonsProps {
   buttons: Array<{
@@ -26,7 +28,7 @@ export function LandingButtons({buttons}: LandingButtonsProps) {
         href={button.variant === 'contained' ? "/core" : "/auth"}
         variant={button.variant}
         size="large"
-        endIcon={<ArrowForward />}
+        endIcon={<ArrowForwardIcon />}
         sx={{
           px: 4,
           py: 2,

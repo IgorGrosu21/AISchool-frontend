@@ -1,8 +1,10 @@
 'use client'
 
 import { Fab } from "@mui/material";
-import { ArrowBack } from "@mui/icons-material";
 import { Link } from '@/i18n';
+
+//icons
+import ArrowBackIcon from "@mui/icons-material/ArrowBack"
 
 interface ReturnButtonProps {
   link: string
@@ -21,7 +23,7 @@ export function ReturnButton({link}: ReturnButtonProps) {
         }
       }}
     >
-      <ArrowBack />
+      <ArrowBackIcon />
     </Fab>
   </Link>
 }
