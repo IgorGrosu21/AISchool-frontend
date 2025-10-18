@@ -1,0 +1,846 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://aischool.md/en</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ro</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ru</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru"/>
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://aischool.md/en/about</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/about"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/about"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/about"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ro/about</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/about"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/about"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/about"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ru/about</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/about"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/about"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/about"/>
+  </url>
+
+  <!-- Auth -->
+  <url>
+    <loc>https://aischool.md/en/auth</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/auth"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/auth"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/auth"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ro/auth</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/auth"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/auth"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/auth"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ru/auth</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/auth"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/auth"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/auth"/>
+  </url>
+
+  <!-- News -->
+  <url>
+    <loc>https://aischool.md/en/news</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/news"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/news"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/news"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ro/news</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/news"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/news"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/news"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ru/news</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/news"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/news"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/news"/>
+  </url>
+
+  <!-- Help - FAQ -->
+  <url>
+    <loc>https://aischool.md/en/help/faq</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/help/faq"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/help/faq"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/help/faq"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ro/help/faq</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/help/faq"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/help/faq"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/help/faq"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ru/help/faq</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/help/faq"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/help/faq"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/help/faq"/>
+  </url>
+
+  <!-- Help - Privacy Policy -->
+  <url>
+    <loc>https://aischool.md/en/help/privacy-policy</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/help/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/help/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/help/privacy-policy"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ro/help/privacy-policy</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/help/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/help/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/help/privacy-policy"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ru/help/privacy-policy</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/help/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/help/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/help/privacy-policy"/>
+  </url>
+
+  <!-- Help - User Agreement -->
+  <url>
+    <loc>https://aischool.md/en/help/user-agreement</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/help/user-agreement"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/help/user-agreement"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/help/user-agreement"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ro/help/user-agreement</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/help/user-agreement"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/help/user-agreement"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/help/user-agreement"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ru/help/user-agreement</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/help/user-agreement"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/help/user-agreement"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/help/user-agreement"/>
+  </url>
+
+  <!-- Core Dashboard -->
+  <url>
+    <loc>https://aischool.md/en/core</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ro/core</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ru/core</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core"/>
+  </url>
+
+  <!-- Core - Diary -->
+  <url>
+    <loc>https://aischool.md/en/core/diary</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/diary"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/diary"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/diary"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ro/core/diary</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/diary"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/diary"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/diary"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ru/core/diary</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/diary"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/diary"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/diary"/>
+  </url>
+
+  <!-- Core - Diary - Parents -->
+  <url>
+    <loc>https://aischool.md/en/core/diary/parents</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/diary/parents"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/diary/parents"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/diary/parents"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ro/core/diary/parents</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/diary/parents"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/diary/parents"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/diary/parents"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ru/core/diary/parents</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/diary/parents"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/diary/parents"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/diary/parents"/>
+  </url>
+
+  <!-- Core - Diary - Students -->
+  <url>
+    <loc>https://aischool.md/en/core/diary/students</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/diary/students"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/diary/students"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/diary/students"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ro/core/diary/students</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/diary/students"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/diary/students"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/diary/students"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ru/core/diary/students</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/diary/students"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/diary/students"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/diary/students"/>
+  </url>
+
+  <!-- Core - Diary - Teachers -->
+  <url>
+    <loc>https://aischool.md/en/core/diary/teachers</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/diary/teachers"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/diary/teachers"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/diary/teachers"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ro/core/diary/teachers</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/diary/teachers"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/diary/teachers"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/diary/teachers"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ru/core/diary/teachers</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/diary/teachers"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/diary/teachers"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/diary/teachers"/>
+  </url>
+
+  <!-- Core - Homeworks -->
+  <url>
+    <loc>https://aischool.md/en/core/homeworks</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/homeworks"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/homeworks"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/homeworks"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ro/core/homeworks</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/homeworks"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/homeworks"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/homeworks"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ru/core/homeworks</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/homeworks"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/homeworks"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/homeworks"/>
+  </url>
+
+  <!-- Core - Journal -->
+  <url>
+    <loc>https://aischool.md/en/core/journal</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/journal"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/journal"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/journal"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ro/core/journal</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/journal"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/journal"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/journal"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ru/core/journal</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/journal"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/journal"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/journal"/>
+  </url>
+
+  <!-- Core - Journal - Parents -->
+  <url>
+    <loc>https://aischool.md/en/core/journal/parents</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/journal/parents"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/journal/parents"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/journal/parents"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ro/core/journal/parents</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/journal/parents"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/journal/parents"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/journal/parents"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ru/core/journal/parents</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/journal/parents"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/journal/parents"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/journal/parents"/>
+  </url>
+
+  <!-- Core - Journal - Students -->
+  <url>
+    <loc>https://aischool.md/en/core/journal/students</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/journal/students"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/journal/students"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/journal/students"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ro/core/journal/students</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/journal/students"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/journal/students"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/journal/students"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ru/core/journal/students</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/journal/students"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/journal/students"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/journal/students"/>
+  </url>
+
+  <!-- Core - Journal - Teachers -->
+  <url>
+    <loc>https://aischool.md/en/core/journal/teachers</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/journal/teachers"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/journal/teachers"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/journal/teachers"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ro/core/journal/teachers</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/journal/teachers"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/journal/teachers"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/journal/teachers"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ru/core/journal/teachers</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/journal/teachers"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/journal/teachers"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/journal/teachers"/>
+  </url>
+
+  <!-- Core - Lessons -->
+  <url>
+    <loc>https://aischool.md/en/core/lessons</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/lessons"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/lessons"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/lessons"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ro/core/lessons</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/lessons"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/lessons"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/lessons"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ru/core/lessons</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/lessons"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/lessons"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/lessons"/>
+  </url>
+
+  <!-- Core - Manuals -->
+  <url>
+    <loc>https://aischool.md/en/core/manuals</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/manuals"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/manuals"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/manuals"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ro/core/manuals</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/manuals"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/manuals"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/manuals"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ru/core/manuals</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/manuals"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/manuals"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/manuals"/>
+  </url>
+
+  <!-- Core - Olimpiads -->
+  <url>
+    <loc>https://aischool.md/en/core/olimpiads</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/olimpiads"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/olimpiads"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/olimpiads"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ro/core/olimpiads</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/olimpiads"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/olimpiads"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/olimpiads"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ru/core/olimpiads</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/olimpiads"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/olimpiads"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/olimpiads"/>
+  </url>
+
+  <!-- Core - Profile -->
+  <url>
+    <loc>https://aischool.md/en/core/profile</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/profile"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/profile"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/profile"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ro/core/profile</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/profile"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/profile"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/profile"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ru/core/profile</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/profile"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/profile"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/profile"/>
+  </url>
+
+  <!-- Core - Profile - Parents -->
+  <url>
+    <loc>https://aischool.md/en/core/profile/parents</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/profile/parents"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/profile/parents"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/profile/parents"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ro/core/profile/parents</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/profile/parents"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/profile/parents"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/profile/parents"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ru/core/profile/parents</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/profile/parents"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/profile/parents"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/profile/parents"/>
+  </url>
+
+  <!-- Core - Profile - Students -->
+  <url>
+    <loc>https://aischool.md/en/core/profile/students</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/profile/students"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/profile/students"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/profile/students"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ro/core/profile/students</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/profile/students"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/profile/students"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/profile/students"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ru/core/profile/students</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/profile/students"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/profile/students"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/profile/students"/>
+  </url>
+
+  <!-- Core - Profile - Teachers -->
+  <url>
+    <loc>https://aischool.md/en/core/profile/teachers</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/profile/teachers"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/profile/teachers"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/profile/teachers"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ro/core/profile/teachers</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/profile/teachers"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/profile/teachers"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/profile/teachers"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ru/core/profile/teachers</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/profile/teachers"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/profile/teachers"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/profile/teachers"/>
+  </url>
+
+  <!-- Core - Schools -->
+  <url>
+    <loc>https://aischool.md/en/core/schools</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/schools"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/schools"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/schools"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ro/core/schools</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/schools"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/schools"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/schools"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ru/core/schools</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/schools"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/schools"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/schools"/>
+  </url>
+
+  <!-- Core - Subscriptions -->
+  <url>
+    <loc>https://aischool.md/en/core/subscriptions</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/subscriptions"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/subscriptions"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/subscriptions"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ro/core/subscriptions</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/subscriptions"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/subscriptions"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/subscriptions"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ru/core/subscriptions</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/subscriptions"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/subscriptions"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/subscriptions"/>
+  </url>
+
+  <!-- Core - Tests -->
+  <url>
+    <loc>https://aischool.md/en/core/tests</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/tests"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/tests"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/tests"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ro/core/tests</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/tests"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/tests"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/tests"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ru/core/tests</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/tests"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/tests"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/tests"/>
+  </url>
+
+  <!-- Core - Universities -->
+  <url>
+    <loc>https://aischool.md/en/core/universities</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/universities"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/universities"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/universities"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ro/core/universities</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/universities"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/universities"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/universities"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ru/core/universities</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/universities"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/universities"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/universities"/>
+  </url>
+
+  <!-- Core - Webinars -->
+  <url>
+    <loc>https://aischool.md/en/core/webinars</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/webinars"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/webinars"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/webinars"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ro/core/webinars</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/webinars"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/webinars"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/webinars"/>
+  </url>
+  <url>
+    <loc>https://aischool.md/ru/core/webinars</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aischool.md/en/core/webinars"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://aischool.md/ro/core/webinars"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aischool.md/ru/core/webinars"/>
+  </url>
+
+</urlset>

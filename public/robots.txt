@@ -1,0 +1,6 @@
+User-Agent: *
+Allow: /
+Disallow: /trpc
+Disallow: /_next
+Disallow: /_vercel
+Sitemap: https://aischool.md/sitemap.xml
