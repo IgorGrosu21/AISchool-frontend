@@ -8,7 +8,7 @@ const localesMiddleware = createMiddleware(routing);
 export const localesMiddlewareFactory: MiddlewareFactory = (next) => {
   return async (request: NextRequest, _next: NextFetchEvent) => {
     const pathname = request.nextUrl.pathname;
-    if (new RegExp('^(?!(\/(?:api|trpc|_next|_vercel|images|favicon.ico))\/?).*').test(pathname)) {
+    if (new RegExp('^(?!(\/(?:api|trpc|_next|_vercel|images|favicon.ico|manifest))\/?).*').test(pathname)) {
       return localesMiddleware(request)
     }
     return next(request, _next);

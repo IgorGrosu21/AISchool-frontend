@@ -10,7 +10,17 @@
   "scope": "/",
   "lang": "en",
   "dir": "ltr",
-  "categories": ["education", "productivity"],
+  "categories": [
+    "education",
+    "productivity",
+    "school",
+    "management",
+    "ai",
+    "learning",
+    "management",
+    "school",
+    "management"
+  ],
   "icons": [
     {
       "src": "/images/logo-hat-light.png",
