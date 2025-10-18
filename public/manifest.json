@@ -23,14 +23,14 @@
   ],
   "icons": [
     {
-      "src": "/images/logo-hat-light.png",
-      "sizes": "any",
+      "src": "/logo.png",
+      "sizes": "256x256",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
       "src": "/favicon.ico",
-      "sizes": "48x48",
+      "sizes": "64x64",
       "type": "image/x-icon"
     }
   ],
@@ -40,21 +40,21 @@
       "short_name": "Home",
       "description": "Go to your dashboard",
       "url": "/core",
-      "icons": [{ "src": "/images/logo-hat-light.png", "sizes": "96x96" }]
+      "icons": [{ "src": "/logo.png", "sizes": "256x256" }]
     },
     {
       "name": "Timetable",
       "short_name": "Schedule",
       "description": "View your schedule",
       "url": "/core/diary",
-      "icons": [{ "src": "/images/logo-hat-light.png", "sizes": "96x96" }]
+      "icons": [{ "src": "/logo.png", "sizes": "256x256" }]
     },
     {
       "name": "Grades",
       "short_name": "Journal",
       "description": "Check your grades",
       "url": "/core/journal",
-      "icons": [{ "src": "/images/logo-hat-light.png", "sizes": "96x96" }]
+      "icons": [{ "src": "/logo.png", "sizes": "256x256" }]
     }
   ],
   "screenshots": [],

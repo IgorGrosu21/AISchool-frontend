@@ -96,7 +96,7 @@ export function SideBar({ user, routes }: SideBarProps) {
         </Stack>
         <Stack gap={2} sx={{height: '100%', width: '100%', justifyContent: 'center'}}>
           <Stack gap={2} direction='row' sx={{p: 2, bgcolor: 'primary.main', alignItems: 'center'}}>
-            <Link href={'/core' + user.profileLink} style={{display: 'flex', alignItems: 'center', pointerEvents: user.profileLink ? 'unset' : 'none'}}>
+            <Link href={`/core/${user.profileLink}`} style={{display: 'flex', alignItems: 'center', pointerEvents: user.profileLink ? 'unset' : 'none'}}>
               <ThemeImage
                 srcDark={user.avatar ? user.avatar : '/images/default-avatar-dark.png'}
                 srcLight={user.avatar ? user.avatar : '/images/default-avatar-light.png'}
