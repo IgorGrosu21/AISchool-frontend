@@ -12,6 +12,7 @@ export function TimetableStepperEditor({subjects}: {subjects: ISubjectName[]}) {
   const { instance: school, setInstance: setSchool } = useSchoolWithTimetableEditorContext()
 
   return <TimetableStepperContainer
+    school={school}
     subjectsComponent={<SubjectsEditor key={2} school={school} setSchool={setSchool} subjects={subjects} />}
     lessonTimeComponent={<LessonTimeEditor key={1} school={school} setTimetable={timetable => setSchool(s => ({...s, timetable}))} />}
     groupComponent={<SchoolGroupsEditor key={2} school={school} setSchool={setSchool} />}

@@ -25,14 +25,7 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  .theme-image-light {
-    display: none;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  .theme-image-dark {
-    display: none;
-  }
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(30) }
+  to { opacity: 1; transform: translateY(0) }
 }

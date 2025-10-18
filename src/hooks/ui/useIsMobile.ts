@@ -1,6 +1,7 @@
 'use client'
 
-import { useTheme, useMediaQuery } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 export function useIsMobile() {
   const theme = useTheme();

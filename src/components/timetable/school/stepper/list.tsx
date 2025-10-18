@@ -13,9 +13,10 @@ interface TimetableStepperProps {
 
 export async function TimetableStepper({school}: TimetableStepperProps) {
   return <TimetableStepperContainer
+    school={school}
     subjectsComponent={<Subjects key={0} subjects={school.subjects} />}
     lessonTimeComponent={<LessonTime key={1} timetable={school.timetable} />}
-    groupComponent={<SchoolGroups key={2} school={school} />}
+    groupComponent={<SchoolGroups key={2} />}
     lessonsComponent={<SchoolLessons key={3} school={school} />}
   />
 }

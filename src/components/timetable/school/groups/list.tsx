@@ -1,13 +1,10 @@
 'use client'
 
-import { ISchoolWithTimetable } from "@/interfaces"
-import { WithKlass } from "../withKlass"
 import { Groups } from "../../groups"
+import { useKlassContext } from "@/providers"
 
-interface SchoolGroupsProps {
-  school: ISchoolWithTimetable
-}
-
-export function SchoolGroups({school}: SchoolGroupsProps) {
-  return <WithKlass school={school} render={klass => <Groups klass={klass} />} />
+export function SchoolGroups() {
+  const { klass } = useKlassContext()
+  
+  return <Groups klass={klass} />
 }

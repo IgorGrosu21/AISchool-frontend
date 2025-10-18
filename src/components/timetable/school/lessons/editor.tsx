@@ -1,8 +1,8 @@
 'use client'
 
-import { IKlassNameWithGroups, ILessonTime, ISchoolWithTimetable } from "@/interfaces";
+import { ILessonTime, ISchoolWithTimetable } from "@/interfaces";
 import { Dispatch, SetStateAction, useCallback } from "react";
-import { WithKlass } from "../withKlass";
+import { useKlassContext } from "@/providers";
 import { LessonsEditor } from "../../lessons";
 
 interface SchoolLessonsEditorProps {
@@ -11,16 +11,16 @@ interface SchoolLessonsEditorProps {
 }
 
 export function SchoolLessonsEditor({school, setSchool}: SchoolLessonsEditorProps) {
-  const getLessonName = useCallback((klass: IKlassNameWithGroups) => {
-    return (lessonTime: ILessonTime) => lessonTime.lessons.find(l => l.klass === klass.id)
-  }, [])
+  const { klass } = useKlassContext()
+
+  const getLessonName = useCallback((lessonTime: ILessonTime) => lessonTime.lessons.find(l => l.klass === klass.id), [klass])
   
-  return <WithKlass school={school} render={klass => <LessonsEditor
+  return <LessonsEditor
     subjects={school.subjects}
     groups={klass.groups}
     staff={school.staff}
     timetable={school.timetable.filter(lt => lt.starting != '')}
-    getLesson={getLessonName(klass)}
+    getLesson={getLessonName}
     createLesson={(lessonTime, subject) => setSchool(
       s => ({...s, timetable: s.timetable.map(lt => lt.id === lessonTime.id ? {...lt, lessons: [...lt.lessons, {
         id: '',
@@ -47,5 +47,5 @@ export function SchoolLessonsEditor({school, setSchool}: SchoolLessonsEditorProp
         l => l.klass === lesson.klass ? {...l, teacher: teacher} : l
       )} : lt)})
     )}
-  />} />
+  />
 }

@@ -3,6 +3,7 @@
 import { getTranslations } from "next-intl/server"
 import { Link } from '@/i18n'
 import { Panel } from "@/ui"
+import { TitleSetter } from "./title"
 
 //mui components
 import Breadcrumbs from "@mui/material/Breadcrumbs"
@@ -31,6 +32,7 @@ export async function NavigationContainer({segments, last, children}: Navigation
   }
 
   return <Stack gap={{ xs: 4, md: 8 }} sx={{flex: 1, px: { xs: 2, sm: 4, md: 8, lg: 16 }, py: { xs: 4, md: 8 }}}>
+    <TitleSetter title={last} />
     <Panel>
       <Breadcrumbs sx={{
         ['& ol']: {

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { Socials } from './socials';
 import { IDetailedUser } from '@/interfaces';
-import { NavigationContainer } from '../navigationContainer';
+import { NavigationContainer } from '../navigation';
 import { Panel } from '@/ui';
 import { Title } from '../editable';
 import { ThemeImage } from '../themeImage';

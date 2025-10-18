@@ -1,0 +1,54 @@
+{
+  "name": "AI School - Smart Learning Management System",
+  "short_name": "AI School",
+  "description": "AI-powered school management platform for students, teachers, and parents",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#146fc2",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["education", "productivity"],
+  "icons": [
+    {
+      "src": "/images/logo-hat-light.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Dashboard",
+      "short_name": "Home",
+      "description": "Go to your dashboard",
+      "url": "/core",
+      "icons": [{ "src": "/images/logo-hat-light.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Timetable",
+      "short_name": "Schedule",
+      "description": "View your schedule",
+      "url": "/core/diary",
+      "icons": [{ "src": "/images/logo-hat-light.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Grades",
+      "short_name": "Journal",
+      "description": "Check your grades",
+      "url": "/core/journal",
+      "icons": [{ "src": "/images/logo-hat-light.png", "sizes": "96x96" }]
+    }
+  ],
+  "screenshots": [],
+  "prefer_related_applications": false,
+  "iarc_rating_id": ""
+}
+

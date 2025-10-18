@@ -32,6 +32,6 @@ export { AuthButton } from "./authButton";
 export { Footer } from "./footer";
 export { ImageUploader } from "./imageUploader";
 export { Loader } from "./loader";
-export { NavigationContainer } from "./navigationContainer";
+export { NavigationContainer } from "./navigation";
 export { ThemeImage } from "./themeImage";
 //export { PdfViewer } from "./pdfViewer";

@@ -13,6 +13,7 @@ export {
   EditorProvider
 } from "./editor";
 export { type Group, useJournalContext, JournalProvider } from "./journal";
+export { useKlassContext, KlassProvider } from "./klass";
 export {
   useAttachedFilesContext,
   useAttachedLinksContext,
