@@ -20,6 +20,7 @@ import LoginIcon from "@mui/icons-material/Login"
 
 export async function Header() {
   const loggedIn = await isLoggedIn()
+
   let userRoutes: IUserRoutes | undefined = undefined
   if (loggedIn) {
     const [userRoutesRaw, status] = await fetchUserRoutes()
@@ -52,7 +53,7 @@ export async function Header() {
       </Link>
     </Stack>
     <Stack gap={{md: 2, lg: 4}} direction='row' sx={{flex: 1, alignItems: 'center', justifyContent: 'center', display: {xs: 'none', md: 'flex'}}}>
-      <QuickLinks userRoutes={userRoutes} />
+      {loggedIn && <QuickLinks userRoutes={userRoutes} />}
     </Stack>
     <Stack gap={{xs: 2, lg: 4}} direction='row' sx={{flex: {xs: 1, md: 0, lg: 1}, alignItems: 'center', justifyContent: 'flex-end'}}>
       <NightNodeToggler />

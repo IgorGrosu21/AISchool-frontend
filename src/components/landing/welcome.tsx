@@ -24,7 +24,7 @@ export function Welcome({type}: {type: 'hero' | 'cta'}) {
   const t = useTranslations(`components.landing.welcome`);
 
   return <Section
-    color='primary'
+    color={type === 'hero' ? 'primary' : 'tertiary'}
     sx={{minHeight: '100vh', display: 'flex', alignItems: 'center'}}
     animationGroup={type === 'hero' ? <AnimationGroup1 /> : <AnimationGroup4 />}
   >

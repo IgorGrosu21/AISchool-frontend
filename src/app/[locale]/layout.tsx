@@ -1,6 +1,5 @@
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
-import { notFound } from 'next/navigation';
-import { routing } from '@/i18n';
+import { redirect, routing } from '@/i18n';
 import { Header, Footer } from "@/components";
 import { AnimatedBackground } from "@/ui";
 
@@ -19,13 +18,13 @@ interface RootLayoutProps {
 export default async function RootLayout({ children, params }: RootLayoutProps) {
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) {
-    notFound();
+    return redirect('/not-found')
   }
   
   return <NextIntlClientProvider>
     <AnimatedBackground />
     <Header />
-    <Stack id='main' component='main' sx={{flex: 1, minHeight: '100%', overflowX: 'auto'}}>
+    <Stack id='main' component='main' sx={{minHeight: '100%'}}>
       {children}
     </Stack>
     <Footer />

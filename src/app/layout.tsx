@@ -58,12 +58,6 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   return <html suppressHydrationWarning className={roboto.variable}>
-    <head>
-      {/* Preconnect to API to speed up first request */}
-      {process.env.NEXT_PUBLIC_DJANGO_API_URL && (
-        <link rel="preconnect" href={new URL(process.env.NEXT_PUBLIC_DJANGO_API_URL).origin} />
-      )}
-    </head>
     <body>
       <InitColorSchemeScript attribute="[data-theme='%s']" />
       <AppRouterCacheProvider>

@@ -19,7 +19,7 @@ export function SectionHeader({isTitle = false, onGradient = false, text1, text2
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.8, delay: 0.2 }}
   >
-    <Stack gap={4} sx={{textAlign: 'center', mb: 8}}>
+    <Stack gap={{xs: 0, md: 4}} sx={{textAlign: 'center', mb: {xs: 0, md: 8}}}>
       <Typography variant={isTitle ? "h1" : "h2"} sx={{
         fontSize: isTitle ? { xs: '2.5rem', md: '4rem', lg: '5rem' } : { xs: '2rem', md: '3rem' },
         fontWeight: 700,

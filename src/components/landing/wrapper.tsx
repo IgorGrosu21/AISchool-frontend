@@ -2,7 +2,7 @@
 
 import { domAnimation, LazyMotion } from 'framer-motion'
 import { Welcome } from './welcome'
-import { Pluses } from './pluses'
+import { PlusesWrapper } from './plusesWrapper'
 
 //mui components
 import Stack from "@mui/material/Stack"
@@ -11,7 +11,7 @@ export function LandingWrapper() {
   return <Stack>
     <LazyMotion features={domAnimation} strict>
       <Welcome type='hero' />
-      <Pluses />
+      <PlusesWrapper />
       <Welcome type='cta' />
     </LazyMotion>
   </Stack>
