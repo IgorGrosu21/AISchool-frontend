@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl"
 import { IUserRoutes } from "@/interfaces"
 
 //mui components
+import Stack from "@mui/material/Stack"
 import Button from "@mui/material/Button"
 import Link from "@mui/material/Link"
 import Typography from "@mui/material/Typography"
@@ -28,10 +29,13 @@ export function QuickLinks({ userRoutes }: QuickLinksProps) {
     ] : []
   }, [userRoutes, tLinks])
 
-  return links.map((link, i) => <Link key={i} href={`/core/${link.link}`}>
-    <Button sx={{gap: 1}}>
-      <link.Icon color='primary' sx={{display: {xs: 'none', xl: 'block'}}} />
-      <Typography variant='h6'>{link.label}</Typography>
-    </Button>
-  </Link>)
+
+  return <Stack gap={{md: 2, lg: 4}} direction='row' sx={{flex: 1, alignItems: 'center', justifyContent: 'center', display: {xs: 'none', md: 'flex'}}}>
+    {links.map((link, i) => <Link key={i} href={`/core/${link.link}`}>
+      <Button sx={{gap: 1}}>
+        <link.Icon color='primary' sx={{display: {xs: 'none', xl: 'block'}}} />
+        <Typography variant='h6'>{link.label}</Typography>
+      </Button>
+    </Link>)}
+  </Stack>
 }

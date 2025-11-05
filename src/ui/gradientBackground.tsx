@@ -2,7 +2,7 @@
 
 import { useMemo } from 'react'
 
-//mui
+//mui components
 import Box, { type BoxProps} from '@mui/material/Box'
 
 export function GradientBackground({children, sx, ...props}: BoxProps) {

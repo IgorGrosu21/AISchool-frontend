@@ -52,9 +52,7 @@ export async function Header() {
         </Stack>
       </Link>
     </Stack>
-    <Stack gap={{md: 2, lg: 4}} direction='row' sx={{flex: 1, alignItems: 'center', justifyContent: 'center', display: {xs: 'none', md: 'flex'}}}>
-      {loggedIn && <QuickLinks userRoutes={userRoutes} />}
-    </Stack>
+    <QuickLinks userRoutes={userRoutes} />
     <Stack gap={{xs: 2, lg: 4}} direction='row' sx={{flex: {xs: 1, md: 0, lg: 1}, alignItems: 'center', justifyContent: 'flex-end'}}>
       <NightNodeToggler />
       <LanguagePicker />

@@ -121,9 +121,9 @@
       "info": "Informaţii",
       "about": "Despre",
       "news": "Noutăți",
-      "privacy_policy": "Politica de confidențialitate",
       "support": "Sprijin",
       "user_agreement": "Acord de utilizator",
+      "privacy_policy": "Politica de confidențialitate",
       "help": "Ajutor",
       "contacts": "Contacte"
     },
@@ -404,15 +404,68 @@
     "next_task": "Următoarea sarcină",
     "complete": "Complet"
   },
+  "about": {
+    "hero": {
+      "title": "Bun venit, utilizator bun!",
+      "desc": "Foarte plăcut să te cunosc! Ne bucurăm să te vedem pe platforma noastră! Hai să ne cunoaștem mai bine."
+    },
+    "us": {
+      "title": "Cine suntem?",
+      "desc": "Noi suntem cei cărora le pasă",
+      "items": {
+        "1": {
+          "heading": "Echipă",
+          "content": "Suntem o echipă de tineri dezvoltatori, designeri și analiști. Suntem cu toții absolvenți de liceu și suntem familiarizați cu toate neajunsurile educației. Dar vrem să schimbăm asta - vrem ca fiecare copil, adolescent și adult să găsească în educație ceea ce noi am găsit odinioară. Ei vor să găsească ceva ce le place și pe care doresc să îl exploreze independent. Credem cu tărie că cei 12 ani de școală modelează viitorul fiecărei persoane și, prin urmare, viitorul țării noastre. Totul începe cu lucruri mărunte, așa că haideți să parcurgem acest drum împreună!"
+        },
+        "2": {
+          "heading": "Fundator",
+          "content": "Sunt fondatorul proiectului AISchool. Am absolvit liceul în mai 2025, dar am început să lucrez la proiect în martie. Încă din clasa a IX-a, am câștigat olimpiade naționale la materii precum matematică, informatică și chimie. Am făcut parte din consiliul elevilor liceului și am organizat numeroase evenimente școlare. De-a lungul carierei mele școlare, am întâlnit numeroase deficiențe în educație și vreau să contribui la schimbarea acestui lucru. Voi depune toate eforturile pentru a mă asigura că educația școlarilor nu se limitează la manuale de hârtie și notițe seci, ci mai degrabă la o călătorie captivantă în lumea cunoașterii."
+        }
+      }
+    },
+    "motives": {
+      "title": "Ce ne motivează?",
+      "desc": "Și noi am mers odată la școală, cum putem rămâne indiferenți față de educație?",
+      "items": {
+        "1": {
+          "heading": "XXI secol este deja aici",
+          "content": "Educația trebuie să țină pasul cu vremurile. Digitalizarea globală a proceselor nu trebuie să ocolească cel mai important element al societății - tineretul."
+        },
+        "2": {
+          "heading": "Rutinele sunt prea multe",
+          "content": "Doisprezece ani de viață școlară — sunt oare doar notițe cu pix albastru și pagini de manual? Educația ar trebui să fie interesantă și captivantă, nu doar o rescriere mecanică a materiei."
+        },
+        "3": {
+          "heading": "Raporturi, raporturi, raporturi...",
+          "content": "Profesia de profesor este una dintre cele mai importante din societate. Vocația unui profesor este de a transmite cunoștințe generațiilor viitoare, nu de a arunca \"hârtie nefolositoare\" în aer liber."
+        },
+        "4": {
+          "heading": "De ce să rezolvi tu, dacă poți copia?",
+          "content": "Răspunsuri la sfârșitul manualului, soluții online și rețele neuronale - ce elev nu le-a folosit? Ar trebui să fie mai ușor și mai captivant pentru elevi să finalizeze temele independent."
+        }
+      }
+    },
+    "goals": {
+      "title": "Ce vrem să realizăm?",
+      "desc": "Ca să facem lumea un loc mai bun, desigur!",
+      "items": {
+        "1": "Să creăm un analog complet al educației offline.",
+        "2": "Să conectăm cât mai multe școli și clase la platformă",
+        "3": "Să revenim interesul pentru educație la elevii de toate vârstele",
+        "4": "Să minimizăm încărcarea profesorilor"
+      }
+    }
+  },
+  "news": {
+    "hero": {
+      "title": "Noutăți",
+      "desc": "Urmăriți toate actualizările AISchool"
+    }
+  },
   "subscriptions": {
     "hero": {
       "title": "AISchool+ abonament",
-      "desc": "Deblocați potențialul complet al educației bazate pe AI",
-      "features": {
-        "1": "Îmbunătățește productivitatea",
-        "2": "Crește eficiența învățării",
-        "3": "Folosește AI la maximum"
-      }
+      "desc": "Deblocați potențialul complet al educației bazate pe AI"
     },
     "free_pluses": {
       "student": "Cel mai convenabil jurnal electronic;Teme online;Manuale convenabile;Numeroase activități",
@@ -439,7 +492,7 @@
       "monthly": "1 lună",
       "quarter": "3 luni",
       "yearly": "1 an",
-      "forever": "pentru totdeauna"
+      "forever": "Pentru Totdeauna"
     },
     "description": {
       "title": "Despre abonament",

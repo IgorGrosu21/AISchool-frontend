@@ -37,7 +37,7 @@ export function SubscriptionPluses() {
     }
   ];
 
-  return <Section>
+  return <Section id='section1'>
     <SectionHeader text1={t('title')} text2={t('desc')} />
     <Grid2 container spacing={4}>
       {featureCards.map((card, index) => <Grid2 size={{ xs: 12, md: 6 }} key={index}>
@@ -59,7 +59,7 @@ export function SubscriptionPluses() {
                 <card.icon sx={{ fontSize: 48, color: 'background.default' }} />
               </Box>
             </m.div>
-            <Stack gap={4} sx={{ textAlign: 'center', flex: 1 }}>
+            <Stack gap={4} sx={{ textAlign: 'center' }}>
               <Typography variant="h4" color={card.color} sx={theme => ({ 
                 fontWeight: 700,
                 fontSize: { xs: '1.5rem', md: '1.75rem' },

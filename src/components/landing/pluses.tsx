@@ -1,7 +1,7 @@
 'use client'
 
 import { m } from 'framer-motion'
-import { SectionHeader } from '@/ui'
+import { Panel, SectionHeader } from '@/ui'
 import { useTranslations } from 'next-intl'
 
 //mui components
@@ -126,34 +126,24 @@ export function Pluses({ currentSectionIndex, currentSection, scrollToSection }:
           animate={{ opacity: 1, x: 0, scale: 1 }}
           transition={{ duration: 0.4, delay: index * 0.1 + 0.3 }}
         >
-          <Stack direction='row' gap={2} sx={{
+          <Panel direction='row' gap={2} sx={{
             height: '100%',
             alignItems: 'center',
-            borderRadius: 4,
-            boxShadow: '0 8px 32px rgba(0,0,0,0.1)',
-            border: '1px solid rgba(0,0,0,0.05)',
-            transition: 'all 0.3s ease',
             position: 'relative',
             overflow: 'hidden',
-            p: 4,
-            '&:hover': {
-              boxShadow: '0 16px 48px rgba(0,0,0,0.15)',
-              transform: 'translateX(10px)'
-            }
+            p: 4
           }}>
-            <m.div whileHover={{ scale: 1.1, rotate: 5 }} transition={{ type: "spring", stiffness: 300 }}>
-              <Stack sx={{
-                width: {xs: 40, md: 80},
-                height: {xs: 40, md: 80},
-                borderRadius: '50%',
-                background: `linear-gradient(135deg, ${color}, ${color}CC)`,
-                alignItems: 'center',
-                justifyContent: 'center',
-                boxShadow: `0 8px 32px ${color}40`
-              }}>
-                <Icon sx={{ fontSize: {xs: 24, md: 40}, color: 'background.default' }} />
-              </Stack>
-            </m.div>
+            <Stack sx={{
+              width: {xs: 40, md: 80},
+              height: {xs: 40, md: 80},
+              borderRadius: '50%',
+              background: `linear-gradient(135deg, ${color}, ${color}CC)`,
+              alignItems: 'center',
+              justifyContent: 'center',
+              boxShadow: `0 8px 32px ${color}40`
+            }}>
+              <Icon sx={{ fontSize: {xs: 24, md: 40}, color: 'background.default' }} />
+            </Stack>
             <Typography variant="h6" sx={{ 
               fontWeight: 600,
               color: 'text.primary',
@@ -162,7 +152,7 @@ export function Pluses({ currentSectionIndex, currentSection, scrollToSection }:
             }}>
               {plus}
             </Typography>
-          </Stack>
+          </Panel>
         </m.div>}
       )}
     </Stack>

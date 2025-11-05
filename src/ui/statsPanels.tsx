@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useState } from "react"
+import { useCallback, useMemo, useState } from "react"
 import { m } from "framer-motion"
 
 //mui components
@@ -20,13 +20,19 @@ interface StatsPanelsProps {
     text: string
     desc?: string
     Icon: typeof SvgIcon
-    onClick?: () => void
   }>
 }
 
 export function StatsPanels({panels}: StatsPanelsProps) {
   const [active, setActive] = useState<number>(-1)
   const panel = useMemo(() => panels[active], [active, panels])
+
+  const scrollToSection = useCallback((index: number) => {
+    const sectionElement = document.getElementById(`section${index}`)
+    if (sectionElement) {
+      sectionElement.scrollIntoView({ behavior: 'smooth' })
+    }
+  }, [])
 
   return <>
     <Stack 
@@ -43,7 +49,7 @@ export function StatsPanels({panels}: StatsPanelsProps) {
     >
       {panels.map((panel, i) => <Box
         key={i}
-        onClick={panel.onClick ?? (panel.desc ? () => setActive(i) : undefined)}
+        onClick={panel.desc ? () => setActive(i) : () => scrollToSection(i + 1)}
         sx={{
           flex: 1,
           cursor: 'pointer',

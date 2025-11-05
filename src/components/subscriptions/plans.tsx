@@ -27,7 +27,7 @@ export function SubscriptionPlans() {
     price: plan.price
   })), []);
 
-  return <Section>
+  return <Section id='section2'>
     <SectionHeader text1={t('title')} text2={t('desc')} />
     <Grid2 container spacing={4} sx={{ maxWidth: 'md' }}>
       {plans.map((plan, index) => {

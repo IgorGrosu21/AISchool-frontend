@@ -34,7 +34,7 @@ export function SubscriptionDescription() {
     }
   ];
 
-  return <Section>
+  return <Section id='section3'>
     <SectionHeader text1={t('title')} />
     <Grid2 container spacing={4}>
       {descriptionCards.map((card, index) => <Grid2 size={{ xs: 12, md: 6 }} key={index}>

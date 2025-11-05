@@ -3,7 +3,6 @@
 import { Section, SectionHeader, StatsPanels, AnimationGroup1 } from "@/ui"
 import { useTranslations } from "next-intl"
 import { IPersonHome } from "@/interfaces"
-import { useCallback } from "react"
 
 //icons
 import AssignmentIcon from "@mui/icons-material/Assignment"
@@ -20,13 +19,6 @@ const sections = [AssignmentIcon, HomeIcon, TrendingUpIcon].map(Icon => ({ icon:
 export function Greetings({profileType, user}: GreetingsProps) {
   const t = useTranslations('components.home')
 
-  const scrollToSection = useCallback((index: number) => {
-    const sectionElement = document.getElementById(`section${index}`)
-    if (sectionElement) {
-      sectionElement.scrollIntoView({ behavior: 'smooth' })
-    }
-  }, [])
-
   return <Section
     color='primary'
     sx={{minHeight: '100vh', display: 'flex', alignItems: 'center'}}
@@ -40,8 +32,7 @@ export function Greetings({profileType, user}: GreetingsProps) {
     />
     <StatsPanels panels={sections.map((feature, index) => ({
       text: t(`sections.${profileType}.${index + 1}.title`),
-      Icon: feature.icon,
-      onClick: () => scrollToSection(index + 1),
+      Icon: feature.icon
     }))} />
   </Section>
 }

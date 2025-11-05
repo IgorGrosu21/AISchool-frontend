@@ -121,9 +121,9 @@
       "info": "Information",
       "about": "About",
       "news": "News",
-      "privacy_policy": "Privacy policy",
       "support": "Support",
       "user_agreement": "User agreement",
+      "privacy_policy": "Privacy policy",
       "help": "Help",
       "contacts": "Contacts"
     },
@@ -404,15 +404,68 @@
     "next_task": "Next task",
     "complete": "Complete"
   },
+  "about": {
+    "hero": {
+      "title": "Hello, dear user!",
+      "desc": "Very nice to meet you! We are glad to see you on our platform! Let's get to know each other better."
+    },
+    "us": {
+      "title": "Who are we?",
+      "desc": "We are the ones who do care",
+      "items": {
+        "1": {
+          "heading": "Team",
+          "content": "We are a team of young developers, designers, and analysts. We are all recent high school graduates ourselves, and we are intimately familiar with all the shortcomings of education. But we want to change that—we want every child, teenager, and adult to find in education what we once found. They want to find something they enjoy and want to explore independently. We truly believe that the 12 years of school shape the future of each person, and therefore the future of our country. Everything starts small, so let's walk this path together!"
+        },
+        "2": {
+          "heading": "Founder",
+          "content": "I am the founder of the AISchool project. I graduated from high school in May 2025, but I began working on the project in March. Since 9th grade, I have won national Olympiads in subjects such as mathematics, computer science, and chemistry. I served on the lyceum student council and organized many in-school events. Throughout my school career, I have encountered numerous shortcomings in education and want to help change this. I will make every effort to ensure that schoolchildren's education is not limited to paper textbooks and dry notes, but rather an engaging journey into the world of knowledge."
+        }
+      }
+    },
+    "motives": {
+      "title": "What drives us?",
+      "desc": "We too once studied in school, how can we remain indifferent to education?",
+      "items": {
+        "1": {
+          "heading": "XXI century is already here",
+          "content": "Education must keep pace with the times. The global digitalization of processes must not bypass the most important element of society—the youth."
+        },
+        "2": {
+          "heading": "Routines are too much",
+          "content": "12 years of school life—is it really just notes in blue pen and pages of textbooks? Education should be interesting and engaging, not just a mechanical rewriting of material."
+        },
+        "3": {
+          "heading": "Reports, reports, reports...",
+          "content": "The teaching profession is one of the most important in society. A teacher's calling is to transmit knowledge to future generations, not to churn out formal \"waste paper\"."
+        },
+        "4": {
+          "heading": "Why solve it yourself if you can copy it?",
+          "content": "Answers at the end of the textbook, online solutions, and neural networks—what student hasn't used them? It should be easier and more engaging for students to complete assignments independently."
+        }
+      }
+    },
+    "goals": {
+      "title": "What we want to achieve?",
+      "desc": "Of course, make the world better!",
+      "items": {
+        "1": "Create a complete offline education analog.",
+        "2": "Connect as many schools and classes to the platform as possible",
+        "3": "Return interest in education to students of all ages",
+        "4": "Minimize the load on teachers"
+      }
+    }
+  },
+  "news": {
+    "hero": {
+      "title": "News",
+      "desc": "Stay up-to-date with all AISchool updates"
+    }
+  },
   "subscriptions": {
     "hero": {
       "title": "AISchool+ subscription",
-      "desc": "Unlock the full potential of AI-powered education",
-      "features": {
-        "1": "Boost you productivity",
-        "2": "Increase your learning efficiency",
-        "3": "Use AI at maximum"
-      }
+      "desc": "Unlock the full potential of AI-powered education"
     },
     "free_pluses": {
       "student": "The most convenient electronic diary;Online homework;Convenient textbooks;Numerous activities",
@@ -439,7 +492,7 @@
       "monthly": "1 month",
       "quarter": "3 months",
       "yearly": "1 year",
-      "forever": "forever"
+      "forever": "Forever"
     },
     "description": {
       "title": "About the subscription",

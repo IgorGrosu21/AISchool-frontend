@@ -1,7 +1,7 @@
 'use server'
 
-import { ErrorPage } from "@/components"
+import { NewsWrapper } from "@/components"
 
 export default async function Page() {
-  return <ErrorPage code={404} />
+  return <NewsWrapper />
 }

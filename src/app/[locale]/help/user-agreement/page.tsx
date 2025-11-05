@@ -1,7 +1,7 @@
 'use server'
 
-import { ErrorPage } from "@/components"
+import { ComingSoon } from "@/components"
 
 export default async function Page() {
-  return <ErrorPage code={404} />
+  return <ComingSoon />
 }
