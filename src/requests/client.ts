@@ -8,7 +8,7 @@ import { cache } from 'react';
 type updateCacheBehavior = 'replace' | 'ignore'
 
 const api = setupCache(axios.create({
-  baseURL: process.env.NEXT_PUBLIC_DJANGO_API_URL,
+  baseURL: process.env.NEXT_PUBLIC_DIARY_URL,
   withCredentials: true,
   headers: {
     'Content-Type': 'application/json'
@@ -105,10 +105,6 @@ export async function sendFile(config: CacheRequestConfig, updateCacheType?: upd
     return [response.file, status]
   }
   return [undefined, status]
-}
-
-export async function getCachedData(key: string) {
-  return api.storage.get(key)
 }
 
 export async function deleteAllCache() {

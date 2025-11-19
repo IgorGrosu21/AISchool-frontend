@@ -1,8 +1,8 @@
 export { AnimationGroup1, AnimationGroup2, AnimationGroup3, AnimationGroup4 } from "./animationsGroups";
-export { AnimatedBackground } from "./animatedBackground";
+export { AnimatedBackground, GradientBackground } from "./bg";
+export { Section, SectionHeader } from "./section";
 export { Card } from "./card";
-export { GradientBackground } from "./gradientBackground";
+export { Loader } from "./loader";
 export { Panel } from "./panel";
-export { Section } from "./section";
-export { SectionHeader } from "./header";
 export { StatsPanels } from "./statsPanels";
+export { ThemeImage } from "./themeImage";

@@ -23,7 +23,7 @@ export function LandingButtons({buttons}: LandingButtonsProps) {
     transition={{ duration: 0.8, delay: 0.3 }}
     viewport={{ once: true }}
   >
-    <Stack direction={{ xs: 'column', sm: 'row' }} spacing={3} alignItems="center">
+    <Stack direction={{ xs: 'column', sm: 'row' }} gap={2} alignItems="center">
       {buttons.map((button, index) => <Button
         key={index}
         component={Link}

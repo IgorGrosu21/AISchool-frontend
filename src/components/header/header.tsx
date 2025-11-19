@@ -6,7 +6,7 @@ import { SideBarWrapper } from "./sidebarWrapper";
 import { LanguagePicker } from "./languagePicker";
 import { ToTopButton } from "./toTopButton";
 import { NightNodeToggler } from "./nightNodeToggler";
-import { ThemeImage } from "../themeImage";
+import { ThemeImage } from "@/ui";
 import { QuickLinks } from "./quickLinks";
 import { errorHandler, fetchUserRoutes } from "@/requests";
 import { IUserRoutes } from "@/interfaces";
@@ -24,7 +24,9 @@ export async function Header() {
   let userRoutes: IUserRoutes | undefined = undefined
   if (loggedIn) {
     const [userRoutesRaw, status] = await fetchUserRoutes()
-    userRoutes = await errorHandler(userRoutesRaw, status)
+    if (status !== 403) {
+      userRoutes = await errorHandler(userRoutesRaw, status)
+    }
   }
 
   return <Stack direction='row' component='header' sx={{
@@ -56,7 +58,7 @@ export async function Header() {
     <Stack gap={{xs: 2, lg: 4}} direction='row' sx={{flex: {xs: 1, md: 0, lg: 1}, alignItems: 'center', justifyContent: 'flex-end'}}>
       <NightNodeToggler />
       <LanguagePicker />
-      {loggedIn ? <SideBarWrapper userRoutes={userRoutes!} /> : <Link href='/auth'>
+      {loggedIn ? <SideBarWrapper userRoutes={userRoutes} /> : <Link href='/auth'>
         <IconButton size="large" sx={{bgcolor: 'primary.main', color: 'primary.contrastText'}}>
           <LoginIcon />
         </IconButton>

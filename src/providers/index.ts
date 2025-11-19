@@ -1,3 +1,4 @@
+export { useAuthContext, AuthProvider } from "./auth";
 export { useCalendarContext, CalendarProvider } from "./calendar";
 export { useDiaryContext, DiaryProvider } from "./diary";
 export {
@@ -10,6 +11,7 @@ export {
   SchoolEditorContext, useSchoolEditorContext,
   SchoolWithKlassesEditorContext, useSchoolWithKlassesEditorContext,
   SchoolWithTimetableEditorContext, useSchoolWithTimetableEditorContext,
+  UserEditorContext, useUserEditorContext,
   EditorProvider
 } from "./editor";
 export { type Group, useJournalContext, JournalProvider } from "./journal";

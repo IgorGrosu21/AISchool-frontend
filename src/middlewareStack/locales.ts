@@ -5,12 +5,16 @@ import { MiddlewareFactory } from './middlewareFactoryType';
  
 const localesMiddleware = createMiddleware(routing);
 
-const excludedRoutes = ['trpc', '_next', '_vercel', 'images', 'favicon.ico', 'logo.png', 'manifest', 'robots.txt', 'sitemap.xml']
+const excludedRoutes = ['api', 'trpc', '_next', '_vercel', 'images', 'favicon.ico', 'logo.png', 'manifest', 'robots.txt', 'sitemap.xml']
 
 export const localesMiddlewareFactory: MiddlewareFactory = (next) => {
   return async (request: NextRequest, _next: NextFetchEvent) => {
     const pathname = request.nextUrl.pathname;
-    if (new RegExp(`^(?!(\/(?:${excludedRoutes.join('|')}))\/?).*`).test(pathname)) {
+    
+    // Skip locale middleware for excluded routes (API routes, static files, etc.)
+    const isExcluded = excludedRoutes.some(route => pathname.startsWith(`/${route}`) || pathname === `/${route}`);
+    
+    if (!isExcluded) {
       return localesMiddleware(request)
     }
     return next(request, _next);

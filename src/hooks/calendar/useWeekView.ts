@@ -6,6 +6,8 @@ import { ISpecificLessonName } from '@/interfaces';
 import { addDays, compareAsc, compareDesc, format, isSameWeek, subDays } from 'date-fns';
 import { useCallback, useEffect, useMemo, useState, useTransition } from 'react';
 
+const DEBOUNCE_MS = 500;
+
 export function useWeekView(dates: Date[]) {
   const { year, setActiveDay, currentDay } = useCalendarContext()
   const { accountType, personId, schoolSlug } = useDiaryContext()
@@ -31,10 +33,10 @@ export function useWeekView(dates: Date[]) {
     const timeout = setTimeout(() => {
       setDebouncedStart(startDay);
       setDebouncedEnd(endDay);
-    }, 500);
+    }, DEBOUNCE_MS);
 
     /*as I understand, when the dependencies update, useEffect calls clearTimeout,
-      so the state doesn't change if the dependencies don't change long enough (500ms)*/
+      so the state doesn't change if the dependencies don't change long enough (DEBOUNCE_MS)*/
     return () => clearTimeout(timeout);
   }, [startDay, endDay])
 

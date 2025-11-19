@@ -10,11 +10,6 @@ type Paginated = WithSlug & {
   endPage: number
 }
 
-export type ITask = WithSlug & {
-  currency: keyof IBalance
-  cost: number
-}
-
 export type IBalance = {
   [key: string]: number
   sapphires: number

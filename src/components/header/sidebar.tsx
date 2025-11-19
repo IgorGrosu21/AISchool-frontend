@@ -1,12 +1,11 @@
 'use client'
 
-import { Link } from '@/i18n'
 import { useState, useEffect, useCallback } from "react"
-import { usePathname } from "@/i18n"
+import { Link, usePathname, useRouter } from "@/i18n"
 import { useTranslations } from "next-intl"
-import { AuthButton, ThemeImage } from "@/components"
-import { logoutThis, verify } from "@/app/actions"
-import { RouteController } from "./routeController"
+import { AuthButton } from "@/components"
+import { ThemeImage } from "@/ui"
+import { logoutThis } from "@/app/actions"
 import { IUserRoutes } from "@/interfaces"
 
 //mui components
@@ -25,13 +24,14 @@ type Routes = Array<Array<{
 }>>
 
 interface SideBarProps {
-  user: IUserRoutes
+  user?: IUserRoutes
   routes: Routes
 }
 
 export function SideBar({ user, routes }: SideBarProps) {
   const [opened, open] = useState(false)
   const pathname = usePathname()
+  const router = useRouter()
   const t = useTranslations('components.sidebar')
 
   const toggleDrawer = useCallback(() => {
@@ -40,14 +40,13 @@ export function SideBar({ user, routes }: SideBarProps) {
   
   useEffect(() => {
     open(false)
-  }, [pathname])
+    if (!user && pathname.includes('/core') && pathname !== '/core/profile/edit') {
+      router.push('/core/profile/edit')
+    }
+  }, [pathname, router, user])
 
   return <>
-    <IconButton
-      onClick={toggleDrawer}
-      size="large"
-      sx={{bgcolor: 'primary.main', color: 'primary.contrastText'}}
-    >
+    <IconButton onClick={toggleDrawer} size="large" sx={{bgcolor: 'primary.main', color: 'primary.contrastText'}}>
       <MenuIcon />
     </IconButton>
     <Drawer
@@ -96,10 +95,10 @@ export function SideBar({ user, routes }: SideBarProps) {
         </Stack>
         <Stack gap={2} sx={{height: '100%', width: '100%', justifyContent: 'center'}}>
           <Stack gap={2} direction='row' sx={{p: 2, bgcolor: 'primary.main', alignItems: 'center'}}>
-            <Link href={`/core/${user.profileLink}`} style={{display: 'flex', alignItems: 'center', pointerEvents: user.profileLink ? 'unset' : 'none'}}>
+            <Link href={`/core/${user?.profileLink ?? 'profile/edit'}`} style={{display: 'flex', alignItems: 'center'}}>
               <ThemeImage
-                srcDark={user.avatar ? user.avatar : '/images/default-avatar-dark.png'}
-                srcLight={user.avatar ? user.avatar : '/images/default-avatar-light.png'}
+                srcDark={user?.avatar ?? '/images/default-avatar-dark.png'}
+                srcLight={user?.avatar ?? '/images/default-avatar-light.png'}
                 style={{borderRadius: '50%'}}
                 alt='avatar'
                 width={100}
@@ -107,11 +106,11 @@ export function SideBar({ user, routes }: SideBarProps) {
               />
             </Link>
             <Stack sx={{flex: 1}}>
-              <Typography variant='h6' color='primary.contrastText'>{user.name}</Typography>
-              <Typography variant='h6' color='primary.contrastText'>{user.surname}</Typography>
+              <Typography variant='h6' color='primary.contrastText'>{user?.name}</Typography>
+              <Typography variant='h6' color='primary.contrastText'>{user?.surname}</Typography>
             </Stack>
           </Stack>
-          {user.isAccountVerified ? <Stack gap={2} sx={{px: 4}}>
+          <Stack gap={2} sx={{px: 4}}>
             {routes.map((group, i) => <Stack key={i}>
               {group.map((route, j) => (
                 <Link key={j} href={'/core/' + route.path}>
@@ -127,14 +126,9 @@ export function SideBar({ user, routes }: SideBarProps) {
                 </Link>
               ))}
             </Stack>)}
-          </Stack> : <Stack component='form' action={verify} gap={2} sx={{p: 4}}>
-            <RouteController />
-            <Typography variant='h6' sx={{textAlign: 'center', textWrap: 'wrap'}}>{t('unverified.label')}</Typography>
-            <Typography sx={{textAlign: 'center', textWrap: 'wrap', whiteSpace: 'pre-wrap'}}>({t('unverified.helper')})</Typography>
-            <AuthButton type='verify' variant='h6' />
-          </Stack>}
+          </Stack>
           <Stack component='form' action={logoutThis} sx={{px: 4, pb: 4, flex: 1, justifyContent: 'flex-end'}}>
-            <AuthButton type='logout' variant='h6' />
+            <AuthButton type='logout' onClick={logoutThis} />
           </Stack>
         </Stack>
       </Stack>

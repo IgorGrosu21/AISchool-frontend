@@ -5,9 +5,8 @@ import { getTranslations } from 'next-intl/server';
 import { Socials } from './socials';
 import { IDetailedUser } from '@/interfaces';
 import { NavigationContainer } from '../navigation';
-import { Panel } from '@/ui';
+import { Panel, ThemeImage } from '@/ui';
 import { Title } from '../editable';
-import { ThemeImage } from '../themeImage';
 
 //mui components
 import Stack from "@mui/material/Stack"
@@ -20,8 +19,8 @@ interface ProfileProps extends React.PropsWithChildren {
 
 export async function Profile({user, headerChildren, children}: ProfileProps) {
   const t = await getTranslations('profile')
-  
-  return <NavigationContainer segments={[]} last={`${user.name} ${user.surname}`}>
+
+  return <NavigationContainer segments={[]} last={user.id ? `${user.surname} ${user.name}` : t('title')}>
     <Title
       label={`${t('title')} ${t(user.profileLink!.split('/')[1])}`}
       link={`/core/${user.profileLink}`}

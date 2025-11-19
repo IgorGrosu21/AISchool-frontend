@@ -5,15 +5,18 @@ import { Fields } from "./fields";
 import { Socials } from "./socials";
 import { ImageUploader } from "../../imageUploader";
 import { removeAvatar, editAvatar } from "@/app/actions";
-import { Panel } from "@/ui";
-import { ThemeImage } from "../../themeImage";
+import { Panel, ThemeImage } from "@/ui";
+import { CityPicker } from "./cityPicker";
+import { TypePicker } from "./typePicker";
+import { LangPicker } from "./langPicker";
 
 //mui components
 import Stack from "@mui/material/Stack"
 
-interface ContainerProps extends React.PropsWithChildren {
+interface ContainerProps {
   user: IDetailedUser
   setUser: (user: IDetailedUser) => void
+  children?: React.ReactNode | React.ReactNode[]
 }
 
 export function ProfileContainer({user, setUser, children}: ContainerProps) {
@@ -54,10 +57,12 @@ export function ProfileContainer({user, setUser, children}: ContainerProps) {
       <Fields user={user} setUser={setUser} />
     </Stack>
     <Stack gap={{ xs: 6, md: 8 }}>
-      <Panel>
-        <Socials socials={user.socials} setSocials={socials => setUser({...user, socials})} />
-      </Panel>
-      {children}
+      <Socials socials={user.socials} setSocials={socials => setUser({...user, socials})} />
+      {children ?? <>
+        <CityPicker user={user} setUser={setUser} />
+        <TypePicker user={user} setUser={setUser} />
+        <LangPicker user={user} setUser={setUser} />
+      </>}
     </Stack>
   </>
 }

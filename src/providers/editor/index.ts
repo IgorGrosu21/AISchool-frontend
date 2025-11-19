@@ -7,6 +7,7 @@ export {
   KlassEditorContext, useKlassEditorContext,
   SchoolEditorContext, useSchoolEditorContext,
   SchoolWithKlassesEditorContext, useSchoolWithKlassesEditorContext,
-  SchoolWithTimetableEditorContext, useSchoolWithTimetableEditorContext
+  SchoolWithTimetableEditorContext, useSchoolWithTimetableEditorContext,
+  UserEditorContext, useUserEditorContext
 } from "./contexts";
 export { EditorProvider } from "./provider";

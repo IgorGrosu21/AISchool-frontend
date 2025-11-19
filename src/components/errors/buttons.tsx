@@ -16,7 +16,7 @@ export function ErrorButtons() {
   const t = useTranslations('errors');
   const router = useRouter();
   
-  return <Stack direction={{ xs: 'column', sm: 'row' }} gap={3}>
+  return <Stack direction={{ xs: 'column', sm: 'row' }} gap={4}>
     <Button 
       variant="contained" 
       size="large" 

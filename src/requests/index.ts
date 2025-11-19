@@ -1,4 +1,5 @@
-export { sendAuthUser, sendLogoutRequest, sendVerificationEmail } from "./auth";
+export { sendAuthRequest, sendCodeVerificationRequest, sendOauth2Request, sendLogoutRequest } from "./auth";
+
 export { fetchCountryNames, fetchRegionNames, fetchCityNames, fetchCity } from "./country";
 export {
   fetchLessonNames, fetchLesson,
@@ -6,7 +7,7 @@ export {
   fetchHomework, sendHomework, deleteHomework, sendHomeworkPhoto, deleteHomeworkPhoto,
   fetchStudentNotes, fetchTeacherNotes, sendNote
 } from "./lesson";
-export { fetchManuals, fetchManual, fetchModule, fetchTopic, sendTask } from "./manual";
+export { fetchManuals, fetchManual, fetchModule, fetchTopic } from "./manual";
 export { fetchParent, sendParent, fetchStudent, sendStudent, fetchTeacher, sendTeacher, fetchPersonHome } from "./person";
 export {
   fetchSchoolNames, fetchSchools, fetchSchool, sendSchool,
@@ -16,6 +17,6 @@ export {
   fetchKlass, sendKlass, fetchTeacherKlasses
 } from "./school";
 export { fetchSubjectsNames, fetchTeachedSubjects, fetchStudiedSubjects } from "./subject";
-export { fetchUserRoutes, createUser, sendAvatar, deleteAvatar } from "./user";
+export { fetchUserRoutes, fetchUser, sendUser, sendAvatar, deleteAvatar } from "./user";
 
 export { errorHandler } from "./errorHandler";

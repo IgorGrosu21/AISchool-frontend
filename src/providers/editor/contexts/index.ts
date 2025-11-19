@@ -14,3 +14,6 @@ export {
   SchoolWithKlassesEditorContext, useSchoolWithKlassesEditorContext,
   SchoolWithTimetableEditorContext, useSchoolWithTimetableEditorContext
 } from "./school";
+export {
+  UserEditorContext, useUserEditorContext
+} from "./user";

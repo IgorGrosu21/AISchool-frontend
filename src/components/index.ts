@@ -1,5 +1,6 @@
 export { AboutWrapper } from "./about";
 export { AttachedFiles, AttachedFilesEditor, AttachedLinks, AttachedLinksEditor } from "./attached";
+export { AuthWrapper, AuthButton } from "./auth";
 export { Calendar } from "./calendar";
 export { ErrorPage } from "./errors";
 export { Header } from "./header";
@@ -31,9 +32,6 @@ export {
 } from "./timetable";
 export { SubscriptionWrapper } from "./subscriptions";
 
-export { AuthButton } from "./authButton";
 export { Footer } from "./footer";
 export { ImageUploader } from "./imageUploader";
-export { Loader } from "./loader";
-export { ThemeImage } from "./themeImage";
 //export { PdfViewer } from "./pdfViewer";

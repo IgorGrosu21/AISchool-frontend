@@ -21,7 +21,6 @@ export function Fields({user, setUser}: FieldsProps) {
     <Stack gap={2} sx={{alignItems: 'flex-start'}}>
       <Typography>{t('name')}:</Typography>
       <TextField
-        placeholder={t('name')}
         value={user.name}
         onChange={e => setUser({...user, name: e.target.value})}
         sx={{width: {xs: '100%', md: 'auto'}}}
@@ -30,7 +29,6 @@ export function Fields({user, setUser}: FieldsProps) {
     <Stack gap={2} sx={{alignItems: 'flex-start'}}>
       <Typography>{t('surname')}:</Typography>
       <TextField
-        placeholder={t('surname')}
         value={user.surname}
         onChange={e => setUser({...user, surname: e.target.value})}
         sx={{width: {xs: '100%', md: 'auto'}}}

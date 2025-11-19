@@ -18,10 +18,12 @@ interface SectionsProps {
 export function Sections({personHome}: SectionsProps) {
   const t = useTranslations('components.home')
 
-  return <Stack>
+  const isInDevelopment = personHome.profileType === 'staff' || personHome.profileType === 'parent'
+
+  return <>
     <Section id='section1'>
-      <SectionHeader text1={t(`sections.${personHome.profileType}.1.title`)} />
-      {personHome.profileType === 'parent' ? <Stack sx={{minHeight: '70vh'}}>
+      <SectionHeader text1={t(`sections.${personHome.profileType}.1`)} />
+      {isInDevelopment ? <Stack sx={{minHeight: '70vh'}}>
       </Stack> : (personHome.tomorrowTimetable.length > 0 ? <TomorrowTimetable
         id={personHome.id}
         accountType={personHome.profileType}
@@ -31,16 +33,16 @@ export function Sections({personHome}: SectionsProps) {
       </Typography>)}
     </Section>
     <Section id='section2'>
-      <SectionHeader text1={t(`sections.${personHome.profileType}.2.title`)} />
-      {personHome.profileType === 'parent' ? <Stack sx={{minHeight: '70vh'}}>
+      <SectionHeader text1={t(`sections.${personHome.profileType}.2`)} />
+      {isInDevelopment ? <Stack sx={{minHeight: '70vh'}}>
       </Stack> : <LatestData
         accountType={personHome.profileType}
         latestData={personHome.latestData}
       />}
     </Section>
     <Section id='section3'>
-      <SectionHeader text1={t(`sections.${personHome.profileType}.3.title`)} />
-      {personHome.profileType === 'parent' ? <Stack sx={{minHeight: '70vh'}}>
+      <SectionHeader text1={t(`sections.${personHome.profileType}.3`)} />
+      {isInDevelopment ? <Stack sx={{minHeight: '70vh'}}>
       </Stack> : <Stack gap={4} sx={{width: '100%'}}>
         {personHome.profileType === 'student' ? <Analytics
           analytics={personHome.analytics}
@@ -51,5 +53,5 @@ export function Sections({personHome}: SectionsProps) {
         </Stack>)}
       </Stack>}
     </Section>
-  </Stack>
+  </>
 }

@@ -30,9 +30,9 @@ export function Greetings({profileType, user}: GreetingsProps) {
       text1={`${t(`greetings.title`)}, ${user.name} ${user.surname}`}
       text2={t('greetings.desc')}
     />
-    <StatsPanels panels={sections.map((feature, index) => ({
-      text: t(`sections.${profileType}.${index + 1}.title`),
+    {profileType !== 'staff' && <StatsPanels panels={sections.map((feature, index) => ({
+      text: t(`sections.${profileType}.${index + 1}`),
       Icon: feature.icon
-    }))} />
+    }))} />}
   </Section>
 }

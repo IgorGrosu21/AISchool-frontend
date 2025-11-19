@@ -4,6 +4,7 @@ import { ISocial } from "@/interfaces"
 import { useCallback } from "react"
 import { useTranslations } from "next-intl"
 import { useSocialsEditor } from "@/hooks"
+import { Panel } from "@/ui"
 
 //mui components
 import Button from "@mui/material/Button"
@@ -35,7 +36,7 @@ export function Socials({socials, setSocials}: SocialsProps) {
     }
   }, [])
 
-  return <Stack gap={2}>
+  return <Panel gap={2}>
     <Typography variant='h6'>{t('pick_socials')}</Typography>
     <Stack gap={2}>
       {socials.map((s, i) => <Stack key={i} direction='row' gap={2} sx={{alignItems: 'center'}}>
@@ -55,5 +56,5 @@ export function Socials({socials, setSocials}: SocialsProps) {
         <Button variant='contained' disabled={social.type === 'un' || !isUnique} onClick={addSocial}>{t('add')}</Button>
       </Stack>
     </Stack>
-  </Stack>
+  </Panel>
 }

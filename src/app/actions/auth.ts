@@ -2,61 +2,79 @@
 
 import { redirect } from '@/i18n'
 
-import { sendAuthUser, createUser, sendLogoutRequest, sendVerificationEmail } from "@/requests";
-import { AxiosError } from "axios";
+import { sendAuthRequest, sendCodeVerificationRequest, sendOauth2Request, sendLogoutRequest } from "@/requests";
 import { deleteTokens, setTokens } from "./token";
-import { IError } from "@/interfaces";
+import { ITokens, IError } from '@/interfaces';
+
+type Validatable = { value: string, error: string }
 
 export type FormState = {
-  email: {
-    value: string
-    error: string
-  }
-  password: {
-    value: string
-    error: string
-  }
+  type: 'login' | 'signup' | 'restore' | 'verification'
+  email: Validatable
+  password: Validatable
+  code: Validatable & { purpose: 'email_verification' | 'password_reset' }
 }
 
-export async function auth(state: FormState, formData: FormData): Promise<FormState> {
-  const type = formData.get('type') as string
-  formData.delete('type')
-  const authUser = JSON.parse(JSON.stringify({ email: formData.get('email'), password: formData.get('password') }))
-  const newState = { email: { value: authUser.email, error: '' }, password: { value: authUser.password, error: '' } }
-
-  try {
-    const [res] = await sendAuthUser(type, authUser)
-    if (res) {
-      await setTokens(res)
-      formData.delete('email')
-      formData.delete('password')
-      switch (type) {
-        case 'signup': {
-          const [user] = await createUser(formData)
-          if (user) {
-            await redirect(`/core/${user.profileLink}`)
+async function handleResponse(response: IError | ITokens, status: number, state: FormState): Promise<FormState> {
+  switch (status) {
+    case 200:
+      return { ...state, type: 'verification', code: {
+        value: '',
+        error: '',
+        purpose: state.type === 'restore' ? 'password_reset' : 'email_verification'
+      } }
+    case 201:
+      await setTokens(response as ITokens)
+      redirect('/core')
+      break
+    case 500:
+      await redirect('/error')
+      break
+    default: {
+      const errorResponse = response as IError
+      switch (errorResponse.attr) {
+        case 'email':
+          return { ...state, email: { ...state.email, error: errorResponse.detail } }
+        case 'password':
+          return { ...state, password: { ...state.password, error: errorResponse.detail } }
+        case 'code':
+          if (state.code) {
+            return { ...state, code: { ...state.code, error: errorResponse.detail } }
           }
+          return state
+        default:
+          await redirect('/error')
           break
-        }
-        case 'login': {
-          await redirect('/core')
-        }
       }
-    }
-  } catch (error: unknown) {
-    if (error instanceof AxiosError) {
-      const response = (error as AxiosError<IError>).response
-      if (response) {
-        const emailErrors = response.data.errors.filter(e => e.attr === 'email')
-        const passwordErrors = response.data.errors.filter(e => e.attr === 'password')
-        return {
-          email: {...newState.email, error: emailErrors.at(0)?.detail ?? ''},
-          password: {...newState.password, error: passwordErrors.at(0)?.detail ?? ''}
-        }
-      }
+      break
     }
   }
-  return newState
+  return state
+}
+
+export async function dispatchAuthAction(state: FormState): Promise<FormState> {
+  let response: IError | ITokens
+  let status: number
+  if (state.type === 'verification') {
+    [response, status] = await sendCodeVerificationRequest(state.email.value, state.password.value, state.code.value, state.code.purpose)
+
+    if (status === 404) {
+      return { ...state, type: 'signup' }
+    }
+  } else {
+    [response, status] = await sendAuthRequest(state.type, state.email.value, state.password.value)
+  }
+  return await handleResponse(response, status, state)
+}
+
+export async function oauth2(provider: string, email: string, token: string): Promise<ITokens | undefined> {
+  const [response, status] = await sendOauth2Request(provider, email, token)
+
+  if (status === 201) {
+    return response as ITokens
+  }
+
+  return undefined
 }
 
 async function logout(all = false) {
@@ -71,8 +89,4 @@ export async function logoutThis() {
 
 export async function logoutAll() {
   await logout(true)
-}
-
-export async function verify() {
-  await sendVerificationEmail()
 }

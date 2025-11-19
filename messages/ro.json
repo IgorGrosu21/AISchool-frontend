@@ -1,56 +1,73 @@
 {
   "auth": {
     "login": {
-      "label": "Conectați-vă la contul dvs",
-      "link": "Prima dată aici? Înscrie-te!",
-      "submit": "Log in"
+      "label": "Intrați în contul",
+      "redirect_labels": {
+        "email": "Nu ai cont? Creează unul!",
+        "password": "Ai uitat parola?"
+      },
+      "submit": "Intră"
     },
     "signup": {
-      "label": "Creați un cont",
-      "link": "Ai deja un cont? Log in!",
-      "submit": "Înscrieți-vă"
+      "label": "Creează un cont",
+      "redirect_labels": {
+        "email": "Ai deja un cont? Intră!"
+      },
+      "submit": "Creează"
+    },
+    "restore": {
+      "label": "Recuperare parolă",
+      "redirect_labels": {
+        "email": "Nu ai cont? Creează unul!"
+      },
+      "submit": "Recuperare parolă"
+    },
+    "verification": {
+      "label": "Verificare email",
+      "helper1": "Un email cu un cod de 6 cifre a fost trimis la adresa ta de email. Introduce-l mai jos pentru a verifica-ți emailul.",
+      "helper2": "Dacă emailul nu a ajuns, verifică folderul \"Spam\" sau apasă butonul de mai jos pentru a-l retrimite prin {seconds} {seconds, plural, one {secundă} few {secunde} many {secunde} other {secunde}}.",
+      "helper3": "Sau poți face clic pe linkul din email și apasă butonul de mai jos",
+      "submit": "Trimite cod"
+    },
+    "resend": {
+      "submit": "Re-trimite cod"
+    },
+    "verified_with_link": {
+      "submit": "Am verificat cu linkul"
+    },
+    "oauth2": {
+      "or": "sau",
+      "google": "Google",
+      "facebook": "Facebook"
     },
     "logout": {
-      "submit": "Deconectare"
-    },
-    "verify": {
-      "submit": "Trimite"
+      "submit": "Ieșire"
     },
     "errors": {
-      "email_already_exists": "E-mailul există deja",
+      "email_invalid": "Format email invalid",
+      "email_already_exists": "Email deja existent",
       "email_not_found": "Cont nu a fost găsit",
-      "password_too_small": "Lungimea minimă a parolei: 8",
+      "password_mismatch": "Parolele nu coincid",
+      "password_too_small": "Lungime minimă a parolei: 8",
       "password_only_numbers": "Parola trebuie să conțină o literă",
       "password_only_letters": "Parola trebuie să conțină un număr",
-      "password_incorect": "Parolă incorectă"
+      "password_incorrect": "Parolă incorectă",
+      "password_not_supported": "Account nu are parolă, folosește rețelele sociale pentru a intra sau pentru a restaura parola",
+      "password_the_same": "Noua parolă nu poate fi aceeași ca cea curentă",
+      "invalid_code": "Cod de verificare invalid",
+      "code_too_short": "Codul trebuie să fie de 6 caractere"
     },
-    "user_type": {
-      "singular": "Tip utilizator",
-      "student": "Student",
-      "teacher": "Profesor",
-      "parent": "Părinte"
-    },
-    "email": "E-mail",
-    "password": "Parolă",
-    "country": "Ţară",
-    "region": "Regiune",
-    "city": "Oraș",
-    "city_picker": {
-      "label": "Oraș",
-      "not_selected": "Nu este selectat",
-      "change": "Schimba",
-      "dialog_title": "Selectați orașul",
-      "save": "Salva",
-      "cancel": "Anula"
-    },
-    "name": "Nume",
-    "surname": "Prenume",
-    "lang": "Limbă",
-    "alternatives": "Alte metode de autentificare"
+    "fields": {
+      "email": "Email",
+      "password": "Parolă",
+      "password2": "Repetă parola",
+      "code": "Cod de 6 cifre"
+    }
   },
   "components": {
     "edit": {
       "200": "Datele salvate cu succes",
+      "201": "Datele create cu succes",
       "403": "Nu sunt suficiente drepturi pentru a face schimbări",
       "404": "Pagina nu a fost găsită",
       "500": "A apărut o eroare, vă rugăm să încercați din nou mai târziu",
@@ -60,10 +77,6 @@
       "save": "Salva"
     },
     "sidebar": {
-      "unverified": {
-        "label": "Contul dvs. nu este încă activ, vă rugăm să faceți clic pe butonul de mai jos pentru a vă verifica e-mailul",
-        "helper": "Va fi trimis un e-mail cu un link, care vă va permite să finalizați procesul de creare a contului. După ce faceți clic pe link, reîncărcați această pagină"
-      },
       "home": "Acasă",
       "profile": "Profilul meu",
       "klass": "Clasa mea",
@@ -193,37 +206,24 @@
       },
       "sections": {
         "student": {
-          "1": {
-            "title": "Mâine orar"
-          },
-          "2": {
-            "title": "Ultimele note"
-          },
-          "3": {
-            "title": "Analiza performanței"
-          }
+          "1": "Orarul pe mâine",
+          "2": "Ultimele note",
+          "3": "Analiza performanței"
         },
         "teacher": {
-          "1": {
-            "title": "Mâine orar"
-          },
-          "2": {
-            "title": "Ultimele teme"
-          },
-          "3": {
-            "title": "Analiza performanței"
-          }
+          "1": "Orarul pe mâine ",
+          "2": "Ultimele teme",
+          "3": "Analiza performanței"
         },
         "parent": {
-          "1": {
-            "title": "Mâine orar"
-          },
-          "2": {
-            "title": "Ultimele note"
-          },
-          "3": {
-            "title": "Analiza performanței"
-          }
+          "1": "Orarul pe mâine",
+          "2": "Ultimele note",
+          "3": "Analiza performanței"
+        },
+        "staff": {
+          "1": "-",
+          "2": "-",
+          "3": "-"
         }
       },
       "no_lessons_tomorrow": "Mâine fără lecții"
@@ -517,6 +517,17 @@
     "surname": "Prenumele dumneavoastră",
     "socials": "Rețele sociale",
     "pick_socials": "Adăugați rețelele de socializare (Instagram, Facebook)",
+    "city_picker": {
+      "title": "Alegeți orașul dumneavoastră",
+      "country": "Țară",
+      "region": "Regiune",
+      "city": "Oraș"
+    },
+    "type_picker": {
+      "title": "Alegeți tipul profilului",
+      "helper": "Tipul de utilizator nu poate fi schimbat după crearea profilului"
+    },
+    "lang_picker": "Alegeți limba profilului",
     "add": "Adăugați"
   },
   "students": {
@@ -579,19 +590,19 @@
   "errors": {
     "401": {
       "title": "Pagina nu este disponibilă",
-      "desc": "Această pagină este disponibilă numai pentru utilizatorii înregistrați.Conectați-vă la contul dvs. pentru a obține acces"
+      "desc": "Această pagină este disponibilă numai pentru utilizatorii înregistrați. Conectați-vă la contul dvs. pentru a obține acces"
     },
     "403": {
       "title": "Pagina nu este disponibilă",
-      "desc": "Nu aveți suficiente drepturi pentru a accesa această pagină.Poate că contul dvs. nu este verificat"
+      "desc": "Nu aveți suficiente drepturi pentru a accesa această pagină. Poate că contul dvs. nu este verificat"
     },
     "404": {
       "title": "Pagina nu a fost găsită",
-      "desc": "Din păcate, pagina solicitată nu există.Poate că a fost mutat sau șters."
+      "desc": "Din păcate, pagina solicitată nu există. Poate că a fost mutat sau șters."
     },
     "500": {
-      "title": "Pagina nu a fost găsită",
-      "desc": "Din păcate, a apărut o eroare.Vă rugăm să încercați din nou mai târziu"
+      "title": "Eroare de server",
+      "desc": "Din păcate, a apărut o eroare. Vă rugăm să încercați din nou mai târziu"
     },
     "home": "Acasă",
     "back": "Înapoi"

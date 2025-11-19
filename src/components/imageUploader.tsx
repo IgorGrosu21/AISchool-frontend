@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState, useTransition } from 'react';
 import { useTranslations } from 'next-intl';
-import { Loader } from './loader';
+import { Loader } from '@/ui';
 
 //mui components
 import Box from "@mui/material/Box"

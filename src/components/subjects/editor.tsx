@@ -50,6 +50,6 @@ export function SubjectsEditor<T extends {subjects: ISubjectName[]}>({instance, 
         <TextField {...params} label={t('list')} placeholder={t('picked')} />
       )}
     />
-    <Subjects subjects={pickedSubjects} small={small} {...props} />
+    <Subjects subjects={pickedSubjects} small={small} applyPanel={false} {...props} />
   </Stack>
 }

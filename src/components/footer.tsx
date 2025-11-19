@@ -1,6 +1,6 @@
 'use server'
 
-import { ThemeImage } from "./themeImage"
+import { ThemeImage } from "@/ui"
 import { Link } from '@/i18n'
 import { getTranslations } from "next-intl/server";
 

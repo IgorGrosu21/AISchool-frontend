@@ -37,7 +37,7 @@ export function StatsPanels({panels}: StatsPanelsProps) {
   return <>
     <Stack 
       direction={{ xs: 'column', md: 'row' }} 
-      spacing={4} 
+      gap={4} 
       sx={{ 
         mt: 4,
         animation: 'fadeInUp 0.4s ease-out 0.8s both',

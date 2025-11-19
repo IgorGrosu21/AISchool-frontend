@@ -1,6 +1,13 @@
 'use server'
 
-import { deleteAvatar, errorHandler, sendAvatar } from "@/requests"
+import { deleteAvatar, errorHandler, sendAvatar, sendUser } from "@/requests"
+import { EditActionFunction } from "./template"
+import { IDetailedUser } from "@/interfaces"
+
+export const editUser: EditActionFunction<IDetailedUser> = async (instance) => {
+  instance.socials = instance.socials.map(s => ({...s, user: instance.id}))
+  return sendUser(instance)
+}
 
 export async function editAvatar(formData: FormData) {
   const [dataRaw, status] = await sendAvatar(formData)

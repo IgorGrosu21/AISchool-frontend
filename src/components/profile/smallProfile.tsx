@@ -2,7 +2,7 @@
 
 import { Link } from '@/i18n';
 import { IUser } from "@/interfaces";
-import { ThemeImage } from "../themeImage";
+import { ThemeImage } from "@/ui";
 
 //mui components
 import Stack from "@mui/material/Stack"

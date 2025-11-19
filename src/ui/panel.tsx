@@ -16,12 +16,8 @@ export function Panel({children, sx, ...props}: StackOwnProps) {
     p: props.p ?? 2,
     borderRadius: 2,
     animation: 'fadein 0.8s ease-in-out',
-    transition: 'transform 0.4s',
-    '&:hover': {
-      transform: 'translateY(-5px)',
-    },
     ...sx,
-  }), [sx, props.p])
+  }), [props.p, sx])
   
   return <Stack
     {...props}

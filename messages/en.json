@@ -1,56 +1,73 @@
 {
   "auth": {
     "login": {
-      "label": "Login to your account",
-      "link": "First time here? Sign up!",
+      "label": "Enter the account",
+      "redirect_labels": {
+        "email": "First time here? Create an account!",
+        "password": "Forgot your password?"
+      },
       "submit": "Login"
     },
     "signup": {
       "label": "Create an account",
-      "link": "Already have an account? Login!",
-      "submit": "Sign up"
+      "redirect_labels": {
+        "email": "Already have an account? Login!"
+      },
+      "submit": "Register"
+    },
+    "restore": {
+      "label": "Password recovery",
+      "redirect_labels": {
+        "email": "First time here? Create an account!"
+      },
+      "submit": "Restore password"
+    },
+    "verification": {
+      "label": "Email verification",
+      "helper1": "An email with a 6-digit code has been sent to your email. Enter it below to verify your email.",
+      "helper2": "If the email hasn't arrived, check the \"Spam\" folder or click the button below to resend it through {seconds} {seconds, plural, one {second} few {seconds} many {seconds} other {seconds}}.",
+      "helper3": "Or you can click the link in the email and click the button below",
+      "submit": "Send code"
+    },
+    "resend": {
+      "submit": "Resend code"
+    },
+    "verified_with_link": {
+      "submit": "I verified with the link"
+    },
+    "oauth2": {
+      "or": "or",
+      "google": "Google",
+      "facebook": "Facebook"
     },
     "logout": {
       "submit": "Logout"
     },
-    "verify": {
-      "submit": "Send"
-    },
     "errors": {
+      "email_invalid": "Invalid email format",
       "email_already_exists": "Email already exists",
       "email_not_found": "Account not found",
+      "password_mismatch": "Passwords don't match",
       "password_too_small": "Minimum password length: 8",
       "password_only_numbers": "Password must contain a letter",
       "password_only_letters": "Password must contain a number",
-      "password_incorect": "Incorrect password"
+      "password_incorrect": "Incorrect password",
+      "password_not_supported": "Account has no password, use social networks to login or restore password",
+      "password_the_same": "New password cannot be the same as the current one",
+      "invalid_code": "Invalid verification code",
+      "code_too_short": "Code must be 6 characters long"
     },
-    "user_type": {
-      "singular": "User type",
-      "student": "Student",
-      "teacher": "Teacher",
-      "parent": "Parent"
-    },
-    "email": "Email",
-    "password": "Password",
-    "country": "Country",
-    "region": "Region",
-    "city": "City",
-    "city_picker": {
-      "label": "City",
-      "not_selected": "Not selected", 
-      "change": "Change",
-      "dialog_title": "Select city",
-      "save": "Save",
-      "cancel": "Cancel"
-    },
-    "name": "Name",
-    "surname": "Surname",
-    "lang": "Language",
-    "alternatives": "Other login methods"
+    "fields": {
+      "email": "Email",
+      "password": "Password",
+      "password2": "Repeat password",
+      "code": "6-digit code"
+    }
   },
   "components": {
     "edit": {
       "200": "Data successfully saved",
+      "201": "Data successfully created",
       "403": "Not enough rights to make changes",
       "404": "Request not found",
       "500": "An error occurred, please try again later",
@@ -60,10 +77,6 @@
       "save": "Save"
     },
     "sidebar": {
-      "unverified": {
-        "label": "Your account is not yet active, please click the button below to verify your email",
-        "helper": "an email with a link will be sent, which will allow you to complete the account creation process. After clicking the link, reload this page"
-      },
       "home": "Home",
       "profile": "My profile",
       "klass": "My class",
@@ -193,37 +206,24 @@
       },
       "sections": {
         "student": {
-          "1": {
-            "title": "Tomorrow timetable"
-          },
-          "2": {
-            "title": "Latest notes"
-          },
-          "3": {
-            "title": "Performance analysis"
-          }
+          "1": "Tomorrow timetable",
+          "2": "Latest notes",
+          "3": "Performance analysis"
         },
         "teacher": {
-          "1": {
-            "title": "Tomorrow timetable"
-          },
-          "2": {
-            "title": "Latest homework"
-          },
-          "3": {
-            "title": "Performance analysis"
-          }
+          "1": "Tomorrow timetable",
+          "2": "Latest homework",
+          "3": "Performance analysis"
         },
         "parent": {
-          "1": {
-            "title": "Tomorrow timetable"
-          },
-          "2": {
-            "title": "Latest notes"
-          },
-          "3": {
-            "title": "Performance analysis"
-          }
+          "1": "Tomorrow timetable",
+          "2": "Latest notes",
+          "3": "Performance analysis"
+        },
+        "staff": {
+          "1": "-",
+          "2": "-",
+          "3": "-"
         }
       },
       "no_lessons_tomorrow": "No lessons tomorrow"
@@ -517,6 +517,17 @@
     "surname": "Your surname",
     "socials": "Social networks",
     "pick_socials": "Add your social networks (Instagram, Facebook)",
+    "city_picker": {
+      "title": "Select your city",
+      "country": "Country",
+      "region": "Region",
+      "city": "City"
+    },
+    "type_picker": {
+      "title": "Select profile type",
+      "helper": "User type cannot be changed after profile creation"
+    },
+    "lang_picker": "Select profile language",
     "add": "Add"
   },
   "students": {
@@ -590,7 +601,7 @@
       "desc": "Unfortunately, the requested page does not exist. Maybe it was moved or deleted."
     },
     "500": {
-      "title": "Page not found",
+      "title": "Server error",
       "desc": "Unfortunately, an error occurred. Please try again later"
     },
     "home": "Home",

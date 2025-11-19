@@ -3,9 +3,8 @@
 import { Context, ProviderProps, useCallback, useMemo, useState, useTransition } from "react"
 
 import { useTranslations } from "next-intl";
-import { Loader, Title } from "@/components";
-import { Panel } from "@/ui";
-import { Link } from '@/i18n';
+import { Title } from "@/components";
+import { Loader, Panel } from "@/ui";
 import { EditorContextType } from "./contexts";
 import { ICanEdit } from "@/interfaces";
 import { useRouter } from "@/i18n";
@@ -14,19 +13,19 @@ import { useRouter } from "@/i18n";
 import Alert from "@mui/material/Alert"
 import Button from "@mui/material/Button"
 import Snackbar, { type SnackbarCloseReason } from "@mui/material/Snackbar"
-import Stack from "@mui/material/Stack"
+import Box from "@mui/material/Box";
 
 interface EditorProviderValue<T> {
   Context: Context<EditorContextType<T> | null>
   initial: T
   action: (instance: T) => Promise<[T | undefined, number]>
-  segments: Array<{ label: string, href: string }>
+  segments?: Array<{ label: string, href: string }>
 }
 
 export function EditorProvider<T extends ICanEdit>({children, value: {Context, initial, action, segments}}: ProviderProps<EditorProviderValue<T>>) {
   const t = useTranslations('components.edit');
-  const returnLink = useMemo(() => '/core/' + segments.at(-1)?.href, [segments])
-  const returnLabel = useMemo(() => '' + segments.at(-1)?.label, [segments])
+  const returnLink = useMemo(() => segments ? '/core/' + segments.at(-1)?.href : undefined, [segments])
+  const returnLabel = useMemo(() => segments ? '' + segments.at(-1)?.label : undefined, [segments])
 
   const [instance, setInstance] = useState<T>(initial)
   const [pending, startTransition] = useTransition()
@@ -42,6 +41,10 @@ export function EditorProvider<T extends ICanEdit>({children, value: {Context, i
     setStatus(undefined);
   }, [])
 
+  const returnBack = useCallback(() => {
+    router.back()
+  }, [router])
+
   const discard = useCallback(() => {
     setInstance(initial)
   }, [initial])
@@ -49,7 +52,7 @@ export function EditorProvider<T extends ICanEdit>({children, value: {Context, i
   const save = useCallback(() => {
     startTransition(async () => {
       const [updatedInstance, status] = await action(instance)
-      if (updatedInstance && status === 200) {
+      if (updatedInstance && status < 300) {
         setStatus(status)
         setInstance({...updatedInstance})
       } else if (status === 401) {
@@ -65,16 +68,13 @@ export function EditorProvider<T extends ICanEdit>({children, value: {Context, i
   }
 
   return <Context.Provider value={{instance, setInstance}}>
-    {returnLabel !== '' && <Title label={returnLabel} link={returnLink} type='back' />}
+    {returnLabel && returnLink && <Title label={returnLabel} link={returnLink} type='back' />}
     {children}
-    <Panel direction='row' sx={{flexGrow: 0, justifyContent: 'space-between'}}>
-      <Link href={returnLink}>
-        <Button variant='outlined'>{t('return')}</Button>
-      </Link>
-      <Stack gap={2} direction='row' sx={{justifyContent: 'flex-end'}}>
-        <Button variant='outlined' onClick={discard}>{t('discard')}</Button>
-        <Button variant='contained' onClick={save}>{t('save')}</Button>
-      </Stack>
+    <Panel direction='row' gap={2} sx={{flexGrow: 0, justifyContent: 'space-between'}}>
+      <Button variant='outlined' onClick={returnBack}>{t('return')}</Button>
+      <Box sx={{flex: 1}} />
+      <Button variant='outlined' onClick={discard}>{t('discard')}</Button>
+      <Button variant='contained' onClick={save}>{t('save')}</Button>
     </Panel>
     <Loader open={pending} />
     <Snackbar open={status !== undefined} autoHideDuration={6000} onClose={handleClose}>

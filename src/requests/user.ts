@@ -5,19 +5,12 @@ export function fetchUserRoutes() {
   return request<IUserRoutes>({url: 'api/user-routes/'})
 }
 
-export async function createUser(formData: FormData) {
-  const user = {
-    id: '',
-    userType: formData.get('userType'),
-    name: formData.get('name'),
-    surname: formData.get('surname'),
-    socials: [],
-    city: {
-      id: formData.get('city_id')
-    },
-    lang: formData.get('lang')
-  }
-  return send<IDetailedUser>({url: 'api/user/', method: 'POST', data: user})
+export function fetchUser() {
+  return request<IDetailedUser>({url: `api/user/`})
+}
+
+export async function sendUser(user: IDetailedUser) {
+  return send<IDetailedUser>({url: 'api/user/', method: user.id === '' ? 'POST' : 'PUT', data: user})
 }
 
 export async function sendAvatar(data: FormData) {

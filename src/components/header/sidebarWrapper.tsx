@@ -18,10 +18,10 @@ import EmojiEvents from "@mui/icons-material/EmojiEvents"
 import SchoolOutlined from "@mui/icons-material/SchoolOutlined"
 import SellOutlined from "@mui/icons-material/SellOutlined"
 
-export async function SideBarWrapper({ userRoutes }: { userRoutes: IUserRoutes }) {
+export async function SideBarWrapper({ userRoutes }: { userRoutes?: IUserRoutes }) {
   const t = await getTranslations('components.sidebar')
 
-  const routes = [
+  const routes = userRoutes ? [
     [
       {path: '', label: t('home'), icon: <HomeOutlined color='primary' />},
     ],
@@ -35,22 +35,24 @@ export async function SideBarWrapper({ userRoutes }: { userRoutes: IUserRoutes }
       {path: 'universities', icon: <SchoolOutlined color='tertiary' />},
       {path: 'subscriptions', icon: <SellOutlined color='tertiary' />},
     ],
-  ]
+  ] : []
 
-  if (userRoutes.profileLink) {
-    routes[0].push({path: userRoutes.profileLink, label: t('profile'), icon: <AccountCircleOutlined color='primary' />})
-  }
-  if (userRoutes.klassLink) {
-    routes[0].push({path: userRoutes.klassLink, label: t('klass'), icon: <Group color='primary' />})
-  }
-  if (userRoutes.schoolLink) {
-    routes[0].push({path: userRoutes.schoolLink, label: t('school'), icon: <School color='primary' />})
-  }
-  if (userRoutes.diaryLink) {
-    routes[1].push({path: userRoutes.diaryLink, label: t('diary'), icon: <ClassOutlined color='secondary' />})
-  }
-  if (userRoutes.journalLink) {
-    routes[1].push({path: userRoutes.journalLink, label: t('journal'), icon: <AutoStories color='secondary' />})
+  if (userRoutes) {
+    if (userRoutes.profileLink) {
+      routes[0].push({path: userRoutes.profileLink, label: t('profile'), icon: <AccountCircleOutlined color='primary' />})
+    }
+    if (userRoutes.klassLink) {
+      routes[0].push({path: userRoutes.klassLink, label: t('klass'), icon: <Group color='primary' />})
+    }
+    if (userRoutes.schoolLink) {
+      routes[0].push({path: userRoutes.schoolLink, label: t('school'), icon: <School color='primary' />})
+    }
+    if (userRoutes.diaryLink) {
+      routes[1].push({path: userRoutes.diaryLink, label: t('diary'), icon: <ClassOutlined color='secondary' />})
+    }
+    if (userRoutes.journalLink) {
+      routes[1].push({path: userRoutes.journalLink, label: t('journal'), icon: <AutoStories color='secondary' />})
+    }
   }
 
   return <SideBar user={userRoutes} routes={routes} />

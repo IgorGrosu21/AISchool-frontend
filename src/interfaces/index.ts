@@ -1,4 +1,4 @@
-export type { IAuthUser, ITokens, IError } from './auth'
+export type { IAccessToken,ITokens, IError } from './auth'
 
 export type { IDetailedCity, IDetailedRegion, IDetailedCountry } from './detailed/country'
 export type { IDetailedLesson, IDetailedSpecificLesson, IDetailedHomework } from './detailed/lesson'
@@ -10,7 +10,7 @@ export type { ICanEdit } from './detailed/canEdit'
 
 export type { ICity, IRegion } from './listed/country'
 export type { IHomework, ILessonTime, ILesson, INote, ISpecificLesson } from './listed/lesson'
-export type { ITask, IBalance, IModuleWithManual, IModule, IManual, ITopic } from './listed/manual'
+export type { IBalance, IModuleWithManual, IModule, IManual, ITopic } from './listed/manual'
 export type { IParent, IStudent, IStudentWithKlass, ISubscription, ITeacher } from './listed/person'
 export type { IKlass, IPosition, ISchool } from './listed/school'
 export type { ISocial, IUser } from './listed/user'

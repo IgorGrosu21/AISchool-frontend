@@ -16,13 +16,14 @@ interface SubjectsProps extends StackProps {
   small?: boolean
   showText?: boolean
   hrefTemplate?: string
+  applyPanel?: boolean
 }
 
-export function Subjects({subjects, small = false, showText = true, hrefTemplate, ...props}: SubjectsProps) {
+export function Subjects({subjects, small = false, showText = true, hrefTemplate, applyPanel = true, ...props}: SubjectsProps) {
   const t = useTranslations('subjects')
   const isMobile = useIsMobile();
 
-  return <Panel {...props} gap={small ? 2 : 4}>
+  const content = <>
     {showText && <Typography variant={small ? 'h6' : 'h5'} sx={{textAlign: 'center'}}>{t('plural')}:</Typography>}
     <Stack gap={4} direction='row' sx={{flexWrap: 'wrap', justifyContent: 'space-evenly'}}>
       {subjects.map((subject, i) => {
@@ -54,5 +55,13 @@ export function Subjects({subjects, small = false, showText = true, hrefTemplate
         return subjectContent
       })}
     </Stack>
-  </Panel>
+  </>
+
+  if (applyPanel) {
+    return <Panel {...props} gap={small ? 2 : 4}>
+      {content}
+    </Panel>
+  }
+
+  return content
 }

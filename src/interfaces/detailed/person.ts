@@ -32,6 +32,8 @@ export type IPersonHome = {
   profileType: 'teacher'
 } | IParentHome & {
   profileType: 'parent'
+} | IStaffHome & {
+  profileType: 'staff'
 })
 
 type IAnalytics<T> = Array<{
@@ -66,4 +68,9 @@ type IParentHome = {
     name: string
     data: IStudentHome
   }>
+}
+
+type IStaffHome = {
+  id: string
+  user: IUser
 }
