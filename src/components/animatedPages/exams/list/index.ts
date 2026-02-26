@@ -1,0 +1,1 @@
+export { ExamsList } from "./content";

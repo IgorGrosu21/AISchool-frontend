@@ -1,7 +1,7 @@
 'use server'
 
-import { redirect } from '@/i18n'
+import { permanentRedirect } from '@/i18n'
 
 export default async function Page() {
-  redirect('/')
+  await permanentRedirect('/')
 }

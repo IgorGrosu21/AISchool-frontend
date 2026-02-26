@@ -1,54 +1,32 @@
 'use client'
 
-import { ISocial } from "@/interfaces"
-import { useCallback, useEffect, useMemo, useState } from "react"
+import { useCallback, useState } from "react"
+import { useVerboseSocials } from "./useVerboseSocials"
 
-const dummySocial = {
-  id: '',
-  type: 'un' as const,
-  link: ''
-}
-
-export function useSocialsEditor(socials: ISocial[], setSocials: (socials: ISocial[]) => void) {
-  const [social, setSocial] = useState<ISocial>(dummySocial)
-
-  const getSocialType = useCallback((link: string) => {
-    if (link.startsWith('https://www.instagram.com/')) {
-      return 'ig'
-    } else if (link.startsWith('https://www.facebook.com/')) {
-      return 'fb'
-    }
-    return 'un'
-  }, [])
-
-  useEffect(() => {
-    setSocial(s => ({...s, type: getSocialType(social.link)}))
-  }, [getSocialType, social.link])
+export function useSocialsEditor(socials: string[], setSocials: (socials: string[]) => void) {
+  const [rawSocials, setRawSocials] = useState<string[]>(socials)
+  const {verboseSocials, getSocialType} = useVerboseSocials(rawSocials)
 
   const updateSocial = useCallback((i: number, link: string) => {
     const type = getSocialType(link)
-    setSocials(socials.map((s, k) => k === i ? s : { ...s, link, type }))
+    setRawSocials(r => r.map((s, k) => k === i ? link : s))
+    if (type !== 'un') {
+      setSocials(socials.map((s, k) => k === i ? link : s))
+    }
   }, [getSocialType, setSocials, socials])
 
   const deleteSocial = useCallback((i: number) => {
+    setRawSocials(r => r.filter((_, k) => k != i))
     setSocials(socials.filter((_, k) => k != i))
   }, [setSocials, socials])
 
   const addSocial = useCallback(() => {
-    setSocials([...socials, social])
-    setSocial(dummySocial)
-  }, [setSocials, social, socials])
-
-  const isUnique = useMemo(() => {
-    return !socials.map(s => s.type).includes(social.type)
-  }, [social, socials])
+    setRawSocials(r => [...r, ''])
+    setSocials([...socials, ''])
+  }, [setSocials, socials])
 
   return {
-    social,
-    setSocial,
-    updateSocial,
-    deleteSocial,
-    addSocial,
-    isUnique
+    verboseSocials,
+    updateSocial, deleteSocial, addSocial
   }
 }

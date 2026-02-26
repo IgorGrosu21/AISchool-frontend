@@ -1,5 +1,5 @@
-import { redirect } from '@/i18n'
+import { permanentRedirect } from '@/i18n'
 
 export default async function Page() {
-  await redirect(`/core`)
+  await permanentRedirect(`/core/diary`)
 }

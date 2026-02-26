@@ -1,19 +1,20 @@
-import { errorHandler, fetchSchoolWithTimetable, fetchSubjectsNames } from "@/requests"
+import { fetchSchoolWithTimetable, fetchSubjects, handleResponse } from "@/requests"
 import { editSchoolWithTimetable } from '@/app/actions';
 import { SchoolWithTimetableEditorContext } from '@/providers';
 import { EditorProvider } from '@/providers';
 import { getTranslations } from 'next-intl/server';
-import { NavigationContainer, TimetableStepperEditor } from '@/components';
+import { NavigationContainer } from '@/components';
+import { Editor } from './editor';
 
 export default async function Page({ params }: { params: Promise<{schoolSlug: string}> }) {
   const { schoolSlug } = await params;
-  const [[schoolRaw, schoolStatus], [subjectsRaw, subjectsStatus]] = await Promise.all([fetchSchoolWithTimetable(schoolSlug), fetchSubjectsNames()])
-  const school = await errorHandler(schoolRaw, schoolStatus)
-  const subjects = await errorHandler(subjectsRaw, subjectsStatus)
+  const [school, subjects] = await Promise.all([
+    handleResponse(fetchSchoolWithTimetable({ schoolSlug })),
+    handleResponse(fetchSubjects())
+  ])
   const t = await getTranslations('schools');
   const segments = [
-    {label: t('list'), href: 'schools'},
-    {label: school.name, href: schoolSlug},
+    {label: school.name, href: `schools/${schoolSlug}`},
     {label: t('timetable'), href: 'timetable'},
   ]
   
@@ -22,9 +23,10 @@ export default async function Page({ params }: { params: Promise<{schoolSlug: st
       Context: SchoolWithTimetableEditorContext,
       initial: school,
       action: editSchoolWithTimetable,
-      segments
+      segments,
+      resource: { type: 'school', schoolSlug }
     }}>
-      <TimetableStepperEditor subjects={subjects} />
+      <Editor allSubjects={subjects} />
     </EditorProvider>
   </NavigationContainer>
 }

@@ -8,11 +8,21 @@ export async function getToken(type = 'access') {
   return cookieStore.get(`${type}_token`)?.value
 }
 
-export async function createToken(type: string, token: string) {
+export async function createRefreshTTL(longRefresh = false) {
+  return {
+    name: 'refresh_token_long',
+    value: longRefresh ? 'true' : 'false',
+    maxAge: 2_592_000, //30 days
+    path: '/',
+    secure: true,
+  }
+}
+
+export async function createToken(type: string, token: string, longRefresh = false) {
   return {
     name: `${type}_token`,
     value: token,
-    maxAge: type === 'access' ? 7_200 : 15_552_000, //2 hours or 180 days
+    maxAge: type === 'refresh' ? (longRefresh ? 2_592_000 : 86_400) : 1_800, //30 days or 1 day or 30 minutes
     path: '/',
     secure: true,
     httpOnly: true,
@@ -21,20 +31,23 @@ export async function createToken(type: string, token: string) {
   }
 }
 
-export async function setToken(type: string, token: string) {
-  const cookieStore = await cookies()
-  cookieStore.set(await createToken(type, token))
-}
-
 export async function setTokens(tokens: ITokens) {
-  await setToken('access', tokens.access)
-  await setToken('refresh', tokens.refresh)
+  const cookieStore = await cookies()
+  const [accessToken, refreshToken, refreshTokenLong] = await Promise.all([
+    createToken('access', tokens.access),
+    createToken('refresh', tokens.refresh, tokens.longRefresh),
+    createRefreshTTL(tokens.longRefresh)
+  ])
+  cookieStore.set(accessToken)
+  cookieStore.set(refreshToken)
+  cookieStore.set(refreshTokenLong)
 }
 
 export async function deleteTokens() {
   const cookieStore = await cookies()
   cookieStore.delete(`access_token`)
   cookieStore.delete(`refresh_token`)
+  cookieStore.delete(`refresh_token_long`)
 }
 
 export async function isLoggedIn() {

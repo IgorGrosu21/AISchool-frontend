@@ -4,7 +4,8 @@ export function stackMiddlewares(functions: Array<(middleware: NextMiddleware) =
   const current = functions[index];
   if (current) {
     const next = stackMiddlewares(functions, index + 1);
-    return current(next);
+    const response = current(next)
+    return response;
   }
   return () => NextResponse.next();
 }

@@ -1,15 +1,15 @@
 'use client'
 
-import { ILessonTimeName, ILessonName } from "@/interfaces"
+import { ILessonTimeName, ILessonName, IPersonDiary } from "@/interfaces"
 import { createContext, useContext } from "react"
 
 export type DiaryContextType = {
-  lessonTimes: ILessonTimeName[]
   lessons: ILessonName[]
-  accountType: 'teacher' | 'student'
-  personId: string
+  profileType: 'teacher' | 'student' | 'parent'
   schoolSlug?: string
-  holidays: Array<{start: string, end: string}>
+  childId?: string
+  readonly timetable: ReadonlyArray<ILessonTimeName>
+  readonly holidays: (IPersonDiary & {profileType: 'student'})['school']['holidays']
 }
 
 export const DiaryContext = createContext<DiaryContextType | null>(null)

@@ -1,6 +1,6 @@
 'use server'
 
-import { redirect } from "next/navigation"
+import { redirect } from "@/i18n"
 import { isLoggedIn } from "@/app/actions";
 import { AuthWrapper } from "@/components";
 import { AuthProvider } from "@/providers";
@@ -12,7 +12,8 @@ export default async function Page() {
   const loggedIn = await isLoggedIn()
   
   if (loggedIn) {
-    redirect('/core')
+    await redirect('/core')
+    return
   }
 
   return <Stack sx={{

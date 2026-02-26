@@ -1,9 +1,23 @@
-export { useHolidayChecker, useWeekView, useMonthView } from "./calendar";
-export { useGroupsEditor, useLessonTimeEditor } from "./lesson";
-export { useGroupedNotes, useKlassesPerformance, useNotePicker, useNoteProgress, useStudentNotes, useStudentWithNotes, useTeacherNotes } from "./notes";
+export { useHolidayChecker, useMonthView, useWeekCarousel, useWeekView, useYear } from "./calendar";
+export {
+  useGroupsEditor,
+  useGroupStudentSwapper,
+  useLessonEditor,
+  useLessonTimeEditor,
+  useReplacementsEditor,
+  useSpecificLessonEditor
+} from "./lesson";
+export {
+  useGroupedNotes,
+  useNotePicker,
+  useNotesBySubjects,
+  useNotesByStudents
+} from "./notes";
+export { useSchoolFilters, useKlassListEditor } from "./school";
 export { useIsMobile, useIsMounted } from "./ui";
-export { useCityPicker, useSocialsEditor } from "./user";
-export { useKlassListEditor } from "./useKlassListEditor";
+export { useCityPicker, useSocialsEditor, useVerboseSocials } from "./user";
+export { useAuthField } from "./useAuthField";
+export { usePermissions } from "./usePermissions";
 export { usePluses } from "./usePluses";
-export { useSchoolFilters } from "./useSchoolFilters";
-export { useValidatedFields } from "./useValidatedFields";
+export { useQueryParams } from "./useQueryParams";
+export { useSecurityField } from "./useSecurityField";

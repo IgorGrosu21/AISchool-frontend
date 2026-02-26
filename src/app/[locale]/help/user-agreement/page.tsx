@@ -1,7 +1,7 @@
 'use server'
 
-import { ComingSoon } from "@/components"
+import { UserAgreementWrapper } from "@/components"
 
 export default async function Page() {
-  return <ComingSoon />
+  return <UserAgreementWrapper />
 }

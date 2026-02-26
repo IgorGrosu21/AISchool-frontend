@@ -1,11 +1,15 @@
 'use server'
 
 import { HomeWrapper } from '@/components'
-import { errorHandler, fetchPersonHome } from '@/requests'
+import { fetchPersonHome, handleResponse } from '@/requests'
+import { redirect } from '@/i18n'
 
 export default async function Page() {
-  const [personHomeRaw, status] = await fetchPersonHome()
-  const personHome = await errorHandler(personHomeRaw, status)
+  const personHome = await handleResponse(fetchPersonHome(), {
+    forbidden: () => {
+      return redirect('/core/settings')
+    }
+  })
 
   return <HomeWrapper personHome={personHome} />
 }

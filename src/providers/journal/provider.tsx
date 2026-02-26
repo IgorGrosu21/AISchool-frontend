@@ -4,10 +4,10 @@ import { ProviderProps, useCallback, useMemo, useState } from "react"
 import { INote } from "@/interfaces";
 import { getYear, getMonth } from 'date-fns';
 
-import { JournalContext, Semester, Group } from "./context";
+import { JournalContext, Group } from "./context";
+import { roundToHundreeds, type Semester, parseNoteValue, usesDescriptors, performanceToHundreds } from "@/utils/notes"
 
 interface JournalProviderValue {
-  personId: string
   period: string
   groups: Array<{
     id: string
@@ -17,7 +17,7 @@ interface JournalProviderValue {
 }
 
 export function JournalProvider({children, value}: ProviderProps<JournalProviderValue>) {
-  const currentDate = useMemo(() => new Date(2025, 2, 25), [])
+  const currentDate = useMemo(() => new Date(), [])
   const currentYear = useMemo(() => getYear(currentDate), [currentDate])
   const currentMonth = useMemo(() => getMonth(currentDate) + 1, [currentDate])
   const year = useMemo(() => currentMonth < 9 ? currentYear : currentYear + 1, [currentYear, currentMonth])
@@ -40,31 +40,32 @@ export function JournalProvider({children, value}: ProviderProps<JournalProvider
     absences: {ma: 0, ua: 0, da: 0, total: 0},
     extraNotes: 0
   })))
+  const useDescriptors = useMemo(() => usesDescriptors(groups.flatMap(group => group.notes)), [groups])
 
-  const updateGroups = useCallback((rawGroups: Array<{id: string, name: string, notes: INote[]}>) => {
+  const updateGroups = useCallback((rawGroups: Array<Pick<Group, 'id' | 'name' | 'notes'>>) => {
     const groups = rawGroups.map(group => {
       let [sum, count] = [0, 0]
       group.notes.forEach(note => {
         if (note.value !== '' && !note.value.includes('a')) {
-          sum += parseInt(note.value)
+          sum += parseNoteValue(note.value, useDescriptors)
           count++
         }
       })
-      const performance = count > 0 ? Math.round((sum / count) * 100) / 100 : 0
+      const performance = count > 0 ? roundToHundreeds(sum, count) : 0
       const absences = {
         ma: group.notes.filter(note => note.value === 'ma').length,
         ua: group.notes.filter(note => note.value === 'ua').length,
         da: group.notes.filter(note => note.value === 'da').length,
       }
       let extraNotes = 0
-      if (performance < 9 && performance > 0) {
-        extraNotes = Math.ceil(count * (Math.floor(performance) + 1 - performance) / (9 - Math.floor(performance)))
+      if (performance > 0 && performance < 9) {
+        extraNotes = Math.ceil(count * (1 - (performance % 1)) / (9 - Math.floor(performance)))
       }
       return {
         id: group.id,
         name: group.name,
         notes: group.notes,
-        performance: performance === 0 ? '-' : performance.toFixed(2),
+        performance: performanceToHundreds(performance, useDescriptors),
         absences: {
           ...absences,
           total: absences.ma + absences.ua + absences.da
@@ -84,15 +85,14 @@ export function JournalProvider({children, value}: ProviderProps<JournalProvider
         10k - (floor(S) + 1)k >= (floor(S) + 1)n - nS
         k(10 - floor(S) - 1) >= n(floor(S) + 1 - S)
         k >= n(1 - fraq(S)) / (9 - floor(S))
-        where fraq(S) = S - floor(S)
+        where fraq(S) = S - floor(S) or S % 1
         indeed, max(floor(S)) = 8 (we do not calculate how many 10s we need to get performance = 10.0)
         so, no edge cases
     */
     setGroups(groups)
-  }, [])
+  }, [useDescriptors])
 
   return <JournalContext.Provider value={{
-    personId: value.personId,
     semester,
     setSemester,
     period,

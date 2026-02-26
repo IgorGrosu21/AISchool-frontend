@@ -21,6 +21,7 @@ export function Card({index, children, ...props}: CardProps) {
   >
     <MuiCard
       sx={{
+        cursor: props.onClick ? 'pointer' : 'default',
         bgcolor: 'transparent',
         height: '100%',
         borderRadius: 4,

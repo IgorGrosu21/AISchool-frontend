@@ -1,0 +1,289 @@
+{
+  "components": {
+    "pdf_viewer": {
+      "to_start": "La început",
+      "prev": "Înapoi",
+      "next": "Înainte",
+      "to_end": "La sfârșit"
+    }
+  },
+  "attached": {
+    "links": {
+      "confirmation": "Ești sigur că vrei să ștergeți următorul link?",
+      "singular": "Linkul",
+      "plural": "Linkuri",
+      "edit": "Edita",
+      "discard": "Resetează",
+      "close": "Închide",
+      "add": "Adăuga",
+      "cancel": "Anula",
+      "proceed": "Da, sunt sigur / sunt sigur"
+    },
+    "files": {
+      "singular": "Fișier",
+      "plural": "Fișiere",
+      "helper": "Trageți fișiere aici sau faceți clic pe butonul de încărcare",
+      "no_image": "Fișierul selectat nu este o imagine, deci nu o putem arăta.Încercați să îl descărcați și să îl deschideți pe computer"
+    }
+  },
+  "schools": {
+    "singular": "Şcoală",
+    "plural": "Școli",
+    "pick_one": "Alege o școală",
+    "pick_many": "Alegeți școli",
+    "list": "Lista școlilor înregistrate",
+    "klass_list": "Lista claselor",
+    "timetable": "Orar",
+    "filters": {
+      "title": "Filtru",
+      "search": "Caută după numele școlii",
+      "langs": {
+        "title": "Limbi"
+      },
+      "types": {
+        "title": "Tipuri de instituții",
+        "E": "Școală primară",
+        "S": "Şcoală",
+        "P": "Liceu privat",
+        "G": "Gimnazial",
+        "L": "Liceu",
+        "C": "Colegiu"
+      },
+      "profiles": {
+        "title": "Profiluri",
+        "GE": "General",
+        "AR": "Artistic",
+        "MU": "Muzică",
+        "CH": "Coregrafie",
+        "TE": "Teatru",
+        "AL": "Alternativă",
+        "SP": "Sport",
+        "HU": "Umanitar",
+        "RE": "Real",
+        "BI": "Bilingve"
+      }
+    },
+    "details": {
+      "found": "Găsite școli:",
+      "edit": "Edita",
+      "name": "Nume",
+      "desc": "Descriere",
+      "about": "Despre școală",
+      "city": "Oraș",
+      "lang": "Limbă",
+      "type": "Tip de instituție",
+      "contacts": "Contacte",
+      "phones": "Telefoane",
+      "phone": "Telefon #",
+      "emails": "E-mailuri",
+      "email": "E-mail #",
+      "address": "Adresa",
+      "website": "Site-ul școlii",
+      "work_hours": "Ore de lucru"
+    }
+  },
+  "klasses": {
+    "singular": "Clasă",
+    "plural": "Clase",
+    "timetable": "Orar",
+    "teacher": "Profesor de clasă",
+    "profiles": {
+      "title": "Profil",
+      "R": "Real",
+      "U": "Umanitar"
+    },
+    "networth": "Balanță",
+    "pick_grade": "Alegeți-vă clasa",
+    "pick_letter": "Alegeți-vă litera de clasă",
+    "view_helper": "Vedeți orarul clasei",
+    "edit_helper": "Alegeți clasa pentru a edita grupurile, orarul sau înlocuirile"
+  },
+  "lesson_time": {
+    "desc": "Specificați timpul începutului și al sfârșitului fiecărei lecții",
+    "helper": "Pentru a introduce timp în mai multe zile, introduceți timpul începerii lecției în format HH:MM, de exemplu 08:00 sau 13:15",
+    "delete_helper": "Dacă nu doriți să salvați o anumită lecție, nu specificați timpul",
+    "duration": "Durata lecției",
+    "starting": "Început",
+    "ending": "Sfârşit",
+    "weekdays": {
+      "MO": "Luni",
+      "TU": "Marti",
+      "WE": "Miercuri",
+      "TH": "Joi",
+      "FR": "Vineri",
+      "SA": "Sâmbătă"
+    },
+    "no_timetable": "Orarul nu este stabilit pentru această zi"
+  },
+  "specific_lessons": {
+    "title": "Subiectul lecției",
+    "desc": "Teme pentru acasă",
+    "teacher_comment": "Comentariul profesorului",
+    "student_comment": "Comentariul studentului",
+    "homework": "Teme pentru acasă",
+    "last_modified": "Ultima modificare",
+    "replacement": "Înlocuire",
+    "no_lesson": "Lecția nu este creată. Persoana responsabilă trebuie să facă modificări la orar",
+    "no_specific_lesson": "Lecția nu este creată. Profesorul trebuie să scrie subiectul lecției, să adauge teme pentru acasă sau să pună o notă pentru tine",
+    "holiday": "Sărbători!"
+  },
+  "stepper": {
+    "klasses": "Clase",
+    "subjects": "Subiecte",
+    "lesson_time": "Timp de lecție",
+    "groups": "Grupuri de elevi",
+    "lessons": "Orarul",
+    "students": "Elevi",
+    "teachers": "Profesori",
+    "parents": "Părinți",
+    "replacements": "Înlocuiri ale lecțiilor",
+    "account": "Cont",
+    "security": "Securitate",
+    "subscriptions": "Abonamente",
+    "notifications": "Notificări"
+  },
+  "subjects": {
+    "singular": "Subiect",
+    "plural": "Subiecte",
+    "picked": "Subiecte alese",
+    "list": "Lista subiecților",
+    "filter_by_lang": "Arată subiectele pe limba: {lang}",
+    "select_all": "Selectează toate",
+    "deselect_all": "Deselectează toate",
+    "pick": {
+      "school": "Alegeți subiectele care sunt predate în școală",
+      "position": "Alegeți subiectele care le predați"
+    },
+    "helper": {
+      "school": "Alegeți subiectele pe limba predării; dacă subiectele sunt predate în două limbi, specificați ambele",
+      "position": "Alegeți subiectele pe limba predării; dacă lucrați în două limbi, specificați ambele"
+    }
+  },
+  "manuals": {
+    "singular": "Manual",
+    "klass": "Clasă",
+    "plural": "Manuale",
+    "topics": "Subiecte",
+    "tasks": "Sarcini",
+    "prev_task": "Sarcină anterioară",
+    "next_task": "Următoarea sarcină",
+    "complete": "Complet"
+  },
+  "account": {
+    "title": "Cont",
+    "student": "Elev",
+    "teacher": "Profesor",
+    "parent": "Părinte",
+    "settings": "Setări",
+    "name": "Nume",
+    "surname": "Prenume",
+    "set_name_surname": "Alegeți numele și prenumele dumneavoastră",
+    "socials_picker": {
+      "title": "Adăugați link-urile la rețelele de socializare (Instagram, Facebook)",
+      "unknown_type": "Tip de link necunoscut"
+    },
+    "city_picker": {
+      "title": "Alegeți orașul dumneavoastră",
+      "country": "Țară",
+      "region": "Regiune",
+      "city": "Oraș"
+    },
+    "type": "Tipul de cont: {userType, select, student {elev} teacher {profesor} parent {părinte} other {utilizator}}",
+    "type_picker": {
+      "title": "Alegeți tipul profilului",
+      "helper": "Tipul de utilizator nu poate fi schimbat după crearea profilului"
+    },
+    "lang": "Limbă",
+    "lang_picker": "Alegeți limba de învățare / predare",
+    "security": {
+      "email": "E-mail",
+      "backup_email": "E-mail de rezervă",
+      "add_backup_email": "Adăugați e-mail de rezervă",
+      "success": "Datele au fost salvate cu succes"
+    }
+  },
+  "profile": {
+    "title": "Profil",
+    "lang": "Limbă",
+    "socials": "Rețele sociale",
+    "goto_settings": "Vezi setările",
+    "refresh_permissions": "Actualizează permisiunile",
+    "refresh_manuals": "Actualizează manualele"
+  },
+  "students": {
+    "singular": "Elev",
+    "list": "Lista elevilor",
+    "balance": "Balanță",
+    "rank": "Rank",
+    "subscription": "Abonament",
+    "is_manager": "Este manager"
+  },
+  "teachers": {
+    "singular": "Profesor",
+    "plural": "Profesori",
+    "experience": "Experiență de lucru: {years, plural, one {# an} few {# ani} many {# ani} other {# ani}}",
+    "edit_experience": "Specificați-vă experiența totală de muncă"
+  },
+  "parents": {
+    "singular": "Părinte",
+    "plural": "Părinți",
+    "list": "Lista părinților"
+  },
+  "positions": {
+    "staff": "Profesori",
+    "work_places": "Locuri de lucru",
+    "is_manager": "Manager",
+    "delete": "Șterge"
+  },
+  "diary": {
+    "singular": "Agendă electronică",
+    "summertime": "Felicitări pentru sosirea verii, vă așteptăm cu nerăbdare anul viitor!"
+  },
+  "journal": {
+    "singular": "Registru electronic",
+    "periods": {
+      "frst": "I semestru",
+      "scnd": "II semestrul",
+      "annual": "An"
+    },
+    "performance": "Performanţă",
+    "absences": {
+      "plural": "Absențe",
+      "ma": "Absențe motivate",
+      "ua": "Absențe nejustificate",
+      "da": "Absențe din cauza bolii"
+    },
+    "extra_notes": "Zece puncte până la clasa următoare",
+    "scroll_helper": "Pentru a derula tabelul, țineți apăsat Shift și folosiți roțile de mouse"
+  },
+  "notes": {
+    "short_absences": {
+      "ma": "am",
+      "ua": "an",
+      "da": "ab"
+    },
+    "absences": {
+      "ma": "Absență motivată",
+      "ua": "Absență nejustificată",
+      "da": "Absența din cauza bolii"
+    },
+    "short_descriptors": {
+      "VG": "FB",
+      "G": "B",
+      "S": "S",
+      "N": "N"
+    },
+    "descriptors": {
+      "VG": "Foarte bine",
+      "G": "Bine",
+      "S": "Satisfăcător",
+      "N": "Nesatisfăcător"
+    },
+    "has_descriptors": "Utilizați descrieri",
+    "comment": "Comentariu",
+    "close": "Închide",
+    "open_lesson": "Lecție deschisă",
+    "discard": "Anula",
+    "save": "Salva"
+  }
+}

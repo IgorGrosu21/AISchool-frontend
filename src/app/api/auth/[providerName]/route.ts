@@ -10,7 +10,7 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ prov
   }
 
   const options = {
-    redirect_uri: provider.redirectUri,
+    redirect_uri: `${process.env.NEXT_PUBLIC_APP_URL}/api/auth/${providerName.toLowerCase()}/callback`,
     client_id: provider.clientId,
     response_type: "code",
     scope: provider.scope,

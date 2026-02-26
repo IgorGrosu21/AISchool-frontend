@@ -1,0 +1,41 @@
+{
+  "header": {
+    "guest": "Gazdă",
+    "home": "Acasă",
+    "settings": "Setări",
+    "profile": "Profilul meu",
+    "notifications": "Notificări",
+    "manuals": "Manuale",
+    "tests": "Teste",
+    "diary": "Jurnal",
+    "journal": "Jurnal",
+    "exams": "Examen",
+    "olympiads": "Olimpiade",
+    "schools": "Școli",
+    "subscriptions": "Abonamente"
+  },
+  "edit": {
+    "200": "Datele salvate cu succes",
+    "201": "Datele create cu succes",
+    "403": "Nu sunt suficiente drepturi pentru a face schimbări",
+    "404": "Pagina nu a fost găsită",
+    "500": "A apărut o eroare, vă rugăm să încercați din nou mai târziu",
+    "edit": "Editează",
+    "return": "Reveni",
+    "discard": "Anulează",
+    "delete": "Șterge",
+    "upload": "Încărcați",
+    "save": "Salva"
+  },
+  "footer": {
+    "info": "Informaţii",
+    "about": "Despre",
+    "news": "Noutăți",
+    "presentation": "Prezentare",
+    "support": "Sprijin",
+    "user_agreement": "Acord de utilizator",
+    "privacy_policy": "Politica de confidențialitate",
+    "help": "Ajutor",
+    "contacts": "Contacte"
+  }
+}

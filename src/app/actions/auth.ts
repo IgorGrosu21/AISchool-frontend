@@ -4,73 +4,81 @@ import { redirect } from '@/i18n'
 
 import { sendAuthRequest, sendCodeVerificationRequest, sendOauth2Request, sendLogoutRequest } from "@/requests";
 import { deleteTokens, setTokens } from "./token";
-import { ITokens, IError } from '@/interfaces';
+import { ITokens, IVerificationRequired, IError } from '@/interfaces';
+import { isError } from '@/requests';
+import type { DeviceInfo } from '@/utils/deviceInfo'
+import type { Validatable } from './template'
 
-type Validatable = { value: string, error: string }
-
-export type FormState = {
+export type AuthFormState = {
   type: 'login' | 'signup' | 'restore' | 'verification'
   email: Validatable
   password: Validatable
-  code: Validatable & { purpose: 'email_verification' | 'password_reset' }
+  code: Validatable & { purpose: 'verify_email' | 'restore_password' }
+  rememberMe: boolean
 }
 
-async function handleResponse(response: IError | ITokens, status: number, state: FormState): Promise<FormState> {
-  switch (status) {
-    case 200:
-      return { ...state, type: 'verification', code: {
-        value: '',
-        error: '',
-        purpose: state.type === 'restore' ? 'password_reset' : 'email_verification'
-      } }
-    case 201:
-      await setTokens(response as ITokens)
-      redirect('/core')
-      break
-    case 500:
-      await redirect('/error')
-      break
-    default: {
-      const errorResponse = response as IError
-      switch (errorResponse.attr) {
-        case 'email':
-          return { ...state, email: { ...state.email, error: errorResponse.detail } }
-        case 'password':
-          return { ...state, password: { ...state.password, error: errorResponse.detail } }
-        case 'code':
-          if (state.code) {
-            return { ...state, code: { ...state.code, error: errorResponse.detail } }
-          }
-          return state
-        default:
-          await redirect('/error')
-          break
-      }
-      break
+async function handleResponse(response: ITokens | IVerificationRequired | IError, state: AuthFormState): Promise<AuthFormState> {
+  if (isError(response)) {
+    switch (response.attr) {
+      case 'email':
+        return { ...state, email: { ...state.email, error: response.detail } }
+      case 'password':
+        return { ...state, password: { ...state.password, error: response.detail } }
+      case 'code':
+        return { ...state, code: { ...state.code, error: response.detail } }
+      default:
+        await redirect('/error')
+        break
     }
+  } else if ('purpose' in response) {
+    return { ...state, type: 'verification', code: {
+      value: '',
+      error: '',
+      purpose: state.type === 'restore' ? 'restore_password' : 'verify_email'
+    } }
+  } else {
+    await setTokens(response as ITokens)
+    await redirect(state.type === 'signup' ? '/core/settings' : '/core')
   }
   return state
 }
 
-export async function dispatchAuthAction(state: FormState): Promise<FormState> {
-  let response: IError | ITokens
-  let status: number
+export async function dispatchAuthAction(
+  state: AuthFormState,
+  deviceInfo: DeviceInfo | null
+): Promise<AuthFormState> {
+  let response: ITokens | IVerificationRequired | IError
   if (state.type === 'verification') {
-    [response, status] = await sendCodeVerificationRequest(state.email.value, state.password.value, state.code.value, state.code.purpose)
+    response = await sendCodeVerificationRequest({
+      email: state.email.value,
+      password: state.password.value,
+      code: state.code.value,
+      purpose: state.code.purpose,
+      rememberMe: state.rememberMe,
+    }, deviceInfo)
 
-    if (status === 404) {
+    if (isError(response) && response.code === 404) {
       return { ...state, type: 'signup' }
     }
   } else {
-    [response, status] = await sendAuthRequest(state.type, state.email.value, state.password.value)
+    response = await sendAuthRequest(state.type, {
+      email: state.email.value,
+      password: state.password.value,
+      rememberMe: state.rememberMe,
+    }, deviceInfo)
   }
-  return await handleResponse(response, status, state)
+  return handleResponse(response, state)
 }
 
-export async function oauth2(provider: string, email: string, token: string): Promise<ITokens | undefined> {
-  const [response, status] = await sendOauth2Request(provider, email, token)
+export async function oauth2(
+  provider: string,
+  email: string,
+  token: string,
+  deviceInfo: DeviceInfo | null
+): Promise<ITokens | undefined> {
+  const response = await sendOauth2Request({provider, email, token}, deviceInfo)
 
-  if (status === 201) {
+  if ('access' in response) {
     return response as ITokens
   }
 

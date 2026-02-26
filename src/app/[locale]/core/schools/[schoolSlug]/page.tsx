@@ -1,47 +1,47 @@
-import { Contacts, Photos, KlassesButton, NavigationContainer, SchoolPositions, TimetableButton, Title } from '@/components';
-import { errorHandler, fetchSchool } from '@/requests';
+import { About, Contacts, Photos, NavigationContainer, PageTitle } from '@/components';
+import { fetchSchool, handleResponse } from '@/requests';
 import { Panel } from '@/ui';
-import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 
 //mui components
-import Stack from "@mui/material/Stack"
+import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
+import Grid2 from "@mui/material/Grid2";
 
 export default async function Page({ params }: { params: Promise<{schoolSlug: string}> }) {
   const { schoolSlug } = await params;
 
-  const [schoolRaw, status] = await fetchSchool(schoolSlug)
-  const school = await errorHandler(schoolRaw, status)
-  const t = await getTranslations('schools');
+  const school = await handleResponse(fetchSchool({ schoolSlug }))
   
-  return <NavigationContainer segments={[{label: t('list'), href: 'schools'}]} last={school.name}>
-    <Title label={school.name} link={`/core/schools/${schoolSlug}`} editable={school} />
-    <Image
-      width={1792}
-      height={1024}
-      src={school.preview ?? '/images/default-school.png'}
-      alt='school-preview'
-      style={{
-        width: '100%',
-        height: '100%',
-        objectFit: 'cover'
-      }}
-      priority
-    />
-    <Panel>
-      <Typography variant='h6' sx={{textAlign: 'center'}}>
-        {school.desc}
-      </Typography>
-    </Panel>
+  return <NavigationContainer segments={[]} last={school.name}>
+    <PageTitle label={school.name} link={`/core/schools/${schoolSlug}`} resource={{ type: 'school', schoolSlug }} />
+    <Grid2 container spacing={2} columns={2}>
+      <Grid2 size={{xs: 2, lg: 1}}>
+        <Box sx={{flex: 1}}>
+          <Image
+            width={1792}
+            height={1024}
+            src={school.preview ?? '/images/default-school.png'}
+            alt='school-preview'
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover'
+            }}
+            priority
+          />
+        </Box>
+      </Grid2>
+      <Grid2 size={{xs: 2, lg: 1}}>
+        <Panel sx={{height: '100%'}}>
+          <Typography variant='h6' sx={{textAlign: 'justify'}}>
+            {school.desc}
+          </Typography>
+        </Panel>
+      </Grid2>
+    </Grid2>
+    <About school={school} />
     <Contacts school={school} />
-    <Stack sx={{alignItems: 'center'}}>
-      <KlassesButton schoolSlug={schoolSlug} />
-    </Stack>
-    <Stack sx={{alignItems: 'center'}}>
-      <TimetableButton schoolSlug={schoolSlug} />
-    </Stack>
-    <SchoolPositions school={school} />
-    {school.files.length > 1 && <Photos school={school} />}
+    <Photos school={school} />
   </NavigationContainer>
 }

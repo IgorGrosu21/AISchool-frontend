@@ -1,0 +1,1 @@
+export { AboutWrapper } from './wrapper'

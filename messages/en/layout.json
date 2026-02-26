@@ -1,0 +1,41 @@
+{
+  "header": {
+    "guest": "Guest",
+    "home": "Home",
+    "settings": "Settings",
+    "profile": "My profile",
+    "notifications": "Notifications",
+    "manuals": "Manuals",
+    "tests": "Tests",
+    "diary": "Diary",
+    "journal": "Journal",
+    "exams": "Exams",
+    "olympiads": "Olimpiads",
+    "schools": "Schools",
+    "subscriptions": "Subscriptions"
+  },
+  "edit": {
+    "200": "Data successfully saved",
+    "201": "Data successfully created",
+    "403": "Not enough rights to make changes",
+    "404": "Request not found",
+    "500": "An error occurred, please try again later",
+    "edit": "Edit",
+    "return": "Return",
+    "discard": "Discard",
+    "delete": "Delete",
+    "upload": "Upload",
+    "save": "Save"
+  },
+  "footer": {
+    "info": "Information",
+    "about": "About",
+    "news": "News",
+    "presentation": "Presentation",
+    "support": "Support",
+    "user_agreement": "User agreement",
+    "privacy_policy": "Privacy policy",
+    "help": "Help",
+    "contacts": "Contacts"
+  }
+}

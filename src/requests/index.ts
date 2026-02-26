@@ -1,22 +1,75 @@
-export { sendAuthRequest, sendCodeVerificationRequest, sendOauth2Request, sendLogoutRequest } from "./auth";
-
-export { fetchCountryNames, fetchRegionNames, fetchCityNames, fetchCity } from "./country";
 export {
-  fetchLessonNames, fetchLesson,
-  fetchSpecificLessonNames, fetchSpecificLesson, sendSpecificLesson, deleteSpecificLesson, sendSpecificLessonPhoto, deleteSpecificLessonPhoto,
-  fetchHomework, sendHomework, deleteHomework, sendHomeworkPhoto, deleteHomeworkPhoto,
-  fetchStudentNotes, fetchTeacherNotes, sendNote
-} from "./lesson";
-export { fetchManuals, fetchManual, fetchModule, fetchTopic } from "./manual";
-export { fetchParent, sendParent, fetchStudent, sendStudent, fetchTeacher, sendTeacher, fetchPersonHome } from "./person";
-export {
-  fetchSchoolNames, fetchSchools, fetchSchool, sendSchool,
-  fetchSchoolWithKlasses, sendSchoolWithKlasses, fetchSchoolWithTimetable, sendSchoolWithTimetable,
-  sendSchoolPreview, deleteSchoolPreview, sendSchoolPhoto, deleteSchoolPhoto,
-  fetchSchoolLessonTimeNames,
-  fetchKlass, sendKlass, fetchTeacherKlasses
-} from "./school";
-export { fetchSubjectsNames, fetchTeachedSubjects, fetchStudiedSubjects } from "./subject";
-export { fetchUserRoutes, fetchUser, sendUser, sendAvatar, deleteAvatar } from "./user";
+  sendAuthRequest,
+  sendOauth2Request,
+  sendLogoutRequest,
+  fetchAuthUser,
+  updateAuthUserEmail,
+  updateAuthUserPassword,
+  deleteAuthUser,
+  sendCodeVerificationRequest,
+  sendTokenVerificationRequest,
+} from "./auth";
 
-export { errorHandler } from "./errorHandler";
+export {
+  fetchCountryNames,
+  fetchRegionNames,
+  fetchCityNames,
+  fetchCountry,
+  fetchHomework,
+  sendHomework,
+  deleteHomework,
+  sendHomeworkPhoto,
+  deleteHomeworkPhoto,
+  fetchStudentNotes,
+  fetchParentNotes,
+  fetchTeacherNotes,
+  sendNote,
+  deleteNote,
+  fetchReplacementNames,
+  fetchSpecificLesson,
+  sendSpecificLesson,
+  deleteSpecificLesson,
+  fetchSpecificLessonNames,
+  sendSpecificLessonPhoto,
+  deleteSpecificLessonPhoto,
+  fetchAccount,
+  sendAccount,
+  sendAvatar,
+  deleteAvatar,
+  fetchPersonDiary,
+  fetchPersonHome,
+  fetchPersonJournal,
+  fetchPersonPermissions,
+  unmarkPersonAsAutoCreated,
+  fetchProfile,
+  sendProfile,
+  fetchKlass,
+  sendKlass,
+  fetchKlassWithLessons,
+  sendKlassWithLessons,
+  fetchSchool,
+  sendSchool,
+  sendSchoolPreview,
+  deleteSchoolPreview,
+  fetchSchools,
+  fetchSchoolNames,
+  sendSchoolPhoto,
+  deleteSchoolPhoto,
+  fetchSchoolWithKlasses,
+  sendSchoolWithKlasses,
+  fetchSchoolWithTimetable,
+  sendSchoolWithTimetable,
+} from "./diary";
+
+export {
+  fetchExams,
+  fetchOlympiads,
+  fetchManuals,
+  fetchManual,
+  fetchModule,
+  fetchTopic,
+  fetchSubjects,
+  fetchUserSubjects,
+} from "./manuals";
+
+export { isError, handleResponse } from "./errorHandler";

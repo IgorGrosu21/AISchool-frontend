@@ -1,11 +1,10 @@
 import { ComingSoon, /*Currency, ModuleHeader, ModuleList,*/ NavigationContainer } from "@/components";
-import { errorHandler, fetchTopic } from "@/requests";
+import { fetchTopic, handleResponse } from "@/requests";
 import { getTranslations } from "next-intl/server";
 
 export default async function Page({ params }: { params: Promise<{manualSlug: string, moduleSlug: string, topicSlug: string}> }) {
   const { manualSlug, moduleSlug, topicSlug } = await params;
-  const [topicRaw, status] = await fetchTopic(manualSlug, moduleSlug, topicSlug)
-  const topic = await errorHandler(topicRaw, status)
+  const topic = await handleResponse(fetchTopic({ manualSlug, moduleSlug, topicSlug }))
   const t = await getTranslations('manuals')
 
   const detailedModule = topic.module //next.js error: do not assign to module variable
@@ -13,7 +12,7 @@ export default async function Page({ params }: { params: Promise<{manualSlug: st
 
   return <NavigationContainer segments={[
     {label: t('plural'), href: 'manuals'},
-    {label: `${manual.subject.verboseName} ${manual.grade}`, href: manualSlug},
+    {label: `${manual.subject.name} ${manual.grade}`, href: manualSlug},
     {label: detailedModule.name, href: moduleSlug}
   ]} last={topic.name}>
     <ComingSoon />

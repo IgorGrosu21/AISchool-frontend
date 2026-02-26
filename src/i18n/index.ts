@@ -1,3 +1,3 @@
 export { Link, usePathname, useRouter, getPathname } from "./navigation";
-export { redirectWithLocale as redirect } from "./redirectWithLocale";
-export { routing } from "./routing";
+export { redirectWithLocale as redirect, permanentRedirectWithLocale as permanentRedirect } from "./redirectWithLocale";
+export { langs, routing } from "./routing";

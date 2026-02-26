@@ -5,7 +5,7 @@ import Image, { ImageProps } from 'next/image'
 //mui components
 import Box from "@mui/material/Box"
  
-type Props = Omit<ImageProps, 'src' | 'priority' | 'loading'> & {
+type Props = Omit<ImageProps, 'src'> & {
   srcLight: ImageProps['src']
   srcDark: ImageProps['src']
 }

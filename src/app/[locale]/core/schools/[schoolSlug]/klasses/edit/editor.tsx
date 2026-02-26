@@ -11,13 +11,15 @@ import Typography from "@mui/material/Typography"
 import AddCircleIcon from "@mui/icons-material/AddCircle"
 import RemoveCircleIcon from "@mui/icons-material/RemoveCircle"
 
+const grades = Array.from({length: 6}, (_, i) => [i + 1, i + 7]).flat()
+
 export function Editor() {
   const { grouped, removeKlass, addKlass } = useKlassListEditor()
 
   return <Grid2 container spacing={8} columns={2}>
-    {grouped.map((group, i) => <Grid2 size={1} key={group.grade}>
+    {grades.map(grade => <Grid2 size={1} key={grade}>
       <Stack direction={{xs: 'column', md: 'row'}} gap={2} sx={{alignItems: 'center'}}>
-        {group.klasses.map((klass, j) => <Button variant='contained' key={j} sx={{
+        {grouped[grade - 1].klasses.map((klass, j) => <Button variant='contained' key={j} sx={{
           borderRadius: '15%',
           width: 75,
           aspectRatio: 1,
@@ -29,7 +31,7 @@ export function Editor() {
               opacity: 1
             }
           }
-        }} onClick={() => removeKlass(i, klass)}>
+        }} onClick={() => removeKlass(klass.grade, klass.letter)}>
           <Typography variant='h6' sx={{color: 'primary.contrastText', textAlign: 'center'}}>{klass.grade}{klass.letter}</Typography>
           <RemoveCircleIcon fontSize='large' sx={{
             position: 'absolute',
@@ -40,14 +42,14 @@ export function Editor() {
             transition: '0.5s'
           }} />
         </Button>)}
-        <Button variant='contained' disabled={group.klasses.length >= 5} sx={{
+        <Button variant='contained' disabled={grouped[grade - 1].klasses.length >= 5} sx={{
           display: 'flex',
           borderRadius: '15%',
           width: 75,
           aspectRatio: 1,
           justifyContent: 'center',
           alignItems: 'center'
-        }} onClick={() => addKlass(i)}>
+        }} onClick={() => addKlass(grade)}>
           <AddCircleIcon fontSize='large' sx={{color: 'primary.contrastText'}} />
         </Button>
       </Stack>

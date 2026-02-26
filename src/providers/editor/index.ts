@@ -1,13 +1,12 @@
 export {
   SpecificLessonEditorContext, useSpecificLessonEditorContext,
   HomeworkEditorContext, useHomeworkEditorContext,
-  StudentEditorContext, useStudentEditorContext,
-  ParentEditorContext, useParentEditorContext,
-  TeacherEditorContext, useTeacherEditorContext,
+  ProfileEditorContext, useProfileEditorContext,
   KlassEditorContext, useKlassEditorContext,
+  KlassWithLessonsEditorContext, useKlassWithLessonsEditorContext,
   SchoolEditorContext, useSchoolEditorContext,
   SchoolWithKlassesEditorContext, useSchoolWithKlassesEditorContext,
   SchoolWithTimetableEditorContext, useSchoolWithTimetableEditorContext,
-  UserEditorContext, useUserEditorContext
+  AccountEditorContext, useAccountEditorContext
 } from "./contexts";
 export { EditorProvider } from "./provider";

@@ -1,8 +1,10 @@
 'use client'
 
-import { useCallback, useEffect, useRef, useState, useTransition } from 'react';
+import { useCallback, useRef, useState, useTransition } from 'react';
 import { useTranslations } from 'next-intl';
-import { Loader } from '@/ui';
+import { WithLoader } from '@/ui';
+import { IError, IMedia } from '@/interfaces';
+import { isError } from '@/requests';
 
 //mui components
 import Box from "@mui/material/Box"
@@ -11,26 +13,22 @@ import Stack from "@mui/material/Stack"
 //icons
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline"
 import FileUploadIcon from "@mui/icons-material/FileUpload"
+import SaveIcon from '@mui/icons-material/Save';
 
-interface ImageUploaderProps<T> {
-  renderImage: (src?: string) => React.ReactNode,
-  existing?: string
-  setExisting: (val?: T) => void,
-  sendFile: (formData: FormData) => Promise<T | undefined>
-  deleteFile: () => Promise<undefined | void>
+interface ImageUploaderProps {
+  renderImage: (src: string | null) => React.ReactNode,
+  existing: string | null
+  setExisting: (val: IMedia | null) => void,
+  sendFile: (formData: FormData) => Promise<IMedia | IError>
+  deleteFile: () => Promise<null | IError>
 }
 
-export function ImageUploader<T>({renderImage, existing, setExisting, sendFile, deleteFile}: ImageUploaderProps<T>) {
+export function ImageUploader({renderImage, existing, setExisting, sendFile, deleteFile}: ImageUploaderProps) {
   const [file, setFile] = useState<File>();
   const [preview, setPreview] = useState(existing);
   const [isPending, startTransition] = useTransition();
-  const [hovering, setHovering] = useState(false)
   const fileInputRef = useRef<HTMLInputElement | null>(null);
-  const t = useTranslations('components.image_uploader');
-
-  useEffect(() => {
-    setPreview(existing)
-  }, [existing])
+  const t = useTranslations('layout.edit');
 
   const openFilePicker = useCallback(() => {
     fileInputRef.current?.click();
@@ -40,69 +38,70 @@ export function ImageUploader<T>({renderImage, existing, setExisting, sendFile, 
     const uploadedFile = e.target.files?.[0] || undefined;
     if (uploadedFile) {
       setFile(uploadedFile);
-      setPreview(URL.createObjectURL(uploadedFile));
+      setPreview(preview => {
+        if (preview) {
+          URL.revokeObjectURL(preview);
+        }
+        return URL.createObjectURL(uploadedFile);
+      });
+    } else {
+      setPreview(preview => {
+        if (preview) {
+          URL.revokeObjectURL(preview);
+        }
+        return null;
+      });
     }
   }, [setFile]);
 
-  const upload = useCallback(() => {
-    const formData = new FormData();
-    formData.append('file', file!);
-    
-    startTransition(async() => {
-      const url = await sendFile(formData)
-      if (url) {
-        setExisting(url)
-      }
-    })
+  const onSend = useCallback(() => {
+    if (fileInputRef.current) {
+      fileInputRef.current.value = ''
+      const formData = new FormData();
+      formData.append('file', file!);
+      
+      startTransition(async() => {
+        const url = await sendFile(formData)
+        if (!isError(url)) {
+          setPreview(url)
+          setExisting(url)
+        }
+      })
+      setFile(undefined);
+    }
   }, [file, sendFile, setExisting]);
 
   const onDelete = useCallback(() => {
-    if (existing) {
-      startTransition(async () => {
-        await deleteFile()
-        setExisting(undefined)
-        setFile(undefined);
-      })
-    } else if (fileInputRef.current) {
+    if (fileInputRef.current) {
       fileInputRef.current.value = ''
-      setPreview(undefined)
+      startTransition(async () => {
+        const url = await deleteFile()
+        if (!isError(url)) {
+          setPreview(null)
+          setExisting(null)
+        }
+      })
       setFile(undefined);
     }
-  }, [deleteFile, existing, setExisting]);
+  }, [deleteFile, setExisting]);
 
-  return <Stack gap={2} direction='row' sx={{flex: 1, height: '100%'}}>
+  return <Stack gap={2} sx={{flex: 1, height: '100%'}}>
     <input ref={fileInputRef} type='file' accept='image/*' style={{display: 'none'}} onChange={onFileChange} />
-    <Stack sx={{
-      position: 'relative',
-      flex: 1,
-      height: '100%',
-      justifyContent: 'center',
-    }} onMouseOver={() => setHovering(true)} onMouseOut={() => setHovering(false)}>
-      <Box sx={{opacity: hovering ? 0.3 : 1, transition: '0.5s'}}>
+    <WithLoader loading={isPending} gap={2} sx={{flex: 1, height: '100%', justifyContent: 'center', alignItems: 'center'}}>
+      <Box>
         {renderImage(preview ?? existing)}
       </Box>
-      <Stack id='controls' gap={2} sx={{
-        zIndex: 1300,
-        position: 'absolute',
-        width: '100%',
-        height: '100%',
-        justifyContent: 'center',
-        alignItems: 'center',
-        bgcolor: 'background.default',
-        opacity: hovering ? 0.7 : 0,
-        transition: '0.5s'
-      }}>
-        <Button onClick={onDelete}>
-          {t('delete')} <DeleteOutlineIcon />
+      <Stack direction={{xs: 'column', md: 'row'}} gap={2} sx={{justifyContent: 'center', alignItems: 'center'}}>
+        <Button variant='contained' color='secondary' onClick={onDelete} disabled={preview === null}>
+          {t(existing ? 'delete' : 'discard')}&nbsp;<DeleteOutlineIcon />
         </Button>
-        <Button onClick={openFilePicker}>
-          {t('upload')} <FileUploadIcon />
+        <Button variant='contained' onClick={openFilePicker}>
+          {t('upload')}&nbsp;<FileUploadIcon />
         </Button>
-        <Button variant='contained' onClick={upload} disabled={file === undefined}>
-          {t('save')}
+        <Button variant='contained' color='tertiary' onClick={onSend} disabled={file === undefined}>
+          {t('save')}&nbsp;<SaveIcon />
         </Button>
       </Stack>
-    </Stack>
-    <Loader open={isPending} />
+    </WithLoader>
   </Stack>
 }

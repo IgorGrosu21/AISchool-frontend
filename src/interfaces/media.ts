@@ -1,7 +1,19 @@
-export type IMedia = string
+export type IMedia = Readonly<string>
 
-export type IDetailedMedia = {
+export type IDetailedMedia = Readonly<{
   id: string
-  file: string
+  url: string
   delete?: boolean
+}>
+
+export type IWithLinks = {
+  links: string[]
+}
+
+export type IWithFiles = {
+  readonly files: ReadonlyArray<IDetailedMedia>
+}
+
+export type IWithFilesData = IWithFiles & {
+  filesData?: File[]
 }

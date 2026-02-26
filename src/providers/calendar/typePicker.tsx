@@ -1,70 +1,74 @@
-'use client'
+"use client";
 
-import { setDate } from "date-fns"
-import { Dispatch, SetStateAction, useCallback } from "react"
+import { useCallback } from "react";
 
 //mui components
-import Stack from "@mui/material/Stack"
-import ToggleButton from "@mui/material/ToggleButton"
-import ToggleButtonGroup from "@mui/material/ToggleButtonGroup"
+import Stack from "@mui/material/Stack";
+import ToggleButton from "@mui/material/ToggleButton";
+import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 //icons
-import ViewCompactIcon from "@mui/icons-material/ViewCompact"
-import AppsIcon from "@mui/icons-material/Apps"
-import ViewWeekIcon from "@mui/icons-material/ViewWeek"
+import ViewCompactIcon from "@mui/icons-material/ViewCompact";
+import AppsIcon from "@mui/icons-material/Apps";
+import ViewWeekIcon from "@mui/icons-material/ViewWeek";
 
 interface TypePickerProps {
-  type: 'year' | 'month' | 'week'
-  setType: Dispatch<SetStateAction<'year' | 'month' | 'week'>>
-  currentMonth: Date
-  setActiveMonth: Dispatch<SetStateAction<Date | undefined>>
-  currentDay: Date
-  setActiveDay: Dispatch<SetStateAction<Date | undefined>>
+  type: "year" | "month" | "week";
+  currentMonth: Date;
+  updateMonth: (month: Date | null) => void;
+  currentDay: Date;
+  updateDay: (day: Date | null) => void;
 }
 
-export function TypePicker({type, setType, currentMonth, setActiveMonth, currentDay, setActiveDay}: TypePickerProps) {
-  const updateType = useCallback((type: 'year' | 'month' | 'week' | null) => {
-    if (type === null) {
-      return //either state should be choosen
-    }
-    setType(type)
-    switch (type) {
-      case 'year': {
-        setActiveMonth(undefined)
-        setActiveDay(undefined)
-        break
+export function TypePicker({
+  type,
+  currentMonth,
+  updateMonth,
+  currentDay,
+  updateDay,
+}: TypePickerProps) {
+  const updateType = useCallback(
+    (type: "year" | "month" | "week" | null) => {
+      if (type === null) {
+        return; //either state should be choosen
       }
-      case 'month': {
-        setActiveMonth(m => m ?? currentMonth) //if active month is undefined, set the current month
-        setActiveDay(undefined)
-        break
+      switch (type) {
+        case "year": {
+          updateMonth(null);
+          break;
+        }
+        case "month": {
+          updateMonth(currentMonth);
+          updateDay(null);
+          break;
+        }
+        case "week": {
+          //if active day is undefined, set the current day and month
+          updateDay(currentDay);
+          break;
+        }
       }
-      case 'week': {
-         //if active day is undefined, set the current day and month
-        setActiveDay(d => {
-          setActiveMonth(setDate((d ?? currentDay), 1))
-          return d ?? currentDay
-        })
-        break
-      }
-    }
-  }, [currentDay, currentMonth, setActiveDay, setActiveMonth, setType])
+    },
+    [currentDay, currentMonth, updateMonth, updateDay],
+  );
 
-  return <Stack direction='row' sx={{justifyContent: 'flex-end'}}>
-    <ToggleButtonGroup
-      color='primary'
-      value={type}
-      exclusive
-      onChange={(_, v) => updateType(v)}
-    >
-      <ToggleButton value='year'>
-        <ViewCompactIcon />
-      </ToggleButton>
-      <ToggleButton value='month'>
-        <AppsIcon />
-      </ToggleButton>
-      <ToggleButton value='week'>
-        <ViewWeekIcon />
-      </ToggleButton>
-    </ToggleButtonGroup>
-  </Stack>
+  return (
+    <Stack direction="row" sx={{ justifyContent: "flex-end" }}>
+      <ToggleButtonGroup
+        color="primary"
+        value={type}
+        exclusive
+        onChange={(_, v) => updateType(v)}
+      >
+        <ToggleButton value="year">
+          <ViewCompactIcon />
+        </ToggleButton>
+        <ToggleButton value="month">
+          <AppsIcon />
+        </ToggleButton>
+        <ToggleButton value="week">
+          <ViewWeekIcon />
+        </ToggleButton>
+      </ToggleButtonGroup>
+    </Stack>
+  );
 }

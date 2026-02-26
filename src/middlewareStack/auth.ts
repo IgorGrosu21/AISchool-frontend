@@ -1,103 +1,77 @@
 import { NextFetchEvent, NextRequest, NextResponse } from 'next/server';
-import { createToken } from "@/app/actions";
 import { MiddlewareFactory } from './middlewareFactoryType';
-import { IAccessToken } from '@/interfaces';
+import { createAuthRedirect, extractRequestTokens, updateResponseTokens } from '@/utils/cookies';
+import { logger, maskToken } from './logger';
 
-const maskToken = (token?: string) => {
-  if (!token) return 'undefined';
-  return `${token.slice(0, 6)}…${token.slice(-6)}`;
-};
+const AUTH_URL = process.env.NEXT_PUBLIC_AUTH_URL!;
 
-const DEBUG = false
+const log = logger('auth');
 
 export const authMiddlewareFactory: MiddlewareFactory = (next) => {
   return async (request: NextRequest, _next: NextFetchEvent) => {
     const pathname = request.nextUrl.pathname;
-    const segments = pathname.split('/').filter(Boolean);
-    const requiresAuth = segments.includes('core');
+    const requiresAuth = pathname.includes('/core')
+
+    if (!requiresAuth) {
+      return next(request, _next);
+    }
 
     let response = (await next(request, _next)) as NextResponse | undefined | null | void;
     if (!response) {
       response = NextResponse.next();
     }
 
-    if (!requiresAuth) {
-      return response;
+    // Extract tokens from cookies
+    const tokens = extractRequestTokens(request);
+
+    log.info('incoming request', {
+      pathname,
+      hasAccess: Boolean(tokens.access),
+      access: maskToken(tokens.access),
+      hasRefresh: Boolean(tokens.refresh),
+      refresh: maskToken(tokens.refresh),
+    });
+
+    // Step 1: Validate refresh token (required)
+    if (!tokens.refresh) {
+      log.warn('missing refresh token; redirecting to auth');
+      return createAuthRedirect(request);
     }
 
-    const access = request.cookies.get('access_token')?.value;
-    const refresh = request.cookies.get('refresh_token')?.value;
+    // Step 2: Ensure access token is valid (refresh if needed)
+    if (!tokens.access) {
+      log.info('refreshing access token', { refresh: maskToken(tokens.refresh) });
 
-    const authRedirectTarget = new URL(`/auth`, request.nextUrl.origin);
 
-    if (DEBUG) {
-      console.info('[auth-middleware] incoming request', {
-        pathname,
-        hasAccess: Boolean(access),
-        access: access ? maskToken(access) : 'undefined',
-        hasRefresh: Boolean(refresh),
-        refresh: refresh ? maskToken(refresh) : 'undefined',
-      });
-    }
-
-    if (!refresh) {
-      if (DEBUG) {
-        console.warn('[auth-middleware] missing refresh token; redirecting to auth', {
-          redirect: authRedirectTarget.toString(),
+      try {
+        const refreshRes = await fetch(`${AUTH_URL}/api/refresh/`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ refresh: tokens.refresh })
         });
-      }
-      return NextResponse.redirect(authRedirectTarget);
-    }
-
-    if (access) {
-      if (DEBUG) {
-        console.info('[auth-middleware] access token present', {
-          access: maskToken(access),
-        });
-      }
-      return response;
-    }
-
-    if (DEBUG) {
-      console.info('[auth-middleware] refreshing access token', {
-      refresh: maskToken(refresh),
-      });
-    }
-
-    try {
-      const refreshResponse = await fetch(`${process.env.NEXT_PUBLIC_AUTH_URL}/refresh/`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ refresh })
-      });
-
-      if (!refreshResponse.ok) {
-        if (DEBUG) {
-          console.error('[auth-middleware] refresh request failed', {
-            status: refreshResponse.status,
-            statusText: refreshResponse.statusText,
-            details: await refreshResponse.json(),
+    
+        if (!refreshRes.ok) {
+          log.warn(`failed to refresh access token`, {
+            status: refreshRes.status,
+            detail: await refreshRes.json(),
           });
+          return createAuthRedirect(request);
         }
-        return response;
-      }
-
-      const data: IAccessToken = await refreshResponse.json();
-      const token = await createToken('access', data.access);
-      const { name, value, ...options } = token;
-      response.cookies.set(name, value, options);
-      if (DEBUG) {
-        console.info('[auth-middleware] set new access token cookie', {
-        access: maskToken(data.access),
+        const refreshedTokens = await refreshRes.json();
+        if (!refreshedTokens) {
+          return createAuthRedirect(request);
+        }
+        await updateResponseTokens(response, refreshedTokens);
+        log.info('set new access and refresh tokens (token rotation)', {
+          access: maskToken(refreshedTokens.access),
+          refresh: maskToken(refreshedTokens.refresh),
         });
+      } catch (error) {
+        log.error('refresh request threw', { error });
+        return createAuthRedirect(request);
       }
-    } catch (error) {
-      if (DEBUG) {
-        console.error('[auth-middleware] refresh request threw', error);
-      }
-      return NextResponse.redirect(authRedirectTarget);
     }
 
     return response;

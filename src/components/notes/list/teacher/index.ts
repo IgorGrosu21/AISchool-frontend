@@ -1,1 +1,0 @@
-export { TeacherNoteList } from "./teacher"

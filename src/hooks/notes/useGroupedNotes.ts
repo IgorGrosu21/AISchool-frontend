@@ -2,26 +2,17 @@
 
 import { useMemo } from "react"
 import { useJournalContext } from "@/providers"
-
-type Absences = {
-  ma: number
-  ua: number
-  da: number
-  total: number
-}
-
-const allAbsences: Array<keyof Absences> = ['ma', 'ua', 'da']
-
-function roundToHundreeds(val: number, q: number) {
-  return Math.round(val / q * 100) / 100
-}
+import { roundToHundreeds, parseNoteValue, usesDescriptors, performanceToHundreds, parsePerformance } from "@/utils/notes"
+import { absences as allAbsences } from "@/utils/notes"
 
 export function useGroupedNotes() {
   const {semester, period, groups} = useJournalContext()
 
+  const useDescriptors = useMemo(() => usesDescriptors(groups.flatMap(group => group.notes)), [groups])
+
   // Determine if today is in the first semester (September 1st to December 31st)
   const isFirstSemester = useMemo(() => {
-    const today = new Date(2025, 2, 25)
+    const today = new Date()
     const currentMonth = today.getMonth() + 1 // getMonth() returns 0-11, so add 1
     return currentMonth >= 9 && currentMonth <= 12
   }, [])
@@ -39,31 +30,31 @@ export function useGroupedNotes() {
         if (date > firstSemesterEnd) {
           isInFirstSemester = false
         }
-        if (isInFirstSemester) {
-          if (note.value !== '' && !note.value.includes('a')) {
-            frstSum += parseInt(note.value)
+        if (note.value !== '' && !note.value.includes('a')) {
+          const noteValue = parseNoteValue(note.value, useDescriptors)
+          if (isInFirstSemester) {
+            frstSum += noteValue
             frstCount++
-          }
-        } else { 
-          if (note.value !== '' && !note.value.includes('a')) {
-            scndSum += parseInt(note.value)
+          } else {
+            scndSum += noteValue
             scndCount++
           }
         }
       })
+
       const frstPerformance = frstCount > 0 ? roundToHundreeds(frstSum, frstCount) : 0
       const scndPerformance = scndCount > 0 ? roundToHundreeds(scndSum, scndCount) : 0
       const semestersCount = (frstPerformance > 0 ? 1 : 0) + (scndPerformance > 0 ? 1 : 0)
-      const annualPerformance = semestersCount > 0 ? roundToHundreeds(frstPerformance + scndPerformance, semestersCount).toFixed(2) : '-'
+      const annualPerformance = semestersCount > 0 ? performanceToHundreds(frstPerformance + scndPerformance, useDescriptors, semestersCount) : '-'
       return {
         id: group.id,
         name: group.name,
-        notes: [frstPerformance === 0 ? '-' : frstPerformance.toFixed(2), scndPerformance === 0 ? '-' : scndPerformance.toFixed(2)],
+        notes: [performanceToHundreds(frstPerformance, useDescriptors), performanceToHundreds(scndPerformance, useDescriptors)],
         performance: annualPerformance,
         absences: group.absences,
       }
     })
-  }, [groups, period, semester])
+  }, [groups, period, semester, useDescriptors])
 
   const absences = useMemo(() => {
     const groups1 = annualGroups ?? groups
@@ -76,14 +67,12 @@ export function useGroupedNotes() {
   const performance = useMemo(() => {
     let [sum, count] = [0, 0]
     const groups1 = annualGroups ?? groups
-    groups1.forEach(group => {
-      if (group.performance !== '-' && group.performance !== '0.00') {
-        sum += parseFloat(group.performance)
-        count++
-      }
+    groups1.filter(group => group.performance !== '-').forEach(group => {
+      sum += parsePerformance(group.performance, useDescriptors)
+      count++
     })
-    return count > 0 ? roundToHundreeds(sum, count).toFixed(2) : '-'
-  }, [annualGroups, groups])
+    return count > 0 ? performanceToHundreds(sum, useDescriptors, count) : '-'
+  }, [annualGroups, groups, useDescriptors])
 
   return {
     isFirstSemester,

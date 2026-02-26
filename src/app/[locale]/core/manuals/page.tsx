@@ -1,5 +1,5 @@
-import { NavigationContainer, Subjects } from "@/components";
-import { errorHandler, fetchManuals } from "@/requests";
+import { ErrorPage, NavigationContainer, Subjects } from "@/components";
+import { fetchManuals, handleResponse } from "@/requests";
 import { IManual } from "@/interfaces";
 import { getTranslations } from "next-intl/server";
 
@@ -9,10 +9,12 @@ import Stack from "@mui/material/Stack"
 import Typography from "@mui/material/Typography"
 
 export default async function Page() {
-  const [manualsRaw, status] = await fetchManuals()
-  const manuals = await errorHandler(manualsRaw, status)
+  const manuals = await handleResponse(fetchManuals())
   const t = await getTranslations('manuals');
-  const tKlasses = await getTranslations('klasses')
+
+  if (manuals === null) {
+    return <ErrorPage code={403} />
+  }
 
   const grades = Array.from({length: 12}, (_, i) => i + 1)
 
@@ -24,18 +26,18 @@ export default async function Page() {
   manuals.forEach(s => grouped.find(s1 => s1.grade === s.grade)?.subGroup.push(s))
   grouped = grouped.filter(g => g.subGroup.length > 0)
 
-  return <NavigationContainer segments={[]} last={t('plural')}>
+  return <NavigationContainer last={t('plural')}>
     <Typography variant='h4'>{t('plural')}</Typography>
     <Stack gap={8}>
       {grouped.length === 1 && <Stack sx={{p: 2, bgcolor: 'primary.main'}}>
-        <Typography variant='h5' sx={{textAlign: 'center', color: 'primary.contrastText'}}>{grouped[0].grade} {tKlasses('singular')}</Typography>
+        <Typography variant='h5' sx={{textAlign: 'center', color: 'primary.contrastText'}}>{grouped[0].grade} {t('klass')}</Typography>
       </Stack>}
       {grouped.map((group, i) => <Stack key={i} gap={4}>
         <Grid2 container spacing={4} columns={{xs: 1, md: 5}}>
           {grouped.length > 1 && <Grid2 size={1}>
             <Stack sx={{height: '100%', alignItems: 'center', justifyContent: 'center'}}>
               <Stack sx={{bgcolor: 'primary.main', borderRadius: '50%', width: {xs: 123, md: 164}, aspectRatio: 1, justifyContent: 'center'}}>
-                <Typography variant='h5' sx={{textAlign: 'center', color: 'primary.contrastText'}}>{group.grade} {tKlasses('singular')}</Typography>
+                <Typography variant='h5' sx={{textAlign: 'center', color: 'primary.contrastText'}}>{group.grade} {t('klass')}</Typography>
               </Stack>
             </Stack>
           </Grid2>}

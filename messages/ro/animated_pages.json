@@ -1,0 +1,345 @@
+{
+  "errors": {
+    "401": {
+      "title": "Pagina nu este disponibilă",
+      "desc": "Această pagină este disponibilă numai pentru utilizatorii înregistrați. Conectați-vă la contul dvs. pentru a obține acces"
+    },
+    "403": {
+      "title": "Pagina nu este disponibilă",
+      "desc": "Nu aveți suficiente drepturi pentru a accesa această pagină. Poate că contul dvs. nu este verificat"
+    },
+    "404": {
+      "title": "Pagina nu a fost găsită",
+      "desc": "Din păcate, pagina solicitată nu există. Poate că a fost mutat sau șters."
+    },
+    "500": {
+      "title": "Eroare de server",
+      "desc": "Din păcate, a apărut o eroare. Vă rugăm să încercați din nou mai târziu"
+    },
+    "home": "Acasă",
+    "back": "Înapoi"
+  },
+  "exams": {
+    "hero": {
+      "title": "Examene",
+      "desc": "Colecția tuturor lucrărilor de examen și răspunsurilor la ele în Republica Moldova"
+    },
+    "2025": {
+      "title": "Vedeți examene din 2025"
+    },
+    "2024": {
+      "title": "Vedeți examene din 2024"
+    },
+    "2023": {
+      "title": "Vedeți examene din 2023"
+    },
+    "filters": {
+      "title": "Filtru și sortare",
+      "all": "Toate",
+      "year": "An",
+      "grade": "Clasă",
+      "subject": "Materie",
+      "lang": "Limbă",
+      "type": "Tip",
+      "profile": "Profil",
+      "sortBy": "Sortare după",
+      "addSort": "Adaugă",
+      "keys": {
+        "grade": "Clasă",
+        "year": "An",
+        "subject": "Materie",
+        "lang": "Limbă",
+        "type": "Tip",
+        "profile": "Profil"
+      },
+      "types": {
+        "T": "Test de antrenament",
+        "P": "Lucrare pre-exam",
+        "E": "Examen",
+        "S": "Examen suplimentar"
+      },
+      "profiles": {
+        "U": "Umanitar",
+        "R": "Real",
+        "A": "Artistic",
+        "S": "Sport",
+        "-": "Comun"
+      }
+    },
+    "list": {
+      "title": "Examene",
+      "empty": "Niciun examen nu corespunde filtrelor selectate.",
+      "pickFilter": "Alegeți orice filtru mai sus pentru a vedea examenele.",
+      "test": "Test",
+      "answers": "Răspunsuri",
+      "groupFormat": {
+        "grade": "Clasa {value}",
+        "year": "Anul {value}",
+        "lang": "Limba {value}",
+        "type": "Tip {value}",
+        "profile": "Profil {value}"
+      }
+    }
+  },
+  "olympiads": {
+    "hero": {
+      "title": "Olimpiade",
+      "desc": "Colecția lucrărilor de olimpiadă și a baremelor în Republica Moldova"
+    },
+    "2025": {
+      "title": "Olimpiade 2025"
+    },
+    "2024": {
+      "title": "Olimpiade 2024"
+    },
+    "2023": {
+      "title": "Olimpiade 2023"
+    },
+    "filters": {
+      "title": "Filtru și sortare",
+      "all": "Toate",
+      "year": "An",
+      "grade": "Clasă",
+      "subject": "Materie",
+      "lang": "Limbă"
+    },
+    "list": {
+      "title": "Olimpiade",
+      "empty": "Niciuna olimpiadă nu corespunde filtrelor selectate.",
+      "pickFilter": "Alegeți orice filtru mai sus pentru a vedea olimpiadele.",
+      "groupFormat": {
+        "grade": "Clasa {value}",
+        "year": "Anul {value}",
+        "subject": "Materia {value}",
+        "lang": "Limba {value}"
+      },
+      "links": {
+        "test1": "Test 1",
+        "barem1": "Barem 1",
+        "answers1": "Răspunsuri 1",
+        "test2": "Test 2",
+        "barem2": "Barem 2",
+        "answers2": "Răspunsuri 2",
+        "results": "Rezultate"
+      }
+    }
+  },
+  "help": {},
+  "home": {
+    "greetings": {
+      "title": "Bun venit",
+      "desc": "Ne bucurăm să vă vedem pe platforma noastră!Aici va fi spațiul dvs. de lucru personal"
+    },
+    "sections": {
+      "student": {
+        "1": "Orarul pe mâine",
+        "2": "Ultimele note",
+        "3": "Analiza performanței"
+      },
+      "teacher": {
+        "1": "Orarul pe mâine ",
+        "2": "Ultimele teme",
+        "3": "Analiza performanței"
+      },
+      "parent": {
+        "1": "Orarul pe mâine",
+        "2": "Ultimele note",
+        "3": "Analiza performanței"
+      },
+      "staff": {
+        "1": "-",
+        "2": "-",
+        "3": "-"
+      }
+    },
+    "no_lessons_tomorrow": "Mâine fără lecții",
+    "no_latest_data": "Nu există date recente",
+    "no_analytics": "Nu există analiză"
+  },
+  "info": {
+    "about": {
+      "hero": {
+        "title": "Bun venit, utilizator drag!",
+        "desc": "Foarte plăcut să te cunosc! Ne bucurăm să te vedem pe platforma noastră! Hai să ne cunoaștem mai bine."
+      },
+      "us": {
+        "title": "Cine suntem?",
+        "desc": "Noi suntem cei cărora le pasă",
+        "items": {
+          "1": {
+            "heading": "Echipă",
+            "content": "Suntem o echipă de tineri dezvoltatori, designeri și analiști. Suntem cu toții absolvenți de liceu și suntem familiarizați cu toate neajunsurile educației. Dar vrem să schimbăm asta - vrem ca fiecare copil, adolescent și adult să găsească în educație ceea ce noi am găsit odinioară. Să găsească ceva ce le place și pe ce doresc să îl exploreze independent. Credem cu tărie că cei 12 ani de școală modelează viitorul fiecărei persoane și, prin urmare, viitorul țării noastre. Totul începe cu lucruri mărunte, așa că haideți să parcurgem acest drum împreună!"
+          },
+          "2": {
+            "heading": "Fundator",
+            "content": "Sunt fondatorul proiectului AISchool. Am absolvit liceul în mai 2025, dar am început să lucrez la proiect în martie, 12-a clasa. Încă din clasa a 9-a, am câștigat olimpiade naționale la materii precum matematică, informatică și chimie. Am făcut parte din consiliul elevilor liceului și am organizat numeroase evenimente școlare. De-a lungul carierei mele școlare, am întâlnit numeroase deficiențe în educație și vreau să contribui la schimbarea acestui lucru. Voi depune toate eforturile pentru a mă asigura că educația școlarilor nu se limitează la manuale de hârtie și notițe seci, ci mai degrabă la tehnologii moderne și viață școlară activă."
+          }
+        }
+      },
+      "motives": {
+        "title": "Ce ne motivează?",
+        "desc": "Și noi am mers odată la școală, cum putem rămâne indiferenți față de educație?",
+        "items": {
+          "1": {
+            "heading": "XXI secol este deja aici",
+            "content": "Educația trebuie să țină pasul cu vremurile. Digitalizarea globală a proceselor nu trebuie să ocolească cel mai important element al societății - tineretul."
+          },
+          "2": {
+            "heading": "Rutinele sunt prea multe",
+            "content": "Doisprezece ani de viață școlară — sunt oare doar notițe cu pix albastru și pagini de manual? Educația ar trebui să fie interesantă și captivantă, nu doar o rescriere mecanică a materiei."
+          },
+          "3": {
+            "heading": "Raporturi, raporturi, raporturi...",
+            "content": "Profesia de profesor este una dintre cele mai importante din societate. Vocația unui profesor este de a transmite cunoștințe generațiilor viitoare, nu de a arunca \"hârtie nefolositoare\" în aer liber."
+          },
+          "4": {
+            "heading": "De ce să rezolvi tu, dacă poți copia?",
+            "content": "Răspunsuri la sfârșitul manualului, soluții online și rețele neuronale - ce elev nu le-a folosit? Ar trebui să fie mai ușor și mai captivant pentru elevi să finalizeze temele independent."
+          }
+        }
+      },
+      "goals": {
+        "title": "Ce vrem să realizăm?",
+        "desc": "Ca să facem lumea un loc mai bun, desigur!",
+        "items": {
+          "1": "Să creăm un analog complet al educației offline.",
+          "2": "Să conectăm cât mai multe școli și clase la platformă",
+          "3": "Să revenim interesul pentru educație la elevii de toate vârstele",
+          "4": "Să minimizăm încărcarea profesorilor"
+        }
+      }
+    }
+  },
+  "landing": {
+    "welcome": {
+      "hero": {
+        "title": "ISchool",
+        "desc": "Platforma revoluționară pentru educația modernă cu inteligență artificială",
+        "features": {
+          "1": {
+            "title": "Inteligenţă artificială",
+            "desc": "Bijuteria coroanei proiectului nostru este prima integrare a inteligenței artificiale în educație din țară – creați teste, verificați teme și creați sarcini unice folosind IA. Secolul XXI a sosit, este timpul să valorificăm întreaga putere a tehnologiei!"
+          },
+          "2": {
+            "title": "Jurnal electronic",
+            "desc": "Un jurnal electronic simplifică sarcinile de rutină, cum ar fi calcularea mediilor generale, numărarea absențelor și analizarea performanței academice. Jurnalul electronic este disponibil în trei formate convenabile: anual, lunar și săptămânal, permițându-vă să găsiți rapid lecția de care aveți nevoie."
+          },
+          "3": {
+            "title": "Sarcini de către subiecți",
+            "desc": "Pentru fiecare materie au fost elaborate teme online bazate pe manualele de stat. Fiecare elev primește teme unice, iar numărul de încercări este nelimitat. Profesorii pot folosi aceste teme pentru a crea teste și teme pentru acasă și pot, de asemenea, transfera direct notele în carnetul de note online cu un simplu clic."
+          }
+        }
+      },
+      "cta": {
+        "title": "Sunteți gata să începeți să învățați viitorul?",
+        "desc": "Alăturați-vă mii de elevi și profesori care folosesc deja școala AI pentru a obține cele mai bune rezultate",
+        "features": {
+          "1": {
+            "title": "Învățare interactivă",
+            "desc": "Însemnările monotone din caiete, pline de zeci de pagini de informații greu de digerat, sunt de domeniul trecutului. Copiii au nevoie de practică, practică și iar practică în secolul XXI. Zeci de mii de teme unice îi vor ajuta pe elevi să stăpânească materia, să o consolideze și să își îmbunătățească performanța academică, în timp ce profesorii pot crea teme și teste unice care pot fi ușor notate de inteligența artificială."
+          },
+          "2": {
+            "title": "Rezultate instantanee",
+            "desc": "Învățarea online le permite elevilor să își vadă instantaneu rezultatele, eliminând necesitatea de a aștepta zile sau chiar săptămâni pentru a afla notele. Profesorii, la rândul lor, pot delega în sfârșit o parte din munca lor de notare inteligenței artificiale, economisind timp pentru alte sarcini importante. În plus, transferul manual al notelor din caiete și foi de testare în carnetul de note electronic nu mai este necesar - totul se face cu un singur clic."
+          },
+          "3": {
+            "title": "Analiza progresului",
+            "desc": "Analiza datelor este fundamentul progresului în secolul XXI. Cu ajutorul platformei noastre, elevii își pot vedea progresul în ceea ce privește notele medii la fiecare materie, iar profesorii pot vedea cum se compară acestea între clase. Învață-ți punctele forte și punctele slabe pentru a-ți îmbunătăți performanța academică."
+          }
+        }
+      },
+      "buttons": {
+        "1": "Începeți să învățați",
+        "2": "Conectați-vă la sistem"
+      }
+    },
+    "pluses": {
+      "title": "Avantaje pentru {usertype, select, student {elevuri} teacher {profesori} parent {părinți} other {utilizatori}} {paid, plural, = 0 {} = 1 {cu un abonament} other {}}",
+      "desc": {
+        "student_free": "Studiul nu a fost niciodată atât de ușor!",
+        "student_paid": "Folosiți întreaga putere a platformei Aischool",
+        "teacher_free": "Simplificați-vă munca cu instrumente moderne",
+        "teacher_paid": "Lasă-l pe AI să facă toate lucrările de rutină pentru tine",
+        "parent_free": "Stai în cunoștință despre progresul copilului tău"
+      }
+    },
+    "for": {
+      "student": "Pentru studenți",
+      "teacher": "Pentru profesori",
+      "parent": "Pentru părinți"
+    }
+  },
+  "restricted": {
+    "ad": {
+      "title": "Disponibil cu Aischool+ Abonament",
+      "subtitle": "Deblocați potențialul întreg împreună cu abonamentul AISchool+ și creșteți-vă productivitatea",
+      "info": {
+        "features": {
+          "1": "Acces Premium",
+          "1_desc": "Deblocați toate funcționalitățile cu abonamentul AISchool+",
+          "2": "Experiență Îmbunătățită",
+          "2_desc": "Creșteți-vă productivitatea cu instrumente avansate"
+        }
+      },
+      "redirect": "Accesați abonamente"
+    },
+    "coming_soon": {
+      "title": "În Curând",
+      "subtitle": "Lucrăm din greu la această funcționalitate. Veți fi notificat când va fi gata!",
+      "info": {
+        "features": {
+          "1": "Rămâneți la curent",
+          "1_desc": "Vă vom anunța când această funcționalitate va fi gata",
+          "2": "Lucrăm din greu",
+          "2_desc": "Proiectul nostru se dezvoltă zilnic"
+        }
+      },
+      "redirect": "Înapoi la Acasă"
+    }
+  },
+  "subscriptions": {
+    "hero": {
+      "title": "AISchool+ abonament",
+      "desc": "Deblocați potențialul complet al educației bazate pe AI"
+    },
+    "free_pluses": {
+      "student": "Cel mai convenabil jurnal electronic;Teme online;Manuale convenabile;Numeroase activități",
+      "teacher": "Cel mai convenabil jurnal electronic;Gestionarea și analiza cursurilor;Generarea unică de teste;Verificarea automată a temelor online",
+      "parent": "Monitorizarea performanței academice a copilului dumneavoastră;Comunicarea cu profesorii;Analiza progresului învățării;Monitorizarea prezenței"
+    },
+    "pluses": {
+      "title": "Avantaje AISchool+",
+      "desc": "Descoperă toate funcțiile puternice care vin cu abonamentul AISchool+",
+      "solo": {
+        "title": "Avantaje pentru elevi",
+        "desc": "Inteligență artificială avansată pentru a îmbunătăți experiența educațională",
+        "list": "Acces la subiecte de toate clasele;sarcini cu inteligență artificială;Webinari cu studenți;Olimpiade de la AISchool;fără reclame;Acces la sarcini audio prin limbi;sarcini pentru pregătirea pentru examene;sarcini de la olimpiadele statului din anii trecuți;acces la subiecte extracurriculare;ajutor cu intrarea în universități statale"
+      },
+      "group": {
+        "title": "Avantaje de abonament de clasă",
+        "desc": "Instrumente speciale pentru profesori și managementul claselor",
+        "list": "Scoring vocal;scanare a jurnalului pentru transfer pe platforma online;transfer automat de mărci în jurnalul online;verificarea sarcinilor cu AI;generarea de teste cu AI;generarea de teme cu AI"
+      }
+    },
+    "plans": {
+      "title": "Planuri de abonament",
+      "desc": "Toate planurile de grup vin cu o reducere de 50%!",
+      "monthly": "1 lună",
+      "quarter": "3 luni",
+      "yearly": "1 an",
+      "forever": "Pentru Totdeauna"
+    },
+    "description": {
+      "title": "Despre abonament",
+      "about": {
+        "title": "Importanța abonamentului",
+        "desc": "Oferim toate materialele didactice necesare absolut gratuit, dar inteligența artificială (IA) nu este (din păcate) gratuită. Pentru a oferi suport serverelor noastre, introducem un abonament cu plată. Pe lângă implementarea inteligenței artificiale, atât elevii, cât și profesorii vor avea acces la o varietate de funcții convenabile și materiale suplimentare pentru a-și sprijini învățarea. Un abonament la curs poate fi creat de către profesorul titular în profilul său personal."
+      },
+      "group": {
+        "title": "Abonament la clasă",
+        "desc": "Un abonament la o clasă include toate beneficiile unui singur abonament, dar oferă și funcții utile pentru profesori. Această funcționalitate va fi disponibilă numai pentru clasele care se abonează. Pentru a crea un abonament, este necesară participarea minimă de 75% a clasei selectate",
+        "discount": "Prețul abonamentului de grup este mai mic cu 50%!"
+      }
+    }
+  }
+}

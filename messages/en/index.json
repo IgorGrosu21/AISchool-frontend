@@ -1,0 +1,289 @@
+{
+  "components": {
+    "pdf_viewer": {
+      "to_start": "To start",
+      "prev": "Back",
+      "next": "Forward",
+      "to_end": "To end"
+    }
+  },
+  "attached": {
+    "links": {
+      "confirmation": "Are you sure you want to delete the following link?",
+      "singular": "Link",
+      "plural": "Links",
+      "edit": "Edit",
+      "discard": "Reset",
+      "close": "Close",
+      "add": "Add",
+      "cancel": "Cancel",
+      "proceed": "Yes, I'm sure / I'm sure"
+    },
+    "files": {
+      "singular": "File",
+      "plural": "Files",
+      "helper": "Drag and drop files here or click the upload button",
+      "no_image": "The selected file is not an image, so we cannot show it. Try downloading it and opening it on your computer"
+    }
+  },
+  "schools": {
+    "singular": "School",
+    "plural": "Schools",
+    "pick_one": "Pick a school",
+    "pick_many": "Pick schools",
+    "list": "List of registered schools",
+    "klass_list": "List of classes",
+    "timetable": "Timetable",
+    "filters": {
+      "title": "Filters",
+      "search": "Search by school name",
+      "langs": {
+        "title": "Languages"
+      },
+      "types": {
+        "title": "Types of institutions",
+        "E": "Primary school",
+        "S": "School",
+        "P": "Private lyceum",
+        "G": "Gymnasium",
+        "L": "Lyceum",
+        "C": "College"
+      },
+      "profiles": {
+        "title": "Profiles",
+        "GE": "General",
+        "AR": "Artistic",
+        "MU": "Music",
+        "CH": "Choreography",
+        "TE": "Theater",
+        "AL": "Alternative",
+        "SP": "Sports",
+        "HU": "Humanitarian",
+        "RE": "Real",
+        "BI": "Two-language"
+      }
+    },
+    "details": {
+      "found": "Found schools:",
+      "edit": "Edit",
+      "name": "Name",
+      "desc": "Description",
+      "about": "About school",
+      "city": "City",
+      "lang": "Language",
+      "type": "Type of institution",
+      "contacts": "Contacts",
+      "phones": "Phones",
+      "phone": "Phone #",
+      "emails": "Emails",
+      "email": "Email #",
+      "address": "Address",
+      "website": "School website",
+      "work_hours": "Work hours"
+    }
+  },
+  "klasses": {
+    "singular": "Class",
+    "plural": "Classes",
+    "timetable": "Timetable",
+    "teacher": "Class teacher",
+    "profiles": {
+      "title": "Profile",
+      "R": "Real",
+      "U": "Humanitarian"
+    },
+    "networth": "Networth",
+    "pick_grade": "Pick your class",
+    "pick_letter": "Pick your class letter",
+    "view_helper": "View the timetable of a class",
+    "edit_helper": "Pick a class to edit its groups, timetable or replacements"
+  },
+  "lesson_time": {
+    "desc": "Specify the time of the start and end of each lesson",
+    "helper": "To introduce time in multiple days, enter the start time of the lesson in the format HH:MM, for example 08:00 or 13:15",
+    "delete_helper": "If you don't want to save a particular lesson, just don't specify the time",
+    "duration": "Lesson duration",
+    "starting": "Start",
+    "ending": "End",
+    "weekdays": {
+      "MO": "Monday",
+      "TU": "Tuesday",
+      "WE": "Wednesday",
+      "TH": "Thursday",
+      "FR": "Friday",
+      "SA": "Saturday"
+    },
+    "no_timetable": "Timetable is not set for this day"
+  },
+  "specific_lessons": {
+    "title": "Lesson topic",
+    "desc": "Homework",
+    "teacher_comment": "Teacher's comment",
+    "student_comment": "Student's comment",
+    "homework": "Homework",
+    "last_modified": "Last modification",
+    "replacement": "Replacement",
+    "no_lesson": "Lesson is not created. The responsible person must make changes to the timetable",
+    "no_specific_lesson": "Lesson is not created. The teacher must write the topic of the lesson, add homework or put a grade for you",
+    "holiday": "Hurray, holidays!"
+  },
+  "stepper": {
+    "klasses": "Classes",
+    "subjects": "Subjects",
+    "lesson_time": "Lesson time",
+    "groups": "Groups of students",
+    "lessons": "Timetable",
+    "students": "Students",
+    "teachers": "Staff",
+    "parents": "Parents",
+    "replacements": "Lesson replacements",
+    "account": "Account",
+    "security": "Security",
+    "subscriptions": "Subscriptions",
+    "notifications": "Notifications"
+  },
+  "subjects": {
+    "singular": "Subject",
+    "plural": "Subjects",
+    "picked": "Picked subjects",
+    "list": "List of subjects",
+    "filter_by_lang": "Show subjects only on this language: {lang}",
+    "select_all": "Select all",
+    "deselect_all": "Deselect all",
+    "pick": {
+      "school": "Pick subjects that are taught in the school",
+      "position": "Pick subjects that you teach"
+    },
+    "helper": {
+      "school": "Pick subjects on the language of teaching; if the subjects are taught in two languages, specify both",
+      "position": "Pick subjects on the language of teaching; if you work in two languages, specify both"
+    }
+  },
+  "manuals": {
+    "singular": "Manual",
+    "klass": "Class",
+    "plural": "Manuals",
+    "topics": "Topics",
+    "tasks": "Tasks",
+    "prev_task": "Previous task",
+    "next_task": "Next task",
+    "complete": "Complete"
+  },
+  "account": {
+    "title": "Account",
+    "student": "Student",
+    "teacher": "Teacher",
+    "parent": "Parent",
+    "settings": "Settings",
+    "name": "Name",
+    "surname": "Surname",
+    "set_name_surname": "Set your name and surname",
+    "socials_picker": {
+      "title": "Add your social network links (Instagram, Facebook)",
+      "unknown_type": "Unknown link type"
+    },
+    "city_picker": {
+      "title": "Select your city",
+      "country": "Country",
+      "region": "Region",
+      "city": "City"
+    },
+    "type": "Account type: {userType, select, student {student} teacher {teacher} parent {parent} other {user}}",
+    "type_picker": {
+      "title": "Select profile type",
+      "helper": "User type cannot be changed after profile creation"
+    },
+    "lang": "Language",
+    "lang_picker": "Select learning / teaching language",
+    "security": {
+      "email": "Email",
+      "backup_email": "Backup email",
+      "add_backup_email": "Add backup email",
+      "success": "Data has been saved successfully"
+    }
+  },
+  "profile": {
+    "title": "Profile",
+    "lang": "Language",
+    "socials": "Social networks",
+    "goto_settings": "Go to settings",
+    "refresh_permissions": "Refresh permissions",
+    "refresh_manuals": "Refresh manuals"
+  },
+  "students": {
+    "singular": "Student",
+    "list": "List of students",
+    "balance": "Balance",
+    "rank": "Rank",
+    "subscription": "Subscription",
+    "is_manager": "Is manager"
+  },
+  "teachers": {
+    "singular": "Teacher",
+    "plural": "Teachers",
+    "experience": "Work experience: {years, plural, one {# year} few {# years} many {# years} other {# years}}",
+    "edit_experience": "Specify your total work experience"
+  },
+  "parents": {
+    "singular": "Parent",
+    "plural": "Parents",
+    "list": "List of parents"
+  },
+  "positions": {
+    "staff": "Teachers",
+    "work_places": "Work places",
+    "is_manager": "Manager",
+    "delete": "Delete"
+  },
+  "diary": {
+    "singular": "Electronic diary",
+    "summertime": "Congratulations on the arrival of summer, we look forward to you next year!"
+  },
+  "journal": {
+    "singular": "Electronic journal",
+    "periods": {
+      "frst": "I Semester",
+      "scnd": "II Semester",
+      "annual": "Year"
+    },
+    "performance": "Performance",
+    "absences": {
+      "plural": "Absences",
+      "ma": "Motivated absences",
+      "ua": "Unjustified absences",
+      "da": "Absences due to illness"
+    },
+    "extra_notes": "Ten points to the next grade",
+    "scroll_helper": "To scroll the table, hold Shift and use the mouse wheel"
+  },
+  "notes": {
+    "short_absences": {
+      "ma": "ma",
+      "ua": "ua",
+      "da": "da"
+    },
+    "absences": {
+      "ma": "Motivated absence",
+      "ua": "Unjustified absence",
+      "da": "Absence due to illness"
+    },
+    "short_descriptors": {
+      "VG": "VG",
+      "G": "G",
+      "S": "S",
+      "N": "N"
+    },
+    "descriptors": {
+      "VG": "Very good",
+      "G": "Good",
+      "S": "Satisfactory",
+      "N": "Unsatisfactory"
+    },
+    "has_descriptors": "Use descriptors",
+    "comment": "Comment",
+    "close": "Close",
+    "open_lesson": "Open lesson",
+    "discard": "Cancel",
+    "save": "Save"
+  }
+}

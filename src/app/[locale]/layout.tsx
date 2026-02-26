@@ -18,7 +18,7 @@ interface RootLayoutProps {
 export default async function RootLayout({ children, params }: RootLayoutProps) {
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) {
-    return redirect('/not-found')
+    await redirect('/not-found')
   }
   
   return <NextIntlClientProvider>

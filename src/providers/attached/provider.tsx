@@ -1,0 +1,20 @@
+'use client'
+
+import { Dispatch, ProviderProps, SetStateAction } from "react";
+import { IWithFilesData, IWithLinks } from "@/interfaces";
+import { AttachedFilesProvider } from "./files/provider";
+import { AttachedLinksProvider } from "./links/provider";
+
+type Instance = IWithFilesData & IWithLinks
+
+interface ValueType<T> {
+  setInstance: Dispatch<SetStateAction<T>>
+}
+
+export function AttachedItemsProvider<T extends Instance>({children, value: {setInstance}}: ProviderProps<ValueType<T>>) {
+  return <AttachedLinksProvider value={{ setInstance: setInstance }}>
+    <AttachedFilesProvider value={{ setInstance: setInstance }}>
+      {children}
+    </AttachedFilesProvider>
+  </AttachedLinksProvider>
+}

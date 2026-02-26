@@ -1,14 +1,17 @@
-import { errorHandler, fetchUser } from "@/requests";
-import { redirect } from '@/i18n';
 import { Profile } from "@/components";
+import { ISubject } from "@/interfaces";
+import { fetchProfile, fetchSubjects, handleResponse } from "@/requests";
 
-export default async function Page() {
-  const [userRaw, status] = await fetchUser()
-  if (status === 403) {
-    return redirect('/core/profile/edit')
+export default async function Page({ searchParams }: { searchParams: Promise<{userId: string}> }) {
+  const { userId } = await searchParams;
+  const profile = await handleResponse(fetchProfile({ userId }))
+  let subjects: ISubject[] | undefined = undefined
+  if (profile.profileType === 'teacher') {
+    subjects = await handleResponse(fetchSubjects())
   }
-  const user = await errorHandler(userRaw, status)
 
-  return <Profile user={user} headerChildren={<></>}>
-  </Profile>
+  return <Profile
+    profile={profile}
+    subjects={subjects}
+  />
 }

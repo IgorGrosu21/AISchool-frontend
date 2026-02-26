@@ -1,25 +1,34 @@
 'use client'
 
-import { ProviderProps, useCallback, useMemo, useState, useTransition } from "react"
-import { Loader } from "@/ui";
+import { ProviderProps, useCallback, useMemo, useState, useTransition, useEffect } from "react"
+import { WithLoader } from "@/ui";
 import { domAnimation, LazyMotion } from "framer-motion";
 import { AuthContext } from "./context";
-import { dispatchAuthAction, FormState } from "@/app/actions";
+import { dispatchAuthAction, AuthFormState } from "@/app/actions";
+import { collectDeviceInfo } from "@/utils/deviceInfo";
+import { writePermissions } from "@/utils/permissions";
 
 export function AuthProvider({children}: ProviderProps<undefined>) {
-  const [state, setState] = useState<FormState>({
+  const [state, setState] = useState<AuthFormState>({
     type: 'login',
     email: { value: '', error: '' },
     password: { value: '', error: '' },
-    code: { value: '', error: '', purpose: 'password_reset' }
+    code: { value: '', error: '', purpose: 'restore_password' },
+    rememberMe: false
   })
   const [pending, startTransition] = useTransition()
   const activeType = useMemo(() => state.type, [state.type])
-  const setActiveType = useCallback((type: FormState['type']) => {
-    setState(state => ({...state, type}))
+  const setActiveType = useCallback((type: AuthFormState['type']) => {
+    setState(state => ({
+      type,
+      email: { value: state.email.value, error: '' },
+      password: { value: state.password.value, error: '' },
+      code: { value: state.code.value, error: '', purpose: state.code.purpose },
+      rememberMe: state.rememberMe
+    }))
   }, [])
 
-  const isReadyForSubmit = useCallback((type: FormState['type']) => {
+  const isReadyForSubmit = useCallback((type: AuthFormState['type']) => {
     const isEmailValid = state.email.error === '' && state.email.value !== ''
     const isPasswordValid = state.password.error === '' && state.password.value !== ''
     if (type === 'verification') {
@@ -29,7 +38,7 @@ export function AuthProvider({children}: ProviderProps<undefined>) {
     return isEmailValid && isPasswordValid
   }, [state])
 
-  const submit = useCallback((type?: FormState['type']) => {
+  const submit = useCallback((type?: AuthFormState['type']) => {
     if (!type || typeof type !== 'string') {
       type = activeType
     }
@@ -38,17 +47,23 @@ export function AuthProvider({children}: ProviderProps<undefined>) {
       return
     }
     startTransition(async () => {
-      dispatchAuthAction({...state, type}).then(setState)
+      const deviceInfo = collectDeviceInfo()
+      dispatchAuthAction({...state, type}, deviceInfo).then(setState)
     })
   }, [activeType, isReadyForSubmit, state])
+
+  useEffect(() => {
+    writePermissions(null)
+  }, [state])
 
   return <AuthContext.Provider value={{
     activeType, setActiveType,
     state, setState, submit
   }}>
     <LazyMotion features={domAnimation} strict>
-      {children}
-      <Loader open={pending} />
+      <WithLoader loading={pending} sx={{justifyContent: 'center', alignItems: 'center'}}>
+        {children}
+      </WithLoader>
     </LazyMotion>
   </AuthContext.Provider>
   

@@ -1,0 +1,1 @@
+export { OlympiadsList } from "./content";

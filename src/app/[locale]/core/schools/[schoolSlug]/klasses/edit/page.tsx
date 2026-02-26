@@ -1,4 +1,4 @@
-import { errorHandler, fetchSchoolWithKlasses } from '@/requests';
+import { fetchSchoolWithKlasses, handleResponse } from '@/requests';
 import { Editor } from './editor';
 import { editSchoolWithKlasses } from '@/app/actions';
 import { SchoolWithKlassesEditorContext } from '@/providers';
@@ -8,13 +8,11 @@ import { NavigationContainer } from '@/components';
 
 export default async function Page({ params }: { params: Promise<{schoolSlug: string}> }) {
   const { schoolSlug } = await params;
-  const [schoolRaw, status] = await fetchSchoolWithKlasses(schoolSlug)
-  const school = await errorHandler(schoolRaw, status)
+  const school = await handleResponse(fetchSchoolWithKlasses({ schoolSlug }))
   const t = await getTranslations('klasses');
   const segments = [
-    {label: t('school_list'), href: 'schools'},
-    {label: school.name, href: schoolSlug},
-    {label: t('list'), href: 'klasses'},
+    {label: school.name, href: `schools/${schoolSlug}`},
+    {label: t('plural'), href: 'klasses'},
   ]
   
   return <NavigationContainer segments={segments} last='edit'>
@@ -22,7 +20,8 @@ export default async function Page({ params }: { params: Promise<{schoolSlug: st
       Context: SchoolWithKlassesEditorContext,
       initial: school,
       action: editSchoolWithKlasses,
-      segments
+      segments,
+      resource: { type: 'school', schoolSlug }
     }}>
       <Editor />
     </EditorProvider>

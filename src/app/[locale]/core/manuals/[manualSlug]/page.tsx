@@ -1,5 +1,5 @@
 import { Balance, ModuleHeader, ModuleList, NavigationContainer } from "@/components";
-import { errorHandler, fetchManual } from "@/requests";
+import { fetchManual, handleResponse } from "@/requests";
 import { getTranslations } from "next-intl/server";
 import { Link } from '@/i18n';
 
@@ -8,14 +8,13 @@ import Typography from "@mui/material/Typography"
 
 export default async function Page({ params }: { params: Promise<{manualSlug: string}> }) {
   const { manualSlug } = await params;
-  const [manualRaw, status] = await fetchManual(manualSlug)
-  const manual = await errorHandler(manualRaw, status)
+  const manual = await handleResponse(fetchManual({ manualSlug }))
   const t = await getTranslations('manuals');
 
   return <NavigationContainer segments={[
     {label: t('plural'), href: 'manuals'}
-  ]} last={`${manual.subject.verboseName} ${manual.grade}`}>
-    <ModuleHeader title={`${manual.subject.verboseName} ${manual.grade}`} progress={manual.progress} />
+  ]} last={`${manual.subject.name} ${manual.grade}`}>
+    <ModuleHeader title={`${manual.subject.name} ${manual.grade}`} progress={manual.progress} />
     {manual.modules.map((module, i) => <ModuleList
       key={i}
       list={module.topics}

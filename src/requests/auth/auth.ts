@@ -1,23 +1,15 @@
-import type { ITokens } from "../../interfaces"
-import { request } from "./client"
-import { deleteAllCache } from "../client";
-import { getToken } from "@/app/actions";
+import type { AuthRequest, Oauth2Request, ITokens, IVerificationRequired } from "../../interfaces"
+import { post } from "./client"
+import type { DeviceInfo } from '@/utils/deviceInfo'
 
-export async function sendAuthRequest(type: 'login' | 'signup' | 'restore', email: string, password: string) {
-  return request<ITokens>({url: `${type}/`, data: { email, password }})
+export async function sendAuthRequest(
+  type: 'login' | 'signup' | 'restore',
+  request: AuthRequest,
+  deviceInfo: DeviceInfo | null
+) {
+  return post<AuthRequest, ITokens | IVerificationRequired>(`${type}/`, request, deviceInfo)
 }
 
-export async function sendCodeVerificationRequest(email: string, password: string, code: string, purpose: string) {
-  return request<ITokens>({url: `verify-code/`, data: { email, password, code, purpose }})
-}
-
-export async function sendOauth2Request(provider: string, email: string, token: string) {
-  return request<ITokens>({url: `oauth2/`, data: { provider, email, token }})
-}
-
-export async function sendLogoutRequest(all = false) {
-  const refresh = await getToken('refresh')
-  
-  deleteAllCache()
-  return request<undefined>({url: `logout${all ? '-all' : ''}/`, data: { refresh: refresh }})
+export async function sendOauth2Request(request: Oauth2Request, deviceInfo: DeviceInfo | null) {
+  return post<Oauth2Request, ITokens>(`oauth2/`, request, deviceInfo)
 }

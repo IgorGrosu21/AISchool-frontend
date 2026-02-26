@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { providers } from "../config";
-import { createToken, oauth2 } from "@/app/actions";
+import { oauth2 } from "@/app/actions";
+import { extractDeviceInfoFromRequest } from "@/utils/deviceInfo";
+import { updateResponseTokens } from "@/utils/cookies";
 
 export async function GET(req: NextRequest, { params }: { params: Promise<{ providerName: string }> }) {
   const code = req.nextUrl.searchParams.get("code");
@@ -12,10 +14,11 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ prov
     let tokenRes;
     const { providerName } = await params
     const provider = providers[providerName];
+    const redirectUri = `${process.env.NEXT_PUBLIC_APP_URL}/api/auth/${providerName.toLowerCase()}/callback`;
     switch (provider.name) {
       case "facebook":
         tokenRes = await fetch(
-          `${provider.tokenUrl}?client_id=${provider.clientId}&redirect_uri=${provider.redirectUri}&client_secret=${provider.clientSecret}&code=${code}`
+          `${provider.tokenUrl}?client_id=${provider.clientId}&redirect_uri=${redirectUri}&client_secret=${provider.clientSecret}&code=${code}`
         );
         break;
       case "google":
@@ -26,7 +29,7 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ prov
             code,
             client_id: provider.clientId,
             client_secret: provider.clientSecret,
-            redirect_uri: provider.redirectUri,
+            redirect_uri: redirectUri,
             grant_type: "authorization_code",
           }),
         });
@@ -53,19 +56,15 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ prov
 
     const user = await userRes.json();
     const token = provider.name === 'google' ? tokens.id_token : tokens.access_token;
+    
+    // Extract device info from request
+    const deviceInfo = extractDeviceInfoFromRequest(req)
+    
     //return NextResponse.json({tokens, user})
-    const authTokens = await oauth2(provider.name, user.email, token)
+    const authTokens = await oauth2(provider.name, user.email, token, deviceInfo)
     if (authTokens) {
       const redirectResponse = NextResponse.redirect(new URL('/core', req.nextUrl.origin))
-      const accessToken = await createToken('access', authTokens.access)
-      const refreshToken = await createToken('refresh', authTokens.refresh)
-
-      const { name: accessName, value: accessValue, ...accessOptions } = accessToken
-      const { name: refreshName, value: refreshValue, ...refreshOptions } = refreshToken
-
-      redirectResponse.cookies.set(accessName, accessValue, accessOptions)
-      redirectResponse.cookies.set(refreshName, refreshValue, refreshOptions)
-      return redirectResponse
+      return updateResponseTokens(redirectResponse, authTokens)
     } else {
       return NextResponse.redirect(new URL('/error', req.nextUrl.origin));
     }

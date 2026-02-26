@@ -1,2 +1,6 @@
 export { useGroupsEditor } from "./useGroupsEditor";
-export { useLessonTimeEditor } from "./useLessonTimeEdiot";
+export { useGroupStudentSwapper } from "./useGroupStudentSwapper";
+export { useLessonEditor } from "./useLessonEditor";
+export { useLessonTimeEditor } from "./useLessonTimeEditor";
+export { useReplacementsEditor } from "./useReplacementsEditor";
+export { useSpecificLessonEditor } from "./useSpecificLessonEditor";

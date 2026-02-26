@@ -1,6 +1,6 @@
 'use client'
 
-import { IDetailedKlass, IDetailedSchool, ISchoolWithKlasses, ISchoolWithTimetable } from "@/interfaces"
+import { IDetailedKlass, IKlassWithLessons, IDetailedSchool, ISchoolWithKlasses, ISchoolWithTimetable } from "@/interfaces"
 import { createContext, useContext } from "react"
 import { EditorContextType } from "./base"
 
@@ -9,6 +9,12 @@ export type KlassEditorContextType = EditorContextType<IDetailedKlass>
 export const KlassEditorContext = createContext<KlassEditorContextType | null>(null)
 
 export const useKlassEditorContext = () => useContext(KlassEditorContext)!
+
+export type KlassWithLessonsEditorContextType = EditorContextType<IKlassWithLessons>
+
+export const KlassWithLessonsEditorContext = createContext<KlassWithLessonsEditorContextType | null>(null)
+
+export const useKlassWithLessonsEditorContext = () => useContext(KlassWithLessonsEditorContext)!
 
 export type SchoolEditorContextType = EditorContextType<IDetailedSchool>
 

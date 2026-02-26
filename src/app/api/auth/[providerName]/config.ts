@@ -5,7 +5,6 @@ export type OAuthProviderConfig = {
   userUrl: string;
   clientId: string;
   clientSecret: string;
-  redirectUri: string;
   scope: string;
 };
 
@@ -17,7 +16,6 @@ export const providers: Record<string, OAuthProviderConfig> = {
     userUrl: "https://www.googleapis.com/oauth2/v2/userinfo",
     clientId: process.env.GOOGLE_CLIENT_ID!,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
-    redirectUri: process.env.GOOGLE_REDIRECT_URI!,
     scope: "openid email profile",
   },
   facebook: {
@@ -27,7 +25,6 @@ export const providers: Record<string, OAuthProviderConfig> = {
     userUrl: "https://graph.facebook.com/me",
     clientId: process.env.FACEBOOK_CLIENT_ID!,
     clientSecret: process.env.FACEBOOK_CLIENT_SECRET!,
-    redirectUri: process.env.FACEBOOK_REDIRECT_URI!,
     scope: "email,public_profile",
   },
 };

@@ -1,0 +1,345 @@
+{
+  "errors": {
+    "401": {
+      "title": "Page not available",
+      "desc": "This page is only available to registered users. Login to your account to get access"
+    },
+    "403": {
+      "title": "Page not available",
+      "desc": "You do not have enough rights to access this page. Maybe your account is not verified"
+    },
+    "404": {
+      "title": "Page not found",
+      "desc": "Unfortunately, the requested page does not exist. Maybe it was moved or deleted."
+    },
+    "500": {
+      "title": "Server error",
+      "desc": "Unfortunately, an error occurred. Please try again later"
+    },
+    "home": "Home",
+    "back": "Back"
+  },
+  "exams": {
+    "hero": {
+      "title": "Exams",
+      "desc": "Collection of all exam papers and answers to them in the Republic of Moldova"
+    },
+    "2025": {
+      "title": "View 2025 exams"
+    },
+    "2024": {
+      "title": "View 2024 exams"
+    },
+    "2023": {
+      "title": "View 2023 exams"
+    },
+    "filters": {
+      "title": "Filter & sort",
+      "all": "All",
+      "year": "Year",
+      "grade": "Grade",
+      "subject": "Subject",
+      "lang": "Language",
+      "type": "Type",
+      "profile": "Profile",
+      "sortBy": "Sort by",
+      "addSort": "Add sort",
+      "keys": {
+        "grade": "Grade",
+        "year": "Year",
+        "subject": "Subject",
+        "lang": "Language",
+        "type": "Type",
+        "profile": "Profile"
+      },
+      "types": {
+        "T": "Training test",
+        "P": "Pre-exam work",
+        "E": "Exam",
+        "S": "Additional exam"
+      },
+      "profiles": {
+        "U": "Humanitarian",
+        "R": "Real",
+        "A": "Artistic",
+        "S": "Sports",
+        "-": "Common"
+      }
+    },
+    "list": {
+      "title": "Exams",
+      "empty": "No exams match the current filters.",
+      "pickFilter": "Pick any filter above to see exams.",
+      "test": "Test",
+      "answers": "Answers",
+      "groupFormat": {
+        "grade": "Grade {value}",
+        "year": "Year {value}",
+        "lang": "Language {value}",
+        "type": "Type {value}",
+        "profile": "Profile {value}"
+      }
+    }
+  },
+  "olympiads": {
+    "hero": {
+      "title": "Olympiads",
+      "desc": "Collection of olympiad papers and grading criteria in the Republic of Moldova"
+    },
+    "2025": {
+      "title": "View 2025 olympiads"
+    },
+    "2024": {
+      "title": "View 2024 olympiads"
+    },
+    "2023": {
+      "title": "View 2023 olympiads"
+    },
+    "filters": {
+      "title": "Filter & sort",
+      "all": "All",
+      "year": "Year",
+      "grade": "Grade",
+      "subject": "Subject",
+      "lang": "Language"
+    },
+    "list": {
+      "title": "Olympiads",
+      "empty": "No olympiads match the current filters.",
+      "pickFilter": "Pick any filter above to see olympiads.",
+      "groupFormat": {
+        "grade": "Grade {value}",
+        "year": "Year {value}",
+        "subject": "Subject {value}",
+        "lang": "Language {value}"
+      },
+      "links": {
+        "test1": "Test 1",
+        "barem1": "Grading 1",
+        "answers1": "Answers 1",
+        "test2": "Test 2",
+        "barem2": "Grading 2",
+        "answers2": "Answers 2",
+        "results": "Results"
+      }
+    }
+  },
+  "help": {},
+  "home": {
+    "greetings": {
+      "title": "Welcome",
+      "desc": "We are glad to see you on our platform! Here will be your personal workspace"
+    },
+    "sections": {
+      "student": {
+        "1": "Tomorrow timetable",
+        "2": "Latest notes",
+        "3": "Performance analysis"
+      },
+      "teacher": {
+        "1": "Tomorrow timetable",
+        "2": "Latest homework",
+        "3": "Performance analysis"
+      },
+      "parent": {
+        "1": "Tomorrow timetable",
+        "2": "Latest notes",
+        "3": "Performance analysis"
+      },
+      "staff": {
+        "1": "-",
+        "2": "-",
+        "3": "-"
+      }
+    },
+    "no_lessons_tomorrow": "No lessons tomorrow",
+    "no_latest_data": "No latest data",
+    "no_analytics": "No analytics"
+  },
+  "info": {
+    "about": {
+      "hero": {
+        "title": "Hello, dear user!",
+        "desc": "Very nice to meet you! We are glad to see you on our platform! Let's get to know each other better."
+      },
+      "us": {
+        "title": "Who are we?",
+        "desc": "We are the ones who do care",
+        "items": {
+          "1": {
+            "heading": "Team",
+            "content": "We are a team of young developers, designers, and analysts. We are all recent high school graduates, and we are closely familiar with all the shortcomings of education. But we want to change that — we want every child, teenager, and adult to find in education what we once found. To find something they enjoy and want to explore themselves. We truly believe that the 12 years of school shape the future of each person, and therefore the future of our country. Everything starts small, so let's walk this path together!"
+          },
+          "2": {
+            "heading": "Founder",
+            "content": "I am the founder of the AISchool project. I graduated from high school in May 2025, though I began working on the project in March, 12th grade. Since 9th grade, I have won national Olympiads in subjects such as mathematics, computer science, and chemistry. I served on the lyceum student council and organized many in-school events. Throughout my school career, I have encountered numerous shortcomings in education and want to help change this. I will make every effort to ensure that students' education is not limited to paper textbooks and dry notes, but rather an modern technologies and active school life."
+          }
+        }
+      },
+      "motives": {
+        "title": "What drives us?",
+        "desc": "We too once studied in school, how can we remain indifferent to education?",
+        "items": {
+          "1": {
+            "heading": "XXI century is already here",
+            "content": "Education must keep pace with the times. The global digitalization of processes must not bypass the most important element of society—the youth."
+          },
+          "2": {
+            "heading": "Routines are too much",
+            "content": "12 years of school life—is it really just notes in blue pen and pages of textbooks? Education should be interesting and engaging, not just a mechanical rewriting of material."
+          },
+          "3": {
+            "heading": "Reports, reports, reports...",
+            "content": "The teaching profession is one of the most important in society. A teacher's calling is to transmit knowledge to future generations, not to churn out formal \"waste paper\"."
+          },
+          "4": {
+            "heading": "Why solve it yourself if you can copy it?",
+            "content": "Answers at the end of the textbook, online solutions, and neural networks—what student hasn't used them? It should be easier and more engaging for students to complete assignments independently."
+          }
+        }
+      },
+      "goals": {
+        "title": "What we want to achieve?",
+        "desc": "Of course, make the world better!",
+        "items": {
+          "1": "Create a complete offline education analog.",
+          "2": "Connect as many schools and classes to the platform as possible",
+          "3": "Return interest in education to students of all ages",
+          "4": "Minimize the load on teachers"
+        }
+      }
+    }
+  },
+  "landing": {
+    "welcome": {
+      "hero": {
+        "title": "ISchool",
+        "desc": "Revolutionary platform for modern education with artificial intelligence",
+        "features": {
+          "1": {
+            "title": "Artificial intelligence",
+            "desc": "Our project's crown jewel is the country's first integration of artificial intelligence into education – create tests, check assignments, and create unique tasks using AI. The 21st century is here, time to harness the full power of technology!"
+          },
+          "2": {
+            "title": "Electronic journal",
+            "desc": "An electronic journal simplifies routine tasks, such as calculating grade point averages, counting absences, and analyzing academic performance. The electronic journal is available in three convenient formats: yearly, monthly, and weekly, allowing you to quickly find the lesson you need."
+          },
+          "3": {
+            "title": "Tasks by subjects",
+            "desc": "Online assignments based on state textbooks have been developed for each subject. Each student receives unique assignments, and the number of attempts is unlimited. Teachers can use these assignments to create tests and homework assignments, and can also directly transfer grades to the online gradebook with the click of a button."
+          }
+        }
+      },
+      "cta": {
+        "title": "Ready to start learning the future?",
+        "desc": "Join thousands of students and teachers who are already using AI School to achieve the best results",
+        "features": {
+          "1": {
+            "title": "Interactive learning",
+            "desc": "Monotonous notebook entries filled with dozens of pages of difficult-to-digest information are a thing of the past. Practice, practice, and more practice are what children need in the 21st century. Tens of thousands of unique assignments will help students master the material, reinforce it, and improve their academic performance, while teachers can create unique assignments and tests that can be easily graded by artificial intelligence."
+          },
+          "2": {
+            "title": "Instant results",
+            "desc": "Online learning allows students to instantly see their results, eliminating the need to wait days or even weeks to learn their grades. Teachers, in turn, can finally delegate some of their grading work to artificial intelligence, saving time for other important tasks. Furthermore, manually transferring grades from notebooks and test sheets to the electronic gradebook is no longer necessary—it's all done with the click of a button."
+          },
+          "3": {
+            "title": "Progress analysis",
+            "desc": "Data analytics is the foundation of progress in the 21st century. With our platform, students can see their progress in their average grades in each subject, and teachers can see how they compare across classes. Learn your strengths and weaknesses to improve your academic performance."
+          }
+        }
+      },
+      "buttons": {
+        "1": "Start learning",
+        "2": "Login to the system"
+      }
+    },
+    "pluses": {
+      "title": "Advantages for {userType, select, student {students} teacher {teachers} parent {parents} other {users}}{paid, plural, =0 {} =1 { with a subscription} other {}}",
+      "desc": {
+        "student_free": "Study has never been so easy!",
+        "student_paid": "Use the full power of the AISchool platform",
+        "teacher_free": "Simplify your work with modern tools",
+        "teacher_paid": "Let AI do all the routine work for you",
+        "parent_free": "Stay in the know about your child's progress"
+      }
+    },
+    "for": {
+      "student": "For students",
+      "teacher": "For teachers",
+      "parent": "For parents"
+    }
+  },
+  "restricted": {
+    "ad": {
+      "title": "Available with AISchool+ subscription",
+      "subtitle": "Unlock the full potential together with the AISchool+ subscription and increase your productivity",
+      "info": {
+        "features": {
+          "1": "Premium Access",
+          "1_desc": "Unlock all features with AISchool+ subscription",
+          "2": "Enhanced Experience",
+          "2_desc": "Boost your productivity with advanced tools"
+        }
+      },
+      "redirect": "Go to subscriptions"
+    },
+    "coming_soon": {
+      "title": "Coming Soon",
+      "subtitle": "We are working hard on this feature. You will be notified when it is ready!",
+      "info": {
+        "features": {
+          "1": "Stay Updated",
+          "1_desc": "We'll notify you when this feature is ready",
+          "2": "We are working hard",
+          "2_desc": "Our project is growing every day"
+        }
+      },
+      "redirect": "Back to Home"
+    }
+  },
+  "subscriptions": {
+    "hero": {
+      "title": "AISchool+ subscription",
+      "desc": "Unlock the full potential of AI-powered education"
+    },
+    "free_pluses": {
+      "student": "The most convenient electronic diary;Online homework;Convenient textbooks;Numerous activities",
+      "teacher": "The most convenient electronic journal;Class management and analytics;Unique test generation;Automatic online assignment checking",
+      "parent": "Monitoring your child's academic performance;Communication with teachers;Learning progress analytics;Attendance monitoring"
+    },
+    "pluses": {
+      "title": "Advantages AISchool+",
+      "desc": "Discover all the powerful features that come with AISchool+ subscription",
+      "solo": {
+        "title": "Advantages for students",
+        "desc": "Advanced artificial intelligence to enhance your educational experience",
+        "list": "Access to subjects of all classes;Tasks with artificial intelligence;Webinars with students;Olympiads from AISchool;No ads;Access to audio tasks by languages;Tasks for preparing for exams;Tasks from previous years' state olympiads;Access to extracurricular subjects;Help with entering state universities"
+      },
+      "group": {
+        "title": "Class subscription advantages",
+        "desc": "Special tools for teachers and class management",
+        "list": "Voice scoring;Scan of the journal for transfer to the online platform;Automatic transfer of marks to the online journal;Checking tasks with AI;Generation of tests with AI;Generation of homework with AI"
+      }
+    },
+    "plans": {
+      "title": "Subscription plans",
+      "desc": "All group plans come with a 50% discount!",
+      "monthly": "1 month",
+      "quarter": "3 months",
+      "yearly": "1 year",
+      "forever": "Forever"
+    },
+    "description": {
+      "title": "About the subscription",
+      "about": {
+        "title": "Importance of the subscription",
+        "desc": "We provide all the necessary learning materials absolutely free, but artificial intelligence (AI) is (unfortunately) not free. To support our servers, we are introducing a paid subscription. In addition to the AI ​​implementation, both students and teachers will have access to a variety of convenient features and additional materials to support their learning. A class subscription can be created by the homeroom teacher in their personal profile."
+      },
+      "group": {
+        "title": "Class subscription",
+        "desc": "A class subscription includes all the benefits of a single subscription, but also provides helpful features for teachers. This functionality will only be available to classes that subscribe. To create a subscription, at least 75% of the selected class must participate",
+        "discount": "The price of the group subscription is lower by 50%!"
+      }
+    }
+  }
+}

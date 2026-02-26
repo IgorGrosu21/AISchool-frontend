@@ -4,16 +4,13 @@ export {
   HomeworkEditorContext, useHomeworkEditorContext,
 } from "./lesson";
 export {
-  ParentEditorContext, useParentEditorContext,
-  StudentEditorContext, useStudentEditorContext,
-  TeacherEditorContext, useTeacherEditorContext
+  AccountEditorContext, useAccountEditorContext,
+  ProfileEditorContext, useProfileEditorContext,
 } from "./person";
 export {
   KlassEditorContext, useKlassEditorContext,
+  KlassWithLessonsEditorContext, useKlassWithLessonsEditorContext,
   SchoolEditorContext, useSchoolEditorContext,
   SchoolWithKlassesEditorContext, useSchoolWithKlassesEditorContext,
   SchoolWithTimetableEditorContext, useSchoolWithTimetableEditorContext
 } from "./school";
-export {
-  UserEditorContext, useUserEditorContext
-} from "./user";

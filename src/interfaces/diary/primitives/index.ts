@@ -1,0 +1,5 @@
+export type { IHolidays } from './holidays'
+export type { HasLessonId, HasLessonTimeSlug, HasHomeworkId, HasNoteValue } from './lesson'
+export type { HasStudentId } from './person'
+export type { HasSchoolSlug, HasKlassSlug, HasGroupSlug } from './school'
+export type { HasSubjectName } from './subject'

@@ -1,0 +1,1 @@
+export { SchoolTable } from './item'

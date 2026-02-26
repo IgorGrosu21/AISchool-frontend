@@ -1,0 +1,1 @@
+export { createRequestResolverFactory } from './factory';

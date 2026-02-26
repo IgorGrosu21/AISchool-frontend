@@ -1,23 +1,17 @@
 'use client'
 
-import { IDetailedParent, IDetailedStudent, IDetailedTeacher } from "@/interfaces"
+import { IUserAccount, IPersonProfile } from "@/interfaces"
 import { createContext, useContext } from "react"
 import { EditorContextType } from "./base"
 
-export type ParentEditorContextType = EditorContextType<IDetailedParent>
+export type AccountEditorContextType = EditorContextType<IUserAccount>
 
-export const ParentEditorContext = createContext<ParentEditorContextType | null>(null)
+export const AccountEditorContext = createContext<AccountEditorContextType | null>(null)
 
-export const useParentEditorContext = () => useContext(ParentEditorContext)!
+export const useAccountEditorContext = () => useContext(AccountEditorContext)!
 
-export type StudentEditorContextType = EditorContextType<IDetailedStudent>
+export type ProfileEditorContextType = EditorContextType<IPersonProfile>
 
-export const StudentEditorContext = createContext<StudentEditorContextType | null>(null)
+export const ProfileEditorContext = createContext<ProfileEditorContextType | null>(null)
 
-export const useStudentEditorContext = () => useContext(StudentEditorContext)!
-
-export type TeacherEditorContextType = EditorContextType<IDetailedTeacher>
-
-export const TeacherEditorContext = createContext<TeacherEditorContextType | null>(null)
-
-export const useTeacherEditorContext = () => useContext(TeacherEditorContext)!
+export const useProfileEditorContext = () => useContext(ProfileEditorContext)!

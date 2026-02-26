@@ -1,14 +1,14 @@
 'use client'
 
-import { FormState } from "@/app/actions"
+import { AuthFormState } from "@/app/actions"
 import { createContext, Dispatch, SetStateAction, useContext } from "react"
 
 export type AuthContextType = {
-  activeType: FormState['type']
-  setActiveType: (type: FormState['type']) => void
-  state: FormState
-  setState: Dispatch<SetStateAction<FormState>>
-  submit: (type?: FormState['type']) => void
+  activeType: AuthFormState['type']
+  setActiveType: (type: AuthFormState['type']) => void
+  state: AuthFormState
+  setState: Dispatch<SetStateAction<AuthFormState>>
+  submit: (type?: AuthFormState['type']) => void
 }
 
 export const AuthContext = createContext<AuthContextType | null>(null)
