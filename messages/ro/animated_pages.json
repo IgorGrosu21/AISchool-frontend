@@ -311,16 +311,13 @@
       "desc": "Platforma revoluționară pentru educația modernă cu inteligență artificială",
       "features": {
         "1": {
-          "title": "Inteligenţă artificială",
-          "desc": "Bijuteria coroanei proiectului nostru este prima integrare a inteligenței artificiale în educație din țară – creați teste, verificați teme și creați sarcini unice folosind IA. Secolul XXI a sosit, este timpul să valorificăm întreaga putere a tehnologiei!"
+          "title": "Inteligenţă artificială"
         },
         "2": {
-          "title": "Jurnal electronic",
-          "desc": "Un jurnal electronic simplifică sarcinile de rutină, cum ar fi calcularea mediilor generale, numărarea absențelor și analizarea performanței academice. Jurnalul electronic este disponibil în trei formate convenabile: anual, lunar și săptămânal, permițându-vă să găsiți rapid lecția de care aveți nevoie."
+          "title": "Jurnal electronic"
         },
         "3": {
-          "title": "Sarcini de către subiecți",
-          "desc": "Pentru fiecare materie au fost elaborate teme online bazate pe manualele de stat. Fiecare elev primește teme unice, iar numărul de încercări este nelimitat. Profesorii pot folosi aceste teme pentru a crea teste și teme pentru acasă și pot, de asemenea, transfera direct notele în carnetul de note online cu un simplu clic."
+          "title": "Sarcini de către subiecți"
         }
       },
       "buttons": {

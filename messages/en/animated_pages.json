@@ -311,16 +311,13 @@
       "desc": "Revolutionary platform for modern education with artificial intelligence",
       "features": {
         "1": {
-          "title": "Artificial intelligence",
-          "desc": "Our project's crown jewel is the country's first integration of artificial intelligence into education – create tests, check assignments, and create unique tasks using AI. The 21st century is here, time to harness the full power of technology!"
+          "title": "Artificial intelligence"
         },
         "2": {
-          "title": "Electronic journal",
-          "desc": "An electronic journal simplifies routine tasks, such as calculating grade point averages, counting absences, and analyzing academic performance. The electronic journal is available in three convenient formats: yearly, monthly, and weekly, allowing you to quickly find the lesson you need."
+          "title": "Electronic journal"
         },
         "3": {
-          "title": "Tasks by subjects",
-          "desc": "Online assignments based on state textbooks have been developed for each subject. Each student receives unique assignments, and the number of attempts is unlimited. Teachers can use these assignments to create tests and homework assignments, and can also directly transfer grades to the online gradebook with the click of a button."
+          "title": "Tasks by subjects"
         }
       },
       "buttons": {
