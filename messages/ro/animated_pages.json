@@ -124,7 +124,102 @@
       }
     }
   },
-  "help": {},
+  "help": {
+    "faq": {
+      "title": "Întrebări frecvente",
+      "subtitle": "Aici veți găsi răspunsuri la cele mai frecvente întrebări, precum și informații despre utilizarea diferitelor funcții ale platformei."
+    },
+    "privacy_policy": {
+      "title": "Politica de prelucrare a datelor cu caracter personal",
+      "subtitle": "Politica de prelucrare a datelor cu caracter personal (denumită în continuare \"Politica\") guvernează relația dintre dumneavoastră (denumit în continuare \"Utilizator\"/Licențiat) și Intelligent School Limited Liability Company, IDNO 1025600068428 (denumită în continuare \"Compania\"/Licențiatorul) cu privire la utilizarea Platformei Educaționale Electronice AISchool (denumită în continuare \"Programul\").",
+      "items": {
+        "1": {
+          "title": "Conceptul și compoziția datelor cu caracter personal"
+        },
+        "2": {
+          "title": "Scopurile și prelucrarea datelor cu caracter personal"
+        },
+        "3": {
+          "title": "Perioadele de prelucrare a datelor cu caracter personal"
+        },
+        "4": {
+          "title": "Comunicare și marketing"
+        },
+        "5": {
+          "title": "Drepturi și obligații"
+        },
+        "6": {
+          "title": "Ce date colectăm despre dvs.?"
+        },
+        "7": {
+          "title": "Principii și condiții de prelucrare a datelor cu caracter personal"
+        },
+        "8": {
+          "title": "Măsuri tehnice și organizatorice și securitatea prelucrării"
+        },
+        "9": {
+          "title": "Unde și cât timp stocăm datele dvs."
+        },
+        "10": {
+          "title": "Securitatea datelor cu caracter personal"
+        },
+        "11": {
+          "title": "Cum vă vom notifica despre modificările aduse acestei Politici?"
+        },
+        "12": {
+          "title": "Politica privind cookie-urile"
+        },
+        "13": {
+          "title": "Autoritatea pentru protecția datelor"
+        },
+        "14": {
+          "title": "Ștergerea contului"
+        },
+        "15": {
+          "title": "Dispoziții finale"
+        }
+      }
+    },
+    "user_agreement": {
+      "title": "Acord de utilizare",
+      "subtitle": "Acordul de utilizare (denumit în continuare \"Acordul\") guvernează relația dintre dumneavoastră (denumit în continuare \"Utilizator\"/Licențiat) și Intelligent School Limited Liability Company, IDNO 1025600068428 (denumită în continuare \"Compania\"/Licențiatorul) cu privire la utilizarea Platformei Educaționale Electronice AISchool (denumită în continuare \"Programul\").",
+      "items": {
+        "1": {
+          "title": "Termeni"
+        },
+        "2": {
+          "title": "Prevederi generale"
+        },
+        "3": {
+          "title": "Reguli de acces la sistem și de furnizare a informațiilor"
+        },
+        "4": {
+          "title": "Drepturile și obligațiile AISchool"
+        },
+        "5": {
+          "title": "Drepturile și obligațiile utilizatorului"
+        },
+        "6": {
+          "title": "Limitarea răspunderii"
+        },
+        "7": {
+          "title": "Proprietate intelectuală"
+        },
+        "8": {
+          "title": "Tipuri de licențe"
+        },
+        "9": {
+          "title": "Plata taxelor de licență"
+        },
+        "10": {
+          "title": "Soluționarea litigiilor"
+        },
+        "11": {
+          "title": "Dispoziții finale"
+        }
+      }
+    }
+  },
   "home": {
     "greetings": {
       "title": "Bun venit",
@@ -211,41 +306,21 @@
     }
   },
   "landing": {
-    "welcome": {
-      "hero": {
-        "title": "ISchool",
-        "desc": "Platforma revoluționară pentru educația modernă cu inteligență artificială",
-        "features": {
-          "1": {
-            "title": "Inteligenţă artificială",
-            "desc": "Bijuteria coroanei proiectului nostru este prima integrare a inteligenței artificiale în educație din țară – creați teste, verificați teme și creați sarcini unice folosind IA. Secolul XXI a sosit, este timpul să valorificăm întreaga putere a tehnologiei!"
-          },
-          "2": {
-            "title": "Jurnal electronic",
-            "desc": "Un jurnal electronic simplifică sarcinile de rutină, cum ar fi calcularea mediilor generale, numărarea absențelor și analizarea performanței academice. Jurnalul electronic este disponibil în trei formate convenabile: anual, lunar și săptămânal, permițându-vă să găsiți rapid lecția de care aveți nevoie."
-          },
-          "3": {
-            "title": "Sarcini de către subiecți",
-            "desc": "Pentru fiecare materie au fost elaborate teme online bazate pe manualele de stat. Fiecare elev primește teme unice, iar numărul de încercări este nelimitat. Profesorii pot folosi aceste teme pentru a crea teste și teme pentru acasă și pot, de asemenea, transfera direct notele în carnetul de note online cu un simplu clic."
-          }
-        }
-      },
-      "cta": {
-        "title": "Sunteți gata să începeți să învățați viitorul?",
-        "desc": "Alăturați-vă mii de elevi și profesori care folosesc deja școala AI pentru a obține cele mai bune rezultate",
-        "features": {
-          "1": {
-            "title": "Învățare interactivă",
-            "desc": "Însemnările monotone din caiete, pline de zeci de pagini de informații greu de digerat, sunt de domeniul trecutului. Copiii au nevoie de practică, practică și iar practică în secolul XXI. Zeci de mii de teme unice îi vor ajuta pe elevi să stăpânească materia, să o consolideze și să își îmbunătățească performanța academică, în timp ce profesorii pot crea teme și teste unice care pot fi ușor notate de inteligența artificială."
-          },
-          "2": {
-            "title": "Rezultate instantanee",
-            "desc": "Învățarea online le permite elevilor să își vadă instantaneu rezultatele, eliminând necesitatea de a aștepta zile sau chiar săptămâni pentru a afla notele. Profesorii, la rândul lor, pot delega în sfârșit o parte din munca lor de notare inteligenței artificiale, economisind timp pentru alte sarcini importante. În plus, transferul manual al notelor din caiete și foi de testare în carnetul de note electronic nu mai este necesar - totul se face cu un singur clic."
-          },
-          "3": {
-            "title": "Analiza progresului",
-            "desc": "Analiza datelor este fundamentul progresului în secolul XXI. Cu ajutorul platformei noastre, elevii își pot vedea progresul în ceea ce privește notele medii la fiecare materie, iar profesorii pot vedea cum se compară acestea între clase. Învață-ți punctele forte și punctele slabe pentru a-ți îmbunătăți performanța academică."
-          }
+    "hero": {
+      "title": "ISchool",
+      "desc": "Platforma revoluționară pentru educația modernă cu inteligență artificială",
+      "features": {
+        "1": {
+          "title": "Inteligenţă artificială",
+          "desc": "Bijuteria coroanei proiectului nostru este prima integrare a inteligenței artificiale în educație din țară – creați teste, verificați teme și creați sarcini unice folosind IA. Secolul XXI a sosit, este timpul să valorificăm întreaga putere a tehnologiei!"
+        },
+        "2": {
+          "title": "Jurnal electronic",
+          "desc": "Un jurnal electronic simplifică sarcinile de rutină, cum ar fi calcularea mediilor generale, numărarea absențelor și analizarea performanței academice. Jurnalul electronic este disponibil în trei formate convenabile: anual, lunar și săptămânal, permițându-vă să găsiți rapid lecția de care aveți nevoie."
+        },
+        "3": {
+          "title": "Sarcini de către subiecți",
+          "desc": "Pentru fiecare materie au fost elaborate teme online bazate pe manualele de stat. Fiecare elev primește teme unice, iar numărul de încercări este nelimitat. Profesorii pot folosi aceste teme pentru a crea teste și teme pentru acasă și pot, de asemenea, transfera direct notele în carnetul de note online cu un simplu clic."
         }
       },
       "buttons": {
@@ -253,6 +328,51 @@
         "2": "Conectați-vă la sistem"
       }
     },
+    "digital_learning": {
+      "title": "Învățare interactivă",
+      "desc": "Integrați tehnologiile moderne în procesul de învățare",
+      "items": {
+        "1": {
+          "title": "Jurnal electronic",
+          "desc": "Treceți la formatul electronic de notare și atribuire a temelor de acasă. Analiza automată a performanței, arhivarea tuturor notelor din anii trecuți și notificări despre noile note și lucrări - totul este la dispoziția dumneavoastră pe platforma noastră"
+        },
+        "2": {
+          "title": "Sarcini și teste după subiecte",
+          "desc": "Sarcini și teste dinamice, cu variante unice pentru fiecare elev. Verificarea instantanee a lucrărilor și transferul notelor în jurnalul electronic. Accesați sute de lucrări de verificare noi de la alți profesori sau creați propriile dvs. într-un editor convenabil."
+        }
+      }
+    },
+    "exams_and_olympiads": {
+      "title": "Examene și olimpiade",
+      "desc": "Colecția tuturor examenenelor și olimpiadelor din Republica Moldova la dispoziția dumneavoastră",
+      "exams": "Examene",
+      "olympiads": "Olimpiade",
+      "schools": "Școli"
+    },
+    "connecting_to_platform": {
+      "title": "Conectarea la platformă",
+      "desc": "Devino parte a platformei noastre chiar astăzi",
+      "roles": {
+        "administration": {
+          "title": "Administratiei",
+          "desc": "Pentru a conecta-vă școala dumneavoastră la platformă, contactați-ne prin secțiunea \"Contacte\""
+        },
+        "teacher": {
+          "title": "Profesorilor",
+          "desc": "Pentru a conecta-vă la platformă, solicitați link-ul de invitație de la administrație sau furnizați-le adresa dumneavoastră electronică pentru crearea automată a unui cont"
+        },
+        "student": {
+          "title": "Elevilor",
+          "desc": "Pentru a conecta-vă la platformă, solicitați link-ul de invitație de la directorul clasei sau furnizați-le adresa dumneavoastră electronică pentru crearea automată a unui cont"
+        },
+        "parent": {
+          "title": "Părinților",
+          "desc": "Pentru a conecta-vă la platformă, solicitați link-ul de invitație de la directorul clasei sau furnizați-le adresa dumneavoastră electronică pentru crearea automată a unui cont"
+        }
+      }
+    }
+  },
+  "presentation": {
     "pluses": {
       "title": "Avantaje pentru {usertype, select, student {elevuri} teacher {profesori} parent {părinți} other {utilizatori}} {paid, plural, = 0 {} = 1 {cu un abonament} other {}}",
       "desc": {

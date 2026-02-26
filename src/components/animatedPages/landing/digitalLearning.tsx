@@ -8,38 +8,36 @@ import { m } from "framer-motion";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 //icons
-import TrendingUpIcon from "@mui/icons-material/TrendingUp";
-import ComputerIcon from "@mui/icons-material/Computer";
-import AssignmentIcon from "@mui/icons-material/Assignment";
-import LightbulbIcon from "@mui/icons-material/Lightbulb";
+import AnalyticsIcon from "@mui/icons-material/Analytics";
+import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
 
 const icons = [
-  { icon: TrendingUpIcon, color: "#FF6B6B" },
-  { icon: ComputerIcon, color: "#4ECDC4" },
-  { icon: AssignmentIcon, color: "#45B7D1" },
-  { icon: LightbulbIcon, color: "#96CEB4" },
+  { icon: AnalyticsIcon, color: "#FFEAA7" },
+  { icon: LibraryBooksIcon, color: "#98D8C8" },
 ];
 
-export function AboutMotives() {
-  const t = useTranslations("animated_pages.info.about.motives");
+export function DigitalLearning() {
+  const t = useTranslations(`animated_pages.landing.digital_learning`);
 
   return (
-    <Section id="section2" sx={{ display: "flex", alignItems: "center" }}>
+    <Section id="section1">
       <SectionHeader text1={t(`title`)} text2={t(`desc`)} />
       <Stack
-        gap={2}
+        gap={4}
+        direction={{ xs: "column", md: "row" }}
         sx={{ width: "100%", maxWidth: "lg", mx: "auto", px: 4, zIndex: 2 }}
       >
         {icons.map(({ icon: Icon, color }, index) => (
           <m.div
-            key={`motives-${index}`}
+            key={`us-${index}`}
             initial={{ opacity: 0, y: -50, scale: 0.9 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.4, delay: index * 0.1 + 0.3 }}
             viewport={{ once: true }}
+            style={{ flex: 1 }}
           >
             <Panel
-              direction="row"
+              direction="column"
               gap={2}
               sx={{
                 height: "100%",
@@ -72,11 +70,11 @@ export function AboutMotives() {
                   sx={{
                     fontWeight: 600,
                     color: "text.primary",
-                    textAlign: "left",
+                    textAlign: "center",
                     fontSize: { xs: "1rem", md: "1.25rem" },
                   }}
                 >
-                  {t(`items.${index + 1}.heading`)}
+                  {t(`items.${index + 1}.title`)}
                 </Typography>
                 <Typography
                   sx={{
@@ -86,7 +84,7 @@ export function AboutMotives() {
                     fontSize: { xs: "0.75rem", md: "1rem" },
                   }}
                 >
-                  {t(`items.${index + 1}.content`)}
+                  {t(`items.${index + 1}.desc`)}
                 </Typography>
               </Stack>
             </Panel>

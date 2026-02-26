@@ -1,11 +1,18 @@
-'use server'
+"use server";
 
-import { Welcome } from './welcome'
-import { WithMotion } from '../withMotion'
+import { LandingHero } from "./hero";
+import { WithMotion } from "../withMotion";
+import { DigitalLearning } from "./digitalLearning";
+import { ExamsAndOlympiads } from "./examsAndOlympiads";
+import { ConnectingToPlatform } from "./connectingToPlatform";
 
 export async function LandingWrapper() {
-  return <WithMotion>
-    <Welcome type='hero' />
-    <Welcome type='cta' />
-  </WithMotion>
+  return (
+    <WithMotion>
+      <LandingHero />
+      <DigitalLearning />
+      <ExamsAndOlympiads />
+      <ConnectingToPlatform />
+    </WithMotion>
+  );
 }

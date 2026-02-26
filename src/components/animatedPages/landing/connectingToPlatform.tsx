@@ -8,35 +8,36 @@ import { m } from "framer-motion";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 //icons
-import TrendingUpIcon from "@mui/icons-material/TrendingUp";
-import ComputerIcon from "@mui/icons-material/Computer";
-import AssignmentIcon from "@mui/icons-material/Assignment";
-import LightbulbIcon from "@mui/icons-material/Lightbulb";
+import SchoolIcon from "@mui/icons-material/School";
+import GroupIcon from "@mui/icons-material/Group";
+import PersonIcon from "@mui/icons-material/Person";
+import FamilyRestroomIcon from "@mui/icons-material/FamilyRestroom";
 
-const icons = [
-  { icon: TrendingUpIcon, color: "#FF6B6B" },
-  { icon: ComputerIcon, color: "#4ECDC4" },
-  { icon: AssignmentIcon, color: "#45B7D1" },
-  { icon: LightbulbIcon, color: "#96CEB4" },
+const roles = [
+  { type: "administration", color: "#FF6B6B", icon: SchoolIcon },
+  { type: "teacher", color: "#DDA0DD", icon: GroupIcon },
+  { type: "student", color: "#45B7D1", icon: PersonIcon },
+  { type: "parent", color: "#96CEB4", icon: FamilyRestroomIcon },
 ];
 
-export function AboutMotives() {
-  const t = useTranslations("animated_pages.info.about.motives");
+export function ConnectingToPlatform() {
+  const t = useTranslations(`animated_pages.landing.connecting_to_platform`);
 
   return (
-    <Section id="section2" sx={{ display: "flex", alignItems: "center" }}>
+    <Section id="section3">
       <SectionHeader text1={t(`title`)} text2={t(`desc`)} />
       <Stack
         gap={2}
         sx={{ width: "100%", maxWidth: "lg", mx: "auto", px: 4, zIndex: 2 }}
       >
-        {icons.map(({ icon: Icon, color }, index) => (
+        {roles.map(({ type, color, icon: Icon }, index) => (
           <m.div
-            key={`motives-${index}`}
+            key={`goals-${index}`}
             initial={{ opacity: 0, y: -50, scale: 0.9 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.4, delay: index * 0.1 + 0.3 }}
             viewport={{ once: true }}
+            style={{ height: "100%" }}
           >
             <Panel
               direction="row"
@@ -76,7 +77,7 @@ export function AboutMotives() {
                     fontSize: { xs: "1rem", md: "1.25rem" },
                   }}
                 >
-                  {t(`items.${index + 1}.heading`)}
+                  {t(`roles.${type}.title`)}
                 </Typography>
                 <Typography
                   sx={{
@@ -86,7 +87,7 @@ export function AboutMotives() {
                     fontSize: { xs: "0.75rem", md: "1rem" },
                   }}
                 >
-                  {t(`items.${index + 1}.content`)}
+                  {t(`roles.${type}.desc`)}
                 </Typography>
               </Stack>
             </Panel>
