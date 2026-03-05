@@ -27,14 +27,5 @@ export {
   useAccountEditorContext,
   EditorProvider,
 } from "./editor";
-export {
-  type SupportedOrdering,
-  useExamsContext,
-  ExamsProvider,
-} from "./exams";
-export {
-  type OlympiadsSupportedOrdering,
-  useOlympiadsContext,
-  OlympiadsProvider,
-} from "./olympiads";
 export { type Group, useJournalContext, JournalProvider } from "./journal";
+export { type TestsFiltering, useTestsContext, TestsProvider } from "./tests";

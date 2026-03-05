@@ -19,35 +19,32 @@
     "home": "Acasă",
     "back": "Înapoi"
   },
-  "exams": {
-    "hero": {
-      "title": "Examene",
-      "desc": "Colecția tuturor lucrărilor de examen și răspunsurilor la ele în Republica Moldova"
+  "tests": {
+    "single": {
+      "exams": "Examen",
+      "olympiads": "Olimpiadă"
     },
-    "2025": {
-      "title": "Vedeți examene din 2025"
+    "plural": {
+      "exams": "Examenele",
+      "olympiads": "Olimpiadele"
     },
-    "2024": {
-      "title": "Vedeți examene din 2024"
-    },
-    "2023": {
-      "title": "Vedeți examene din 2023"
+    "desc": {
+      "exams": "Colecția tuturor lucrărilor de examen și răspunsurilor la ele în Republica Moldova",
+      "olympiads": "Colecția tuturor lucrărilor de olimpiadă și a rezultatelor în Republica Moldova"
     },
     "filters": {
       "title": "Filtru și sortare",
       "all": "Toate",
       "year": "An",
       "grade": "Clasă",
-      "subject": "Materie",
+      "subject": "Disciplină",
       "lang": "Limbă",
       "type": "Tip",
       "profile": "Profil",
-      "sortBy": "Sortare după",
-      "addSort": "Adaugă",
       "keys": {
         "grade": "Clasă",
         "year": "An",
-        "subject": "Materie",
+        "subject": "Disciplină",
         "lang": "Limbă",
         "type": "Tip",
         "profile": "Profil"
@@ -66,62 +63,26 @@
         "-": "Comun"
       }
     },
-    "list": {
-      "title": "Examene",
-      "empty": "Niciun examen nu corespunde filtrelor selectate.",
-      "pickFilter": "Alegeți orice filtru mai sus pentru a vedea examenele.",
-      "test": "Test",
-      "answers": "Răspunsuri",
-      "groupFormat": {
-        "grade": "Clasa {value}",
-        "year": "Anul {value}",
-        "lang": "Limba {value}",
-        "type": "Tip {value}",
-        "profile": "Profil {value}"
-      }
-    }
-  },
-  "olympiads": {
-    "hero": {
-      "title": "Olimpiade",
-      "desc": "Colecția lucrărilor de olimpiadă și a baremelor în Republica Moldova"
+    "empty": "Nu există {type, select, exams {examenele} olympiads {olimpiadele} other {teste}} care corespund filtrelor selectate.",
+    "pickFilter": "Alegeți orice filtru mai sus pentru a vedea {type, select, exams {examenele} olympiads {olimpiadele} other {teste}}.",
+    "test": "Test",
+    "answers": "Răspunsuri",
+    "groupFormat": {
+      "grade": "Clasa {value}",
+      "year": "Anul {value}",
+      "lang": "Limba {value}",
+      "subject": "Disciplină {value}",
+      "type": "Tip {value}",
+      "profile": "Profil {value}"
     },
-    "2025": {
-      "title": "Olimpiade 2025"
-    },
-    "2024": {
-      "title": "Olimpiade 2024"
-    },
-    "2023": {
-      "title": "Olimpiade 2023"
-    },
-    "filters": {
-      "title": "Filtru și sortare",
-      "all": "Toate",
-      "year": "An",
-      "grade": "Clasă",
-      "subject": "Materie",
-      "lang": "Limbă"
-    },
-    "list": {
-      "title": "Olimpiade",
-      "empty": "Niciuna olimpiadă nu corespunde filtrelor selectate.",
-      "pickFilter": "Alegeți orice filtru mai sus pentru a vedea olimpiadele.",
-      "groupFormat": {
-        "grade": "Clasa {value}",
-        "year": "Anul {value}",
-        "subject": "Materia {value}",
-        "lang": "Limba {value}"
-      },
-      "links": {
-        "test1": "Test 1",
-        "barem1": "Barem 1",
-        "answers1": "Răspunsuri 1",
-        "test2": "Test 2",
-        "barem2": "Barem 2",
-        "answers2": "Răspunsuri 2",
-        "results": "Rezultate"
-      }
+    "links": {
+      "test1": "Test 1",
+      "barem1": "Barem 1",
+      "answers1": "Răspunsuri 1",
+      "test2": "Test 2",
+      "barem2": "Barem 2",
+      "answers2": "Răspunsuri 2",
+      "results": "Rezultate"
     }
   },
   "help": {

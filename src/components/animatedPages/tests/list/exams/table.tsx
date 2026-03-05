@@ -1,8 +1,10 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import type { IOlympiad } from "@/interfaces";
+import type { IExam } from "@/interfaces";
+import { ALL_TYPES, getPresentProfilesAndTypes } from "@/utils/tests";
 
+//mui components
 import Paper from "@mui/material/Paper";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -11,26 +13,15 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 
-import { OlympiadsTableCell } from "./cell";
+import { ExamsTableCell } from "./cell";
 
-const COLUMN_KEYS = [
-  "test1",
-  "barem1",
-  "answers1",
-  "test2",
-  "barem2",
-  "answers2",
-  "results",
-] as const;
-
-export type OlympiadsTableProps = {
-  olympiadList: IOlympiad[];
+export type ExamsTableProps = {
+  tests: IExam[];
 };
 
-export function OlympiadsTable({ olympiadList }: OlympiadsTableProps) {
-  const t = useTranslations("animated_pages.olympiads");
-
-  if (olympiadList.length === 0) return null;
+export function ExamsTable({ tests }: ExamsTableProps) {
+  const t = useTranslations("animated_pages.tests");
+  const { profiles } = getPresentProfilesAndTypes(tests);
 
   return (
     <TableContainer
@@ -45,6 +36,9 @@ export function OlympiadsTable({ olympiadList }: OlympiadsTableProps) {
           "& .MuiTableCell-root": {
             py: 1.5,
             px: 2,
+            width: "20%",
+            minWidth: "20%",
+            maxWidth: "20%",
             boxSizing: "border-box",
             borderColor: "divider",
           },
@@ -52,30 +46,32 @@ export function OlympiadsTable({ olympiadList }: OlympiadsTableProps) {
       >
         <TableHead>
           <TableRow>
-            <TableCell sx={{ fontWeight: 600 }} align="center">
-              {t("filters.lang")}
-            </TableCell>
-            {COLUMN_KEYS.map((key) => (
-              <TableCell key={key} sx={{ fontWeight: 600 }} align="center">
-                {t(`list.links.${key}`)}
+            <TableCell sx={{ fontWeight: 600 }} />
+            {ALL_TYPES.map((type) => (
+              <TableCell key={type} sx={{ fontWeight: 600 }} align="center">
+                {t(`filters.types.${type}`)}
               </TableCell>
             ))}
           </TableRow>
         </TableHead>
         <TableBody>
-          {olympiadList.map((item, i) => (
+          {profiles.map((profile) => (
             <TableRow
-              key={i}
+              key={profile}
               sx={{
                 "&:last-child td": { border: 0 },
               }}
             >
-              <TableCell align="center" sx={{ fontWeight: 500 }}>
-                {item.lang}
+              <TableCell sx={{ fontWeight: 500 }}>
+                {t(`filters.profiles.${profile}`)}
               </TableCell>
-              {COLUMN_KEYS.map((key) => (
-                <TableCell key={key} align="center">
-                  <OlympiadsTableCell olympiad={item} linkKey={key} />
+              {ALL_TYPES.map((type) => (
+                <TableCell key={type} align="center">
+                  <ExamsTableCell
+                    tests={tests.filter(
+                      (t) => t.profile === profile && t.type === type,
+                    )}
+                  />
                 </TableCell>
               ))}
             </TableRow>

@@ -1,13 +1,10 @@
 "use server";
 
-import { ExamsWrapper } from "@/components";
-import { handleResponse, fetchExams, fetchSubjects } from "@/requests";
+import { TestsWrapper } from "@/components";
+import { handleResponse, fetchSubjects } from "@/requests";
 
 export default async function Page() {
-  const [exams, subjects] = await Promise.all([
-    handleResponse(fetchExams()),
-    handleResponse(fetchSubjects()),
-  ]);
+  const subjects = await handleResponse(fetchSubjects());
 
-  return <ExamsWrapper exams={exams} subjects={subjects} />;
+  return <TestsWrapper subjects={subjects} type="exams" />;
 }

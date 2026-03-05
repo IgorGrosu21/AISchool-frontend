@@ -1,1 +1,0 @@
-export { OlympiadsWrapper } from "./wrapper";

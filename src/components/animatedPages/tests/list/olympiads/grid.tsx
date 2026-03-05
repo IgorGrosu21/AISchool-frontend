@@ -19,17 +19,15 @@ const LINK_KEYS = [
 ] as const;
 
 export type OlympiadsGridProps = {
-  olympiadList: IOlympiad[];
+  tests: IOlympiad[];
 };
 
-export function OlympiadsGrid({ olympiadList }: OlympiadsGridProps) {
-  const t = useTranslations("animated_pages.olympiads");
-
-  if (olympiadList.length === 0) return null;
+export function OlympiadsGrid({ tests }: OlympiadsGridProps) {
+  const t = useTranslations("animated_pages.tests");
 
   return (
     <Box sx={{ display: "flex", flexDirection: "column", gap: 2, mb: 2 }}>
-      {olympiadList.map((olympiad, i) => (
+      {tests.map((test, i) => (
         <Paper
           key={i}
           variant="outlined"
@@ -48,7 +46,7 @@ export function OlympiadsGrid({ olympiadList }: OlympiadsGridProps) {
               color: "text.secondary",
             }}
           >
-            {t("filters.lang")}: {olympiad.lang}
+            {t("filters.lang")}: {test.lang}
           </Box>
           <Box
             sx={{
@@ -61,7 +59,7 @@ export function OlympiadsGrid({ olympiadList }: OlympiadsGridProps) {
             }}
           >
             {LINK_KEYS.map((key) => (
-              <OlympiadsTableCell key={key} olympiad={olympiad} linkKey={key} />
+              <OlympiadsTableCell key={key} test={test} linkKey={key} />
             ))}
           </Box>
         </Paper>

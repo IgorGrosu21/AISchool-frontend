@@ -1,6 +1,5 @@
 export {
   ErrorPage,
-  ExamsWrapper,
   FAQWrapper,
   PrivacyPolicyWrapper,
   UserAgreementWrapper,
@@ -9,10 +8,10 @@ export {
   NewsWrapper,
   PresentationWrapper,
   LandingWrapper,
-  OlympiadsWrapper,
   Ad,
   ComingSoon,
   SubscriptionWrapper,
+  TestsWrapper,
 } from "./animatedPages";
 
 export { AuthWrapper } from "./auth";

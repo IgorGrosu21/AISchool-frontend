@@ -19,19 +19,18 @@
     "home": "Home",
     "back": "Back"
   },
-  "exams": {
-    "hero": {
-      "title": "Exams",
-      "desc": "Collection of all exam papers and answers to them in the Republic of Moldova"
+  "tests": {
+    "single": {
+      "exams": "Exam",
+      "olympiads": "Olympiad"
     },
-    "2025": {
-      "title": "View 2025 exams"
+    "plural": {
+      "exams": "Exams",
+      "olympiads": "Olympiads"
     },
-    "2024": {
-      "title": "View 2024 exams"
-    },
-    "2023": {
-      "title": "View 2023 exams"
+    "desc": {
+      "exams": "Collection of all exam papers and answers to them in the Republic of Moldova",
+      "olympiads": "Collection of olympiad papers and results in the Republic of Moldova"
     },
     "filters": {
       "title": "Filter & sort",
@@ -42,8 +41,6 @@
       "lang": "Language",
       "type": "Type",
       "profile": "Profile",
-      "sortBy": "Sort by",
-      "addSort": "Add sort",
       "keys": {
         "grade": "Grade",
         "year": "Year",
@@ -66,62 +63,26 @@
         "-": "Common"
       }
     },
-    "list": {
-      "title": "Exams",
-      "empty": "No exams match the current filters.",
-      "pickFilter": "Pick any filter above to see exams.",
-      "test": "Test",
-      "answers": "Answers",
-      "groupFormat": {
-        "grade": "Grade {value}",
-        "year": "Year {value}",
-        "lang": "Language {value}",
-        "type": "Type {value}",
-        "profile": "Profile {value}"
-      }
-    }
-  },
-  "olympiads": {
-    "hero": {
-      "title": "Olympiads",
-      "desc": "Collection of olympiad papers and grading criteria in the Republic of Moldova"
+    "empty": "No {type, select, exams {exams} olympiads {olympiads} other {tests}} match the current filters.",
+    "pickFilter": "Select any filter above to see {type, select, exams {exams} olympiads {olympiads} other {tests}}.",
+    "test": "Test",
+    "answers": "Answers",
+    "groupFormat": {
+      "grade": "Grade {value}",
+      "year": "Year {value}",
+      "lang": "Language {value}",
+      "subject": "Subject {value}",
+      "type": "Type {value}",
+      "profile": "Profile {value}"
     },
-    "2025": {
-      "title": "View 2025 olympiads"
-    },
-    "2024": {
-      "title": "View 2024 olympiads"
-    },
-    "2023": {
-      "title": "View 2023 olympiads"
-    },
-    "filters": {
-      "title": "Filter & sort",
-      "all": "All",
-      "year": "Year",
-      "grade": "Grade",
-      "subject": "Subject",
-      "lang": "Language"
-    },
-    "list": {
-      "title": "Olympiads",
-      "empty": "No olympiads match the current filters.",
-      "pickFilter": "Pick any filter above to see olympiads.",
-      "groupFormat": {
-        "grade": "Grade {value}",
-        "year": "Year {value}",
-        "subject": "Subject {value}",
-        "lang": "Language {value}"
-      },
-      "links": {
-        "test1": "Test 1",
-        "barem1": "Grading 1",
-        "answers1": "Answers 1",
-        "test2": "Test 2",
-        "barem2": "Grading 2",
-        "answers2": "Answers 2",
-        "results": "Results"
-      }
+    "links": {
+      "test1": "Test 1",
+      "barem1": "Grading 1",
+      "answers1": "Answers 1",
+      "test2": "Test 2",
+      "barem2": "Grading 2",
+      "answers2": "Answers 2",
+      "results": "Results"
     }
   },
   "help": {

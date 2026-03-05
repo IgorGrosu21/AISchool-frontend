@@ -1,13 +1,10 @@
 "use server";
 
-import { OlympiadsWrapper } from "@/components";
-import { handleResponse, fetchOlympiads, fetchSubjects } from "@/requests";
+import { TestsWrapper } from "@/components";
+import { handleResponse, fetchSubjects } from "@/requests";
 
 export default async function Page() {
-  const [olympiads, subjects] = await Promise.all([
-    handleResponse(fetchOlympiads()),
-    handleResponse(fetchSubjects()),
-  ]);
+  const subjects = await handleResponse(fetchSubjects());
 
-  return <OlympiadsWrapper olympiads={olympiads} subjects={subjects} />;
+  return <TestsWrapper subjects={subjects} type="olympiads" />;
 }

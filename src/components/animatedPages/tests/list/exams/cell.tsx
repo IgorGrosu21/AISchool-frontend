@@ -9,13 +9,13 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 
 export type ExamsTableCellProps = {
-  exams: IExam[];
+  tests: IExam[];
 };
 
-export function ExamsTableCell({ exams }: ExamsTableCellProps) {
-  const t = useTranslations("animated_pages.exams");
+export function ExamsTableCell({ tests }: ExamsTableCellProps) {
+  const t = useTranslations("animated_pages.tests");
 
-  if (exams.length === 0) {
+  if (tests.length === 0) {
     return (
       <Typography color="text.secondary" sx={{ textAlign: "center" }}>
         —
@@ -25,7 +25,7 @@ export function ExamsTableCell({ exams }: ExamsTableCellProps) {
 
   return (
     <Stack gap={1} sx={{ py: 1.5 }}>
-      {exams.map((exam, i) => (
+      {tests.map((test, i) => (
         <Stack
           direction={{ xs: "column", md: "row" }}
           gap={1}
@@ -34,26 +34,26 @@ export function ExamsTableCell({ exams }: ExamsTableCellProps) {
         >
           <Button
             component="a"
-            href={exam.test}
+            href={test.test}
             target="_blank"
             rel="noopener noreferrer"
             size="small"
             variant="outlined"
             color="primary"
           >
-            {exam.order !== 0 ? `#${exam.order}` : t("list.test")}
+            {test.order !== 0 ? `#${test.order}` : t("test")}
           </Button>
-          {exam.answers && (
+          {test.answers && (
             <Button
               component="a"
-              href={exam.answers}
+              href={test.answers}
               target="_blank"
               rel="noopener noreferrer"
               size="small"
               variant="outlined"
               color="secondary"
             >
-              {t("list.answers")}
+              {t("answers")}
             </Button>
           )}
         </Stack>

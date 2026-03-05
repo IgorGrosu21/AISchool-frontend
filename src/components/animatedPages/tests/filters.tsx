@@ -2,13 +2,12 @@
 
 import { useCallback, useMemo, useEffect } from "react";
 import { useTranslations } from "next-intl";
-import { useExamsContext } from "@/providers";
-import { IExam } from "@/interfaces";
+import { useTestsContext, type TestsFiltering } from "@/providers";
 import type { ISubject } from "@/interfaces";
 import {
   buildSubjectOptionsByCuttedSlug,
   getAvailableLangsForSubject,
-} from "@/utils/manuals";
+} from "@/utils/tests";
 
 import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
@@ -18,46 +17,55 @@ import Grid2 from "@mui/material/Grid2";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 
-const ALL_YEARS = [
-  2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022,
-  2023, 2024, 2025,
-].reverse();
-const ALL_GRADES = [4, 9, 12];
-const ALL_LANGS = [
-  "en",
-  "fr",
-  "sp",
-  "tu",
-  "it",
-  "ga",
-  "bu",
-  "ru",
-  "ro",
-  "ge",
-  "uk",
-];
-const ALL_TYPES = ["T", "P", "E", "S"];
-const ALL_PROFILES = ["U", "R", "A", "S", "-"];
+const ALL_YEARS = {
+  exams: [
+    2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021,
+    2022, 2023, 2024, 2025,
+  ].reverse(),
+  olympiads: [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025].reverse(),
+} as const;
+const ALL_GRADES = {
+  exams: [4, 9, 12],
+  olympiads: [7, 8, 9, 10, 11, 12],
+} as const;
+const ALL_LANGS = {
+  exams: ["en", "fr", "sp", "tu", "it", "ga", "bu", "ru", "ro", "ge", "uk"],
+  olympiads: ["uk", "ge", "ru", "sp", "ga", "fr", "bu", "ro", "en"],
+} as const;
+const ALL_TYPES = {
+  exams: ["T", "P", "E", "S"],
+  olympiads: [],
+} as const;
+const ALL_PROFILES = {
+  exams: ["U", "R", "A", "S", "-"],
+  olympiads: [],
+} as const;
 
-export function ExamsFilters({ subjects }: { subjects: ISubject[] }) {
-  const t = useTranslations("animated_pages.exams");
-  const { filtering, setFiltering, allExams } = useExamsContext();
+export function TestsFilters({
+  subjects,
+  type,
+}: {
+  subjects: ISubject[];
+  type: "exams" | "olympiads";
+}) {
+  const t = useTranslations(`animated_pages.tests`);
+  const { filtering, setFiltering, allTests } = useTestsContext(type);
 
   const subjectOptionsByCuttedSlug = useMemo(() => {
     return buildSubjectOptionsByCuttedSlug(
       subjects,
-      allExams,
-      (exam) => exam.subject.slug,
+      allTests,
+      (item) => item.subject.slug,
     );
-  }, [subjects, allExams]);
+  }, [subjects, allTests]);
 
   const availableLangs = useMemo(() => {
     return getAvailableLangsForSubject(
       subjectOptionsByCuttedSlug,
       filtering.subjectCuttedSlug ?? undefined,
-      ALL_LANGS,
+      ALL_LANGS[type],
     );
-  }, [filtering.subjectCuttedSlug, subjectOptionsByCuttedSlug]);
+  }, [filtering.subjectCuttedSlug, subjectOptionsByCuttedSlug, type]);
 
   useEffect(() => {
     if (
@@ -70,7 +78,10 @@ export function ExamsFilters({ subjects }: { subjects: ISubject[] }) {
   }, [filtering.lang, availableLangs, setFiltering]);
 
   const updateFilter = useCallback(
-    <K extends keyof IExam>(key: K, value: IExam[K] | undefined) => {
+    <K extends keyof TestsFiltering>(
+      key: K,
+      value: TestsFiltering[K] | undefined,
+    ) => {
       setFiltering((prev) => ({ ...prev, [key]: value }));
     },
     [setFiltering],
@@ -86,7 +97,15 @@ export function ExamsFilters({ subjects }: { subjects: ISubject[] }) {
         {t("filters.title")}
       </Typography>
       <Grid2 container spacing={2} sx={{ alignItems: "flex-end" }}>
-        <Grid2 size={{ xs: 12, sm: 6, md: 4, lg: 2, xl: 1 }}>
+        <Grid2
+          size={{
+            xs: 12,
+            sm: 6,
+            md: 4,
+            lg: type === "exams" ? 2 : 3,
+            xl: type === "exams" ? 1 : 3,
+          }}
+        >
           <FormControl size="small" fullWidth>
             <InputLabel>{t("filters.year")}</InputLabel>
             <Select
@@ -101,7 +120,7 @@ export function ExamsFilters({ subjects }: { subjects: ISubject[] }) {
               onClose={blurOnClose}
             >
               <MenuItem value="">{t("filters.all")}</MenuItem>
-              {ALL_YEARS.map((y) => (
+              {ALL_YEARS[type].map((y) => (
                 <MenuItem key={y} value={y}>
                   {y}
                 </MenuItem>
@@ -109,7 +128,15 @@ export function ExamsFilters({ subjects }: { subjects: ISubject[] }) {
             </Select>
           </FormControl>
         </Grid2>
-        <Grid2 size={{ xs: 12, sm: 6, md: 4, lg: 2, xl: 1 }}>
+        <Grid2
+          size={{
+            xs: 12,
+            sm: 6,
+            md: 4,
+            lg: type === "exams" ? 2 : 3,
+            xl: type === "exams" ? 1 : 3,
+          }}
+        >
           <FormControl size="small" fullWidth>
             <InputLabel>{t("filters.grade")}</InputLabel>
             <Select
@@ -124,7 +151,7 @@ export function ExamsFilters({ subjects }: { subjects: ISubject[] }) {
               onClose={blurOnClose}
             >
               <MenuItem value="">{t("filters.all")}</MenuItem>
-              {ALL_GRADES.map((g) => (
+              {ALL_GRADES[type].map((g) => (
                 <MenuItem key={g} value={g}>
                   {g}
                 </MenuItem>
@@ -132,7 +159,15 @@ export function ExamsFilters({ subjects }: { subjects: ISubject[] }) {
             </Select>
           </FormControl>
         </Grid2>
-        <Grid2 size={{ xs: 12, sm: 6, md: 4, lg: 2, xl: 5 }}>
+        <Grid2
+          size={{
+            xs: 12,
+            sm: 6,
+            md: 4,
+            lg: type === "exams" ? 2 : 4,
+            xl: type === "exams" ? 5 : 4,
+          }}
+        >
           <FormControl size="small" fullWidth>
             <InputLabel>{t("filters.subject")}</InputLabel>
             <Select
@@ -157,7 +192,9 @@ export function ExamsFilters({ subjects }: { subjects: ISubject[] }) {
             </Select>
           </FormControl>
         </Grid2>
-        <Grid2 size={{ xs: 12, sm: 6, md: 4, lg: 2, xl: 1 }}>
+        <Grid2
+          size={{ xs: 12, sm: 6, md: 4, lg: 2, xl: type === "exams" ? 1 : 2 }}
+        >
           <FormControl size="small" fullWidth>
             <InputLabel>{t("filters.lang")}</InputLabel>
             <Select
@@ -180,52 +217,56 @@ export function ExamsFilters({ subjects }: { subjects: ISubject[] }) {
             </Select>
           </FormControl>
         </Grid2>
-        <Grid2 size={{ xs: 12, sm: 6, md: 4, lg: 2 }}>
-          <FormControl size="small" fullWidth>
-            <InputLabel>{t("filters.type")}</InputLabel>
-            <Select
-              value={filtering.type ?? ""}
-              label={t("filters.type")}
-              onChange={(e) =>
-                updateFilter(
-                  "type",
-                  e.target.value === "" ? undefined : String(e.target.value),
-                )
-              }
-              onClose={blurOnClose}
-            >
-              <MenuItem value="">{t("filters.all")}</MenuItem>
-              {ALL_TYPES.map((type) => (
-                <MenuItem key={type} value={type}>
-                  {t(`filters.types.${type}`)}
-                </MenuItem>
-              ))}
-            </Select>
-          </FormControl>
-        </Grid2>
-        <Grid2 size={{ xs: 12, sm: 6, md: 4, lg: 2 }}>
-          <FormControl size="small" fullWidth>
-            <InputLabel>{t("filters.profile")}</InputLabel>
-            <Select
-              value={filtering.profile ?? ""}
-              label={t("filters.profile")}
-              onChange={(e) =>
-                updateFilter(
-                  "profile",
-                  e.target.value === "" ? undefined : String(e.target.value),
-                )
-              }
-              onClose={blurOnClose}
-            >
-              <MenuItem value="">{t("filters.all")}</MenuItem>
-              {ALL_PROFILES.map((p) => (
-                <MenuItem key={p} value={p}>
-                  {t(`filters.profiles.${p}`)}
-                </MenuItem>
-              ))}
-            </Select>
-          </FormControl>
-        </Grid2>
+        {type === "exams" && (
+          <Grid2 size={{ xs: 12, sm: 6, md: 4, lg: 2 }}>
+            <FormControl size="small" fullWidth>
+              <InputLabel>{t("filters.type")}</InputLabel>
+              <Select
+                value={filtering.type ?? ""}
+                label={t("filters.type")}
+                onChange={(e) =>
+                  updateFilter(
+                    "type",
+                    e.target.value === "" ? undefined : String(e.target.value),
+                  )
+                }
+                onClose={blurOnClose}
+              >
+                <MenuItem value="">{t("filters.all")}</MenuItem>
+                {ALL_TYPES[type].map((type) => (
+                  <MenuItem key={type} value={type}>
+                    {t(`filters.types.${type}`)}
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+          </Grid2>
+        )}
+        {type === "exams" && (
+          <Grid2 size={{ xs: 12, sm: 6, md: 4, lg: 2 }}>
+            <FormControl size="small" fullWidth>
+              <InputLabel>{t("filters.profile")}</InputLabel>
+              <Select
+                value={filtering.profile ?? ""}
+                label={t("filters.profile")}
+                onChange={(e) =>
+                  updateFilter(
+                    "profile",
+                    e.target.value === "" ? undefined : String(e.target.value),
+                  )
+                }
+                onClose={blurOnClose}
+              >
+                <MenuItem value="">{t("filters.all")}</MenuItem>
+                {ALL_PROFILES[type].map((p) => (
+                  <MenuItem key={p} value={p}>
+                    {t(`filters.profiles.${p}`)}
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+          </Grid2>
+        )}
       </Grid2>
     </Box>
   );

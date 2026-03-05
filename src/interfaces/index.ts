@@ -95,6 +95,7 @@ export type {
   IManual,
   ITask,
   ITopic,
+  ITest,
   IExam,
   IOlympiad,
 } from "./manuals/listed";

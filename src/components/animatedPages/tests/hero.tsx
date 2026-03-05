@@ -3,7 +3,7 @@
 import { useCallback } from "react";
 import { useTranslations } from "next-intl";
 import { AnimationGroup3, Section, SectionHeader, StatsPanels } from "@/ui";
-import { useExamsContext } from "@/providers";
+import { useTestsContext } from "@/providers";
 
 //icons
 import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
@@ -16,13 +16,13 @@ const features = [
   { icon: TrendingUpIcon, section: "2023" },
 ];
 
-export function ExamsHero() {
-  const t = useTranslations("animated_pages.exams");
-  const { setFiltering } = useExamsContext();
+export function TestsHero({ type }: { type: "exams" | "olympiads" }) {
+  const t = useTranslations(`animated_pages.tests`);
+  const { setFiltering } = useTestsContext(type);
 
   const scrollToFilters = useCallback(
     (year: number) => {
-      setFiltering({ year });
+      setFiltering((filtering) => ({ ...filtering, year }));
       document
         .getElementById("section0")
         ?.scrollIntoView({ behavior: "smooth" });
@@ -39,12 +39,12 @@ export function ExamsHero() {
       <SectionHeader
         isTitle
         onGradient
-        text1={t(`hero.title`)}
-        text2={t(`hero.desc`)}
+        text1={t(`plural.${type}`)}
+        text2={t(`desc.${type}`)}
       />
       <StatsPanels
         panels={features.map((feature) => ({
-          text: t(`${feature.section}.title`),
+          text: `${t("plural." + type)} ${feature.section}`,
           onClick: () => scrollToFilters(Number(feature.section)),
           Icon: feature.icon,
         }))}

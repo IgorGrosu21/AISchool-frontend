@@ -11,6 +11,7 @@ export type {
   IManual,
   ITask,
   ITopic,
+  ITest,
   IExam,
   IOlympiad,
 } from "./listed";

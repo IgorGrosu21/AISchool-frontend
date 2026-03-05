@@ -3,7 +3,7 @@
 import { Fragment } from "react";
 import { useTranslations } from "next-intl";
 import type { IExam } from "@/interfaces";
-import { ALL_TYPES } from "@/utils/exams";
+import { ALL_TYPES } from "@/utils/tests";
 import { ExamsTableCell } from "./cell";
 
 //mui components
@@ -12,13 +12,11 @@ import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 
 export type ExamsGridProps = {
-  examList: IExam[];
+  tests: IExam[];
 };
 
-export function ExamsGrid({ examList }: ExamsGridProps) {
-  const t = useTranslations("animated_pages.exams");
-
-  if (examList.length === 0) return null;
+export function ExamsGrid({ tests }: ExamsGridProps) {
+  const t = useTranslations("animated_pages.tests");
 
   return (
     <Paper variant="outlined" sx={{ mb: 2, border: "0", p: 2 }}>
@@ -38,7 +36,7 @@ export function ExamsGrid({ examList }: ExamsGridProps) {
               {t(`filters.types.${type}`)}
             </Stack>
             <Box>
-              <ExamsTableCell exams={examList.filter((e) => e.type === type)} />
+              <ExamsTableCell tests={tests.filter((t) => t.type === type)} />
             </Box>
           </Fragment>
         ))}

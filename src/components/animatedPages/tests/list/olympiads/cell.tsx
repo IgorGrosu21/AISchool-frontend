@@ -8,17 +8,14 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 
 export type OlympiadsTableCellProps = {
-  olympiad: IOlympiad | null;
+  test: IOlympiad | null;
   linkKey: keyof IOlympiad;
 };
 
-export function OlympiadsTableCell({
-  olympiad,
-  linkKey,
-}: OlympiadsTableCellProps) {
-  const t = useTranslations("animated_pages.olympiads");
+export function OlympiadsTableCell({ test, linkKey }: OlympiadsTableCellProps) {
+  const t = useTranslations("animated_pages.tests");
 
-  if (!olympiad || !olympiad[linkKey]) {
+  if (!test || !test[linkKey]) {
     return (
       <Typography color="text.secondary" sx={{ textAlign: "center" }}>
         —
@@ -26,8 +23,8 @@ export function OlympiadsTableCell({
     );
   }
 
-  const url = olympiad[linkKey];
-  const labelKey = `list.links.${linkKey}`;
+  const url = test[linkKey];
+  const labelKey = `links.${linkKey}`;
   return (
     <Stack sx={{ py: 1.5 }}>
       <Button

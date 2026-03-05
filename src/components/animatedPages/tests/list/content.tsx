@@ -4,11 +4,13 @@ import { useMemo, useCallback } from "react";
 import { useTranslations } from "next-intl";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { useExamsContext, type SupportedOrdering } from "@/providers";
-import type { IExam } from "@/interfaces";
+import { ITest } from "@/interfaces";
+import { useTestsContext } from "@/providers";
+import { WithLoader } from "@/ui";
 
-import { ExamsListLevel } from "./level";
+import { TestsListLevel } from "./level";
 
+//mui components
 import List from "@mui/material/List";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
@@ -17,13 +19,13 @@ import Fade from "@mui/material/Fade";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import InboxOutlinedIcon from "@mui/icons-material/InboxOutlined";
 
-const GROUP_KEYS: SupportedOrdering[] = ["grade", "year", "subject"];
+const GROUP_KEYS = ["grade", "year", "subject"];
 
-export function ExamsList() {
-  const t = useTranslations("animated_pages.exams");
+export function TestsList({ type }: { type: "exams" | "olympiads" }) {
+  const t = useTranslations(`animated_pages.tests`);
   const theme = useTheme();
   const isMdOrUp = useMediaQuery(theme.breakpoints.up("md"));
-  const { exams, filtering } = useExamsContext();
+  const { tests, filtering, loading } = useTestsContext(type);
 
   const hasAnyFilter = useMemo(() => {
     return (
@@ -47,28 +49,35 @@ export function ExamsList() {
       }
       const v = filtering[key];
       return v === undefined || v === "";
-    }) as SupportedOrdering[];
-    return isMdOrUp ? base : ([...base, "profile"] as SupportedOrdering[]);
-  }, [filtering, isMdOrUp]);
+    });
+    return isMdOrUp ? base : [...base, type === "exams" ? "profile" : "lang"];
+  }, [filtering, isMdOrUp, type]);
 
   const getGroupLabel = useCallback(
-    (key: SupportedOrdering, value: string, groupExams: IExam[]): string => {
-      if (key === "grade") return t("list.groupFormat.grade", { value });
-      if (key === "year") return t("list.groupFormat.year", { value });
-      if (key === "profile") return t("list.groupFormat.profile", { value });
+    (key: string, value: string, groupTests: ITest[]): string => {
+      if (key === "grade") return t("groupFormat.grade", { value });
+      if (key === "year") return t("groupFormat.year", { value });
+      if (key === "lang") return t("groupFormat.lang", { value });
+      if (key === "profile") return t("groupFormat.profile", { value });
       if (key === "subject") {
-        const exam = groupExams[0];
-        return exam?.subject?.name ?? value;
+        const names = [
+          ...new Set(
+            groupTests
+              .map((t) => t.subject?.name)
+              .filter((n): n is string => Boolean(n)),
+          ),
+        ];
+        return names.length > 0 ? names.join(" - ") : value;
       }
       return value;
     },
     [t],
   );
 
-  if (!hasAnyFilter || exams.length === 0) {
+  if (!hasAnyFilter || (tests !== null && tests.length === 0)) {
     const isPickFilter = !hasAnyFilter;
     return (
-      <Fade key="exams-list-empty" in={true} timeout={300}>
+      <Fade key="tests-list-empty" in={true} timeout={300}>
         <Box id="section1" sx={{ py: 4, px: 2 }}>
           <Paper
             variant="outlined"
@@ -94,7 +103,7 @@ export function ExamsList() {
               />
             )}
             <Typography variant="body1" color="text.secondary">
-              {t(`list.${isPickFilter ? "pickFilter" : "empty"}`)}
+              {t(`${isPickFilter ? "pickFilter" : "empty"}`, { type: type })}
             </Typography>
           </Paper>
         </Box>
@@ -103,22 +112,27 @@ export function ExamsList() {
   }
 
   return (
-    <Fade key="exams-list" in={true} timeout={300}>
+    <Fade key="tests-list" in={true} timeout={300}>
       <Box id="section1" sx={{ py: 2, px: 2 }}>
         <Typography variant="h6" sx={{ mb: 2 }}>
-          {t("list.title")}
+          {t(`plural.${type}`)}
         </Typography>
-        <Paper variant="outlined" sx={{ overflow: "hidden" }}>
-          <List disablePadding>
-            <ExamsListLevel
-              exams={exams}
-              groupingKeys={groupingKeys}
-              depth={0}
-              getGroupLabel={getGroupLabel}
-              isMdOrUp={isMdOrUp}
-            />
-          </List>
-        </Paper>
+        <WithLoader loading={loading}>
+          <Paper variant="outlined" sx={{ overflow: "hidden" }}>
+            <List disablePadding>
+              {tests && (
+                <TestsListLevel
+                  tests={tests}
+                  groupingKeys={groupingKeys}
+                  depth={0}
+                  getGroupLabel={getGroupLabel}
+                  isMdOrUp={isMdOrUp}
+                  type={type}
+                />
+              )}
+            </List>
+          </Paper>
+        </WithLoader>
       </Box>
     </Fade>
   );

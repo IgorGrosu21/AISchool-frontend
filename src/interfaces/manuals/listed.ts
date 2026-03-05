@@ -60,6 +60,7 @@ export type IExam = {
   order: number;
   test: string;
   answers: string;
+  [key: string]: string | number | Omit<ISubject, "lang">;
 };
 
 export type IOlympiad = {
@@ -74,4 +75,7 @@ export type IOlympiad = {
   barem2: string;
   answers2: string;
   results: string;
+  [key: string]: string | number | Omit<ISubject, "lang">;
 };
+
+export type ITest = IExam | IOlympiad;
