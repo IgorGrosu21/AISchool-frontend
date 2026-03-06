@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  ProviderProps,
-  useCallback,
-  useEffect,
-  useMemo,
-  useState,
-} from "react";
+import { ProviderProps, useCallback, useMemo, useState } from "react";
 
 import { CalendarContext } from "./context";
 import { TypePicker } from "./typePicker";
@@ -66,10 +60,6 @@ export function CalendarProvider({
     },
     [updateQueryParam],
   );
-
-  useEffect(() => {
-    console.log(type);
-  }, [type]);
 
   return (
     <CalendarContext.Provider
