@@ -1,7 +1,8 @@
-'use server'
+"use server";
 
-import { SubscriptionWrapper } from '@/components'
+import { ComingSoon } from "@/components";
 
 export default async function Page() {
-  return <SubscriptionWrapper />
+  return <ComingSoon />;
+  //return <SubscriptionWrapper />
 }
