@@ -57,7 +57,7 @@ const loadMessagesForLocale = async (locale: string) => {
         ]);
         break;
       default:
-        throw new Error(`Unsupported locale: ${locale}`);
+        return loadMessagesForLocale("ro");
     }
 
     return {
