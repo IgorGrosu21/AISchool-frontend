@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Script from "next/script";
+//import Script from "next/script";
 import { Roboto } from "next/font/google";
 import { ThemeProvider } from "@mui/material/styles";
 import InitColorSchemeScript from "@mui/material/InitColorSchemeScript";
@@ -76,11 +76,12 @@ export default async function RootLayout({
   return (
     <html suppressHydrationWarning className={roboto.variable}>
       <head>
-        <Script
+        {/*<Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4865858364709474"
+          strategy="afterInteractive"
           crossOrigin="anonymous"
-        />
+        />*/}
       </head>
       <body>
         <InitColorSchemeScript attribute="[data-theme='%s']" />

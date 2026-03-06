@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { useEffect, useRef } from "react";
 
@@ -9,7 +9,12 @@ interface AdUnitProps {
   responsive?: boolean;
 }
 
-export function AdUnit({slot, style, format = "auto", responsive = true}: AdUnitProps) {
+export function AdUnit({
+  slot,
+  style,
+  format = "auto",
+  responsive = true,
+}: AdUnitProps) {
   const adRef = useRef<HTMLModElement>(null);
 
   useEffect(() => {
@@ -26,13 +31,17 @@ export function AdUnit({slot, style, format = "auto", responsive = true}: AdUnit
     }
   }, []);
 
-  return <ins
-    ref={adRef}
-    className="adsbygoogle"
-    style={{ display: "block", ...style }}
-    data-ad-client="ca-pub-4865858364709474"
-    data-ad-slot={slot}
-    data-ad-format={format}
-    data-full-width-responsive={responsive ? "true" : "false"}
-  />
+  return null;
+
+  return (
+    <ins
+      ref={adRef}
+      className="adsbygoogle"
+      style={{ display: "block", ...style }}
+      data-ad-client="ca-pub-4865858364709474"
+      data-ad-slot={slot}
+      data-ad-format={format}
+      data-full-width-responsive={responsive ? "true" : "false"}
+    />
+  );
 }
